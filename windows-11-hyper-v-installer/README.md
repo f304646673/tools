@@ -16,7 +16,7 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 ![请添加图片描述](https://github.com/f304646673/tools/blob/main/windows-11-hyper-v-installer/images/1.png)
 ![请添加图片描述](https://github.com/f304646673/tools/blob/main/windows-11-hyper-v-installer/images/2.png)
 最后我们输入Y并重启电脑。
-# 启用
+## 启用
 重启电脑后进入“启用或关闭Windows功能”，勾选Hyper-V。然后点击“确定”，待准备好后，重启系统。
 ![请添加图片描述](https://github.com/f304646673/tools/blob/main/windows-11-hyper-v-installer/images/3.png)
 这样我们就可以看到Hyper-V管理器了。

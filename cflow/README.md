@@ -319,15 +319,16 @@ cflow ./test/test-time.c ./*.c \
 ```bash
 dot -T gif test_time.dot -o test_time.gif  
 ```
-
 ![请添加图片描述](https://img-blog.csdnimg.cn/direct/0d69916d783d46a28cecc1111a5c9629.gif)
+局部图如下
+![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/41559cce3df04f4ab0ceab9a68f6cfad.png)
+
 如果图片看不行，可以通过下面指令生成svg文件。
 
 ```bash
 dot -T svg test_time.dot -o test_time.svg
 ```
 可以从[https://github.com/f304646673/tools/blob/main/cflow/images/test_time.svg](https://github.com/f304646673/tools/blob/main/cflow/images/test_time.svg)下载查看。
-
 # 参考资料
 
  - [https://www.gnu.org/software/cflow/manual/cflow.html](https://www.gnu.org/software/cflow/manual/cflow.html)

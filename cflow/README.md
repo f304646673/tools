@@ -1,5 +1,3 @@
-@[TOC](大纲)
-
 从最开始写[《IT项目研发过程中的利器》](https://blog.csdn.net/breaksoftware/category_7043007.html)这系列博文已经过去6年。最近几年，相关软件有所迭代，也出现很多其他有意思的“利器”。最近准备把这系列做个修补，同时新增其他语言（比如Golang和Python）品类的“利器”供大家把玩。
 在[《静态分析C语言生成函数调用关系的利器——cflow》](https://fangliang.blog.csdn.net/article/details/75576878)一文中，我们介绍了如何使用cflow查看C语言代码中函数的调用关系。其中指出cflow（老版本）不能直接导出dot文件，需要使用其他工具来做辅助。但是**最新版的cflow（v1.7）已经支持导出dot了**。
 目前市面上介绍cflow的例子都比较简单（包括我写的那篇[《静态分析C语言生成函数调用关系的利器——cflow》](https://fangliang.blog.csdn.net/article/details/75576878)），比如函数都在一个文件里的，且调用关系也不复杂。但是现实工作中，我们的代码工程结构可能很复杂，导致看了类似博文的同学也不知道在实际生产中怎么应用。
@@ -328,6 +326,7 @@ dot -T gif test_time.dot -o test_time.gif
 ```bash
 dot -T svg test_time.dot -o test_time.svg
 ```
+可以从[https://github.com/f304646673/tools/blob/main/cflow/images/test_time.svg](https://github.com/f304646673/tools/blob/main/cflow/images/test_time.svg)下载查看。
 
 # 参考资料
 

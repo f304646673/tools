@@ -1,0 +1,291 @@
+
+;; Function epoll_create (epoll_create, funcdef_no=6, decl_uid=3367, cgraph_uid=7, symbol_order=6)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 16.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 size+0 S4 A32])
+        (reg:SI 5 di [ size ])) "./epoll_sub.c":39:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 85)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 size+0 S4 A32])) "./epoll_sub.c":47:10 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 4 si)
+        (reg:SI 85)) "./epoll_sub.c":47:10 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 5 di)
+        (const_int 213 [0xd5])) "./epoll_sub.c":47:10 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "./epoll_sub.c":47:10 -1
+     (nil))
+(call_insn 10 9 11 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("syscall") [flags 0x41]  <function_decl 0x7f150f8af400 syscall>) [0 syscall S1 A8])
+            (const_int 0 [0]))) "./epoll_sub.c":47:10 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (nil)))))
+(insn 11 10 12 2 (set (reg:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "./epoll_sub.c":47:10 -1
+     (nil))
+(insn 12 11 15 2 (set (reg:SI 83 [ _5 ])
+        (subreg:SI (reg:DI 82 [ _1 ]) 0)) "./epoll_sub.c":47:10 -1
+     (nil))
+(insn 15 12 19 2 (set (reg:SI 84 [ <retval> ])
+        (reg:SI 83 [ _5 ])) "./epoll_sub.c":47:10 -1
+     (nil))
+(insn 19 15 20 2 (set (reg/i:SI 0 ax)
+        (reg:SI 84 [ <retval> ])) "./epoll_sub.c":49:1 -1
+     (nil))
+(insn 20 19 0 2 (use (reg/i:SI 0 ax)) "./epoll_sub.c":49:1 -1
+     (nil))
+
+;; Function epoll_ctl (epoll_ctl, funcdef_no=7, decl_uid=3374, cgraph_uid=8, symbol_order=7)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 25.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 epfd+0 S4 A32])
+        (reg:SI 5 di [ epfd ])) "./epoll_sub.c":53:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 op+0 S4 A32])
+        (reg:SI 4 si [ op ])) "./epoll_sub.c":53:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 fd+0 S4 A32])
+        (reg:SI 1 dx [ fd ])) "./epoll_sub.c":53:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 event+0 S8 A64])
+        (reg:DI 2 cx [ event ])) "./epoll_sub.c":53:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 event+0 S8 A64])) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 86)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 fd+0 S4 A32])) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 87)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 op+0 S4 A32])) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 88)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 epfd+0 S4 A32])) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 36 r8)
+        (reg:DI 85)) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 2 cx)
+        (reg:SI 86)) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 1 dx)
+        (reg:SI 87)) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 4 si)
+        (reg:SI 88)) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 5 di)
+        (const_int 233 [0xe9])) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "./epoll_sub.c":55:10 -1
+     (nil))
+(call_insn 19 18 20 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("syscall") [flags 0x41]  <function_decl 0x7f150f8af400 syscall>) [0 syscall S1 A8])
+            (const_int 0 [0]))) "./epoll_sub.c":55:10 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (nil))))))))
+(insn 20 19 21 2 (set (reg:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 21 20 24 2 (set (reg:SI 83 [ _8 ])
+        (subreg:SI (reg:DI 82 [ _1 ]) 0)) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 24 21 28 2 (set (reg:SI 84 [ <retval> ])
+        (reg:SI 83 [ _8 ])) "./epoll_sub.c":55:10 -1
+     (nil))
+(insn 28 24 29 2 (set (reg/i:SI 0 ax)
+        (reg:SI 84 [ <retval> ])) "./epoll_sub.c":56:1 -1
+     (nil))
+(insn 29 28 0 2 (use (reg/i:SI 0 ax)) "./epoll_sub.c":56:1 -1
+     (nil))
+
+;; Function epoll_wait (epoll_wait, funcdef_no=8, decl_uid=3379, cgraph_uid=9, symbol_order=8)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 25.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 epfd+0 S4 A32])
+        (reg:SI 5 di [ epfd ])) "./epoll_sub.c":60:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 events+0 S8 A64])
+        (reg:DI 4 si [ events ])) "./epoll_sub.c":60:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 maxevents+0 S4 A32])
+        (reg:SI 1 dx [ maxevents ])) "./epoll_sub.c":60:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 timeout+0 S4 A32])
+        (reg:SI 2 cx [ timeout ])) "./epoll_sub.c":60:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SI 85)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 timeout+0 S4 A32])) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 86)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 maxevents+0 S4 A32])) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 87)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 events+0 S8 A64])) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 88)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 epfd+0 S4 A32])) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 36 r8)
+        (reg:SI 85)) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 2 cx)
+        (reg:SI 86)) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 1 dx)
+        (reg:DI 87)) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 4 si)
+        (reg:SI 88)) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 5 di)
+        (const_int 232 [0xe8])) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "./epoll_sub.c":64:10 -1
+     (nil))
+(call_insn 19 18 20 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("syscall") [flags 0x41]  <function_decl 0x7f150f8af400 syscall>) [0 syscall S1 A8])
+            (const_int 0 [0]))) "./epoll_sub.c":64:10 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (nil))))))))
+(insn 20 19 21 2 (set (reg:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 21 20 24 2 (set (reg:SI 83 [ _8 ])
+        (subreg:SI (reg:DI 82 [ _1 ]) 0)) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 24 21 28 2 (set (reg:SI 84 [ <retval> ])
+        (reg:SI 83 [ _8 ])) "./epoll_sub.c":64:10 -1
+     (nil))
+(insn 28 24 29 2 (set (reg/i:SI 0 ax)
+        (reg:SI 84 [ <retval> ])) "./epoll_sub.c":66:1 -1
+     (nil))
+(insn 29 28 0 2 (use (reg/i:SI 0 ax)) "./epoll_sub.c":66:1 -1
+     (nil))

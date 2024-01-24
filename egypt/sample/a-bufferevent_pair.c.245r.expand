@@ -1,0 +1,4078 @@
+
+;; Function bufferevent_trigger_nolock_ (bufferevent_trigger_nolock_, funcdef_no=7, decl_uid=5614, cgraph_uid=8, symbol_order=7)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 7->11 redirected to 12
+Edge 9->11 redirected to 12
+Merging block 11 into block 10...
+Merged blocks 10 and 11.
+Merged 10 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bufev+0 S8 A64])
+        (reg:DI 5 di [ bufev ])) "./bufferevent-internal.h":415:1 -1
+     (nil))
+(insn 3 2 6 2 (set (reg:SI 94)
+        (reg:SI 4 si [ iotype ])) "./bufferevent-internal.h":415:1 -1
+     (nil))
+(insn 6 3 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [21 options+0 S4 A32])
+        (reg:SI 1 dx [ options ])) "./bufferevent-internal.h":415:1 -1
+     (nil))
+(insn 4 6 5 2 (set (reg:HI 95)
+        (subreg:HI (reg:SI 94) 0)) "./bufferevent-internal.h":415:1 -1
+     (nil))
+(insn 5 4 7 2 (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [10 iotype+0 S2 A32])
+        (reg:HI 95)) "./bufferevent-internal.h":415:1 -1
+     (nil))
+(note 7 5 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 7 11 2 (set (reg:SI 82 [ _1 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [10 iotype+0 S2 A32]))) "./bufferevent-internal.h":416:14 -1
+     (nil))
+(insn 11 10 12 2 (parallel [
+            (set (reg:SI 83 [ _2 ])
+                (and:SI (reg:SI 82 [ _1 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent-internal.h":416:14 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "./bufferevent-internal.h":416:5 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "./bufferevent-internal.h":416:5 -1
+     (nil)
+ -> 36)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg:SI 96)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [21 options+0 S4 A32])) "./bufferevent-internal.h":416:38 -1
+     (nil))
+(insn 16 15 17 4 (parallel [
+            (set (reg:SI 84 [ _3 ])
+                (and:SI (reg:SI 96)
+                    (const_int 65536 [0x10000])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent-internal.h":416:38 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [21 options+0 S4 A32])
+            (const_int 65536 [0x10000]))
+        (nil)))
+(insn 17 16 18 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _3 ])
+            (const_int 0 [0]))) "./bufferevent-internal.h":416:25 -1
+     (nil))
+(jump_insn 18 17 19 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) "./bufferevent-internal.h":416:25 -1
+     (nil)
+ -> 29)
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg/f:DI 97)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bufev+0 S8 A64])) "./bufferevent-internal.h":417:31 -1
+     (nil))
+(insn 21 20 22 5 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (plus:DI (reg/f:DI 97)
+                (const_int 256 [0x100])) [29 bufev_20(D)->input+0 S8 A64])) "./bufferevent-internal.h":417:31 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:DI 5 di)
+        (reg/f:DI 85 [ _4 ])) "./bufferevent-internal.h":417:6 -1
+     (nil))
+(call_insn 23 22 24 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x7f085ec59700 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+            (const_int 0 [0]))) "./bufferevent-internal.h":417:6 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 24 23 25 5 (set (reg:DI 86 [ _5 ])
+        (reg:DI 0 ax)) "./bufferevent-internal.h":417:6 -1
+     (nil))
+(insn 25 24 26 5 (set (reg/f:DI 98)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bufev+0 S8 A64])) "./bufferevent-internal.h":417:57 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:DI 87 [ _6 ])
+        (mem:DI (plus:DI (reg/f:DI 98)
+                (const_int 272 [0x110])) [20 bufev_20(D)->wm_read.low+0 S8 A64])) "./bufferevent-internal.h":417:57 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 86 [ _5 ])
+            (reg:DI 87 [ _6 ]))) "./bufferevent-internal.h":416:68 -1
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "./bufferevent-internal.h":416:68 -1
+     (nil)
+ -> 36)
+(code_label 29 28 30 6 3 (nil) [1 uses])
+(note 30 29 31 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 6 (set (reg:SI 99)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [21 options+0 S4 A32])) "./bufferevent-internal.h":418:3 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:DI 100)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bufev+0 S8 A64])) "./bufferevent-internal.h":418:3 -1
+     (nil))
+(insn 33 32 34 6 (set (reg:SI 4 si)
+        (reg:SI 99)) "./bufferevent-internal.h":418:3 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:DI 5 di)
+        (reg:DI 100)) "./bufferevent-internal.h":418:3 -1
+     (nil))
+(call_insn 35 34 36 6 (call (mem:QI (symbol_ref:DI ("bufferevent_run_readcb_") [flags 0x41]  <function_decl 0x7f085ed59e00 bufferevent_run_readcb_>) [0 bufferevent_run_readcb_ S1 A8])
+        (const_int 0 [0])) "./bufferevent-internal.h":418:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(code_label 36 35 37 7 2 (nil) [2 uses])
+(note 37 36 38 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 7 (set (reg:SI 88 [ _7 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [10 iotype+0 S2 A32]))) "./bufferevent-internal.h":419:14 -1
+     (nil))
+(insn 39 38 40 7 (parallel [
+            (set (reg:SI 89 [ _8 ])
+                (and:SI (reg:SI 88 [ _7 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent-internal.h":419:14 -1
+     (nil))
+(insn 40 39 41 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 89 [ _8 ])
+            (const_int 0 [0]))) "./bufferevent-internal.h":419:5 -1
+     (nil))
+(jump_insn 41 40 42 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 66)
+            (pc))) "./bufferevent-internal.h":419:5 806 {*jcc}
+     (nil)
+ -> 66)
+(note 42 41 43 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 8 (set (reg:SI 101)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [21 options+0 S4 A32])) "./bufferevent-internal.h":419:39 -1
+     (nil))
+(insn 44 43 45 8 (parallel [
+            (set (reg:SI 90 [ _9 ])
+                (and:SI (reg:SI 101)
+                    (const_int 65536 [0x10000])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent-internal.h":419:39 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [21 options+0 S4 A32])
+            (const_int 65536 [0x10000]))
+        (nil)))
+(insn 45 44 46 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 90 [ _9 ])
+            (const_int 0 [0]))) "./bufferevent-internal.h":419:26 -1
+     (nil))
+(jump_insn 46 45 47 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 57)
+            (pc))) "./bufferevent-internal.h":419:26 -1
+     (nil)
+ -> 57)
+(note 47 46 48 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 9 (set (reg/f:DI 102)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bufev+0 S8 A64])) "./bufferevent-internal.h":420:31 -1
+     (nil))
+(insn 49 48 50 9 (set (reg/f:DI 91 [ _10 ])
+        (mem/f:DI (plus:DI (reg/f:DI 102)
+                (const_int 264 [0x108])) [29 bufev_20(D)->output+0 S8 A64])) "./bufferevent-internal.h":420:31 -1
+     (nil))
+(insn 50 49 51 9 (set (reg:DI 5 di)
+        (reg/f:DI 91 [ _10 ])) "./bufferevent-internal.h":420:6 -1
+     (nil))
+(call_insn 51 50 52 9 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x7f085ec59700 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+            (const_int 0 [0]))) "./bufferevent-internal.h":420:6 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 52 51 53 9 (set (reg:DI 92 [ _11 ])
+        (reg:DI 0 ax)) "./bufferevent-internal.h":420:6 -1
+     (nil))
+(insn 53 52 54 9 (set (reg/f:DI 103)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bufev+0 S8 A64])) "./bufferevent-internal.h":420:59 -1
+     (nil))
+(insn 54 53 55 9 (set (reg:DI 93 [ _12 ])
+        (mem:DI (plus:DI (reg/f:DI 103)
+                (const_int 288 [0x120])) [20 bufev_20(D)->wm_write.low+0 S8 A64])) "./bufferevent-internal.h":420:59 -1
+     (nil))
+(insn 55 54 56 9 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 92 [ _11 ])
+            (reg:DI 93 [ _12 ]))) "./bufferevent-internal.h":419:69 -1
+     (nil))
+(jump_insn 56 55 57 9 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 66)
+            (pc))) "./bufferevent-internal.h":419:69 806 {*jcc}
+     (nil)
+ -> 66)
+(code_label 57 56 58 10 5 (nil) [1 uses])
+(note 58 57 59 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 10 (set (reg:SI 104)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [21 options+0 S4 A32])) "./bufferevent-internal.h":421:3 -1
+     (nil))
+(insn 60 59 61 10 (set (reg:DI 105)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bufev+0 S8 A64])) "./bufferevent-internal.h":421:3 -1
+     (nil))
+(insn 61 60 62 10 (set (reg:SI 4 si)
+        (reg:SI 104)) "./bufferevent-internal.h":421:3 -1
+     (nil))
+(insn 62 61 63 10 (set (reg:DI 5 di)
+        (reg:DI 105)) "./bufferevent-internal.h":421:3 -1
+     (nil))
+(call_insn 63 62 66 10 (call (mem:QI (symbol_ref:DI ("bufferevent_run_writecb_") [flags 0x41]  <function_decl 0x7f085ed59f00 bufferevent_run_writecb_>) [0 bufferevent_run_writecb_ S1 A8])
+        (const_int 0 [0])) "./bufferevent-internal.h":421:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(code_label 66 63 67 12 1 (nil) [2 uses])
+(note 67 66 0 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+
+;; Function upcast (upcast, funcdef_no=8, decl_uid=5669, cgraph_uid=9, symbol_order=8)
+
+Partition 0: size 8 align 8
+	bev_p_9
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 46.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])
+        (reg:DI 5 di [ bev ])) "./bufferevent_pair.c":57:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":59:7 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 89)
+                (const_int 8 [0x8])) [4 bev_8(D)->be_ops+0 S8 A64])) "./bufferevent_pair.c":59:7 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 90)
+        (symbol_ref:DI ("bufferevent_ops_pair") [flags 0x2]  <var_decl 0x7f085ecf96c0 bufferevent_ops_pair>)) "./bufferevent_pair.c":59:5 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (reg:DI 90))) "./bufferevent_pair.c":59:5 -1
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "./bufferevent_pair.c":59:5 -1
+     (nil)
+ -> 15)
+(note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 4 (set (reg/f:DI 87 [ _6 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":60:10 -1
+     (nil))
+(jump_insn 13 12 14 4 (set (pc)
+        (label_ref 43)) "./bufferevent_pair.c":60:10 -1
+     (nil)
+ -> 43)
+(barrier 14 13 15)
+(code_label 15 14 16 5 8 (nil) [1 uses])
+(note 16 15 17 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 5 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":61:8 -1
+     (nil))
+(insn 18 17 19 5 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])
+        (reg/f:DI 91)) "./bufferevent_pair.c":61:8 -1
+     (nil))
+(insn 19 18 20 5 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 20 19 21 5 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (plus:DI (reg/f:DI 92)
+                (const_int 8 [0x8])) [4 bev_p_9->bev.bev.be_ops+0 S8 A64])) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:DI 93)
+        (symbol_ref:DI ("bufferevent_ops_pair") [flags 0x2]  <var_decl 0x7f085ecf96c0 bufferevent_ops_pair>)) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 83 [ _2 ])
+            (reg:DI 93))) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:QI 84 [ _3 ])
+        (ne:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:DI 85 [ _4 ])
+        (zero_extend:DI (reg:QI 84 [ _3 ]))) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:DI 86 [ _5 ])
+        (reg:DI 85 [ _4 ])) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 86 [ _5 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(jump_insn 27 26 28 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 40)
+            (pc))) "./bufferevent_pair.c":62:2 -1
+     (nil)
+ -> 40)
+(note 28 27 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 6 (set (reg:DI 37 r9)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f085ecf9900 __func__>)) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 30 29 31 6 (set (reg:DI 36 r8)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f085edc0c60 *.LC0>)) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 2 cx)
+        (const_int 62 [0x3e])) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:DI 94)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f085edc0cf0 *.LC1>)) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 33 32 34 6 (set (reg:DI 1 dx)
+        (reg:DI 94)) "./bufferevent_pair.c":62:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f085edc0cf0 *.LC1>)
+        (nil)))
+(insn 34 33 35 6 (set (reg:DI 95)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f085edc0d80 *.LC2>)) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:DI 4 si)
+        (reg:DI 95)) "./bufferevent_pair.c":62:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f085edc0d80 *.LC2>)
+        (nil)))
+(insn 36 35 37 6 (set (reg:SI 5 di)
+        (const_int -559030611 [0xffffffffdeaddead])) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "./bufferevent_pair.c":62:2 -1
+     (nil))
+(call_insn 38 37 39 6 (call (mem:QI (symbol_ref:DI ("event_errx") [flags 0x41]  <function_decl 0x7f085ecf7200 event_errx>) [0 event_errx S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":62:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:SI (use (reg:SI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 39 38 40)
+(code_label 40 39 41 7 10 (nil) [1 uses])
+(note 41 40 42 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 7 (set (reg/f:DI 87 [ _6 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":63:9 -1
+     (nil))
+(code_label 43 42 44 8 9 (nil) [1 uses])
+(note 44 43 45 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 49 8 (set (reg/f:DI 88 [ <retval> ])
+        (reg/f:DI 87 [ _6 ])) "./bufferevent_pair.c":64:1 -1
+     (nil))
+(insn 49 45 50 8 (set (reg/i:DI 0 ax)
+        (reg/f:DI 88 [ <retval> ])) "./bufferevent_pair.c":64:1 -1
+     (nil))
+(insn 50 49 0 8 (use (reg/i:DI 0 ax)) "./bufferevent_pair.c":64:1 -1
+     (nil))
+
+;; Function incref_and_lock (incref_and_lock, funcdef_no=9, decl_uid=5676, cgraph_uid=10, symbol_order=9)
+
+Partition 0: size 8 align 8
+	bevp_9
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 b+0 S8 A64])
+        (reg:DI 5 di [ b ])) "./bufferevent_pair.c":70:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 b+0 S8 A64])) "./bufferevent_pair.c":72:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (reg:DI 85)) "./bufferevent_pair.c":72:2 -1
+     (nil))
+(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:DI ("bufferevent_incref_and_lock_") [flags 0x41]  <function_decl 0x7f085ed59c00 bufferevent_incref_and_lock_>) [0 bufferevent_incref_and_lock_ S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":72:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg:DI 86)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 b+0 S8 A64])) "./bufferevent_pair.c":73:9 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 5 di)
+        (reg:DI 86)) "./bufferevent_pair.c":73:9 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("upcast") [flags 0x3]  <function_decl 0x7f085ed6a700 upcast>) [0 upcast S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":73:9 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 12 11 13 2 (set (reg:DI 87)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":73:9 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bevp+0 S8 A64])
+        (reg:DI 87)) "./bufferevent_pair.c":73:9 -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 88)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bevp+0 S8 A64])) "./bufferevent_pair.c":74:10 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 88)
+                (const_int 520 [0x208])) [43 bevp_9->partner+0 S8 A64])) "./bufferevent_pair.c":74:10 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":74:5 -1
+     (nil))
+(jump_insn 17 16 18 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 26)
+            (pc))) "./bufferevent_pair.c":74:5 806 {*jcc}
+     (nil)
+ -> 26)
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bevp+0 S8 A64])) "./bufferevent_pair.c":75:32 -1
+     (nil))
+(insn 20 19 21 4 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (plus:DI (reg/f:DI 89)
+                (const_int 520 [0x208])) [43 bevp_9->partner+0 S8 A64])) "./bufferevent_pair.c":75:32 -1
+     (nil))
+(insn 21 20 22 4 (set (reg/f:DI 84 [ _3 ])
+        (reg/f:DI 83 [ _2 ])) "./bufferevent_pair.c":75:3 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:DI 5 di)
+        (reg/f:DI 84 [ _3 ])) "./bufferevent_pair.c":75:3 -1
+     (nil))
+(call_insn 23 22 26 4 (call (mem:QI (symbol_ref:DI ("bufferevent_incref_and_lock_") [flags 0x41]  <function_decl 0x7f085ed59c00 bufferevent_incref_and_lock_>) [0 bufferevent_incref_and_lock_ S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":75:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(code_label 26 23 27 6 11 (nil) [1 uses])
+(note 27 26 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+;; Function decref_and_unlock (decref_and_unlock, funcdef_no=10, decl_uid=5680, cgraph_uid=11, symbol_order=10)
+
+Partition 0: size 8 align 8
+	bevp_8
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 b+0 S8 A64])
+        (reg:DI 5 di [ b ])) "./bufferevent_pair.c":80:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 b+0 S8 A64])) "./bufferevent_pair.c":81:34 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (reg:DI 85)) "./bufferevent_pair.c":81:34 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("upcast") [flags 0x3]  <function_decl 0x7f085ed6a700 upcast>) [0 upcast S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":81:34 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg:DI 86)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":81:34 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bevp+0 S8 A64])
+        (reg:DI 86)) "./bufferevent_pair.c":81:34 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 87)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bevp+0 S8 A64])) "./bufferevent_pair.c":82:10 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 87)
+                (const_int 520 [0x208])) [43 bevp_8->partner+0 S8 A64])) "./bufferevent_pair.c":82:10 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":82:5 -1
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "./bufferevent_pair.c":82:5 -1
+     (nil)
+ -> 21)
+(note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:DI 88)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bevp+0 S8 A64])) "./bufferevent_pair.c":83:34 -1
+     (nil))
+(insn 17 16 18 4 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (plus:DI (reg/f:DI 88)
+                (const_int 520 [0x208])) [43 bevp_8->partner+0 S8 A64])) "./bufferevent_pair.c":83:34 -1
+     (nil))
+(insn 18 17 19 4 (set (reg/f:DI 84 [ _3 ])
+        (reg/f:DI 83 [ _2 ])) "./bufferevent_pair.c":83:3 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 5 di)
+        (reg/f:DI 84 [ _3 ])) "./bufferevent_pair.c":83:3 -1
+     (nil))
+(call_insn 20 19 21 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("bufferevent_decref_and_unlock_") [flags 0x41]  <function_decl 0x7f085ed59d00 bufferevent_decref_and_unlock_>) [0 bufferevent_decref_and_unlock_ S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":83:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(code_label 21 20 22 5 15 (nil) [1 uses])
+(note 22 21 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 5 (set (reg:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 b+0 S8 A64])) "./bufferevent_pair.c":84:2 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:DI 5 di)
+        (reg:DI 89)) "./bufferevent_pair.c":84:2 -1
+     (nil))
+(call_insn 25 24 0 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("bufferevent_decref_and_unlock_") [flags 0x41]  <function_decl 0x7f085ed59d00 bufferevent_decref_and_unlock_>) [0 bufferevent_decref_and_unlock_ S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":84:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+
+;; Function bufferevent_pair_elt_new (bufferevent_pair_elt_new, funcdef_no=11, decl_uid=5689, cgraph_uid=12, symbol_order=11)
+
+Partition 0: size 8 align 8
+	bufev_12
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 68.
+Merging block 11 into block 10...
+Merged blocks 10 and 11.
+Merged 10 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 base+0 S8 A64])
+        (reg:DI 5 di [ base ])) "./bufferevent_pair.c":95:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [21 options+0 S4 A32])
+        (reg:SI 4 si [ options ])) "./bufferevent_pair.c":95:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:DI 4 si)
+        (const_int 536 [0x218])) "./bufferevent_pair.c":97:17 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 5 di)
+        (const_int 1 [0x1])) "./bufferevent_pair.c":97:17 -1
+     (nil))
+(call_insn 9 8 10 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("event_mm_calloc_") [flags 0x41]  <function_decl 0x7f085ed6a300 event_mm_calloc_>) [0 event_mm_calloc_ S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":97:17 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 10 9 11 2 (set (reg:DI 91)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":97:17 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])
+        (reg:DI 91)) "./bufferevent_pair.c":97:17 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])
+            (const_int 0 [0]))) "./bufferevent_pair.c":97:5 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "./bufferevent_pair.c":97:5 -1
+     (nil)
+ -> 18)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg/f:DI 89 [ _8 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":98:10 -1
+     (nil))
+(jump_insn 16 15 17 4 (set (pc)
+        (label_ref 65)) "./bufferevent_pair.c":98:10 -1
+     (nil)
+ -> 65)
+(barrier 17 16 18)
+(code_label 18 17 19 5 17 (nil) [1 uses])
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg:SI 82 [ options.0_1 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [21 options+0 S4 A32])) "./bufferevent_pair.c":99:6 -1
+     (nil))
+(insn 21 20 22 5 (set (reg/f:DI 83 [ _2 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])) "./bufferevent_pair.c":99:6 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [3 base+0 S8 A64])) "./bufferevent_pair.c":99:6 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:SI 2 cx)
+        (reg:SI 82 [ options.0_1 ])) "./bufferevent_pair.c":99:6 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:DI 93)
+        (symbol_ref:DI ("bufferevent_ops_pair") [flags 0x2]  <var_decl 0x7f085ecf96c0 bufferevent_ops_pair>)) "./bufferevent_pair.c":99:6 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:DI 1 dx)
+        (reg:DI 93)) "./bufferevent_pair.c":99:6 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("bufferevent_ops_pair") [flags 0x2]  <var_decl 0x7f085ecf96c0 bufferevent_ops_pair>)
+        (nil)))
+(insn 26 25 27 5 (set (reg:DI 4 si)
+        (reg:DI 92)) "./bufferevent_pair.c":99:6 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:DI 5 di)
+        (reg/f:DI 83 [ _2 ])) "./bufferevent_pair.c":99:6 -1
+     (nil))
+(call_insn 28 27 29 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("bufferevent_init_common_") [flags 0x41]  <function_decl 0x7f085ed59300 bufferevent_init_common_>) [0 bufferevent_init_common_ S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":99:6 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:SI (use (reg:SI 2 cx))
+                    (nil))))))
+(insn 29 28 30 5 (set (reg:SI 84 [ _3 ])
+        (reg:SI 0 ax)) "./bufferevent_pair.c":99:6 -1
+     (nil))
+(insn 30 29 31 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _3 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":99:5 -1
+     (nil))
+(jump_insn 31 30 32 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 39)
+            (pc))) "./bufferevent_pair.c":99:5 -1
+     (nil)
+ -> 39)
+(note 32 31 33 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 6 (set (reg:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])) "./bufferevent_pair.c":101:3 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:DI 5 di)
+        (reg:DI 94)) "./bufferevent_pair.c":101:3 -1
+     (nil))
+(call_insn 35 34 36 6 (call (mem:QI (symbol_ref:DI ("event_mm_free_") [flags 0x41]  <function_decl 0x7f085ed6a600 event_mm_free_>) [0 event_mm_free_ S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":101:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 36 35 37 6 (set (reg/f:DI 89 [ _8 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":102:10 -1
+     (nil))
+(jump_insn 37 36 38 6 (set (pc)
+        (label_ref 65)) "./bufferevent_pair.c":102:10 -1
+     (nil)
+ -> 65)
+(barrier 38 37 39)
+(code_label 39 38 40 7 19 (nil) [1 uses])
+(note 40 39 41 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 7 (set (reg/f:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])) "./bufferevent_pair.c":104:7 -1
+     (nil))
+(insn 42 41 43 7 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (plus:DI (reg/f:DI 95)
+                (const_int 264 [0x108])) [29 bufev_12->bev.bev.output+0 S8 A64])) "./bufferevent_pair.c":104:7 -1
+     (nil))
+(insn 43 42 44 7 (set (reg:DI 96)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])) "./bufferevent_pair.c":104:7 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:DI 1 dx)
+        (reg:DI 96)) "./bufferevent_pair.c":104:7 -1
+     (nil))
+(insn 45 44 46 7 (set (reg:DI 97)
+        (symbol_ref:DI ("be_pair_outbuf_cb") [flags 0x3]  <function_decl 0x7f085ed6ad00 be_pair_outbuf_cb>)) "./bufferevent_pair.c":104:7 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:DI 4 si)
+        (reg:DI 97)) "./bufferevent_pair.c":104:7 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("be_pair_outbuf_cb") [flags 0x3]  <function_decl 0x7f085ed6ad00 be_pair_outbuf_cb>)
+        (nil)))
+(insn 47 46 48 7 (set (reg:DI 5 di)
+        (reg/f:DI 85 [ _4 ])) "./bufferevent_pair.c":104:7 -1
+     (nil))
+(call_insn 48 47 49 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_add_cb") [flags 0x41]  <function_decl 0x7f085ec66600 evbuffer_add_cb>) [0 evbuffer_add_cb S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":104:7 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 49 48 50 7 (set (reg/f:DI 86 [ _5 ])
+        (reg:DI 0 ax)) "./bufferevent_pair.c":104:7 -1
+     (nil))
+(insn 50 49 51 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 86 [ _5 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":104:5 -1
+     (nil))
+(jump_insn 51 50 52 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 59)
+            (pc))) "./bufferevent_pair.c":104:5 -1
+     (nil)
+ -> 59)
+(note 52 51 53 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 8 (set (reg/f:DI 87 [ _6 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])) "./bufferevent_pair.c":105:3 -1
+     (nil))
+(insn 54 53 55 8 (set (reg:DI 5 di)
+        (reg/f:DI 87 [ _6 ])) "./bufferevent_pair.c":105:3 -1
+     (nil))
+(call_insn 55 54 56 8 (call (mem:QI (symbol_ref:DI ("bufferevent_free") [flags 0x41]  <function_decl 0x7f085ec6cb00 bufferevent_free>) [0 bufferevent_free S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":105:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 56 55 57 8 (set (reg/f:DI 89 [ _8 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":106:10 -1
+     (nil))
+(jump_insn 57 56 58 8 (set (pc)
+        (label_ref 65)) "./bufferevent_pair.c":106:10 -1
+     (nil)
+ -> 65)
+(barrier 58 57 59)
+(code_label 59 58 60 9 20 (nil) [1 uses])
+(note 60 59 61 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 61 60 62 9 (set (reg/f:DI 88 [ _7 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])) "./bufferevent_pair.c":109:2 -1
+     (nil))
+(insn 62 61 63 9 (set (reg:DI 5 di)
+        (reg/f:DI 88 [ _7 ])) "./bufferevent_pair.c":109:2 -1
+     (nil))
+(call_insn 63 62 64 9 (call (mem:QI (symbol_ref:DI ("bufferevent_init_generic_timeout_cbs_") [flags 0x41]  <function_decl 0x7f085ed66500 bufferevent_init_generic_timeout_cbs_>) [0 bufferevent_init_generic_timeout_cbs_ S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":109:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 64 63 65 9 (set (reg/f:DI 89 [ _8 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev+0 S8 A64])) "./bufferevent_pair.c":111:9 -1
+     (nil))
+(code_label 65 64 66 10 18 (nil) [3 uses])
+(note 66 65 67 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 71 10 (set (reg/f:DI 90 [ <retval> ])
+        (reg/f:DI 89 [ _8 ])) "./bufferevent_pair.c":112:1 -1
+     (nil))
+(insn 71 67 72 10 (set (reg/i:DI 0 ax)
+        (reg/f:DI 90 [ <retval> ])) "./bufferevent_pair.c":112:1 -1
+     (nil))
+(insn 72 71 0 10 (use (reg/i:DI 0 ax)) "./bufferevent_pair.c":112:1 -1
+     (nil))
+
+;; Function bufferevent_pair_new (bufferevent_pair_new, funcdef_no=12, decl_uid=3873, cgraph_uid=13, symbol_order=12)
+
+Partition 1: size 8 align 8
+	bufev2_16
+Partition 0: size 8 align 8
+	bufev1_15
+Partition 2: size 4 align 4
+	tmp_options_19
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 100.
+Merging block 11 into block 10...
+Merged blocks 10 and 11.
+Merged 10 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [3 base+0 S8 A64])
+        (reg:DI 5 di [ base ])) "./bufferevent_pair.c":117:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -44 [0xffffffffffffffd4])) [21 options+0 S4 A32])
+        (reg:SI 4 si [ options ])) "./bufferevent_pair.c":117:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [52 pair+0 S8 A64])
+        (reg:DI 1 dx [ pair ])) "./bufferevent_pair.c":117:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])
+        (const_int 0 [0])) "./bufferevent_pair.c":118:27 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])
+        (const_int 0 [0])) "./bufferevent_pair.c":118:43 -1
+     (nil))
+(insn 10 9 14 2 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -44 [0xffffffffffffffd4])) [21 options+0 S4 A32])
+                (ior:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -44 [0xffffffffffffffd4])) [21 options+0 S4 A32])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":121:10 -1
+     (nil))
+(insn 14 10 15 2 (set (reg:SI 98)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -44 [0xffffffffffffffd4])) [21 options+0 S4 A32])) "./bufferevent_pair.c":122:14 -1
+     (nil))
+(insn 15 14 16 2 (parallel [
+            (set (reg:SI 97)
+                (and:SI (reg:SI 98)
+                    (const_int -3 [0xfffffffffffffffd])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":122:14 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -44 [0xffffffffffffffd4])) [21 options+0 S4 A32])
+            (const_int -3 [0xfffffffffffffffd]))
+        (nil)))
+(insn 16 15 17 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [21 tmp_options+0 S4 A32])
+        (reg:SI 97)) "./bufferevent_pair.c":122:14 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 99)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -44 [0xffffffffffffffd4])) [21 options+0 S4 A32])) "./bufferevent_pair.c":124:11 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 100)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [3 base+0 S8 A64])) "./bufferevent_pair.c":124:11 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 4 si)
+        (reg:SI 99)) "./bufferevent_pair.c":124:11 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 5 di)
+        (reg:DI 100)) "./bufferevent_pair.c":124:11 -1
+     (nil))
+(call_insn 21 20 22 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("bufferevent_pair_elt_new") [flags 0x3]  <function_decl 0x7f085ed6ae00 bufferevent_pair_elt_new>) [0 bufferevent_pair_elt_new S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":124:11 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 22 21 23 2 (set (reg:DI 101)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":124:11 -1
+     (nil))
+(insn 23 22 24 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])
+        (reg:DI 101)) "./bufferevent_pair.c":124:11 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])
+            (const_int 0 [0]))) "./bufferevent_pair.c":125:5 -1
+     (nil))
+(jump_insn 25 24 26 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 30)
+            (pc))) "./bufferevent_pair.c":125:5 -1
+     (nil)
+ -> 30)
+(note 26 25 27 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 4 (set (reg:SI 93 [ _12 ])
+        (const_int -1 [0xffffffffffffffff])) "./bufferevent_pair.c":126:10 -1
+     (nil))
+(jump_insn 28 27 29 4 (set (pc)
+        (label_ref 97)) "./bufferevent_pair.c":126:10 -1
+     (nil)
+ -> 97)
+(barrier 29 28 30)
+(code_label 30 29 31 5 22 (nil) [1 uses])
+(note 31 30 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 33 5 (set (reg:SI 102)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [21 tmp_options+0 S4 A32])) "./bufferevent_pair.c":127:11 -1
+     (nil))
+(insn 33 32 34 5 (set (reg:DI 103)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [3 base+0 S8 A64])) "./bufferevent_pair.c":127:11 -1
+     (nil))
+(insn 34 33 35 5 (set (reg:SI 4 si)
+        (reg:SI 102)) "./bufferevent_pair.c":127:11 -1
+     (nil))
+(insn 35 34 36 5 (set (reg:DI 5 di)
+        (reg:DI 103)) "./bufferevent_pair.c":127:11 -1
+     (nil))
+(call_insn 36 35 37 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("bufferevent_pair_elt_new") [flags 0x3]  <function_decl 0x7f085ed6ae00 bufferevent_pair_elt_new>) [0 bufferevent_pair_elt_new S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":127:11 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 37 36 38 5 (set (reg:DI 104)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":127:11 -1
+     (nil))
+(insn 38 37 39 5 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])
+        (reg:DI 104)) "./bufferevent_pair.c":127:11 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])
+            (const_int 0 [0]))) "./bufferevent_pair.c":128:5 -1
+     (nil))
+(jump_insn 40 39 41 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "./bufferevent_pair.c":128:5 -1
+     (nil)
+ -> 48)
+(note 41 40 42 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 6 (set (reg/f:DI 82 [ _1 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])) "./bufferevent_pair.c":129:3 -1
+     (nil))
+(insn 43 42 44 6 (set (reg:DI 5 di)
+        (reg/f:DI 82 [ _1 ])) "./bufferevent_pair.c":129:3 -1
+     (nil))
+(call_insn 44 43 45 6 (call (mem:QI (symbol_ref:DI ("bufferevent_free") [flags 0x41]  <function_decl 0x7f085ec6cb00 bufferevent_free>) [0 bufferevent_free S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":129:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 45 44 46 6 (set (reg:SI 93 [ _12 ])
+        (const_int -1 [0xffffffffffffffff])) "./bufferevent_pair.c":130:10 -1
+     (nil))
+(jump_insn 46 45 47 6 (set (pc)
+        (label_ref 97)) "./bufferevent_pair.c":130:10 -1
+     (nil)
+ -> 97)
+(barrier 47 46 48)
+(code_label 48 47 49 7 24 (nil) [1 uses])
+(note 49 48 50 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 7 (set (reg:SI 105)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -44 [0xffffffffffffffd4])) [21 options+0 S4 A32])) "./bufferevent_pair.c":133:14 -1
+     (nil))
+(insn 51 50 52 7 (parallel [
+            (set (reg:SI 83 [ _2 ])
+                (and:SI (reg:SI 105)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":133:14 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -44 [0xffffffffffffffd4])) [21 options+0 S4 A32])
+            (const_int 2 [0x2]))
+        (nil)))
+(insn 52 51 53 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":133:5 -1
+     (nil))
+(jump_insn 53 52 54 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "./bufferevent_pair.c":133:5 -1
+     (nil)
+ -> 61)
+(note 54 53 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 8 (set (reg/f:DI 106)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])) "./bufferevent_pair.c":135:3 -1
+     (nil))
+(insn 56 55 57 8 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (plus:DI (reg/f:DI 106)
+                (const_int 448 [0x1c0])) [15 bufev1_23->bev.lock+0 S8 A64])) "./bufferevent_pair.c":135:3 -1
+     (nil))
+(insn 57 56 58 8 (set (reg/f:DI 85 [ _4 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])) "./bufferevent_pair.c":135:3 -1
+     (nil))
+(insn 58 57 59 8 (set (reg:DI 4 si)
+        (reg/f:DI 84 [ _3 ])) "./bufferevent_pair.c":135:3 -1
+     (nil))
+(insn 59 58 60 8 (set (reg:DI 5 di)
+        (reg/f:DI 85 [ _4 ])) "./bufferevent_pair.c":135:3 -1
+     (nil))
+(call_insn 60 59 61 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("bufferevent_enable_locking_") [flags 0x41]  <function_decl 0x7f085ed59b00 bufferevent_enable_locking_>) [0 bufferevent_enable_locking_ S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":135:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(code_label 61 60 62 9 25 (nil) [1 uses])
+(note 62 61 63 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 9 (set (reg/f:DI 107)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])) "./bufferevent_pair.c":138:18 -1
+     (nil))
+(insn 64 63 65 9 (set (reg/f:DI 108)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])) "./bufferevent_pair.c":138:18 -1
+     (nil))
+(insn 65 64 66 9 (set (mem/f:DI (plus:DI (reg/f:DI 107)
+                (const_int 520 [0x208])) [43 bufev1_23->partner+0 S8 A64])
+        (reg/f:DI 108)) "./bufferevent_pair.c":138:18 -1
+     (nil))
+(insn 66 65 67 9 (set (reg/f:DI 109)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])) "./bufferevent_pair.c":139:18 -1
+     (nil))
+(insn 67 66 68 9 (set (reg/f:DI 110)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])) "./bufferevent_pair.c":139:18 -1
+     (nil))
+(insn 68 67 69 9 (set (mem/f:DI (plus:DI (reg/f:DI 109)
+                (const_int 520 [0x208])) [43 bufev2_25->partner+0 S8 A64])
+        (reg/f:DI 110)) "./bufferevent_pair.c":139:18 -1
+     (nil))
+(insn 69 68 70 9 (set (reg/f:DI 111)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])) "./bufferevent_pair.c":141:2 -1
+     (nil))
+(insn 70 69 71 9 (set (reg/f:DI 86 [ _5 ])
+        (mem/f:DI (plus:DI (reg/f:DI 111)
+                (const_int 256 [0x100])) [29 bufev1_23->bev.bev.input+0 S8 A64])) "./bufferevent_pair.c":141:2 -1
+     (nil))
+(insn 71 70 72 9 (set (reg:SI 4 si)
+        (const_int 0 [0])) "./bufferevent_pair.c":141:2 -1
+     (nil))
+(insn 72 71 73 9 (set (reg:DI 5 di)
+        (reg/f:DI 86 [ _5 ])) "./bufferevent_pair.c":141:2 -1
+     (nil))
+(call_insn 73 72 74 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_freeze") [flags 0x41]  <function_decl 0x7f085ec66e00 evbuffer_freeze>) [0 evbuffer_freeze S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":141:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 74 73 75 9 (set (reg/f:DI 112)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])) "./bufferevent_pair.c":142:2 -1
+     (nil))
+(insn 75 74 76 9 (set (reg/f:DI 87 [ _6 ])
+        (mem/f:DI (plus:DI (reg/f:DI 112)
+                (const_int 264 [0x108])) [29 bufev1_23->bev.bev.output+0 S8 A64])) "./bufferevent_pair.c":142:2 -1
+     (nil))
+(insn 76 75 77 9 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "./bufferevent_pair.c":142:2 -1
+     (nil))
+(insn 77 76 78 9 (set (reg:DI 5 di)
+        (reg/f:DI 87 [ _6 ])) "./bufferevent_pair.c":142:2 -1
+     (nil))
+(call_insn 78 77 79 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_freeze") [flags 0x41]  <function_decl 0x7f085ec66e00 evbuffer_freeze>) [0 evbuffer_freeze S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":142:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 79 78 80 9 (set (reg/f:DI 113)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])) "./bufferevent_pair.c":143:2 -1
+     (nil))
+(insn 80 79 81 9 (set (reg/f:DI 88 [ _7 ])
+        (mem/f:DI (plus:DI (reg/f:DI 113)
+                (const_int 256 [0x100])) [29 bufev2_25->bev.bev.input+0 S8 A64])) "./bufferevent_pair.c":143:2 -1
+     (nil))
+(insn 81 80 82 9 (set (reg:SI 4 si)
+        (const_int 0 [0])) "./bufferevent_pair.c":143:2 -1
+     (nil))
+(insn 82 81 83 9 (set (reg:DI 5 di)
+        (reg/f:DI 88 [ _7 ])) "./bufferevent_pair.c":143:2 -1
+     (nil))
+(call_insn 83 82 84 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_freeze") [flags 0x41]  <function_decl 0x7f085ec66e00 evbuffer_freeze>) [0 evbuffer_freeze S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":143:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 84 83 85 9 (set (reg/f:DI 114)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])) "./bufferevent_pair.c":144:2 -1
+     (nil))
+(insn 85 84 86 9 (set (reg/f:DI 89 [ _8 ])
+        (mem/f:DI (plus:DI (reg/f:DI 114)
+                (const_int 264 [0x108])) [29 bufev2_25->bev.bev.output+0 S8 A64])) "./bufferevent_pair.c":144:2 -1
+     (nil))
+(insn 86 85 87 9 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "./bufferevent_pair.c":144:2 -1
+     (nil))
+(insn 87 86 88 9 (set (reg:DI 5 di)
+        (reg/f:DI 89 [ _8 ])) "./bufferevent_pair.c":144:2 -1
+     (nil))
+(call_insn 88 87 89 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_freeze") [flags 0x41]  <function_decl 0x7f085ec66e00 evbuffer_freeze>) [0 evbuffer_freeze S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":144:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 89 88 90 9 (set (reg/f:DI 90 [ _9 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bufev1+0 S8 A64])) "./bufferevent_pair.c":146:12 -1
+     (nil))
+(insn 90 89 91 9 (set (reg/f:DI 115)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [52 pair+0 S8 A64])) "./bufferevent_pair.c":146:10 -1
+     (nil))
+(insn 91 90 92 9 (set (mem/f:DI (reg/f:DI 115) [42 *pair_33(D)+0 S8 A64])
+        (reg/f:DI 90 [ _9 ])) "./bufferevent_pair.c":146:10 -1
+     (nil))
+(insn 92 91 93 9 (set (reg/f:DI 116)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [52 pair+0 S8 A64])) "./bufferevent_pair.c":147:6 -1
+     (nil))
+(insn 93 92 94 9 (parallel [
+            (set (reg/f:DI 91 [ _10 ])
+                (plus:DI (reg/f:DI 116)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":147:6 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -56 [0xffffffffffffffc8])) [52 pair+0 S8 A64])
+            (const_int 8 [0x8]))
+        (nil)))
+(insn 94 93 95 9 (set (reg/f:DI 92 [ _11 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bufev2+0 S8 A64])) "./bufferevent_pair.c":147:12 -1
+     (nil))
+(insn 95 94 96 9 (set (mem/f:DI (reg/f:DI 91 [ _10 ]) [42 *_10+0 S8 A64])
+        (reg/f:DI 92 [ _11 ])) "./bufferevent_pair.c":147:10 -1
+     (nil))
+(insn 96 95 97 9 (set (reg:SI 93 [ _12 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":149:9 -1
+     (nil))
+(code_label 97 96 98 10 23 (nil) [2 uses])
+(note 98 97 99 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 99 98 103 10 (set (reg:SI 94 [ <retval> ])
+        (reg:SI 93 [ _12 ])) "./bufferevent_pair.c":150:1 -1
+     (nil))
+(insn 103 99 104 10 (set (reg/i:SI 0 ax)
+        (reg:SI 94 [ <retval> ])) "./bufferevent_pair.c":150:1 -1
+     (nil))
+(insn 104 103 0 10 (use (reg/i:SI 0 ax)) "./bufferevent_pair.c":150:1 -1
+     (nil))
+
+;; Function be_pair_transfer (be_pair_transfer, funcdef_no=13, decl_uid=5703, cgraph_uid=14, symbol_order=13)
+
+Partition 1: size 8 align 8
+	dst_size_42
+Partition 0: size 8 align 8
+	n_28
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 6->7 to 20 failed.
+Merging block 21 into block 20...
+Merged blocks 20 and 21.
+Merged 20 and 21 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 6->7 to 20 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])
+        (reg:DI 5 di [ src ])) "./bufferevent_pair.c":155:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])
+        (reg:DI 4 si [ dst ])) "./bufferevent_pair.c":155:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [21 ignore_wm+0 S4 A32])
+        (reg:SI 1 dx [ ignore_wm ])) "./bufferevent_pair.c":155:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg/f:DI 109)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])) "./bufferevent_pair.c":159:2 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 109)
+                (const_int 264 [0x108])) [29 src_34(D)->output+0 S8 A64])) "./bufferevent_pair.c":159:2 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "./bufferevent_pair.c":159:2 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 5 di)
+        (reg/f:DI 82 [ _1 ])) "./bufferevent_pair.c":159:2 -1
+     (nil))
+(call_insn 12 11 13 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_unfreeze") [flags 0x41]  <function_decl 0x7f085ec66f00 evbuffer_unfreeze>) [0 evbuffer_unfreeze S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":159:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 13 12 14 2 (set (reg/f:DI 110)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":160:2 -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (plus:DI (reg/f:DI 110)
+                (const_int 256 [0x100])) [29 dst_36(D)->input+0 S8 A64])) "./bufferevent_pair.c":160:2 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 4 si)
+        (const_int 0 [0])) "./bufferevent_pair.c":160:2 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 5 di)
+        (reg/f:DI 83 [ _2 ])) "./bufferevent_pair.c":160:2 -1
+     (nil))
+(call_insn 17 16 18 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_unfreeze") [flags 0x41]  <function_decl 0x7f085ec66f00 evbuffer_unfreeze>) [0 evbuffer_unfreeze S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":160:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 18 17 19 2 (set (reg/f:DI 111)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":162:18 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 111)
+                (const_int 280 [0x118])) [20 dst_36(D)->wm_read.high+0 S8 A64])) "./bufferevent_pair.c":162:18 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 84 [ _3 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":162:5 -1
+     (nil))
+(jump_insn 21 20 22 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 75)
+            (pc))) "./bufferevent_pair.c":162:5 -1
+     (nil)
+ -> 75)
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (set (reg/f:DI 112)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":163:37 -1
+     (nil))
+(insn 24 23 25 4 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (plus:DI (reg/f:DI 112)
+                (const_int 256 [0x100])) [29 dst_36(D)->input+0 S8 A64])) "./bufferevent_pair.c":163:37 -1
+     (nil))
+(insn 25 24 26 4 (set (reg:DI 5 di)
+        (reg/f:DI 85 [ _4 ])) "./bufferevent_pair.c":163:14 -1
+     (nil))
+(call_insn 26 25 27 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x7f085ec59700 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":163:14 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 27 26 28 4 (set (reg:DI 113)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":163:14 -1
+     (nil))
+(insn 28 27 29 4 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [20 dst_size+0 S8 A64])
+        (reg:DI 113)) "./bufferevent_pair.c":163:14 -1
+     (nil))
+(insn 29 28 30 4 (set (reg/f:DI 114)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":164:30 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:DI 86 [ _5 ])
+        (mem:DI (plus:DI (reg/f:DI 114)
+                (const_int 280 [0x118])) [20 dst_36(D)->wm_read.high+0 S8 A64])) "./bufferevent_pair.c":164:30 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [20 dst_size+0 S8 A64])
+            (reg:DI 86 [ _5 ]))) "./bufferevent_pair.c":164:6 -1
+     (nil))
+(jump_insn 32 31 33 4 (set (pc)
+        (if_then_else (geu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 51)
+            (pc))) "./bufferevent_pair.c":164:6 -1
+     (nil)
+ -> 51)
+(note 33 32 34 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 5 (set (reg/f:DI 115)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":165:20 -1
+     (nil))
+(insn 35 34 38 5 (set (reg:DI 87 [ _6 ])
+        (mem:DI (plus:DI (reg/f:DI 115)
+                (const_int 280 [0x118])) [20 dst_36(D)->wm_read.high+0 S8 A64])) "./bufferevent_pair.c":165:20 -1
+     (nil))
+(insn 38 35 39 5 (parallel [
+            (set (reg:DI 117)
+                (minus:DI (reg:DI 87 [ _6 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [20 dst_size+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":165:6 -1
+     (nil))
+(insn 39 38 40 5 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [20 n+0 S8 A64])
+        (reg:DI 117)) "./bufferevent_pair.c":165:6 -1
+     (nil))
+(insn 40 39 41 5 (set (reg/f:DI 118)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":166:4 -1
+     (nil))
+(insn 41 40 42 5 (set (reg/f:DI 88 [ _7 ])
+        (mem/f:DI (plus:DI (reg/f:DI 118)
+                (const_int 256 [0x100])) [29 dst_36(D)->input+0 S8 A64])) "./bufferevent_pair.c":166:4 -1
+     (nil))
+(insn 42 41 43 5 (set (reg/f:DI 119)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])) "./bufferevent_pair.c":166:4 -1
+     (nil))
+(insn 43 42 44 5 (set (reg/f:DI 89 [ _8 ])
+        (mem/f:DI (plus:DI (reg/f:DI 119)
+                (const_int 264 [0x108])) [29 src_34(D)->output+0 S8 A64])) "./bufferevent_pair.c":166:4 -1
+     (nil))
+(insn 44 43 45 5 (set (reg:DI 120)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [20 n+0 S8 A64])) "./bufferevent_pair.c":166:4 -1
+     (nil))
+(insn 45 44 46 5 (set (reg:DI 1 dx)
+        (reg:DI 120)) "./bufferevent_pair.c":166:4 -1
+     (nil))
+(insn 46 45 47 5 (set (reg:DI 4 si)
+        (reg/f:DI 88 [ _7 ])) "./bufferevent_pair.c":166:4 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:DI 5 di)
+        (reg/f:DI 89 [ _8 ])) "./bufferevent_pair.c":166:4 -1
+     (nil))
+(call_insn 48 47 49 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_remove_buffer") [flags 0x41]  <function_decl 0x7f085ec5d000 evbuffer_remove_buffer>) [0 evbuffer_remove_buffer S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":166:4 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(jump_insn 49 48 50 5 (set (pc)
+        (label_ref 90)) -1
+     (nil)
+ -> 90)
+(barrier 50 49 51)
+(code_label 51 50 52 6 28 (nil) [1 uses])
+(note 52 51 53 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -36 [0xffffffffffffffdc])) [21 ignore_wm+0 S4 A32])
+            (const_int 0 [0]))) "./bufferevent_pair.c":168:7 -1
+     (nil))
+(jump_insn 54 53 55 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 58)
+            (pc))) "./bufferevent_pair.c":168:7 -1
+     (nil)
+ -> 58)
+(note 55 54 56 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 56 55 57 7 (set (pc)
+        (label_ref 161)) "./bufferevent_pair.c":169:5 -1
+     (nil)
+ -> 161)
+(barrier 57 56 58)
+(code_label 58 57 59 8 30 (nil) [1 uses])
+(note 59 58 60 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 8 (set (reg/f:DI 121)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])) "./bufferevent_pair.c":170:31 -1
+     (nil))
+(insn 61 60 62 8 (set (reg/f:DI 90 [ _9 ])
+        (mem/f:DI (plus:DI (reg/f:DI 121)
+                (const_int 264 [0x108])) [29 src_34(D)->output+0 S8 A64])) "./bufferevent_pair.c":170:31 -1
+     (nil))
+(insn 62 61 63 8 (set (reg:DI 5 di)
+        (reg/f:DI 90 [ _9 ])) "./bufferevent_pair.c":170:8 -1
+     (nil))
+(call_insn 63 62 64 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x7f085ec59700 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":170:8 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 64 63 65 8 (set (reg:DI 122)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":170:8 -1
+     (nil))
+(insn 65 64 66 8 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [20 n+0 S8 A64])
+        (reg:DI 122)) "./bufferevent_pair.c":170:8 -1
+     (nil))
+(insn 66 65 67 8 (set (reg/f:DI 123)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])) "./bufferevent_pair.c":171:4 -1
+     (nil))
+(insn 67 66 68 8 (set (reg/f:DI 91 [ _10 ])
+        (mem/f:DI (plus:DI (reg/f:DI 123)
+                (const_int 264 [0x108])) [29 src_34(D)->output+0 S8 A64])) "./bufferevent_pair.c":171:4 -1
+     (nil))
+(insn 68 67 69 8 (set (reg/f:DI 124)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":171:4 -1
+     (nil))
+(insn 69 68 70 8 (set (reg/f:DI 92 [ _11 ])
+        (mem/f:DI (plus:DI (reg/f:DI 124)
+                (const_int 256 [0x100])) [29 dst_36(D)->input+0 S8 A64])) "./bufferevent_pair.c":171:4 -1
+     (nil))
+(insn 70 69 71 8 (set (reg:DI 4 si)
+        (reg/f:DI 91 [ _10 ])) "./bufferevent_pair.c":171:4 -1
+     (nil))
+(insn 71 70 72 8 (set (reg:DI 5 di)
+        (reg/f:DI 92 [ _11 ])) "./bufferevent_pair.c":171:4 -1
+     (nil))
+(call_insn 72 71 73 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_add_buffer") [flags 0x41]  <function_decl 0x7f085ec5d200 evbuffer_add_buffer>) [0 evbuffer_add_buffer S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":171:4 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(jump_insn 73 72 74 8 (set (pc)
+        (label_ref 90)) "./bufferevent_pair.c":171:4 -1
+     (nil)
+ -> 90)
+(barrier 74 73 75)
+(code_label 75 74 76 9 27 (nil) [1 uses])
+(note 76 75 77 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 77 76 78 9 (set (reg/f:DI 125)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])) "./bufferevent_pair.c":174:30 -1
+     (nil))
+(insn 78 77 79 9 (set (reg/f:DI 93 [ _12 ])
+        (mem/f:DI (plus:DI (reg/f:DI 125)
+                (const_int 264 [0x108])) [29 src_34(D)->output+0 S8 A64])) "./bufferevent_pair.c":174:30 -1
+     (nil))
+(insn 79 78 80 9 (set (reg:DI 5 di)
+        (reg/f:DI 93 [ _12 ])) "./bufferevent_pair.c":174:7 -1
+     (nil))
+(call_insn 80 79 81 9 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x7f085ec59700 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":174:7 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 81 80 82 9 (set (reg:DI 126)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":174:7 -1
+     (nil))
+(insn 82 81 83 9 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [20 n+0 S8 A64])
+        (reg:DI 126)) "./bufferevent_pair.c":174:7 -1
+     (nil))
+(insn 83 82 84 9 (set (reg/f:DI 127)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])) "./bufferevent_pair.c":175:3 -1
+     (nil))
+(insn 84 83 85 9 (set (reg/f:DI 94 [ _13 ])
+        (mem/f:DI (plus:DI (reg/f:DI 127)
+                (const_int 264 [0x108])) [29 src_34(D)->output+0 S8 A64])) "./bufferevent_pair.c":175:3 -1
+     (nil))
+(insn 85 84 86 9 (set (reg/f:DI 128)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":175:3 -1
+     (nil))
+(insn 86 85 87 9 (set (reg/f:DI 95 [ _14 ])
+        (mem/f:DI (plus:DI (reg/f:DI 128)
+                (const_int 256 [0x100])) [29 dst_36(D)->input+0 S8 A64])) "./bufferevent_pair.c":175:3 -1
+     (nil))
+(insn 87 86 88 9 (set (reg:DI 4 si)
+        (reg/f:DI 94 [ _13 ])) "./bufferevent_pair.c":175:3 -1
+     (nil))
+(insn 88 87 89 9 (set (reg:DI 5 di)
+        (reg/f:DI 95 [ _14 ])) "./bufferevent_pair.c":175:3 -1
+     (nil))
+(call_insn 89 88 90 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_add_buffer") [flags 0x41]  <function_decl 0x7f085ec5d200 evbuffer_add_buffer>) [0 evbuffer_add_buffer S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":175:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(code_label 90 89 91 10 29 (nil) [2 uses])
+(note 91 90 92 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 92 91 93 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [20 n+0 S8 A64])
+            (const_int 0 [0]))) "./bufferevent_pair.c":178:5 -1
+     (nil))
+(jump_insn 93 92 94 10 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 149)
+            (pc))) "./bufferevent_pair.c":178:5 -1
+     (nil)
+ -> 149)
+(note 94 93 95 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 96 11 (set (reg/f:DI 129)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(insn 96 95 97 11 (set (reg:DI 96 [ _15 ])
+        (mem:DI (plus:DI (reg/f:DI 129)
+                (const_int 336 [0x150])) [20 dst_36(D)->timeout_read.tv_sec+0 S8 A64])) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(insn 97 96 98 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 96 [ _15 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(jump_insn 98 97 99 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 104)
+            (pc))) "./bufferevent_pair.c":179:3 -1
+     (nil)
+ -> 104)
+(note 99 98 100 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 100 99 101 12 (set (reg/f:DI 130)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(insn 101 100 102 12 (set (reg:DI 97 [ _16 ])
+        (mem:DI (plus:DI (reg/f:DI 130)
+                (const_int 344 [0x158])) [20 dst_36(D)->timeout_read.tv_usec+0 S8 A64])) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(insn 102 101 103 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 97 [ _16 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(jump_insn 103 102 104 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 113)
+            (pc))) "./bufferevent_pair.c":179:3 -1
+     (nil)
+ -> 113)
+(code_label 104 103 105 13 33 (nil) [1 uses])
+(note 105 104 106 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 106 105 107 13 (set (reg/f:DI 131)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(insn 107 106 108 13 (parallel [
+            (set (reg/f:DI 98 [ _17 ])
+                (plus:DI (reg/f:DI 131)
+                    (const_int 336 [0x150])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":179:3 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])
+            (const_int 336 [0x150]))
+        (nil)))
+(insn 108 107 109 13 (set (reg/f:DI 132)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(insn 109 108 110 13 (parallel [
+            (set (reg/f:DI 99 [ _18 ])
+                (plus:DI (reg/f:DI 132)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":179:3 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])
+            (const_int 16 [0x10]))
+        (nil)))
+(insn 110 109 111 13 (set (reg:DI 4 si)
+        (reg/f:DI 98 [ _17 ])) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(insn 111 110 112 13 (set (reg:DI 5 di)
+        (reg/f:DI 99 [ _18 ])) "./bufferevent_pair.c":179:3 -1
+     (nil))
+(call_insn 112 111 113 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("event_add") [flags 0x41]  <function_decl 0x7f085ecc5900 event_add>) [0 event_add S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":179:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(code_label 113 112 114 14 34 (nil) [1 uses])
+(note 114 113 115 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 116 14 (set (reg/f:DI 133)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":181:30 -1
+     (nil))
+(insn 116 115 117 14 (set (reg/f:DI 100 [ _19 ])
+        (mem/f:DI (plus:DI (reg/f:DI 133)
+                (const_int 264 [0x108])) [29 dst_36(D)->output+0 S8 A64])) "./bufferevent_pair.c":181:30 -1
+     (nil))
+(insn 117 116 118 14 (set (reg:DI 5 di)
+        (reg/f:DI 100 [ _19 ])) "./bufferevent_pair.c":181:7 -1
+     (nil))
+(call_insn 118 117 119 14 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x7f085ec59700 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":181:7 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 119 118 120 14 (set (reg:DI 101 [ _20 ])
+        (reg:DI 0 ax)) "./bufferevent_pair.c":181:7 -1
+     (nil))
+(insn 120 119 121 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 101 [ _20 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":181:6 -1
+     (nil))
+(jump_insn 121 120 122 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 143)
+            (pc))) "./bufferevent_pair.c":181:6 -1
+     (nil)
+ -> 143)
+(note 122 121 123 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 123 122 124 15 (set (reg/f:DI 134)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(insn 124 123 125 15 (set (reg:DI 102 [ _21 ])
+        (mem:DI (plus:DI (reg/f:DI 134)
+                (const_int 352 [0x160])) [20 dst_36(D)->timeout_write.tv_sec+0 S8 A64])) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(insn 125 124 126 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 102 [ _21 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(jump_insn 126 125 127 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 132)
+            (pc))) "./bufferevent_pair.c":182:4 -1
+     (nil)
+ -> 132)
+(note 127 126 128 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 128 127 129 16 (set (reg/f:DI 135)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(insn 129 128 130 16 (set (reg:DI 103 [ _22 ])
+        (mem:DI (plus:DI (reg/f:DI 135)
+                (const_int 360 [0x168])) [20 dst_36(D)->timeout_write.tv_usec+0 S8 A64])) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(insn 130 129 131 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 103 [ _22 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(jump_insn 131 130 132 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 149)
+            (pc))) "./bufferevent_pair.c":182:4 -1
+     (nil)
+ -> 149)
+(code_label 132 131 133 17 36 (nil) [1 uses])
+(note 133 132 134 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 134 133 135 17 (set (reg/f:DI 136)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(insn 135 134 136 17 (parallel [
+            (set (reg/f:DI 104 [ _23 ])
+                (plus:DI (reg/f:DI 136)
+                    (const_int 352 [0x160])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":182:4 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])
+            (const_int 352 [0x160]))
+        (nil)))
+(insn 136 135 137 17 (set (reg/f:DI 137)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(insn 137 136 138 17 (parallel [
+            (set (reg/f:DI 105 [ _24 ])
+                (plus:DI (reg/f:DI 137)
+                    (const_int 136 [0x88])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":182:4 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])
+            (const_int 136 [0x88]))
+        (nil)))
+(insn 138 137 139 17 (set (reg:DI 4 si)
+        (reg/f:DI 104 [ _23 ])) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(insn 139 138 140 17 (set (reg:DI 5 di)
+        (reg/f:DI 105 [ _24 ])) "./bufferevent_pair.c":182:4 -1
+     (nil))
+(call_insn 140 139 141 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("event_add") [flags 0x41]  <function_decl 0x7f085ecc5900 event_add>) [0 event_add S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":182:4 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(jump_insn 141 140 142 17 (set (pc)
+        (label_ref 149)) "./bufferevent_pair.c":182:4 -1
+     (nil)
+ -> 149)
+(barrier 142 141 143)
+(code_label 143 142 144 18 35 (nil) [1 uses])
+(note 144 143 145 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 145 144 146 18 (set (reg/f:DI 138)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":184:4 -1
+     (nil))
+(insn 146 145 147 18 (parallel [
+            (set (reg/f:DI 106 [ _25 ])
+                (plus:DI (reg/f:DI 138)
+                    (const_int 136 [0x88])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":184:4 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])
+            (const_int 136 [0x88]))
+        (nil)))
+(insn 147 146 148 18 (set (reg:DI 5 di)
+        (reg/f:DI 106 [ _25 ])) "./bufferevent_pair.c":184:4 -1
+     (nil))
+(call_insn 148 147 149 18 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("event_del") [flags 0x41]  <function_decl 0x7f085ecc5b00 event_del>) [0 event_del S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":184:4 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(code_label 149 148 150 19 32 (nil) [3 uses])
+(note 150 149 151 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 151 150 152 19 (set (reg:DI 139)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":187:2 -1
+     (nil))
+(insn 152 151 153 19 (set (reg:SI 1 dx)
+        (const_int 0 [0])) "./bufferevent_pair.c":187:2 -1
+     (nil))
+(insn 153 152 154 19 (set (reg:SI 4 si)
+        (const_int 2 [0x2])) "./bufferevent_pair.c":187:2 -1
+     (nil))
+(insn 154 153 155 19 (set (reg:DI 5 di)
+        (reg:DI 139)) "./bufferevent_pair.c":187:2 -1
+     (nil))
+(call_insn 155 154 156 19 (call (mem:QI (symbol_ref:DI ("bufferevent_trigger_nolock_") [flags 0x3]  <function_decl 0x7f085ed66100 bufferevent_trigger_nolock_>) [0 bufferevent_trigger_nolock_ S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":187:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 156 155 157 19 (set (reg:DI 140)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])) "./bufferevent_pair.c":188:2 -1
+     (nil))
+(insn 157 156 158 19 (set (reg:SI 1 dx)
+        (const_int 0 [0])) "./bufferevent_pair.c":188:2 -1
+     (nil))
+(insn 158 157 159 19 (set (reg:SI 4 si)
+        (const_int 4 [0x4])) "./bufferevent_pair.c":188:2 -1
+     (nil))
+(insn 159 158 160 19 (set (reg:DI 5 di)
+        (reg:DI 140)) "./bufferevent_pair.c":188:2 -1
+     (nil))
+(call_insn 160 159 161 19 (call (mem:QI (symbol_ref:DI ("bufferevent_trigger_nolock_") [flags 0x3]  <function_decl 0x7f085ed66100 bufferevent_trigger_nolock_>) [0 bufferevent_trigger_nolock_ S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":188:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(code_label 161 160 162 20 31 ("done") [1 uses])
+(note 162 161 163 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 163 162 164 20 (set (reg/f:DI 141)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 src+0 S8 A64])) "./bufferevent_pair.c":190:2 -1
+     (nil))
+(insn 164 163 165 20 (set (reg/f:DI 107 [ _26 ])
+        (mem/f:DI (plus:DI (reg/f:DI 141)
+                (const_int 264 [0x108])) [29 src_34(D)->output+0 S8 A64])) "./bufferevent_pair.c":190:2 -1
+     (nil))
+(insn 165 164 166 20 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "./bufferevent_pair.c":190:2 -1
+     (nil))
+(insn 166 165 167 20 (set (reg:DI 5 di)
+        (reg/f:DI 107 [ _26 ])) "./bufferevent_pair.c":190:2 -1
+     (nil))
+(call_insn 167 166 168 20 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_freeze") [flags 0x41]  <function_decl 0x7f085ec66e00 evbuffer_freeze>) [0 evbuffer_freeze S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":190:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 168 167 169 20 (set (reg/f:DI 142)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [42 dst+0 S8 A64])) "./bufferevent_pair.c":191:2 -1
+     (nil))
+(insn 169 168 170 20 (set (reg/f:DI 108 [ _27 ])
+        (mem/f:DI (plus:DI (reg/f:DI 142)
+                (const_int 256 [0x100])) [29 dst_36(D)->input+0 S8 A64])) "./bufferevent_pair.c":191:2 -1
+     (nil))
+(insn 170 169 171 20 (set (reg:SI 4 si)
+        (const_int 0 [0])) "./bufferevent_pair.c":191:2 -1
+     (nil))
+(insn 171 170 172 20 (set (reg:DI 5 di)
+        (reg/f:DI 108 [ _27 ])) "./bufferevent_pair.c":191:2 -1
+     (nil))
+(call_insn 172 171 0 20 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_freeze") [flags 0x41]  <function_decl 0x7f085ec66e00 evbuffer_freeze>) [0 evbuffer_freeze S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":191:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+
+;; Function be_pair_wants_to_talk (be_pair_wants_to_talk, funcdef_no=14, decl_uid=5714, cgraph_uid=15, symbol_order=14)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 35 from 9 to 10.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Removing jump 45.
+Merging block 11 into block 10...
+Merged blocks 10 and 11.
+Merged 10 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 src+0 S8 A64])
+        (reg:DI 5 di [ src ])) "./bufferevent_pair.c":197:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 dst+0 S8 A64])
+        (reg:DI 4 si [ dst ])) "./bufferevent_pair.c":197:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 src+0 S8 A64])) "./bufferevent_pair.c":198:23 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:HI 82 [ _1 ])
+        (mem:HI (plus:DI (reg/f:DI 93)
+                (const_int 368 [0x170])) [10 src_14(D)->bev.bev.enabled+0 S2 A64])) "./bufferevent_pair.c":198:23 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 83 [ _2 ])
+        (sign_extend:SI (reg:HI 82 [ _1 ]))) "./bufferevent_pair.c":198:33 -1
+     (nil))
+(insn 10 9 11 2 (parallel [
+            (set (reg:SI 84 [ _3 ])
+                (and:SI (reg:SI 83 [ _2 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":198:33 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _3 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":200:31 -1
+     (nil))
+(jump_insn 12 11 13 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) "./bufferevent_pair.c":200:31 -1
+     (nil)
+ -> 37)
+(note 13 12 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 4 (set (reg/f:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 dst+0 S8 A64])) "./bufferevent_pair.c":199:20 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:HI 85 [ _4 ])
+        (mem:HI (plus:DI (reg/f:DI 94)
+                (const_int 368 [0x170])) [10 dst_15(D)->bev.bev.enabled+0 S2 A64])) "./bufferevent_pair.c":199:20 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 86 [ _5 ])
+        (sign_extend:SI (reg:HI 85 [ _4 ]))) "./bufferevent_pair.c":199:30 -1
+     (nil))
+(insn 17 16 18 4 (parallel [
+            (set (reg:SI 87 [ _6 ])
+                (and:SI (reg:SI 86 [ _5 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":199:30 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _6 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":198:45 -1
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) "./bufferevent_pair.c":198:45 -1
+     (nil)
+ -> 37)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg/f:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 dst+0 S8 A64])) "./bufferevent_pair.c":200:15 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:HI 88 [ _7 ])
+        (mem:HI (plus:DI (reg/f:DI 95)
+                (const_int 388 [0x184])) [10 dst_15(D)->bev.read_suspended+0 S2 A32])) "./bufferevent_pair.c":200:15 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 88 [ _7 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":199:41 -1
+     (nil))
+(jump_insn 24 23 25 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) "./bufferevent_pair.c":199:41 -1
+     (nil)
+ -> 37)
+(note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 6 (set (reg/f:DI 96)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 src+0 S8 A64])) "./bufferevent_pair.c":201:39 -1
+     (nil))
+(insn 27 26 28 6 (set (reg/f:DI 89 [ _8 ])
+        (mem/f:DI (plus:DI (reg/f:DI 96)
+                (const_int 264 [0x108])) [29 src_14(D)->bev.bev.output+0 S8 A64])) "./bufferevent_pair.c":201:39 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:DI 5 di)
+        (reg/f:DI 89 [ _8 ])) "./bufferevent_pair.c":201:6 -1
+     (nil))
+(call_insn 29 28 30 6 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x7f085ec59700 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":201:6 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 30 29 31 6 (set (reg:DI 90 [ _9 ])
+        (reg:DI 0 ax)) "./bufferevent_pair.c":201:6 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 90 [ _9 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":200:31 -1
+     (nil))
+(jump_insn 32 31 33 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) "./bufferevent_pair.c":200:31 -1
+     (nil)
+ -> 37)
+(note 33 32 34 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 7 (set (reg:SI 91 [ iftmp.2_10 ])
+        (const_int 1 [0x1])) "./bufferevent_pair.c":200:31 -1
+     (nil))
+(jump_insn 35 34 36 7 (set (pc)
+        (label_ref:DI 42)) "./bufferevent_pair.c":200:31 807 {jump}
+     (nil)
+ -> 42)
+(barrier 36 35 37)
+(code_label 37 36 38 8 39 (nil) [4 uses])
+(note 38 37 39 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 42 8 (set (reg:SI 91 [ iftmp.2_10 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":200:31 -1
+     (nil))
+(code_label 42 39 43 10 41 (nil) [1 uses])
+(note 43 42 44 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 48 10 (set (reg:SI 92 [ <retval> ])
+        (reg:SI 91 [ iftmp.2_10 ])) "./bufferevent_pair.c":200:31 -1
+     (nil))
+(insn 48 44 49 10 (set (reg/i:SI 0 ax)
+        (reg:SI 92 [ <retval> ])) "./bufferevent_pair.c":202:1 -1
+     (nil))
+(insn 49 48 0 10 (use (reg/i:SI 0 ax)) "./bufferevent_pair.c":202:1 -1
+     (nil))
+
+;; Function be_pair_outbuf_cb (be_pair_outbuf_cb, funcdef_no=15, decl_uid=5686, cgraph_uid=16, symbol_order=15)
+
+Partition 1: size 8 align 8
+	partner_12
+Partition 0: size 8 align 8
+	bev_pair_10
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 8 into block 7...
+Merged blocks 7 and 8.
+Merged 7 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [29 outbuf+0 S8 A64])
+        (reg:DI 5 di [ outbuf ])) "./bufferevent_pair.c":207:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [53 info+0 S8 A64])
+        (reg:DI 4 si [ info ])) "./bufferevent_pair.c":207:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [15 arg+0 S8 A64])
+        (reg:DI 1 dx [ arg ])) "./bufferevent_pair.c":207:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [15 arg+0 S8 A64])) "./bufferevent_pair.c":208:27 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_pair+0 S8 A64])
+        (reg/f:DI 89)) "./bufferevent_pair.c":208:27 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_pair+0 S8 A64])) "./bufferevent_pair.c":209:27 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 91)
+        (mem/f:DI (plus:DI (reg/f:DI 90)
+                (const_int 520 [0x208])) [43 bev_pair_10->partner+0 S8 A64])) "./bufferevent_pair.c":209:27 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])
+        (reg/f:DI 91)) "./bufferevent_pair.c":209:27 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_pair+0 S8 A64])) "./bufferevent_pair.c":211:2 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 5 di)
+        (reg/f:DI 82 [ _1 ])) "./bufferevent_pair.c":211:2 -1
+     (nil))
+(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("incref_and_lock") [flags 0x3]  <function_decl 0x7f085ed6a900 incref_and_lock>) [0 incref_and_lock S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":211:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 16 15 17 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [53 info+0 S8 A64])) "./bufferevent_pair.c":213:10 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 83 [ _2 ])
+        (mem:DI (plus:DI (reg/f:DI 92)
+                (const_int 8 [0x8])) [20 info_14(D)->n_added+0 S8 A64])) "./bufferevent_pair.c":213:10 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [53 info+0 S8 A64])) "./bufferevent_pair.c":213:26 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 93)
+                (const_int 16 [0x10])) [20 info_14(D)->n_deleted+0 S8 A64])) "./bufferevent_pair.c":213:26 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 83 [ _2 ])
+            (reg:DI 84 [ _3 ]))) "./bufferevent_pair.c":213:5 -1
+     (nil))
+(jump_insn 21 20 22 2 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 41)
+            (pc))) "./bufferevent_pair.c":213:5 -1
+     (nil)
+ -> 41)
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])
+            (const_int 0 [0]))) "./bufferevent_pair.c":213:38 -1
+     (nil))
+(jump_insn 24 23 25 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 41)
+            (pc))) "./bufferevent_pair.c":213:38 -1
+     (nil)
+ -> 41)
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 5 (set (reg:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])) "./bufferevent_pair.c":216:7 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_pair+0 S8 A64])) "./bufferevent_pair.c":216:7 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:DI 4 si)
+        (reg:DI 94)) "./bufferevent_pair.c":216:7 -1
+     (nil))
+(insn 29 28 30 5 (set (reg:DI 5 di)
+        (reg:DI 95)) "./bufferevent_pair.c":216:7 -1
+     (nil))
+(call_insn 30 29 31 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("be_pair_wants_to_talk") [flags 0x3]  <function_decl 0x7f085ed75600 be_pair_wants_to_talk>) [0 be_pair_wants_to_talk S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":216:7 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 31 30 32 5 (set (reg:SI 85 [ _4 ])
+        (reg:SI 0 ax)) "./bufferevent_pair.c":216:7 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _4 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":216:6 -1
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 41)
+            (pc))) "./bufferevent_pair.c":216:6 -1
+     (nil)
+ -> 41)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 6 (set (reg/f:DI 86 [ _5 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])) "./bufferevent_pair.c":217:4 -1
+     (nil))
+(insn 36 35 37 6 (set (reg/f:DI 87 [ _6 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_pair+0 S8 A64])) "./bufferevent_pair.c":217:4 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:SI 1 dx)
+        (const_int 0 [0])) "./bufferevent_pair.c":217:4 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:DI 4 si)
+        (reg/f:DI 86 [ _5 ])) "./bufferevent_pair.c":217:4 -1
+     (nil))
+(insn 39 38 40 6 (set (reg:DI 5 di)
+        (reg/f:DI 87 [ _6 ])) "./bufferevent_pair.c":217:4 -1
+     (nil))
+(call_insn 40 39 41 6 (call (mem:QI (symbol_ref:DI ("be_pair_transfer") [flags 0x3]  <function_decl 0x7f085ed75200 be_pair_transfer>) [0 be_pair_transfer S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":217:4 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(code_label 41 40 42 7 43 (nil) [3 uses])
+(note 42 41 43 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 7 (set (reg/f:DI 88 [ _7 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_pair+0 S8 A64])) "./bufferevent_pair.c":221:2 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:DI 5 di)
+        (reg/f:DI 88 [ _7 ])) "./bufferevent_pair.c":221:2 -1
+     (nil))
+(call_insn 45 44 0 7 (call (mem:QI (symbol_ref:DI ("decref_and_unlock") [flags 0x3]  <function_decl 0x7f085ed6ab00 decref_and_unlock>) [0 decref_and_unlock S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":221:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+
+;; Function be_pair_enable (be_pair_enable, funcdef_no=16, decl_uid=5725, cgraph_uid=17, symbol_order=16)
+
+Partition 1: size 8 align 8
+	partner_31
+Partition 0: size 8 align 8
+	bev_p_30
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 21 into block 20...
+Merged blocks 20 and 21.
+Merged 20 and 21 without moving.
+Removing jump 135.
+Merging block 22 into block 20...
+Merged blocks 20 and 22.
+Merged 20 and 22 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])
+        (reg:DI 5 di [ bufev ])) "./bufferevent_pair.c":226:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:SI 106)
+        (reg:SI 4 si [ events ])) "./bufferevent_pair.c":226:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg:HI 107)
+        (subreg:HI (reg:SI 106) 0)) "./bufferevent_pair.c":226:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [10 events+0 S2 A32])
+        (reg:HI 107)) "./bufferevent_pair.c":226:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:DI 108)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":227:35 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 5 di)
+        (reg:DI 108)) "./bufferevent_pair.c":227:35 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("upcast") [flags 0x3]  <function_decl 0x7f085ed6a700 upcast>) [0 upcast S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":227:35 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 12 11 13 2 (set (reg:DI 109)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":227:35 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_p+0 S8 A64])
+        (reg:DI 109)) "./bufferevent_pair.c":227:35 -1
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 110)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":228:27 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 111)
+        (mem/f:DI (plus:DI (reg/f:DI 110)
+                (const_int 520 [0x208])) [43 bev_p_30->partner+0 S8 A64])) "./bufferevent_pair.c":228:27 -1
+     (nil))
+(insn 16 15 17 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])
+        (reg/f:DI 111)) "./bufferevent_pair.c":228:27 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 112)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":230:2 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 5 di)
+        (reg:DI 112)) "./bufferevent_pair.c":230:2 -1
+     (nil))
+(call_insn 19 18 20 2 (call (mem:QI (symbol_ref:DI ("incref_and_lock") [flags 0x3]  <function_decl 0x7f085ed6a900 incref_and_lock>) [0 incref_and_lock S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":230:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 20 19 21 2 (set (reg:SI 82 [ _1 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -28 [0xffffffffffffffe4])) [10 events+0 S2 A32]))) "./bufferevent_pair.c":232:13 -1
+     (nil))
+(insn 21 20 22 2 (parallel [
+            (set (reg:SI 83 [ _2 ])
+                (and:SI (reg:SI 82 [ _1 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":232:13 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":232:5 -1
+     (nil))
+(jump_insn 23 22 24 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "./bufferevent_pair.c":232:5 -1
+     (nil)
+ -> 43)
+(note 24 23 25 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 4 (set (reg/f:DI 113)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 113)
+                (const_int 336 [0x150])) [20 bufev_28(D)->timeout_read.tv_sec+0 S8 A64])) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 84 [ _3 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(jump_insn 28 27 29 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) "./bufferevent_pair.c":233:3 -1
+     (nil)
+ -> 34)
+(note 29 28 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (reg/f:DI 114)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(insn 31 30 32 5 (set (reg:DI 85 [ _4 ])
+        (mem:DI (plus:DI (reg/f:DI 114)
+                (const_int 344 [0x158])) [20 bufev_28(D)->timeout_read.tv_usec+0 S8 A64])) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 85 [ _4 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "./bufferevent_pair.c":233:3 -1
+     (nil)
+ -> 43)
+(code_label 34 33 35 6 46 (nil) [1 uses])
+(note 35 34 36 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 37 6 (set (reg/f:DI 115)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(insn 37 36 38 6 (parallel [
+            (set (reg/f:DI 86 [ _5 ])
+                (plus:DI (reg/f:DI 115)
+                    (const_int 336 [0x150])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":233:3 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])
+            (const_int 336 [0x150]))
+        (nil)))
+(insn 38 37 39 6 (set (reg/f:DI 116)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(insn 39 38 40 6 (parallel [
+            (set (reg/f:DI 87 [ _6 ])
+                (plus:DI (reg/f:DI 116)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":233:3 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])
+            (const_int 16 [0x10]))
+        (nil)))
+(insn 40 39 41 6 (set (reg:DI 4 si)
+        (reg/f:DI 86 [ _5 ])) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:DI 5 di)
+        (reg/f:DI 87 [ _6 ])) "./bufferevent_pair.c":233:3 -1
+     (nil))
+(call_insn 42 41 43 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("event_add") [flags 0x41]  <function_decl 0x7f085ecc5900 event_add>) [0 event_add S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":233:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(code_label 43 42 44 7 45 (nil) [2 uses])
+(note 44 43 45 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 7 (set (reg:SI 88 [ _7 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -28 [0xffffffffffffffe4])) [10 events+0 S2 A32]))) "./bufferevent_pair.c":235:14 -1
+     (nil))
+(insn 46 45 47 7 (parallel [
+            (set (reg:SI 89 [ _8 ])
+                (and:SI (reg:SI 88 [ _7 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":235:14 -1
+     (nil))
+(insn 47 46 48 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 89 [ _8 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":235:5 -1
+     (nil))
+(jump_insn 48 47 49 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 76)
+            (pc))) "./bufferevent_pair.c":235:5 -1
+     (nil)
+ -> 76)
+(note 49 48 50 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 8 (set (reg/f:DI 117)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":235:54 -1
+     (nil))
+(insn 51 50 52 8 (set (reg/f:DI 90 [ _9 ])
+        (mem/f:DI (plus:DI (reg/f:DI 117)
+                (const_int 264 [0x108])) [29 bufev_28(D)->output+0 S8 A64])) "./bufferevent_pair.c":235:54 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:DI 5 di)
+        (reg/f:DI 90 [ _9 ])) "./bufferevent_pair.c":235:29 -1
+     (nil))
+(call_insn 53 52 54 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x7f085ec59700 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":235:29 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 54 53 55 8 (set (reg:DI 91 [ _10 ])
+        (reg:DI 0 ax)) "./bufferevent_pair.c":235:29 -1
+     (nil))
+(insn 55 54 56 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 91 [ _10 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":235:26 -1
+     (nil))
+(jump_insn 56 55 57 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 76)
+            (pc))) "./bufferevent_pair.c":235:26 -1
+     (nil)
+ -> 76)
+(note 57 56 58 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 58 57 59 9 (set (reg/f:DI 118)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(insn 59 58 60 9 (set (reg:DI 92 [ _11 ])
+        (mem:DI (plus:DI (reg/f:DI 118)
+                (const_int 352 [0x160])) [20 bufev_28(D)->timeout_write.tv_sec+0 S8 A64])) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(insn 60 59 61 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 92 [ _11 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(jump_insn 61 60 62 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 67)
+            (pc))) "./bufferevent_pair.c":236:3 -1
+     (nil)
+ -> 67)
+(note 62 61 63 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 10 (set (reg/f:DI 119)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(insn 64 63 65 10 (set (reg:DI 93 [ _12 ])
+        (mem:DI (plus:DI (reg/f:DI 119)
+                (const_int 360 [0x168])) [20 bufev_28(D)->timeout_write.tv_usec+0 S8 A64])) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(insn 65 64 66 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 93 [ _12 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(jump_insn 66 65 67 10 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 76)
+            (pc))) "./bufferevent_pair.c":236:3 -1
+     (nil)
+ -> 76)
+(code_label 67 66 68 11 48 (nil) [1 uses])
+(note 68 67 69 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 11 (set (reg/f:DI 120)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(insn 70 69 71 11 (parallel [
+            (set (reg/f:DI 94 [ _13 ])
+                (plus:DI (reg/f:DI 120)
+                    (const_int 352 [0x160])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":236:3 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])
+            (const_int 352 [0x160]))
+        (nil)))
+(insn 71 70 72 11 (set (reg/f:DI 121)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(insn 72 71 73 11 (parallel [
+            (set (reg/f:DI 95 [ _14 ])
+                (plus:DI (reg/f:DI 121)
+                    (const_int 136 [0x88])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":236:3 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])
+            (const_int 136 [0x88]))
+        (nil)))
+(insn 73 72 74 11 (set (reg:DI 4 si)
+        (reg/f:DI 94 [ _13 ])) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(insn 74 73 75 11 (set (reg:DI 5 di)
+        (reg/f:DI 95 [ _14 ])) "./bufferevent_pair.c":236:3 -1
+     (nil))
+(call_insn 75 74 76 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("event_add") [flags 0x41]  <function_decl 0x7f085ecc5900 event_add>) [0 event_add S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":236:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(code_label 76 75 77 12 47 (nil) [3 uses])
+(note 77 76 78 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 78 77 79 12 (set (reg:SI 96 [ _15 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -28 [0xffffffffffffffe4])) [10 events+0 S2 A32]))) "./bufferevent_pair.c":239:14 -1
+     (nil))
+(insn 79 78 80 12 (parallel [
+            (set (reg:SI 97 [ _16 ])
+                (and:SI (reg:SI 96 [ _15 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":239:14 -1
+     (nil))
+(insn 80 79 81 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 97 [ _16 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":239:5 -1
+     (nil))
+(jump_insn 81 80 82 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 101)
+            (pc))) "./bufferevent_pair.c":239:5 -1
+     (nil)
+ -> 101)
+(note 82 81 83 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 84 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])
+            (const_int 0 [0]))) "./bufferevent_pair.c":239:25 -1
+     (nil))
+(jump_insn 84 83 85 13 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 101)
+            (pc))) "./bufferevent_pair.c":239:25 -1
+     (nil)
+ -> 101)
+(note 85 84 86 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 14 (set (reg:DI 122)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":240:6 -1
+     (nil))
+(insn 87 86 88 14 (set (reg:DI 123)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])) "./bufferevent_pair.c":240:6 -1
+     (nil))
+(insn 88 87 89 14 (set (reg:DI 4 si)
+        (reg:DI 122)) "./bufferevent_pair.c":240:6 -1
+     (nil))
+(insn 89 88 90 14 (set (reg:DI 5 di)
+        (reg:DI 123)) "./bufferevent_pair.c":240:6 -1
+     (nil))
+(call_insn 90 89 91 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("be_pair_wants_to_talk") [flags 0x3]  <function_decl 0x7f085ed75600 be_pair_wants_to_talk>) [0 be_pair_wants_to_talk S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":240:6 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 91 90 92 14 (set (reg:SI 98 [ _17 ])
+        (reg:SI 0 ax)) "./bufferevent_pair.c":240:6 -1
+     (nil))
+(insn 92 91 93 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 98 [ _17 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":239:36 -1
+     (nil))
+(jump_insn 93 92 94 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 101)
+            (pc))) "./bufferevent_pair.c":239:36 -1
+     (nil)
+ -> 101)
+(note 94 93 95 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 96 15 (set (reg/f:DI 99 [ _18 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])) "./bufferevent_pair.c":241:3 -1
+     (nil))
+(insn 96 95 97 15 (set (reg:DI 124)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":241:3 -1
+     (nil))
+(insn 97 96 98 15 (set (reg:SI 1 dx)
+        (const_int 0 [0])) "./bufferevent_pair.c":241:3 -1
+     (nil))
+(insn 98 97 99 15 (set (reg:DI 4 si)
+        (reg:DI 124)) "./bufferevent_pair.c":241:3 -1
+     (nil))
+(insn 99 98 100 15 (set (reg:DI 5 di)
+        (reg/f:DI 99 [ _18 ])) "./bufferevent_pair.c":241:3 -1
+     (nil))
+(call_insn 100 99 101 15 (call (mem:QI (symbol_ref:DI ("be_pair_transfer") [flags 0x3]  <function_decl 0x7f085ed75200 be_pair_transfer>) [0 be_pair_transfer S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":241:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(code_label 101 100 102 16 49 (nil) [3 uses])
+(note 102 101 103 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 103 102 104 16 (set (reg:SI 100 [ _19 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -28 [0xffffffffffffffe4])) [10 events+0 S2 A32]))) "./bufferevent_pair.c":244:14 -1
+     (nil))
+(insn 104 103 105 16 (parallel [
+            (set (reg:SI 101 [ _20 ])
+                (and:SI (reg:SI 100 [ _19 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":244:14 -1
+     (nil))
+(insn 105 104 106 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 101 [ _20 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":244:5 -1
+     (nil))
+(jump_insn 106 105 107 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) "./bufferevent_pair.c":244:5 -1
+     (nil)
+ -> 126)
+(note 107 106 108 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 109 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])
+            (const_int 0 [0]))) "./bufferevent_pair.c":244:26 -1
+     (nil))
+(jump_insn 109 108 110 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) "./bufferevent_pair.c":244:26 -1
+     (nil)
+ -> 126)
+(note 110 109 111 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 111 110 112 18 (set (reg:DI 125)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])) "./bufferevent_pair.c":245:6 -1
+     (nil))
+(insn 112 111 113 18 (set (reg:DI 126)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":245:6 -1
+     (nil))
+(insn 113 112 114 18 (set (reg:DI 4 si)
+        (reg:DI 125)) "./bufferevent_pair.c":245:6 -1
+     (nil))
+(insn 114 113 115 18 (set (reg:DI 5 di)
+        (reg:DI 126)) "./bufferevent_pair.c":245:6 -1
+     (nil))
+(call_insn 115 114 116 18 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("be_pair_wants_to_talk") [flags 0x3]  <function_decl 0x7f085ed75600 be_pair_wants_to_talk>) [0 be_pair_wants_to_talk S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":245:6 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 116 115 117 18 (set (reg:SI 102 [ _21 ])
+        (reg:SI 0 ax)) "./bufferevent_pair.c":245:6 -1
+     (nil))
+(insn 117 116 118 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 102 [ _21 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":244:37 -1
+     (nil))
+(jump_insn 118 117 119 18 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) "./bufferevent_pair.c":244:37 -1
+     (nil)
+ -> 126)
+(note 119 118 120 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 120 119 121 19 (set (reg/f:DI 103 [ _22 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 partner+0 S8 A64])) "./bufferevent_pair.c":246:3 -1
+     (nil))
+(insn 121 120 122 19 (set (reg:DI 127)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":246:3 -1
+     (nil))
+(insn 122 121 123 19 (set (reg:SI 1 dx)
+        (const_int 0 [0])) "./bufferevent_pair.c":246:3 -1
+     (nil))
+(insn 123 122 124 19 (set (reg:DI 4 si)
+        (reg/f:DI 103 [ _22 ])) "./bufferevent_pair.c":246:3 -1
+     (nil))
+(insn 124 123 125 19 (set (reg:DI 5 di)
+        (reg:DI 127)) "./bufferevent_pair.c":246:3 -1
+     (nil))
+(call_insn 125 124 126 19 (call (mem:QI (symbol_ref:DI ("be_pair_transfer") [flags 0x3]  <function_decl 0x7f085ed75200 be_pair_transfer>) [0 be_pair_transfer S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":246:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(code_label 126 125 127 20 50 (nil) [3 uses])
+(note 127 126 128 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 128 127 129 20 (set (reg:DI 128)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bufev+0 S8 A64])) "./bufferevent_pair.c":248:2 -1
+     (nil))
+(insn 129 128 130 20 (set (reg:DI 5 di)
+        (reg:DI 128)) "./bufferevent_pair.c":248:2 -1
+     (nil))
+(call_insn 130 129 131 20 (call (mem:QI (symbol_ref:DI ("decref_and_unlock") [flags 0x3]  <function_decl 0x7f085ed6ab00 decref_and_unlock>) [0 decref_and_unlock S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":248:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 131 130 134 20 (set (reg:SI 104 [ _42 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":249:9 -1
+     (nil))
+(insn 134 131 138 20 (set (reg:SI 105 [ <retval> ])
+        (reg:SI 104 [ _42 ])) "./bufferevent_pair.c":249:9 -1
+     (nil))
+(insn 138 134 139 20 (set (reg/i:SI 0 ax)
+        (reg:SI 105 [ <retval> ])) "./bufferevent_pair.c":250:1 -1
+     (nil))
+(insn 139 138 0 20 (use (reg/i:SI 0 ax)) "./bufferevent_pair.c":250:1 -1
+     (nil))
+
+;; Function be_pair_disable (be_pair_disable, funcdef_no=17, decl_uid=5735, cgraph_uid=18, symbol_order=17)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 8 into block 7...
+Merged blocks 7 and 8.
+Merged 7 and 8 without moving.
+Removing jump 35.
+Merging block 9 into block 7...
+Merged blocks 7 and 9.
+Merged 7 and 9 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bev+0 S8 A64])
+        (reg:DI 5 di [ bev ])) "./bufferevent_pair.c":254:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:SI 90)
+        (reg:SI 4 si [ events ])) "./bufferevent_pair.c":254:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg:HI 91)
+        (subreg:HI (reg:SI 90) 0)) "./bufferevent_pair.c":254:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [10 events+0 S2 A32])
+        (reg:HI 91)) "./bufferevent_pair.c":254:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SI 82 [ _1 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [10 events+0 S2 A32]))) "./bufferevent_pair.c":255:13 -1
+     (nil))
+(insn 10 9 11 2 (parallel [
+            (set (reg:SI 83 [ _2 ])
+                (and:SI (reg:SI 82 [ _1 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":255:13 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":255:5 -1
+     (nil))
+(jump_insn 12 11 13 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "./bufferevent_pair.c":255:5 -1
+     (nil)
+ -> 18)
+(note 13 12 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 4 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":256:3 -1
+     (nil))
+(insn 15 14 16 4 (parallel [
+            (set (reg/f:DI 84 [ _3 ])
+                (plus:DI (reg/f:DI 92)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":256:3 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [42 bev+0 S8 A64])
+            (const_int 16 [0x10]))
+        (nil)))
+(insn 16 15 17 4 (set (reg:DI 5 di)
+        (reg/f:DI 84 [ _3 ])) "./bufferevent_pair.c":256:3 -1
+     (nil))
+(call_insn 17 16 18 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("event_del") [flags 0x41]  <function_decl 0x7f085ecc5b00 event_del>) [0 event_del S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":256:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(code_label 18 17 19 5 53 (nil) [1 uses])
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg:SI 85 [ _4 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [10 events+0 S2 A32]))) "./bufferevent_pair.c":258:13 -1
+     (nil))
+(insn 21 20 22 5 (parallel [
+            (set (reg:SI 86 [ _5 ])
+                (and:SI (reg:SI 85 [ _4 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":258:13 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 86 [ _5 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":258:5 -1
+     (nil))
+(jump_insn 23 22 24 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) "./bufferevent_pair.c":258:5 -1
+     (nil)
+ -> 29)
+(note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 6 (set (reg/f:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":259:3 -1
+     (nil))
+(insn 26 25 27 6 (parallel [
+            (set (reg/f:DI 87 [ _6 ])
+                (plus:DI (reg/f:DI 93)
+                    (const_int 136 [0x88])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":259:3 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [42 bev+0 S8 A64])
+            (const_int 136 [0x88]))
+        (nil)))
+(insn 27 26 28 6 (set (reg:DI 5 di)
+        (reg/f:DI 87 [ _6 ])) "./bufferevent_pair.c":259:3 -1
+     (nil))
+(call_insn 28 27 29 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("event_del") [flags 0x41]  <function_decl 0x7f085ecc5b00 event_del>) [0 event_del S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":259:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(code_label 29 28 30 7 54 (nil) [1 uses])
+(note 30 29 31 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 34 7 (set (reg:SI 88 [ _14 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":261:9 -1
+     (nil))
+(insn 34 31 38 7 (set (reg:SI 89 [ <retval> ])
+        (reg:SI 88 [ _14 ])) "./bufferevent_pair.c":261:9 -1
+     (nil))
+(insn 38 34 39 7 (set (reg/i:SI 0 ax)
+        (reg:SI 89 [ <retval> ])) "./bufferevent_pair.c":262:1 -1
+     (nil))
+(insn 39 38 0 7 (use (reg/i:SI 0 ax)) "./bufferevent_pair.c":262:1 -1
+     (nil))
+
+;; Function be_pair_unlink (be_pair_unlink, funcdef_no=18, decl_uid=5738, cgraph_uid=19, symbol_order=18)
+
+Partition 0: size 8 align 8
+	bev_p_8
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])
+        (reg:DI 5 di [ bev ])) "./bufferevent_pair.c":266:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":267:35 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (reg:DI 85)) "./bufferevent_pair.c":267:35 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("upcast") [flags 0x3]  <function_decl 0x7f085ed6a700 upcast>) [0 upcast S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":267:35 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg:DI 86)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":267:35 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])
+        (reg:DI 86)) "./bufferevent_pair.c":267:35 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 87)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":269:11 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 87)
+                (const_int 520 [0x208])) [43 bev_p_8->partner+0 S8 A64])) "./bufferevent_pair.c":269:11 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":269:5 -1
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 27)
+            (pc))) "./bufferevent_pair.c":269:5 806 {*jcc}
+     (nil)
+ -> 27)
+(note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:DI 88)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":270:34 -1
+     (nil))
+(insn 17 16 18 4 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (plus:DI (reg/f:DI 88)
+                (const_int 520 [0x208])) [43 bev_p_8->partner+0 S8 A64])) "./bufferevent_pair.c":270:34 -1
+     (nil))
+(insn 18 17 19 4 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":270:27 -1
+     (nil))
+(insn 19 18 20 4 (set (mem/f:DI (plus:DI (reg/f:DI 89)
+                (const_int 528 [0x210])) [43 bev_p_8->unlinked_partner+0 S8 A64])
+        (reg/f:DI 83 [ _2 ])) "./bufferevent_pair.c":270:27 -1
+     (nil))
+(insn 20 19 21 4 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":271:8 -1
+     (nil))
+(insn 21 20 22 4 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (plus:DI (reg/f:DI 90)
+                (const_int 520 [0x208])) [43 bev_p_8->partner+0 S8 A64])) "./bufferevent_pair.c":271:8 -1
+     (nil))
+(insn 22 21 23 4 (set (mem/f:DI (plus:DI (reg/f:DI 84 [ _3 ])
+                (const_int 520 [0x208])) [43 _3->partner+0 S8 A64])
+        (const_int 0 [0])) "./bufferevent_pair.c":271:27 -1
+     (nil))
+(insn 23 22 24 4 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":272:18 -1
+     (nil))
+(insn 24 23 27 4 (set (mem/f:DI (plus:DI (reg/f:DI 91)
+                (const_int 520 [0x208])) [43 bev_p_8->partner+0 S8 A64])
+        (const_int 0 [0])) "./bufferevent_pair.c":272:18 -1
+     (nil))
+(code_label 27 24 28 6 56 (nil) [1 uses])
+(note 28 27 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+;; Function be_pair_destruct (be_pair_destruct, funcdef_no=19, decl_uid=5742, cgraph_uid=20, symbol_order=19)
+
+Partition 0: size 8 align 8
+	bev_p_9
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])
+        (reg:DI 5 di [ bev ])) "./bufferevent_pair.c":279:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:DI 86)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":280:35 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 5 di)
+        (reg:DI 86)) "./bufferevent_pair.c":280:35 -1
+     (nil))
+(call_insn 8 7 9 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("upcast") [flags 0x3]  <function_decl 0x7f085ed6a700 upcast>) [0 upcast S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":280:35 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 9 8 10 2 (set (reg:DI 87)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":280:35 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])
+        (reg:DI 87)) "./bufferevent_pair.c":280:35 -1
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 88)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":297:11 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 88)
+                (const_int 528 [0x210])) [43 bev_p_9->unlinked_partner+0 S8 A64])) "./bufferevent_pair.c":297:11 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":297:5 -1
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "./bufferevent_pair.c":297:5 -1
+     (nil)
+ -> 35)
+(note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":297:30 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:QI 83 [ _2 ])
+        (mem:QI (plus:DI (reg/f:DI 89)
+                (const_int 384 [0x180])) [51 *bev_p_9+384 S1 A64])) "./bufferevent_pair.c":297:30 -1
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (reg:QI 84 [ _3 ])
+                (and:QI (reg:QI 83 [ _2 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":297:30 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 84 [ _3 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":297:30 -1
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "./bufferevent_pair.c":297:30 -1
+     (nil)
+ -> 35)
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":298:8 -1
+     (nil))
+(insn 23 22 26 5 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (plus:DI (reg/f:DI 90)
+                (const_int 528 [0x210])) [43 bev_p_9->unlinked_partner+0 S8 A64])) "./bufferevent_pair.c":298:8 -1
+     (nil))
+(insn 26 23 27 5 (set (reg:QI 93)
+        (mem/j:QI (plus:DI (reg/f:DI 85 [ _4 ])
+                (const_int 384 [0x180])) [1 _4->bev.own_lock+0 S1 A64])) "./bufferevent_pair.c":298:41 -1
+     (nil))
+(insn 27 26 28 5 (parallel [
+            (set (reg:QI 94)
+                (ior:QI (reg:QI 93)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":298:41 -1
+     (nil))
+(insn 28 27 29 5 (set (mem/j:QI (plus:DI (reg/f:DI 85 [ _4 ])
+                (const_int 384 [0x180])) [1 _4->bev.own_lock+0 S1 A64])
+        (reg:QI 94)) "./bufferevent_pair.c":298:41 -1
+     (nil))
+(insn 29 28 32 5 (set (reg/f:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":299:23 -1
+     (nil))
+(insn 32 29 33 5 (set (reg:QI 98)
+        (mem/j:QI (plus:DI (reg/f:DI 95)
+                (const_int 384 [0x180])) [1 bev_p_9->bev.own_lock+0 S1 A64])) "./bufferevent_pair.c":299:23 -1
+     (nil))
+(insn 33 32 34 5 (parallel [
+            (set (reg:QI 99)
+                (and:QI (reg:QI 98)
+                    (const_int -2 [0xfffffffffffffffe])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":299:23 -1
+     (nil))
+(insn 34 33 35 5 (set (mem/j:QI (plus:DI (reg/f:DI 95)
+                (const_int 384 [0x180])) [1 bev_p_9->bev.own_lock+0 S1 A64])
+        (reg:QI 99)) "./bufferevent_pair.c":299:23 -1
+     (nil))
+(code_label 35 34 36 6 60 (nil) [2 uses])
+(note 36 35 37 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 6 (set (reg/f:DI 100)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":301:26 -1
+     (nil))
+(insn 38 37 0 6 (set (mem/f:DI (plus:DI (reg/f:DI 100)
+                (const_int 528 [0x210])) [43 bev_p_9->unlinked_partner+0 S8 A64])
+        (const_int 0 [0])) "./bufferevent_pair.c":301:26 -1
+     (nil))
+
+;; Function be_pair_flush (be_pair_flush, funcdef_no=20, decl_uid=5748, cgraph_uid=21, symbol_order=20)
+
+Partition 2: size 8 align 8
+	partner_25
+Partition 1: size 8 align 8
+	bev_p_22
+Partition 0: size 2 align 2
+	what_12
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 100.
+Merging block 19 into block 18...
+Merged blocks 18 and 19.
+Merged 18 and 19 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [42 bev+0 S8 A64])
+        (reg:DI 5 di [ bev ])) "./bufferevent_pair.c":307:1 -1
+     (nil))
+(insn 3 2 6 2 (set (reg:SI 95)
+        (reg:SI 4 si [ iotype ])) "./bufferevent_pair.c":307:1 -1
+     (nil))
+(insn 6 3 4 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [21 mode+0 S4 A32])
+        (reg:SI 1 dx [ mode ])) "./bufferevent_pair.c":307:1 -1
+     (nil))
+(insn 4 6 5 2 (set (reg:HI 96)
+        (subreg:HI (reg:SI 95) 0)) "./bufferevent_pair.c":307:1 -1
+     (nil))
+(insn 5 4 7 2 (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -44 [0xffffffffffffffd4])) [10 iotype+0 S2 A32])
+        (reg:HI 96)) "./bufferevent_pair.c":307:1 -1
+     (nil))
+(note 7 5 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 7 11 2 (set (reg:DI 97)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":308:35 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 5 di)
+        (reg:DI 97)) "./bufferevent_pair.c":308:35 -1
+     (nil))
+(call_insn 12 11 13 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("upcast") [flags 0x3]  <function_decl 0x7f085ed6a700 upcast>) [0 upcast S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":308:35 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 13 12 14 2 (set (reg:DI 98)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":308:35 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_p+0 S8 A64])
+        (reg:DI 98)) "./bufferevent_pair.c":308:35 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 99)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":311:12 -1
+     (nil))
+(insn 16 15 17 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 99)
+                (const_int 520 [0x208])) [43 bev_p_22->partner+0 S8 A64])) "./bufferevent_pair.c":311:12 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":311:5 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "./bufferevent_pair.c":311:5 -1
+     (nil)
+ -> 23)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg:SI 93 [ _14 ])
+        (const_int -1 [0xffffffffffffffff])) "./bufferevent_pair.c":312:10 -1
+     (nil))
+(jump_insn 21 20 22 4 (set (pc)
+        (label_ref 97)) "./bufferevent_pair.c":312:10 -1
+     (nil)
+ -> 97)
+(barrier 22 21 23)
+(code_label 23 22 24 5 62 (nil) [1 uses])
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -48 [0xffffffffffffffd0])) [21 mode+0 S4 A32])
+            (const_int 0 [0]))) "./bufferevent_pair.c":314:5 -1
+     (nil))
+(jump_insn 26 25 27 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 31)
+            (pc))) "./bufferevent_pair.c":314:5 -1
+     (nil)
+ -> 31)
+(note 27 26 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 6 (set (reg:SI 93 [ _14 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":315:10 -1
+     (nil))
+(jump_insn 29 28 30 6 (set (pc)
+        (label_ref 97)) "./bufferevent_pair.c":315:10 -1
+     (nil)
+ -> 97)
+(barrier 30 29 31)
+(code_label 31 30 32 7 64 (nil) [1 uses])
+(note 32 31 33 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 7 (set (reg:DI 100)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":317:2 -1
+     (nil))
+(insn 34 33 35 7 (set (reg:DI 5 di)
+        (reg:DI 100)) "./bufferevent_pair.c":317:2 -1
+     (nil))
+(call_insn 35 34 36 7 (call (mem:QI (symbol_ref:DI ("incref_and_lock") [flags 0x3]  <function_decl 0x7f085ed6a900 incref_and_lock>) [0 incref_and_lock S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":317:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 36 35 37 7 (set (reg/f:DI 101)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":319:12 -1
+     (nil))
+(insn 37 36 38 7 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (plus:DI (reg/f:DI 101)
+                (const_int 520 [0x208])) [43 bev_p_22->partner+0 S8 A64])) "./bufferevent_pair.c":319:12 -1
+     (nil))
+(insn 38 37 39 7 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 partner+0 S8 A64])
+        (reg/f:DI 83 [ _2 ])) "./bufferevent_pair.c":319:10 -1
+     (nil))
+(insn 39 38 40 7 (set (reg:SI 84 [ _3 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -44 [0xffffffffffffffd4])) [10 iotype+0 S2 A32]))) "./bufferevent_pair.c":321:14 -1
+     (nil))
+(insn 40 39 41 7 (parallel [
+            (set (reg:SI 85 [ _4 ])
+                (and:SI (reg:SI 84 [ _3 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":321:14 -1
+     (nil))
+(insn 41 40 42 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _4 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":321:5 -1
+     (nil))
+(jump_insn 42 41 43 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "./bufferevent_pair.c":321:5 -1
+     (nil)
+ -> 50)
+(note 43 42 44 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 45 8 (set (reg:DI 102)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":322:3 -1
+     (nil))
+(insn 45 44 46 8 (set (reg:DI 103)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 partner+0 S8 A64])) "./bufferevent_pair.c":322:3 -1
+     (nil))
+(insn 46 45 47 8 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "./bufferevent_pair.c":322:3 -1
+     (nil))
+(insn 47 46 48 8 (set (reg:DI 4 si)
+        (reg:DI 102)) "./bufferevent_pair.c":322:3 -1
+     (nil))
+(insn 48 47 49 8 (set (reg:DI 5 di)
+        (reg:DI 103)) "./bufferevent_pair.c":322:3 -1
+     (nil))
+(call_insn 49 48 50 8 (call (mem:QI (symbol_ref:DI ("be_pair_transfer") [flags 0x3]  <function_decl 0x7f085ed75200 be_pair_transfer>) [0 be_pair_transfer S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":322:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(code_label 50 49 51 9 65 (nil) [1 uses])
+(note 51 50 52 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 9 (set (reg:SI 86 [ _5 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -44 [0xffffffffffffffd4])) [10 iotype+0 S2 A32]))) "./bufferevent_pair.c":324:14 -1
+     (nil))
+(insn 53 52 54 9 (parallel [
+            (set (reg:SI 87 [ _6 ])
+                (and:SI (reg:SI 86 [ _5 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":324:14 -1
+     (nil))
+(insn 54 53 55 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _6 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":324:5 -1
+     (nil))
+(jump_insn 55 54 56 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "./bufferevent_pair.c":324:5 -1
+     (nil)
+ -> 63)
+(note 56 55 57 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 10 (set (reg:DI 104)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 partner+0 S8 A64])) "./bufferevent_pair.c":325:3 -1
+     (nil))
+(insn 58 57 59 10 (set (reg:DI 105)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":325:3 -1
+     (nil))
+(insn 59 58 60 10 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "./bufferevent_pair.c":325:3 -1
+     (nil))
+(insn 60 59 61 10 (set (reg:DI 4 si)
+        (reg:DI 104)) "./bufferevent_pair.c":325:3 -1
+     (nil))
+(insn 61 60 62 10 (set (reg:DI 5 di)
+        (reg:DI 105)) "./bufferevent_pair.c":325:3 -1
+     (nil))
+(call_insn 62 61 63 10 (call (mem:QI (symbol_ref:DI ("be_pair_transfer") [flags 0x3]  <function_decl 0x7f085ed75200 be_pair_transfer>) [0 be_pair_transfer S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":325:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(code_label 63 62 64 11 66 (nil) [1 uses])
+(note 64 63 65 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -48 [0xffffffffffffffd0])) [21 mode+0 S4 A32])
+            (const_int 2 [0x2]))) "./bufferevent_pair.c":327:5 -1
+     (nil))
+(jump_insn 66 65 67 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 91)
+            (pc))) "./bufferevent_pair.c":327:5 -1
+     (nil)
+ -> 91)
+(note 67 66 68 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 68 67 69 12 (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -18 [0xffffffffffffffee])) [10 what+0 S2 A16])
+        (const_int 16 [0x10])) "./bufferevent_pair.c":328:9 -1
+     (nil))
+(insn 69 68 70 12 (set (reg:SI 88 [ _7 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -44 [0xffffffffffffffd4])) [10 iotype+0 S2 A32]))) "./bufferevent_pair.c":329:14 -1
+     (nil))
+(insn 70 69 71 12 (parallel [
+            (set (reg:SI 89 [ _8 ])
+                (and:SI (reg:SI 88 [ _7 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":329:14 -1
+     (nil))
+(insn 71 70 72 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 89 [ _8 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":329:6 -1
+     (nil))
+(jump_insn 72 71 73 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 75)
+            (pc))) "./bufferevent_pair.c":329:6 -1
+     (nil)
+ -> 75)
+(note 73 72 74 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 13 (parallel [
+            (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -18 [0xffffffffffffffee])) [10 what+0 S2 A16])
+                (ior:HI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -18 [0xffffffffffffffee])) [10 what+0 S2 A16])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":330:9 -1
+     (nil))
+(code_label 75 74 76 14 68 (nil) [1 uses])
+(note 76 75 77 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 77 76 78 14 (set (reg:SI 90 [ _9 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -44 [0xffffffffffffffd4])) [10 iotype+0 S2 A32]))) "./bufferevent_pair.c":331:14 -1
+     (nil))
+(insn 78 77 79 14 (parallel [
+            (set (reg:SI 91 [ _10 ])
+                (and:SI (reg:SI 90 [ _9 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":331:14 -1
+     (nil))
+(insn 79 78 80 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 91 [ _10 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":331:6 -1
+     (nil))
+(jump_insn 80 79 81 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 83)
+            (pc))) "./bufferevent_pair.c":331:6 -1
+     (nil)
+ -> 83)
+(note 81 80 82 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 15 (parallel [
+            (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -18 [0xffffffffffffffee])) [10 what+0 S2 A16])
+                (ior:HI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -18 [0xffffffffffffffee])) [10 what+0 S2 A16])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "./bufferevent_pair.c":332:9 -1
+     (nil))
+(code_label 83 82 84 16 69 (nil) [1 uses])
+(note 84 83 85 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 85 84 86 16 (set (reg:SI 92 [ _11 ])
+        (sign_extend:SI (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -18 [0xffffffffffffffee])) [10 what+0 S2 A16]))) "./bufferevent_pair.c":333:3 -1
+     (nil))
+(insn 86 85 87 16 (set (reg:DI 106)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [42 partner+0 S8 A64])) "./bufferevent_pair.c":333:3 -1
+     (nil))
+(insn 87 86 88 16 (set (reg:SI 1 dx)
+        (const_int 0 [0])) "./bufferevent_pair.c":333:3 -1
+     (nil))
+(insn 88 87 89 16 (set (reg:SI 4 si)
+        (reg:SI 92 [ _11 ])) "./bufferevent_pair.c":333:3 -1
+     (nil))
+(insn 89 88 90 16 (set (reg:DI 5 di)
+        (reg:DI 106)) "./bufferevent_pair.c":333:3 -1
+     (nil))
+(call_insn 90 89 91 16 (call (mem:QI (symbol_ref:DI ("bufferevent_run_eventcb_") [flags 0x41]  <function_decl 0x7f085ed66000 bufferevent_run_eventcb_>) [0 bufferevent_run_eventcb_ S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":333:3 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(code_label 91 90 92 17 67 (nil) [1 uses])
+(note 92 91 93 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 93 92 94 17 (set (reg:DI 107)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":335:2 -1
+     (nil))
+(insn 94 93 95 17 (set (reg:DI 5 di)
+        (reg:DI 107)) "./bufferevent_pair.c":335:2 -1
+     (nil))
+(call_insn 95 94 96 17 (call (mem:QI (symbol_ref:DI ("decref_and_unlock") [flags 0x3]  <function_decl 0x7f085ed6ab00 decref_and_unlock>) [0 decref_and_unlock S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":335:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 96 95 97 17 (set (reg:SI 93 [ _14 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":336:9 -1
+     (nil))
+(code_label 97 96 98 18 63 (nil) [2 uses])
+(note 98 97 99 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 99 98 103 18 (set (reg:SI 94 [ <retval> ])
+        (reg:SI 93 [ _14 ])) "./bufferevent_pair.c":337:1 -1
+     (nil))
+(insn 103 99 104 18 (set (reg/i:SI 0 ax)
+        (reg:SI 94 [ <retval> ])) "./bufferevent_pair.c":337:1 -1
+     (nil))
+(insn 104 103 0 18 (use (reg/i:SI 0 ax)) "./bufferevent_pair.c":337:1 -1
+     (nil))
+
+;; Function bufferevent_pair_get_partner (bufferevent_pair_get_partner, funcdef_no=21, decl_uid=3875, cgraph_uid=22, symbol_order=21)
+
+Partition 1: size 8 align 8
+	bev_p_10
+Partition 0: size 8 align 8
+	partner_3
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 40.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])
+        (reg:DI 5 di [ bev ])) "./bufferevent_pair.c":341:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [42 partner+0 S8 A64])
+        (const_int 0 [0])) "./bufferevent_pair.c":343:22 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 86)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":344:10 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 5 di)
+        (reg:DI 86)) "./bufferevent_pair.c":344:10 -1
+     (nil))
+(call_insn 9 8 10 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("upcast") [flags 0x3]  <function_decl 0x7f085ed6a700 upcast>) [0 upcast S1 A8])
+            (const_int 0 [0]))) "./bufferevent_pair.c":344:10 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 10 9 11 2 (set (reg:DI 87)
+        (reg:DI 0 ax)) "./bufferevent_pair.c":344:10 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])
+        (reg:DI 87)) "./bufferevent_pair.c":344:10 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])
+            (const_int 0 [0]))) "./bufferevent_pair.c":345:5 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "./bufferevent_pair.c":345:5 -1
+     (nil)
+ -> 18)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg/f:DI 84 [ _4 ])
+        (const_int 0 [0])) "./bufferevent_pair.c":346:10 -1
+     (nil))
+(jump_insn 16 15 17 4 (set (pc)
+        (label_ref 37)) "./bufferevent_pair.c":346:10 -1
+     (nil)
+ -> 37)
+(barrier 17 16 18)
+(code_label 18 17 19 5 71 (nil) [1 uses])
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg:DI 88)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":348:2 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:DI 5 di)
+        (reg:DI 88)) "./bufferevent_pair.c":348:2 -1
+     (nil))
+(call_insn 22 21 23 5 (call (mem:QI (symbol_ref:DI ("incref_and_lock") [flags 0x3]  <function_decl 0x7f085ed6a900 incref_and_lock>) [0 incref_and_lock S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":348:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 23 22 24 5 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":349:11 -1
+     (nil))
+(insn 24 23 25 5 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (plus:DI (reg/f:DI 89)
+                (const_int 520 [0x208])) [43 bev_p_10->partner+0 S8 A64])) "./bufferevent_pair.c":349:11 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (const_int 0 [0]))) "./bufferevent_pair.c":349:5 -1
+     (nil))
+(jump_insn 26 25 27 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 31)
+            (pc))) "./bufferevent_pair.c":349:5 -1
+     (nil)
+ -> 31)
+(note 27 26 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 6 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [43 bev_p+0 S8 A64])) "./bufferevent_pair.c":350:13 -1
+     (nil))
+(insn 29 28 30 6 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (plus:DI (reg/f:DI 90)
+                (const_int 520 [0x208])) [43 bev_p_10->partner+0 S8 A64])) "./bufferevent_pair.c":350:13 -1
+     (nil))
+(insn 30 29 31 6 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [42 partner+0 S8 A64])
+        (reg/f:DI 83 [ _2 ])) "./bufferevent_pair.c":350:11 -1
+     (nil))
+(code_label 31 30 32 7 73 (nil) [1 uses])
+(note 32 31 33 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 7 (set (reg:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [42 bev+0 S8 A64])) "./bufferevent_pair.c":351:2 -1
+     (nil))
+(insn 34 33 35 7 (set (reg:DI 5 di)
+        (reg:DI 91)) "./bufferevent_pair.c":351:2 -1
+     (nil))
+(call_insn 35 34 36 7 (call (mem:QI (symbol_ref:DI ("decref_and_unlock") [flags 0x3]  <function_decl 0x7f085ed6ab00 decref_and_unlock>) [0 decref_and_unlock S1 A8])
+        (const_int 0 [0])) "./bufferevent_pair.c":351:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 36 35 37 7 (set (reg/f:DI 84 [ _4 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [42 partner+0 S8 A64])) "./bufferevent_pair.c":352:9 -1
+     (nil))
+(code_label 37 36 38 8 72 (nil) [1 uses])
+(note 38 37 39 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 43 8 (set (reg/f:DI 85 [ <retval> ])
+        (reg/f:DI 84 [ _4 ])) "./bufferevent_pair.c":353:1 -1
+     (nil))
+(insn 43 39 44 8 (set (reg/i:DI 0 ax)
+        (reg/f:DI 85 [ <retval> ])) "./bufferevent_pair.c":353:1 -1
+     (nil))
+(insn 44 43 0 8 (use (reg/i:DI 0 ax)) "./bufferevent_pair.c":353:1 -1
+     (nil))

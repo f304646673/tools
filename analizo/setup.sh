@@ -1,7 +1,6 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install perl
 sudo apt install doxygen-doxyparse
-perl -v
 sudo apt install cpanminus
 sudo cpanm File::ShareDir::Install
 sudo cpanm FindBin::libs

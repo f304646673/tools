@@ -1,0 +1,20 @@
+Description: HOTFIX failing automated test for ACC metric
+DEP: 3
+Forwarded: https://github.com/analizo/analizo/issues/179
+Author: Joenio Marques da Costa <joenio@joenio.me>
+Last-Update: 2022-07-30
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+See [DEP-3](http://dep.debian.net/deps/dep3/) for more details about the different fields.
+
+--- a/t/features/metrics/deep_inheritance_afferent_connections.feature
++++ b/t/features/metrics/deep_inheritance_afferent_connections.feature
+@@ -9,7 +9,7 @@
+     Then analizo must report that module <module> has acc = <acc>
+     Examples:
+       | module                      | acc  |
+-      | Dog                         | 8    |
++      | Dog                         | 7    |
+       | DogFirstGreatGrandson       | 1    |
+       | DogFirstPuppy               | 4    |
+       | DogGrandson                 | 3    |

@@ -1,0 +1,39 @@
+Description: drop local::lib
+DEP: 3
+Forwarded: not-needed
+Author: Joenio Marques da Costa <joenio@joenio.me>
+Last-Update: 2022-08-04
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+See [DEP-3](http://dep.debian.net/deps/dep3/) for more details about the different fields.
+
+--- a/lib/Analizo.pm
++++ b/lib/Analizo.pm
+@@ -2,7 +2,6 @@
+ use App::Cmd::Setup -app;
+ use strict;
+ use warnings;
+-use local::lib;
+ 
+ our $VERSION = '1.25.4';
+ 
+--- a/lib/Test/Analizo/Class.pm
++++ b/lib/Test/Analizo/Class.pm
+@@ -1,7 +1,6 @@
+ package Test::Analizo::Class;
+ use strict;
+ use warnings;
+-use local::lib;
+ 
+ use parent qw( Test::Class );
+ use File::Path qw(remove_tree);
+--- a/t/features.t
++++ b/t/features.t
+@@ -1,7 +1,6 @@
+ #!perl
+ use strict;
+ use warnings;
+-use local::lib;
+ use Test::BDD::Cucumber;
+ 
+ # This will find step definitions and feature files in the directory you point

@@ -1,0 +1,33 @@
+digraph callgraph
+{
+
+  /* list of nodes */
+  "test-time::called" [group="test-time"];
+  "test-time::ev" [group="test-time"];
+  "test-time::main(int,char **)" [group="test-time"];
+  "test-time::rand_int(int)" [group="test-time"];
+  "test-time::time_cb(evutil_socket_t,short,void *)" [group="test-time"];
+  "test-time::weakrand_state" [group="test-time"];
+
+  /* list of subgraphs */
+  subgraph "cluster_test-time" {
+    label = "test-time";
+    node [label="test-time::called"] "test-time::called";
+    node [label="test-time::ev"] "test-time::ev";
+    node [label="test-time::main(int,char **)"] "test-time::main(int,char **)";
+    node [label="test-time::rand_int(int)"] "test-time::rand_int(int)";
+    node [label="test-time::time_cb(evutil_socket_t,short,void *)"] "test-time::time_cb(evutil_socket_t,short,void *)";
+    node [label="test-time::weakrand_state"] "test-time::weakrand_state";
+  }
+
+  /* list of edges */
+  "test-time::main(int,char **)" -> "test-time::called" [style = "dashed"];
+  "test-time::main(int,char **)" -> "test-time::ev" [style = "dashed"];
+  "test-time::main(int,char **)" -> "test-time::rand_int(int)" [style = "solid"];
+  "test-time::main(int,char **)" -> "test-time::time_cb(evutil_socket_t,short,void *)" [style = "solid"];
+  "test-time::main(int,char **)" -> "test-time::weakrand_state" [style = "dashed"];
+  "test-time::rand_int(int)" -> "test-time::weakrand_state" [style = "dashed"];
+  "test-time::time_cb(evutil_socket_t,short,void *)" -> "test-time::called" [style = "dashed"];
+  "test-time::time_cb(evutil_socket_t,short,void *)" -> "test-time::ev" [style = "dashed"];
+  "test-time::time_cb(evutil_socket_t,short,void *)" -> "test-time::rand_int(int)" [style = "solid"];
+}

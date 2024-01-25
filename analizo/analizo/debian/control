@@ -1,0 +1,82 @@
+Source: analizo
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Joenio Marques da Costa <joenio@joenio.me>
+Section: devel
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: doxygen-doxyparse <!nocheck>,
+                     libapp-cmd-perl <!nocheck>,
+                     libarchive-extract-perl <!nocheck>,
+                     libchi-perl <!nocheck>,
+                     libclass-accessor-perl <!nocheck>,
+                     libclass-inspector-perl <!nocheck>,
+                     libdbd-sqlite3-perl <!nocheck>,
+                     libdbi-perl <!nocheck>,
+                     libdigest-sha-perl <!nocheck>,
+                     libenv-path-perl <!nocheck>,
+                     libfile-copy-recursive-perl <!nocheck>,
+                     libfile-homedir-perl <!nocheck>,
+                     libfile-libmagic-perl <!nocheck>,
+                     libfile-share-perl <!nocheck>,
+                     libfile-sharedir-install-perl,
+                     libfile-sharedir-perl,
+                     libfile-slurp-perl <!nocheck>,
+                     libfindbin-libs-perl <!nocheck>,
+                     libgit-wrapper-perl <!nocheck>,
+                     libgraph-perl <!nocheck>,
+                     libgraph-readwrite-perl <!nocheck>,
+                     libjson-perl <!nocheck>,
+                     liblist-compare-perl <!nocheck>,
+                     liblist-moreutils-perl <!nocheck>,
+                     libstatistics-descriptive-perl <!nocheck>,
+                     libterm-progressbar-perl <!nocheck>,
+                     libterm-ui-perl <!nocheck>,
+                     libtest-bdd-cucumber-perl (>= 0.61) <!nocheck>,
+                     libtest-class-perl <!nocheck>,
+                     libtest-exception-perl <!nocheck>,
+                     libtest-mockmodule-perl <!nocheck>,
+                     libtest-mockobject-perl <!nocheck>,
+                     libyaml-libyaml-perl <!nocheck>,
+                     libzmq-ffi-perl <!nocheck>,
+                     perl
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/analizo
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/analizo.git
+Homepage: https://www.analizo.org
+Rules-Requires-Root: no
+
+Package: analizo
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         doxygen-doxyparse,
+         libapp-cmd-perl,
+         libchi-perl,
+         libclass-accessor-perl,
+         libclass-inspector-perl,
+         libdbd-sqlite3-perl,
+         libdbi-perl,
+         libdigest-sha-perl,
+         libenv-path-perl,
+         libfile-copy-recursive-perl,
+         libfile-homedir-perl,
+         libfindbin-libs-perl,
+         libgraph-perl,
+         libgraph-readwrite-perl,
+         libjson-perl,
+         liblist-compare-perl,
+         libstatistics-descriptive-perl,
+         libterm-progressbar-perl,
+         libyaml-libyaml-perl,
+         libzmq-ffi-perl
+Recommends: graphviz,
+            man-db
+Description: multi-language source code analysis toolkit
+ Analizo is a suite of source code analysis tools, aimed at being
+ language-independent and extensible, analizo parses source code in multiple
+ languages and report useful information about it, such as module dependency,
+ source code metrics and more.
+ .
+ Analizo uses doxyparse to parse the source code, and is currently tested and
+ expected to work well with C, C++, Java and C# source code.

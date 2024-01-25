@@ -1,0 +1,209 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://metacpan.org/release/Analizo
+Upstream-Contact: Joenio Marques da Costa <joenio@joenio.me>
+Upstream-Name: Analizo
+
+Files: *
+Copyright: 1994-2006, Andreas Gustafsson
+           2008-2010, Antonio Terceiro <terceiro@debian.org>
+           2014-2022, Joenio Marques da Costa <joenio@joenio.me>
+           Alexandre Almeida Barbosa <alexandrealmeidabarbosa@gmail.com>
+           Allan Nobre <allanjefrey9@hotmail.com>
+           Alysson Raniere <alysson.raniere@gmail.com>
+           Athos Ribeiro <athoscribeiro@gmail.com>
+           brunobrg <bbraganca1991@gmail.com>
+           Bryan de Holanda <bryan.h.fernandes@hotmail.com>
+           Caio Salgado <caio.csalgado@gmail.com>
+           Carlos Filipe <carlosfilipe.lb@gmail.com>
+           Charles Oliveira <18oliveira.charles@gmail.com>
+           Edson Alves <edsonalves@unb.br>
+           Hugo Neves de Carvalho <hugonvsc@gmail.com>
+           Igor Gabriel <igorgabriel515@gmail.com>
+           Igor Ribeiro Barbosa Duarte <igor.ribeiro.duarte@gmail.com>
+           Izabela Cardoso <cizabelacristina@gmail.com>
+           Joao M. Miranda <joaomm88@gmail.com>
+           Joao Paulo Busche <joaopaulo.busche@gmail.com>
+           Joao Paulo Ferreira <iamferreirajp@gmail.com>
+           Jonathan Moraes <arkyebr@gmail.com>
+           Kamilla Crozara <holanda.kamilla@gmail.com>
+           Kleber <kleberbritomoreira10@gmail.com>
+           Luan Guimaraes <livreluan@gmail.com>
+           Lucas Costa <lucascostaa73@gmail.com>
+           Lucas Kanashiro <kanashiro.duarte@gmail.com>
+           Luiz Romário Santana Rios <luizromario@gmail.com>
+           Macartur Sousa <macartur.sc@gmail.com>
+           Marcelo Ferreira <marcelohpf@gmail.com>
+           Mateus Andrade <mateusandrade080@gmail.com>
+           Matheus Miranda <matheusmirandalacerda@gmail.com>
+           Mohammad S Anwar <mohammad.anwar@yahoo.com>
+           Paulo Borba <pauloesb@gmail.com>
+           Paulo Meirelles <paulo@softwarelivre.org>
+           Rafael Martins <rmmartins@gmail.com>
+           Rafael Reggiani Manzo <rr.manzo@gmail.com>
+           Roger Lenke <rogerlenke@gmail.com>
+           Sabryna de Sousa <sabryna.sousa1323@gmail.com>
+           Tiago Pereira <tiagogomespereira@gmail.com>
+           Victor Cotrim <cotrim149@gmail.com>
+License: GPL-3+
+
+Files: t/samples/android-framework/android-5.1.1_r38/AudioTrackShared.cpp
+Copyright: 2007, The Android Open Source Project
+License: Apache-2.0
+
+Files: t/samples/android-framework/android-5.1.1_r38/MCLinker.cpp
+Copyright: 2011-2013, MediaTek Inc
+License: NCSA
+
+Files: t/samples/httpd-2.4.38/*
+Copyright: Apache Software Foundation
+License: Apache-2.0
+
+Files: t/samples/kdelibs/*
+Copyright: 2009-2010, Sebastian Trueg <trueg@kde.org>
+License: GPL-2 or GPL-3
+
+Files: t/samples/kdelibs/backportglobal.h
+Copyright: 2011, Nokia
+License: LGPL-2.1
+
+Files: t/samples/kdelibs/parser.cpp
+Copyright: 1984, 1989-1990, 2000-2012, Free Software Foundation
+License: GPL-3+
+
+Files: t/samples/mlpack-3.0.0/*
+Copyright: 2008-2018, Ryan Curtin <ryan@ratml.org>
+           2011-2012, Matthew Amidon <mamidon@gatech.edu>
+License: BSD-3-clause
+
+Files: debian/*
+Copyright: 2008-2009, Antonio Terceiro <terceiro@debian.org>
+           2019-2022, Joenio Marques da Costa <joenio@joenio.me>
+License: Artistic or GPL-1+
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ On Debian systems, a copy of the License can be found in
+ `/usr/share/common-licenses/Apache-2.0`.
+ .
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an "AS
+ IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied.  See the License for the specific language
+ governing permissions and limitations under the License.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ * Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of the copyright holder nor the
+   names of any contributors may be used to endorse or promote products
+   derived from this software without specific prior written permission.
+ .
+ This software is provided by the copyright holders "as is" and any express or
+ implied warranties, including, but not limited to, the implied warranties of
+ merchantability and fitness for a particular purpose are disclaimed. In no
+ event shall the copyright holders be liable for any direct, indirect,
+ incidental, special, exemplary, or consequential damages (including, but not
+ limited to, procurement of substitute goods or services; loss of use, data,
+ or profits; or business interruption) however caused and on any theory of
+ liability, whether in contract, strict liability, or tort (including
+ negligence or otherwise) arising in any way out of the use of this software,
+ even if advised of the possibility of such damage.
+
+License: Artistic
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the Artistic License, which comes with Perl.
+ .
+ On Debian systems, the complete text of the Artistic License can be
+ found in `/usr/share/common-licenses/Artistic'.
+
+License: GPL-1+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 1, or (at your option)
+ any later version.
+ .
+ On Debian systems, the complete text of version 1 of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-1'.
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2 as published
+ by the Free Software Foundation.
+ .
+ On Debian systems the full text of the GNU General Public License version 2
+ can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 3 as published
+ by the Free Software Foundation
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in `/usr/share/common-licenses/GPL-3`.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in `/usr/share/common-licenses/GPL-3`.
+
+License: LGPL-2.1
+ This library is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License version
+ 2.1 as published by the Free Software Foundation.
+ .
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301  USA
+ .
+ Alternatively, this file is available under the Mozilla Public
+ License Version 1.1.  You may obtain a copy of the License at
+ http://www.mozilla.org/MPL/
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 2.1 is available in /usr/share/common-licenses/LGPL-2.1.
+
+License: NCSA
+ University of Illinois/NCSA
+ Open Source License (NCSA)
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal with
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the Software, and to permit persons to whom the Software is furnished to do
+ so, subject to the following conditions:
+ .
+ * Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimers.
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimers in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the names of the LLVM Team, University of Illinois at
+   Urbana-Champaign, nor the names of its contributors may be used to
+   endorse or promote products derived from this Software without specific
+   prior written permission.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
+ SOFTWARE.

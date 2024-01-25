@@ -1,0 +1,9 @@
+---
+Archive: CPAN
+Bug-Database: https://github.com/analizo/Analizo/issues
+Bug-Submit: https://github.com/analizo/Analizo/issues/new
+Repository: https://github.com/analizo/analizo.git
+Repository-Browse: https://github.com/analizo/analizo
+Cite-As: "Terceiro, A., Costa, J., Miranda, J., Meirelles, P., Rios, L. R., Almeida, L., ... & Kon, F. (2010, September). <a href='https://www.analizo.org/publications/analizo-cbsoft2010-tools.pdf'>Analizo: an extensible multi-language source code analysis and visualization toolkit.</a> In Brazilian conference on software: theory and practice (Tools Session)."
+Funding: CNPQ, FAPESB, INES Qualipso project, CCSL USP
+FAQ: https://www.analizo.org/faq.html

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+exec 2>&1
+
+set -e
+
+test_analizo_version() {
+  ANALIZO_VERSION=$(analizo --version)
+  COUNT=$(echo $ANALIZO_VERSION | grep --count "analizo version [0-9]")
+  assertEquals "unexpected analizo version message: $ANALIZO_VERSION" 1 $COUNT
+}
+
+test_analizo_metrics_over_hello_world_c_sample_code() {
+  ANALIZO_OUTPUT=$(ANALIZO_CACHE=${HOME} analizo metrics /usr/share/doc/analizo/examples/samples/hello_world/c)
+  COUNT=$(echo $ANALIZO_OUTPUT | grep --count "_module: hello_world")
+  assertEquals "module 'hello_world' not found on analizo-metrics output" 1 $COUNT
+}
+
+. shunit2

@@ -1,0 +1,61 @@
+Description: avoid possible shell insecurities when calling system()
+ Calling system("command $argument") makes perl execute a shell and that
+ opens possibilities for abusing spaces and other special characters used by
+ shells.
+ .
+ The fix is to use system("command", $argument), in which case no shell is
+ involved.
+Author: Damyan Ivanov <dmn@debian.org>
+Forwarded: https://github.com/analizo/analizo/pull/186
+
+--- a/lib/Test/Analizo.pm
++++ b/lib/Test/Analizo.pm
+@@ -63,12 +63,13 @@ sub unpack_sample_git_repository {
+   }
+   my ($package, $filename, $line) = caller;
+   my $tmpdir = tmpdir_for($filename);
+-  system("mkdir -p $tmpdir");
++  system('mkdir', '-p', $tmpdir);
+   for my $repo (@repos) {
+-    system("tar xzf t/samples/$repo.tar.gz -C $tmpdir --no-same-owner");
++    system('tar', 'xzf', "t/samples/$repo.tar.gz", '-C', $tmpdir,
++        '--no-same-owner');
+   }
+   &$code();
+-  system("rm -rf $tmpdir");
++  system('rm', '-rf', $tmpdir);
+ }
+ 
+ sub readfile {
+--- a/t/Analizo/Batch/Output/CSV.t
++++ b/t/Analizo/Batch/Output/CSV.t
+@@ -12,11 +12,11 @@ my $TMPDIR = tmpdir();
+ my $TMPFILE = "$TMPDIR/output.csv";
+ 
+ sub setup : Tests(setup) {
+-  system("mkdir -p $TMPDIR");
++  system("mkdir", "-p", $TMPDIR);
+ }
+ 
+ sub teardown : Tests(teardown) {
+-  system("rm -rf $TMPDIR");
++  system("rm", "-rf", $TMPDIR);
+ }
+ 
+ sub constructor : Tests {
+--- a/t/Analizo/Batch/Output/DB.t
++++ b/t/Analizo/Batch/Output/DB.t
+@@ -245,11 +245,11 @@ sub __create {
+ }
+ 
+ sub setup : Test(setup) {
+-  system("mkdir -p $TMPDIR");
++  system("mkdir", "-p", $TMPDIR);
+ }
+ 
+ sub teardown : Test(teardown) {
+-  system("rm -rf $TMPDIR");
++  system("rm", "-rf", $TMPDIR);
+ }
+ 
+ sub table_created_ok($$) {

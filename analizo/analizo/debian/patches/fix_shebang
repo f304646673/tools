@@ -1,0 +1,17 @@
+Description: change shebang line on the script file
+DEP: 3
+Forwarded: not-needed
+Author: Joenio Marques da Costa <joenio@joenio.me>
+Last-Update: 2022-07-23
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+See [DEP-3](http://dep.debian.net/deps/dep3/) for more details about the different fields.
+
+--- a/bin/analizo
++++ b/bin/analizo
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env perl
++#!/usr/bin/perl
+ use FindBin::libs;
+ use Analizo;
+ use strict;

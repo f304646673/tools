@@ -1,0 +1,41 @@
+graph: { title: "./evutil_time.c"
+node: { title: "evutil_tv_to_msec_" label: "evutil_tv_to_msec_\n./evutil_time.c:128:1" }
+node: { title: "evutil_usleep_" label: "evutil_usleep_\n./evutil_time.c:141:1" }
+node: { title: "nanosleep" label: "nanosleep\n/usr/include/time.h:272:12" shape : ellipse }
+edge: { sourcename: "evutil_usleep_" targetname: "nanosleep" label: "./evutil_time.c:169:3" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "evutil_usleep_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_date_rfc1123" label: "evutil_date_rfc1123\n./evutil_time.c:184:1" }
+node: { title: "time" label: "time\n/usr/include/time.h:76:15" shape : ellipse }
+edge: { sourcename: "evutil_date_rfc1123" targetname: "time" label: "./evutil_time.c:191:13" }
+node: { title: "gmtime_r" label: "gmtime_r\n/usr/include/time.h:154:19" shape : ellipse }
+edge: { sourcename: "evutil_date_rfc1123" targetname: "gmtime_r" label: "./evutil_time.c:200:3" }
+node: { title: "evutil_snprintf" label: "evutil_snprintf\n./include/event2/util.h:625:5" shape : ellipse }
+edge: { sourcename: "evutil_date_rfc1123" targetname: "evutil_snprintf" label: "./evutil_time.c:218:9" }
+edge: { sourcename: "evutil_date_rfc1123" targetname: "__stack_chk_fail" }
+node: { title: "./evutil_time.c:adjust_monotonic_time" label: "adjust_monotonic_time\n./evutil_time.c:231:1" }
+edge: { sourcename: "./evutil_time.c:adjust_monotonic_time" targetname: "__stack_chk_fail" }
+node: { title: "evutil_monotonic_timer_new" label: "evutil_monotonic_timer_new\n./evutil_time.c:251:1" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "evutil_monotonic_timer_new" targetname: "event_mm_malloc_" label: "./evutil_time.c:255:7" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "evutil_monotonic_timer_new" targetname: "memset" label: "./evutil_time.c:258:3" }
+node: { title: "evutil_monotonic_timer_free" label: "evutil_monotonic_timer_free\n./evutil_time.c:268:1" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "evutil_monotonic_timer_free" targetname: "event_mm_free_" label: "./evutil_time.c:271:5" }
+node: { title: "evutil_configure_monotonic_time" label: "evutil_configure_monotonic_time\n./evutil_time.c:279:1" }
+edge: { sourcename: "evutil_configure_monotonic_time" targetname: "evutil_configure_monotonic_time_" label: "./evutil_time.c:282:10" }
+node: { title: "evutil_gettime_monotonic" label: "evutil_gettime_monotonic\n./evutil_time.c:289:1" }
+edge: { sourcename: "evutil_gettime_monotonic" targetname: "evutil_gettime_monotonic_" label: "./evutil_time.c:292:10" }
+node: { title: "evutil_configure_monotonic_time_" label: "evutil_configure_monotonic_time_\n./evutil_time.c:307:1" }
+node: { title: "clock_gettime" label: "clock_gettime\n/usr/include/time.h:279:12" shape : ellipse }
+edge: { sourcename: "evutil_configure_monotonic_time_" targetname: "clock_gettime" label: "./evutil_time.c:328:7" }
+edge: { sourcename: "evutil_configure_monotonic_time_" targetname: "clock_gettime" label: "./evutil_time.c:334:19" }
+edge: { sourcename: "evutil_configure_monotonic_time_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_gettime_monotonic_" label: "evutil_gettime_monotonic_\n./evutil_time.c:348:1" }
+node: { title: "gettimeofday" label: "gettimeofday\n/usr/include/x86_64-linux-gnu/sys/time.h:67:12" shape : ellipse }
+edge: { sourcename: "evutil_gettime_monotonic_" targetname: "gettimeofday" label: "./evutil_time.c:354:7" }
+edge: { sourcename: "evutil_gettime_monotonic_" targetname: "./evutil_time.c:adjust_monotonic_time" label: "./evutil_time.c:356:3" }
+edge: { sourcename: "evutil_gettime_monotonic_" targetname: "clock_gettime" label: "./evutil_time.c:360:6" }
+edge: { sourcename: "evutil_gettime_monotonic_" targetname: "__stack_chk_fail" }
+}

@@ -1,0 +1,94 @@
+graph: { title: "./evutil_rand.c"
+node: { title: "./evutil_rand.c:arc4_init" label: "arc4_init\n././arc4random.c:103:1" }
+node: { title: "./evutil_rand.c:arc4_addrandom" label: "arc4_addrandom\n././arc4random.c:114:1" }
+node: { title: "./evutil_rand.c:read_all" label: "read_all\n././arc4random.c:132:1" }
+node: { title: "read" label: "read\n/usr/include/unistd.h:371:16" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:read_all" targetname: "read" label: "././arc4random.c:138:12" }
+node: { title: "./evutil_rand.c:arc4_seed_getrandom" label: "arc4_seed_getrandom\n././arc4random.c:169:1" }
+node: { title: "getrandom" label: "getrandom\n/usr/include/x86_64-linux-gnu/sys/random.h:34:9" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_getrandom" targetname: "getrandom" label: "././arc4random.c:176:7" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_getrandom" targetname: "./evutil_rand.c:arc4_addrandom" label: "././arc4random.c:180:2" }
+node: { title: "evutil_memclear_" label: "evutil_memclear_\n./util-internal.h:552:6" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_getrandom" targetname: "evutil_memclear_" label: "././arc4random.c:181:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_getrandom" targetname: "__stack_chk_fail" }
+node: { title: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" label: "arc4_seed_proc_sys_kernel_random_uuid\n././arc4random.c:230:1" }
+node: { title: "evutil_open_closeonexec_" label: "evutil_open_closeonexec_\n./util-internal.h:294:5" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "evutil_open_closeonexec_" label: "././arc4random.c:241:8" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "read" label: "././arc4random.c:244:7" }
+node: { title: "close" label: "close\n/usr/include/unistd.h:358:12" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "close" label: "././arc4random.c:245:3" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "memset" label: "././arc4random.c:248:3" }
+node: { title: "EVUTIL_ISXDIGIT_" label: "EVUTIL_ISXDIGIT_\n./util-internal.h:258:5" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "EVUTIL_ISXDIGIT_" label: "././arc4random.c:250:8" }
+node: { title: "evutil_hex_char_to_int_" label: "evutil_hex_char_to_int_\n./util-internal.h:459:5" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "evutil_hex_char_to_int_" label: "././arc4random.c:251:15" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "./evutil_rand.c:arc4_addrandom" label: "././arc4random.c:262:3" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "evutil_memclear_" label: "././arc4random.c:265:2" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "evutil_memclear_" label: "././arc4random.c:266:2" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" targetname: "__stack_chk_fail" }
+node: { title: "./evutil_rand.c:arc4_seed_urandom_helper_" label: "arc4_seed_urandom_helper_\n././arc4random.c:275:12" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_urandom_helper_" targetname: "evutil_open_closeonexec_" label: "././arc4random.c:281:7" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_urandom_helper_" targetname: "./evutil_rand.c:read_all" label: "././arc4random.c:284:6" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_urandom_helper_" targetname: "close" label: "././arc4random.c:285:2" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_urandom_helper_" targetname: "./evutil_rand.c:arc4_addrandom" label: "././arc4random.c:288:2" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_urandom_helper_" targetname: "evutil_memclear_" label: "././arc4random.c:289:2" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_urandom_helper_" targetname: "__stack_chk_fail" }
+node: { title: "./evutil_rand.c:arc4_seed_urandom" label: "arc4_seed_urandom\n././arc4random.c:294:1" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_urandom" targetname: "./evutil_rand.c:arc4_seed_urandom_helper_" label: "././arc4random.c:302:10" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed_urandom" targetname: "./evutil_rand.c:arc4_seed_urandom_helper_" label: "././arc4random.c:305:7" }
+node: { title: "./evutil_rand.c:arc4_seed" label: "arc4_seed\n././arc4random.c:315:1" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed" targetname: "./evutil_rand.c:arc4_seed_getrandom" label: "././arc4random.c:326:11" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed" targetname: "./evutil_rand.c:arc4_seed_urandom" label: "././arc4random.c:330:11" }
+edge: { sourcename: "./evutil_rand.c:arc4_seed" targetname: "./evutil_rand.c:arc4_seed_proc_sys_kernel_random_uuid" label: "././arc4random.c:335:11" }
+node: { title: "./evutil_rand.c:arc4_stir" label: "arc4_stir\n././arc4random.c:348:1" }
+edge: { sourcename: "./evutil_rand.c:arc4_stir" targetname: "./evutil_rand.c:arc4_init" label: "././arc4random.c:354:3" }
+edge: { sourcename: "./evutil_rand.c:arc4_stir" targetname: "./evutil_rand.c:arc4_seed" label: "././arc4random.c:358:11" }
+edge: { sourcename: "./evutil_rand.c:arc4_stir" targetname: "./evutil_rand.c:arc4_getbyte" label: "././arc4random.c:380:9" }
+edge: { sourcename: "./evutil_rand.c:arc4_stir" targetname: "./evutil_rand.c:arc4_getword" label: "././arc4random.c:382:15" }
+node: { title: "./evutil_rand.c:arc4_stir_if_needed" label: "arc4_stir_if_needed\n././arc4random.c:391:1" }
+node: { title: "getpid" label: "getpid\n/usr/include/unistd.h:650:16" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4_stir_if_needed" targetname: "getpid" label: "././arc4random.c:393:14" }
+edge: { sourcename: "./evutil_rand.c:arc4_stir_if_needed" targetname: "./evutil_rand.c:arc4_stir" label: "././arc4random.c:398:3" }
+node: { title: "./evutil_rand.c:arc4_getbyte" label: "arc4_getbyte\n././arc4random.c:403:1" }
+node: { title: "./evutil_rand.c:arc4_getword" label: "arc4_getword\n././arc4random.c:417:1" }
+edge: { sourcename: "./evutil_rand.c:arc4_getword" targetname: "./evutil_rand.c:arc4_getbyte" label: "././arc4random.c:421:18" }
+edge: { sourcename: "./evutil_rand.c:arc4_getword" targetname: "./evutil_rand.c:arc4_getbyte" label: "././arc4random.c:422:9" }
+edge: { sourcename: "./evutil_rand.c:arc4_getword" targetname: "./evutil_rand.c:arc4_getbyte" label: "././arc4random.c:423:9" }
+edge: { sourcename: "./evutil_rand.c:arc4_getword" targetname: "./evutil_rand.c:arc4_getbyte" label: "././arc4random.c:424:9" }
+node: { title: "./evutil_rand.c:arc4random_addrandom" label: "arc4random_addrandom\n././arc4random.c:443:1" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./evutil_rand.c:arc4random_addrandom" targetname: "__indirect_call" label: "././arc4random.c:446:2" }
+edge: { sourcename: "./evutil_rand.c:arc4random_addrandom" targetname: "./evutil_rand.c:arc4_stir" label: "././arc4random.c:448:3" }
+edge: { sourcename: "./evutil_rand.c:arc4random_addrandom" targetname: "./evutil_rand.c:arc4_addrandom" label: "././arc4random.c:454:3" }
+edge: { sourcename: "./evutil_rand.c:arc4random_addrandom" targetname: "__indirect_call" label: "././arc4random.c:456:2" }
+node: { title: "./evutil_rand.c:arc4random_buf" label: "arc4random_buf\n././arc4random.c:476:1" }
+edge: { sourcename: "./evutil_rand.c:arc4random_buf" targetname: "__indirect_call" label: "././arc4random.c:479:2" }
+edge: { sourcename: "./evutil_rand.c:arc4random_buf" targetname: "./evutil_rand.c:arc4_stir_if_needed" label: "././arc4random.c:480:2" }
+edge: { sourcename: "./evutil_rand.c:arc4random_buf" targetname: "./evutil_rand.c:arc4_stir" label: "././arc4random.c:483:4" }
+edge: { sourcename: "./evutil_rand.c:arc4random_buf" targetname: "./evutil_rand.c:arc4_getbyte" label: "././arc4random.c:484:12" }
+edge: { sourcename: "./evutil_rand.c:arc4random_buf" targetname: "__indirect_call" label: "././arc4random.c:486:2" }
+node: { title: "evutil_secure_rng_global_setup_locks_" label: "evutil_secure_rng_global_setup_locks_\n./evutil_rand.c:138:1" }
+node: { title: "evthread_setup_global_lock_" label: "evthread_setup_global_lock_\n./evthread-internal.h:374:7" shape : ellipse }
+edge: { sourcename: "evutil_secure_rng_global_setup_locks_" targetname: "evthread_setup_global_lock_" label: "./evutil_rand.c:140:2" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "evutil_secure_rng_global_setup_locks_" targetname: "event_warn" label: "./evutil_rand.c:140:2" }
+node: { title: "./evutil_rand.c:evutil_free_secure_rng_globals_locks" label: "evutil_free_secure_rng_globals_locks\n./evutil_rand.c:146:1" }
+edge: { sourcename: "./evutil_rand.c:evutil_free_secure_rng_globals_locks" targetname: "__indirect_call" label: "./evutil_rand.c:150:3" }
+node: { title: "evutil_secure_rng_set_urandom_device_file" label: "evutil_secure_rng_set_urandom_device_file\n./evutil_rand.c:158:1" }
+edge: { sourcename: "evutil_secure_rng_set_urandom_device_file" targetname: "__indirect_call" label: "./evutil_rand.c:161:2" }
+edge: { sourcename: "evutil_secure_rng_set_urandom_device_file" targetname: "__indirect_call" label: "./evutil_rand.c:163:2" }
+node: { title: "evutil_secure_rng_init" label: "evutil_secure_rng_init\n./evutil_rand.c:169:1" }
+edge: { sourcename: "evutil_secure_rng_init" targetname: "__indirect_call" label: "./evutil_rand.c:173:2" }
+edge: { sourcename: "evutil_secure_rng_init" targetname: "./evutil_rand.c:arc4_stir" label: "./evutil_rand.c:174:10" }
+edge: { sourcename: "evutil_secure_rng_init" targetname: "__indirect_call" label: "./evutil_rand.c:175:2" }
+node: { title: "./evutil_rand.c:ev_arc4random_buf" label: "ev_arc4random_buf\n./evutil_rand.c:180:1" }
+edge: { sourcename: "./evutil_rand.c:ev_arc4random_buf" targetname: "./evutil_rand.c:arc4random_buf" label: "./evutil_rand.c:182:2" }
+node: { title: "evutil_secure_rng_get_bytes" label: "evutil_secure_rng_get_bytes\n./evutil_rand.c:188:1" }
+edge: { sourcename: "evutil_secure_rng_get_bytes" targetname: "./evutil_rand.c:ev_arc4random_buf" label: "./evutil_rand.c:190:2" }
+node: { title: "evutil_secure_rng_add_bytes" label: "evutil_secure_rng_add_bytes\n./evutil_rand.c:194:1" }
+edge: { sourcename: "evutil_secure_rng_add_bytes" targetname: "./evutil_rand.c:arc4random_addrandom" label: "./evutil_rand.c:197:2" }
+node: { title: "evutil_free_secure_rng_globals_" label: "evutil_free_secure_rng_globals_\n./evutil_rand.c:203:1" }
+edge: { sourcename: "evutil_free_secure_rng_globals_" targetname: "./evutil_rand.c:evutil_free_secure_rng_globals_locks" label: "./evutil_rand.c:205:5" }
+}

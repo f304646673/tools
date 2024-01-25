@@ -1,0 +1,60 @@
+graph: { title: "./select.c"
+node: { title: "./select.c:select_init" label: "select_init\n./select.c:110:1" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./mm-internal.h:58:7" shape : ellipse }
+edge: { sourcename: "./select.c:select_init" targetname: "event_mm_calloc_" label: "./select.c:114:14" }
+edge: { sourcename: "./select.c:select_init" targetname: "./select.c:select_resize" label: "./select.c:117:6" }
+edge: { sourcename: "./select.c:select_init" targetname: "./select.c:select_free_selectop" label: "./select.c:118:3" }
+node: { title: "sigfd_init_" label: "sigfd_init_\n./evsignal-internal.h:65:5" shape : ellipse }
+edge: { sourcename: "./select.c:select_init" targetname: "sigfd_init_" label: "./select.c:122:6" }
+node: { title: "evsig_init_" label: "evsig_init_\n./evsignal-internal.h:71:5" shape : ellipse }
+edge: { sourcename: "./select.c:select_init" targetname: "evsig_init_" label: "./select.c:123:3" }
+node: { title: "evutil_weakrand_seed_" label: "evutil_weakrand_seed_\n./util-internal.h:337:13" shape : ellipse }
+edge: { sourcename: "./select.c:select_init" targetname: "evutil_weakrand_seed_" label: "./select.c:125:2" }
+node: { title: "./select.c:select_dispatch" label: "select_dispatch\n./select.c:141:1" }
+node: { title: "event_mm_realloc_" label: "event_mm_realloc_\n./mm-internal.h:72:7" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "event_mm_realloc_" label: "./select.c:150:23" }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "event_mm_realloc_" label: "./select.c:153:24" }
+node: { title: "memcpy" label: "memcpy\n/usr/include/string.h:43:14" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "memcpy" label: "./select.c:164:2" }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "memcpy" label: "./select.c:166:2" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "__indirect_call" label: "./select.c:171:2" }
+node: { title: "select" label: "select\n/usr/include/x86_64-linux-gnu/sys/select.h:102:12" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "select" label: "./select.c:173:8" }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "__indirect_call" label: "./select.c:176:2" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "__errno_location" label: "./select.c:181:7" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "event_warn" label: "./select.c:182:4" }
+node: { title: "event_debugx_" label: "event_debugx_\n./log-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "event_debugx_" label: "./select.c:189:2" }
+node: { title: "evutil_weakrand_range_" label: "evutil_weakrand_range_\n./util-internal.h:348:12" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "evutil_weakrand_range_" label: "./select.c:192:6" }
+node: { title: "evmap_io_active_" label: "evmap_io_active_\n./evmap-internal.h:78:6" shape : ellipse }
+edge: { sourcename: "./select.c:select_dispatch" targetname: "evmap_io_active_" label: "./select.c:205:3" }
+node: { title: "./select.c:select_resize" label: "select_resize\n./select.c:213:1" }
+edge: { sourcename: "./select.c:select_resize" targetname: "event_mm_realloc_" label: "./select.c:221:20" }
+edge: { sourcename: "./select.c:select_resize" targetname: "event_mm_realloc_" label: "./select.c:224:21" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./select.c:select_resize" targetname: "memset" label: "./select.c:236:2" }
+edge: { sourcename: "./select.c:select_resize" targetname: "memset" label: "./select.c:238:2" }
+edge: { sourcename: "./select.c:select_resize" targetname: "event_warn" label: "./select.c:247:2" }
+node: { title: "./select.c:select_add" label: "select_add\n./select.c:253:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./select.c:select_add" targetname: "event_errx" label: "./select.c:258:2" }
+edge: { sourcename: "./select.c:select_add" targetname: "./select.c:select_resize" label: "./select.c:277:8" }
+node: { title: "./select.c:select_del" label: "select_del\n./select.c:300:1" }
+edge: { sourcename: "./select.c:select_del" targetname: "event_errx" label: "./select.c:305:2" }
+node: { title: "./select.c:select_free_selectop" label: "select_free_selectop\n./select.c:324:1" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "./select.c:select_free_selectop" targetname: "event_mm_free_" label: "./select.c:327:3" }
+edge: { sourcename: "./select.c:select_free_selectop" targetname: "event_mm_free_" label: "./select.c:329:3" }
+edge: { sourcename: "./select.c:select_free_selectop" targetname: "event_mm_free_" label: "./select.c:331:3" }
+edge: { sourcename: "./select.c:select_free_selectop" targetname: "event_mm_free_" label: "./select.c:333:3" }
+edge: { sourcename: "./select.c:select_free_selectop" targetname: "memset" label: "./select.c:335:2" }
+edge: { sourcename: "./select.c:select_free_selectop" targetname: "event_mm_free_" label: "./select.c:336:2" }
+node: { title: "./select.c:select_dealloc" label: "select_dealloc\n./select.c:340:1" }
+node: { title: "evsig_dealloc_" label: "evsig_dealloc_\n./evsignal-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "./select.c:select_dealloc" targetname: "evsig_dealloc_" label: "./select.c:342:2" }
+edge: { sourcename: "./select.c:select_dealloc" targetname: "./select.c:select_free_selectop" label: "./select.c:344:2" }
+}

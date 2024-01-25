@@ -1,0 +1,64 @@
+graph: { title: "./log.c"
+node: { title: "event_enable_debug_logging" label: "event_enable_debug_logging\n./log.c:76:1" }
+node: { title: "event_set_fatal_callback" label: "event_set_fatal_callback\n./log.c:84:1" }
+node: { title: "./log.c:event_exit" label: "event_exit\n./log.c:90:1" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./log.c:event_exit" targetname: "__indirect_call" label: "./log.c:93:3" }
+node: { title: "exit" label: "exit\n/usr/include/stdlib.h:624:13" shape : ellipse }
+edge: { sourcename: "./log.c:event_exit" targetname: "exit" label: "./log.c:94:3" }
+node: { title: "abort" label: "abort\n/usr/include/stdlib.h:598:13" shape : ellipse }
+edge: { sourcename: "./log.c:event_exit" targetname: "abort" label: "./log.c:96:3" }
+edge: { sourcename: "./log.c:event_exit" targetname: "exit" label: "./log.c:98:3" }
+node: { title: "event_err" label: "event_err\n./log.c:102:1" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "event_err" targetname: "__errno_location" label: "./log.c:107:38" }
+node: { title: "strerror" label: "strerror\n/usr/include/string.h:419:14" shape : ellipse }
+edge: { sourcename: "event_err" targetname: "strerror" label: "./log.c:107:29" }
+edge: { sourcename: "event_err" targetname: "event_logv_" label: "./log.c:107:2" }
+edge: { sourcename: "event_err" targetname: "./log.c:event_exit" label: "./log.c:109:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "event_err" targetname: "__stack_chk_fail" }
+node: { title: "event_warn" label: "event_warn\n./log.c:113:1" }
+edge: { sourcename: "event_warn" targetname: "__errno_location" label: "./log.c:118:39" }
+edge: { sourcename: "event_warn" targetname: "strerror" label: "./log.c:118:30" }
+edge: { sourcename: "event_warn" targetname: "event_logv_" label: "./log.c:118:2" }
+edge: { sourcename: "event_warn" targetname: "__stack_chk_fail" }
+node: { title: "event_sock_err" label: "event_sock_err\n./log.c:123:1" }
+edge: { sourcename: "event_sock_err" targetname: "__errno_location" label: "./log.c:126:12" }
+edge: { sourcename: "event_sock_err" targetname: "strerror" label: "./log.c:129:29" }
+edge: { sourcename: "event_sock_err" targetname: "event_logv_" label: "./log.c:129:2" }
+edge: { sourcename: "event_sock_err" targetname: "./log.c:event_exit" label: "./log.c:131:2" }
+edge: { sourcename: "event_sock_err" targetname: "__stack_chk_fail" }
+node: { title: "event_sock_warn" label: "event_sock_warn\n./log.c:135:1" }
+edge: { sourcename: "event_sock_warn" targetname: "__errno_location" label: "./log.c:138:12" }
+edge: { sourcename: "event_sock_warn" targetname: "strerror" label: "./log.c:141:30" }
+edge: { sourcename: "event_sock_warn" targetname: "event_logv_" label: "./log.c:141:2" }
+edge: { sourcename: "event_sock_warn" targetname: "__stack_chk_fail" }
+node: { title: "event_errx" label: "event_errx\n./log.c:146:1" }
+edge: { sourcename: "event_errx" targetname: "event_logv_" label: "./log.c:151:2" }
+edge: { sourcename: "event_errx" targetname: "./log.c:event_exit" label: "./log.c:153:2" }
+edge: { sourcename: "event_errx" targetname: "__stack_chk_fail" }
+node: { title: "event_warnx" label: "event_warnx\n./log.c:157:1" }
+edge: { sourcename: "event_warnx" targetname: "event_logv_" label: "./log.c:162:2" }
+edge: { sourcename: "event_warnx" targetname: "__stack_chk_fail" }
+node: { title: "event_msgx" label: "event_msgx\n./log.c:167:1" }
+edge: { sourcename: "event_msgx" targetname: "event_logv_" label: "./log.c:172:2" }
+edge: { sourcename: "event_msgx" targetname: "__stack_chk_fail" }
+node: { title: "event_debugx_" label: "event_debugx_\n./log.c:177:1" }
+edge: { sourcename: "event_debugx_" targetname: "event_logv_" label: "./log.c:182:2" }
+edge: { sourcename: "event_debugx_" targetname: "__stack_chk_fail" }
+node: { title: "event_logv_" label: "event_logv_\n./log.c:187:1" }
+node: { title: "evutil_vsnprintf" label: "evutil_vsnprintf\n./include/event2/util.h:634:5" shape : ellipse }
+edge: { sourcename: "event_logv_" targetname: "evutil_vsnprintf" label: "./log.c:196:3" }
+node: { title: "strlen" label: "strlen\n/usr/include/string.h:407:15" shape : ellipse }
+edge: { sourcename: "event_logv_" targetname: "strlen" label: "./log.c:201:9" }
+node: { title: "evutil_snprintf" label: "evutil_snprintf\n./include/event2/util.h:625:5" shape : ellipse }
+edge: { sourcename: "event_logv_" targetname: "evutil_snprintf" label: "./log.c:203:4" }
+edge: { sourcename: "event_logv_" targetname: "./log.c:event_log" label: "./log.c:207:2" }
+edge: { sourcename: "event_logv_" targetname: "__stack_chk_fail" }
+node: { title: "event_set_log_callback" label: "event_set_log_callback\n./log.c:213:1" }
+node: { title: "./log.c:event_log" label: "event_log\n./log.c:219:1" }
+edge: { sourcename: "./log.c:event_log" targetname: "__indirect_call" label: "./log.c:222:3" }
+node: { title: "fprintf" label: "fprintf\n/usr/include/stdio.h:350:12" shape : ellipse }
+edge: { sourcename: "./log.c:event_log" targetname: "fprintf" label: "./log.c:242:9" }
+}

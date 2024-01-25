@@ -1,0 +1,91 @@
+graph: { title: "./evthread.c"
+node: { title: "evthread_set_id_callback" label: "evthread_set_id_callback\n./evthread.c:72:1" }
+node: { title: "evthread_get_lock_callbacks" label: "evthread_get_lock_callbacks\n./evthread.c:77:33" }
+node: { title: "evthread_get_condition_callbacks" label: "evthread_get_condition_callbacks\n./evthread.c:82:38" }
+node: { title: "evthreadimpl_disable_lock_debugging_" label: "evthreadimpl_disable_lock_debugging_\n./evthread.c:87:6" }
+node: { title: "evthread_set_lock_callbacks" label: "evthread_set_lock_callbacks\n./evthread.c:93:1" }
+edge: { sourcename: "evthread_set_lock_callbacks" targetname: "evthread_get_lock_callbacks" label: "./evthread.c:95:43" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "evthread_set_lock_callbacks" targetname: "event_errx" label: "./evthread.c:100:7" }
+node: { title: "event_warnx" label: "event_warnx\n./log-internal.h:68:6" shape : ellipse }
+edge: { sourcename: "evthread_set_lock_callbacks" targetname: "event_warnx" label: "./evthread.c:107:4" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "evthread_set_lock_callbacks" targetname: "memset" label: "./evthread.c:109:3" }
+edge: { sourcename: "evthread_set_lock_callbacks" targetname: "event_warnx" label: "./evthread.c:123:3" }
+node: { title: "memcpy" label: "memcpy\n/usr/include/string.h:43:14" shape : ellipse }
+edge: { sourcename: "evthread_set_lock_callbacks" targetname: "memcpy" label: "./evthread.c:128:3" }
+node: { title: "event_global_setup_locks_" label: "event_global_setup_locks_\n./evthread-internal.h:387:5" shape : ellipse }
+edge: { sourcename: "evthread_set_lock_callbacks" targetname: "event_global_setup_locks_" label: "./evthread.c:129:10" }
+node: { title: "evthread_set_condition_callbacks" label: "evthread_set_condition_callbacks\n./evthread.c:136:1" }
+edge: { sourcename: "evthread_set_condition_callbacks" targetname: "evthread_get_condition_callbacks" label: "./evthread.c:138:48" }
+edge: { sourcename: "evthread_set_condition_callbacks" targetname: "event_errx" label: "./evthread.c:143:7" }
+edge: { sourcename: "evthread_set_condition_callbacks" targetname: "event_warnx" label: "./evthread.c:150:4" }
+edge: { sourcename: "evthread_set_condition_callbacks" targetname: "memset" label: "./evthread.c:153:3" }
+edge: { sourcename: "evthread_set_condition_callbacks" targetname: "event_warnx" label: "./evthread.c:166:3" }
+edge: { sourcename: "evthread_set_condition_callbacks" targetname: "memcpy" label: "./evthread.c:172:3" }
+node: { title: "./evthread.c:debug_lock_alloc" label: "debug_lock_alloc\n./evthread.c:195:1" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "./evthread.c:debug_lock_alloc" targetname: "event_mm_malloc_" label: "./evthread.c:197:30" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./evthread.c:debug_lock_alloc" targetname: "__indirect_call" label: "./evthread.c:201:24" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "./evthread.c:debug_lock_alloc" targetname: "event_mm_free_" label: "./evthread.c:203:4" }
+node: { title: "./evthread.c:debug_lock_free" label: "debug_lock_free\n./evthread.c:217:1" }
+edge: { sourcename: "./evthread.c:debug_lock_free" targetname: "event_errx" label: "./evthread.c:220:2" }
+edge: { sourcename: "./evthread.c:debug_lock_free" targetname: "event_errx" label: "./evthread.c:221:2" }
+edge: { sourcename: "./evthread.c:debug_lock_free" targetname: "event_errx" label: "./evthread.c:222:2" }
+edge: { sourcename: "./evthread.c:debug_lock_free" targetname: "__indirect_call" label: "./evthread.c:224:3" }
+edge: { sourcename: "./evthread.c:debug_lock_free" targetname: "event_mm_free_" label: "./evthread.c:230:2" }
+node: { title: "./evthread.c:evthread_debug_lock_mark_locked" label: "evthread_debug_lock_mark_locked\n./evthread.c:234:1" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_locked" targetname: "event_errx" label: "./evthread.c:236:2" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_locked" targetname: "event_errx" label: "./evthread.c:239:3" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_locked" targetname: "__indirect_call" label: "./evthread.c:242:8" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_locked" targetname: "event_errx" label: "./evthread.c:244:4" }
+node: { title: "./evthread.c:debug_lock_lock" label: "debug_lock_lock\n./evthread.c:250:1" }
+edge: { sourcename: "./evthread.c:debug_lock_lock" targetname: "event_errx" label: "./evthread.c:255:3" }
+edge: { sourcename: "./evthread.c:debug_lock_lock" targetname: "event_errx" label: "./evthread.c:257:3" }
+edge: { sourcename: "./evthread.c:debug_lock_lock" targetname: "__indirect_call" label: "./evthread.c:259:9" }
+edge: { sourcename: "./evthread.c:debug_lock_lock" targetname: "./evthread.c:evthread_debug_lock_mark_locked" label: "./evthread.c:261:3" }
+node: { title: "./evthread.c:evthread_debug_lock_mark_unlocked" label: "evthread_debug_lock_mark_unlocked\n./evthread.c:267:1" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_unlocked" targetname: "event_errx" label: "./evthread.c:269:2" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_unlocked" targetname: "event_errx" label: "./evthread.c:271:3" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_unlocked" targetname: "event_errx" label: "./evthread.c:273:3" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_unlocked" targetname: "__indirect_call" label: "./evthread.c:276:8" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_unlocked" targetname: "event_errx" label: "./evthread.c:277:3" }
+edge: { sourcename: "./evthread.c:evthread_debug_lock_mark_unlocked" targetname: "event_errx" label: "./evthread.c:282:2" }
+node: { title: "./evthread.c:debug_lock_unlock" label: "debug_lock_unlock\n./evthread.c:286:1" }
+edge: { sourcename: "./evthread.c:debug_lock_unlock" targetname: "./evthread.c:evthread_debug_lock_mark_unlocked" label: "./evthread.c:290:2" }
+edge: { sourcename: "./evthread.c:debug_lock_unlock" targetname: "__indirect_call" label: "./evthread.c:292:9" }
+node: { title: "./evthread.c:debug_cond_wait" label: "debug_cond_wait\n./evthread.c:297:1" }
+edge: { sourcename: "./evthread.c:debug_cond_wait" targetname: "event_errx" label: "./evthread.c:301:2" }
+edge: { sourcename: "./evthread.c:debug_cond_wait" targetname: "event_errx" label: "./evthread.c:302:2" }
+edge: { sourcename: "./evthread.c:debug_cond_wait" targetname: "evthread_is_debug_lock_held_" label: "./evthread.c:303:2" }
+edge: { sourcename: "./evthread.c:debug_cond_wait" targetname: "event_errx" label: "./evthread.c:303:2" }
+edge: { sourcename: "./evthread.c:debug_cond_wait" targetname: "./evthread.c:evthread_debug_lock_mark_unlocked" label: "./evthread.c:304:2" }
+edge: { sourcename: "./evthread.c:debug_cond_wait" targetname: "__indirect_call" label: "./evthread.c:305:6" }
+edge: { sourcename: "./evthread.c:debug_cond_wait" targetname: "./evthread.c:evthread_debug_lock_mark_locked" label: "./evthread.c:306:2" }
+node: { title: "evthread_enable_lock_debuging" label: "evthread_enable_lock_debuging\n./evthread.c:312:1" }
+edge: { sourcename: "evthread_enable_lock_debuging" targetname: "evthread_enable_lock_debugging" label: "./evthread.c:314:2" }
+node: { title: "evthread_enable_lock_debugging" label: "evthread_enable_lock_debugging\n./evthread.c:318:1" }
+edge: { sourcename: "evthread_enable_lock_debugging" targetname: "event_global_setup_locks_" label: "./evthread.c:341:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "evthread_enable_lock_debugging" targetname: "__stack_chk_fail" }
+node: { title: "evthread_is_debug_lock_held_" label: "evthread_is_debug_lock_held_\n./evthread.c:345:1" }
+edge: { sourcename: "evthread_is_debug_lock_held_" targetname: "__indirect_call" label: "./evthread.c:351:22" }
+node: { title: "evthread_debug_get_real_lock_" label: "evthread_debug_get_real_lock_\n./evthread.c:359:1" }
+node: { title: "evthread_setup_global_lock_" label: "evthread_setup_global_lock_\n./evthread.c:366:1" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "event_errx" label: "./evthread.c:376:3" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "./evthread.c:debug_lock_alloc" label: "./evthread.c:377:10" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "event_errx" label: "./evthread.c:381:3" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "__indirect_call" label: "./evthread.c:385:4" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "./evthread.c:debug_lock_alloc" label: "./evthread.c:386:11" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "event_mm_malloc_" label: "./evthread.c:388:10" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "__indirect_call" label: "./evthread.c:390:4" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "event_errx" label: "./evthread.c:400:3" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "__indirect_call" label: "./evthread.c:401:10" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "./evthread.c:debug_lock_alloc" label: "./evthread.c:404:45" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "event_errx" label: "./evthread.c:405:3" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "event_errx" label: "./evthread.c:407:3" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "__indirect_call" label: "./evthread.c:409:17" }
+edge: { sourcename: "evthread_setup_global_lock_" targetname: "event_mm_free_" label: "./evthread.c:413:5" }
+}

@@ -1,0 +1,560 @@
+graph: { title: "./buffer.c"
+node: { title: "./buffer.c:evbuffer_chain_new" label: "evbuffer_chain_new\n./buffer.c:153:1" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_chain_new" targetname: "event_mm_malloc_" label: "./buffer.c:164:15" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_chain_new" targetname: "memset" label: "./buffer.c:167:2" }
+node: { title: "./buffer.c:evbuffer_chain_new_membuf" label: "evbuffer_chain_new_membuf\n./buffer.c:182:1" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_new_membuf" targetname: "./buffer.c:evbuffer_chain_new" label: "./buffer.c:201:9" }
+node: { title: "./buffer.c:evbuffer_chain_free" label: "evbuffer_chain_free\n./buffer.c:205:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "event_errx" label: "./buffer.c:207:2" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "__indirect_call" label: "./buffer.c:228:5" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "evbuffer_file_segment_free" label: "./buffer.c:242:4" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "event_errx" label: "./buffer.c:254:3" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "event_errx" label: "./buffer.c:255:3" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "__indirect_call" label: "./buffer.c:256:3" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:257:3" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "evbuffer_decref_and_unlock_" label: "./buffer.c:258:3" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_chain_free" targetname: "event_mm_free_" label: "./buffer.c:261:2" }
+node: { title: "./buffer.c:evbuffer_free_all_chains" label: "evbuffer_free_all_chains\n./buffer.c:265:1" }
+edge: { sourcename: "./buffer.c:evbuffer_free_all_chains" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:270:3" }
+node: { title: "./buffer.c:evbuffer_chains_all_empty" label: "evbuffer_chains_all_empty\n./buffer.c:276:1" }
+node: { title: "./buffer.c:evbuffer_free_trailing_empty_chains" label: "evbuffer_free_trailing_empty_chains\n./buffer.c:300:1" }
+edge: { sourcename: "./buffer.c:evbuffer_free_trailing_empty_chains" targetname: "./buffer.c:evbuffer_chains_all_empty" label: "./buffer.c:307:3" }
+edge: { sourcename: "./buffer.c:evbuffer_free_trailing_empty_chains" targetname: "event_errx" label: "./buffer.c:307:3" }
+edge: { sourcename: "./buffer.c:evbuffer_free_trailing_empty_chains" targetname: "./buffer.c:evbuffer_free_all_chains" label: "./buffer.c:308:3" }
+node: { title: "./buffer.c:evbuffer_chain_insert" label: "evbuffer_chain_insert\n./buffer.c:318:1" }
+node: { title: "evthread_is_debug_lock_held_" label: "evthread_is_debug_lock_held_\n./evthread-internal.h:371:5" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_chain_insert" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:321:2" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_insert" targetname: "event_errx" label: "./buffer.c:321:2" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_insert" targetname: "event_errx" label: "./buffer.c:324:3" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_insert" targetname: "event_errx" label: "./buffer.c:325:3" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_insert" targetname: "./buffer.c:evbuffer_free_trailing_empty_chains" label: "./buffer.c:329:9" }
+node: { title: "./buffer.c:evbuffer_chain_insert_new" label: "evbuffer_chain_insert_new\n./buffer.c:339:1" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_insert_new" targetname: "./buffer.c:evbuffer_chain_new_membuf" label: "./buffer.c:342:15" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_insert_new" targetname: "./buffer.c:evbuffer_chain_insert" label: "./buffer.c:344:2" }
+node: { title: "evbuffer_chain_pin_" label: "evbuffer_chain_pin_\n./buffer.c:349:1" }
+edge: { sourcename: "evbuffer_chain_pin_" targetname: "event_errx" label: "./buffer.c:351:2" }
+node: { title: "evbuffer_chain_unpin_" label: "evbuffer_chain_unpin_\n./buffer.c:356:1" }
+edge: { sourcename: "evbuffer_chain_unpin_" targetname: "event_errx" label: "./buffer.c:358:2" }
+edge: { sourcename: "evbuffer_chain_unpin_" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:361:3" }
+node: { title: "./buffer.c:evbuffer_chain_incref" label: "evbuffer_chain_incref\n./buffer.c:365:1" }
+node: { title: "evbuffer_new" label: "evbuffer_new\n./buffer.c:371:1" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./mm-internal.h:58:7" shape : ellipse }
+edge: { sourcename: "evbuffer_new" targetname: "event_mm_calloc_" label: "./buffer.c:375:11" }
+node: { title: "evbuffer_set_flags" label: "evbuffer_set_flags\n./buffer.c:388:1" }
+edge: { sourcename: "evbuffer_set_flags" targetname: "__indirect_call" label: "./buffer.c:390:2" }
+edge: { sourcename: "evbuffer_set_flags" targetname: "__indirect_call" label: "./buffer.c:392:2" }
+node: { title: "evbuffer_clear_flags" label: "evbuffer_clear_flags\n./buffer.c:397:1" }
+edge: { sourcename: "evbuffer_clear_flags" targetname: "__indirect_call" label: "./buffer.c:399:2" }
+edge: { sourcename: "evbuffer_clear_flags" targetname: "__indirect_call" label: "./buffer.c:401:2" }
+node: { title: "evbuffer_incref_" label: "evbuffer_incref_\n./buffer.c:406:1" }
+edge: { sourcename: "evbuffer_incref_" targetname: "__indirect_call" label: "./buffer.c:408:2" }
+edge: { sourcename: "evbuffer_incref_" targetname: "__indirect_call" label: "./buffer.c:410:2" }
+node: { title: "evbuffer_incref_and_lock_" label: "evbuffer_incref_and_lock_\n./buffer.c:414:1" }
+edge: { sourcename: "evbuffer_incref_and_lock_" targetname: "__indirect_call" label: "./buffer.c:416:2" }
+node: { title: "evbuffer_defer_callbacks" label: "evbuffer_defer_callbacks\n./buffer.c:421:1" }
+edge: { sourcename: "evbuffer_defer_callbacks" targetname: "__indirect_call" label: "./buffer.c:423:2" }
+node: { title: "event_base_get_npriorities" label: "event_base_get_npriorities\n./include/event2/event.h:1513:5" shape : ellipse }
+edge: { sourcename: "evbuffer_defer_callbacks" targetname: "event_base_get_npriorities" label: "./buffer.c:427:6" }
+node: { title: "event_deferred_cb_init_" label: "event_deferred_cb_init_\n./defer-internal.h:50:6" shape : ellipse }
+edge: { sourcename: "evbuffer_defer_callbacks" targetname: "event_deferred_cb_init_" label: "./buffer.c:426:2" }
+edge: { sourcename: "evbuffer_defer_callbacks" targetname: "__indirect_call" label: "./buffer.c:429:2" }
+node: { title: "evbuffer_enable_locking" label: "evbuffer_enable_locking\n./buffer.c:434:1" }
+edge: { sourcename: "evbuffer_enable_locking" targetname: "__indirect_call" label: "./buffer.c:443:3" }
+node: { title: "evbuffer_set_parent_" label: "evbuffer_set_parent_\n./buffer.c:458:1" }
+edge: { sourcename: "evbuffer_set_parent_" targetname: "__indirect_call" label: "./buffer.c:460:2" }
+edge: { sourcename: "evbuffer_set_parent_" targetname: "__indirect_call" label: "./buffer.c:462:2" }
+node: { title: "./buffer.c:evbuffer_run_callbacks" label: "evbuffer_run_callbacks\n./buffer.c:466:1" }
+edge: { sourcename: "./buffer.c:evbuffer_run_callbacks" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:488:2" }
+edge: { sourcename: "./buffer.c:evbuffer_run_callbacks" targetname: "event_errx" label: "./buffer.c:488:2" }
+edge: { sourcename: "./buffer.c:evbuffer_run_callbacks" targetname: "__indirect_call" label: "./buffer.c:516:4" }
+edge: { sourcename: "./buffer.c:evbuffer_run_callbacks" targetname: "__indirect_call" label: "./buffer.c:519:4" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_run_callbacks" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_invoke_callbacks_" label: "evbuffer_invoke_callbacks_\n./buffer.c:524:1" }
+node: { title: "event_deferred_cb_schedule_" label: "event_deferred_cb_schedule_\n./defer-internal.h:66:5" shape : ellipse }
+edge: { sourcename: "evbuffer_invoke_callbacks_" targetname: "event_deferred_cb_schedule_" label: "./buffer.c:532:7" }
+edge: { sourcename: "evbuffer_invoke_callbacks_" targetname: "evbuffer_incref_and_lock_" label: "./buffer.c:533:4" }
+node: { title: "bufferevent_incref" label: "bufferevent_incref\n./include/event2/bufferevent.h:613:6" shape : ellipse }
+edge: { sourcename: "evbuffer_invoke_callbacks_" targetname: "bufferevent_incref" label: "./buffer.c:535:5" }
+edge: { sourcename: "evbuffer_invoke_callbacks_" targetname: "__indirect_call" label: "./buffer.c:536:4" }
+edge: { sourcename: "evbuffer_invoke_callbacks_" targetname: "./buffer.c:evbuffer_run_callbacks" label: "./buffer.c:540:2" }
+node: { title: "./buffer.c:evbuffer_deferred_callback" label: "evbuffer_deferred_callback\n./buffer.c:544:1" }
+edge: { sourcename: "./buffer.c:evbuffer_deferred_callback" targetname: "__indirect_call" label: "./buffer.c:551:2" }
+edge: { sourcename: "./buffer.c:evbuffer_deferred_callback" targetname: "./buffer.c:evbuffer_run_callbacks" label: "./buffer.c:553:2" }
+edge: { sourcename: "./buffer.c:evbuffer_deferred_callback" targetname: "evbuffer_decref_and_unlock_" label: "./buffer.c:554:2" }
+node: { title: "bufferevent_decref" label: "bufferevent_decref\n./include/event2/bufferevent.h:627:5" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_deferred_callback" targetname: "bufferevent_decref" label: "./buffer.c:556:3" }
+node: { title: "./buffer.c:evbuffer_remove_all_callbacks" label: "evbuffer_remove_all_callbacks\n./buffer.c:560:1" }
+edge: { sourcename: "./buffer.c:evbuffer_remove_all_callbacks" targetname: "event_mm_free_" label: "./buffer.c:566:3" }
+node: { title: "evbuffer_decref_and_unlock_" label: "evbuffer_decref_and_unlock_\n./buffer.c:571:1" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:574:2" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "event_errx" label: "./buffer.c:574:2" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "event_errx" label: "./buffer.c:576:2" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "__indirect_call" label: "./buffer.c:579:3" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:585:3" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "./buffer.c:evbuffer_remove_all_callbacks" label: "./buffer.c:587:2" }
+node: { title: "event_deferred_cb_cancel_" label: "event_deferred_cb_cancel_\n./defer-internal.h:59:6" shape : ellipse }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "event_deferred_cb_cancel_" label: "./buffer.c:589:3" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "__indirect_call" label: "./buffer.c:591:2" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "__indirect_call" label: "./buffer.c:593:3" }
+edge: { sourcename: "evbuffer_decref_and_unlock_" targetname: "event_mm_free_" label: "./buffer.c:594:2" }
+node: { title: "evbuffer_free" label: "evbuffer_free\n./buffer.c:598:1" }
+edge: { sourcename: "evbuffer_free" targetname: "__indirect_call" label: "./buffer.c:600:2" }
+edge: { sourcename: "evbuffer_free" targetname: "evbuffer_decref_and_unlock_" label: "./buffer.c:601:2" }
+node: { title: "evbuffer_set_max_read" label: "evbuffer_set_max_read\n./buffer.c:604:5" }
+edge: { sourcename: "evbuffer_set_max_read" targetname: "__indirect_call" label: "./buffer.c:610:2" }
+edge: { sourcename: "evbuffer_set_max_read" targetname: "__indirect_call" label: "./buffer.c:612:2" }
+node: { title: "evbuffer_get_max_read" label: "evbuffer_get_max_read\n./buffer.c:615:8" }
+edge: { sourcename: "evbuffer_get_max_read" targetname: "__indirect_call" label: "./buffer.c:618:2" }
+edge: { sourcename: "evbuffer_get_max_read" targetname: "__indirect_call" label: "./buffer.c:620:2" }
+node: { title: "evbuffer_lock" label: "evbuffer_lock\n./buffer.c:625:1" }
+edge: { sourcename: "evbuffer_lock" targetname: "__indirect_call" label: "./buffer.c:627:2" }
+node: { title: "evbuffer_unlock" label: "evbuffer_unlock\n./buffer.c:631:1" }
+edge: { sourcename: "evbuffer_unlock" targetname: "__indirect_call" label: "./buffer.c:633:2" }
+node: { title: "evbuffer_get_length" label: "evbuffer_get_length\n./buffer.c:637:1" }
+edge: { sourcename: "evbuffer_get_length" targetname: "__indirect_call" label: "./buffer.c:640:2" }
+edge: { sourcename: "evbuffer_get_length" targetname: "__indirect_call" label: "./buffer.c:642:2" }
+node: { title: "evbuffer_get_contiguous_space" label: "evbuffer_get_contiguous_space\n./buffer.c:647:1" }
+edge: { sourcename: "evbuffer_get_contiguous_space" targetname: "__indirect_call" label: "./buffer.c:652:2" }
+edge: { sourcename: "evbuffer_get_contiguous_space" targetname: "__indirect_call" label: "./buffer.c:655:2" }
+node: { title: "evbuffer_add_iovec" label: "evbuffer_add_iovec\n./buffer.c:661:1" }
+edge: { sourcename: "evbuffer_add_iovec" targetname: "__indirect_call" label: "./buffer.c:666:2" }
+edge: { sourcename: "evbuffer_add_iovec" targetname: "evbuffer_expand_fast_" label: "./buffer.c:674:6" }
+edge: { sourcename: "evbuffer_add_iovec" targetname: "evbuffer_add" label: "./buffer.c:684:7" }
+edge: { sourcename: "evbuffer_add_iovec" targetname: "__indirect_call" label: "./buffer.c:692:5" }
+node: { title: "evbuffer_reserve_space" label: "evbuffer_reserve_space\n./buffer.c:697:1" }
+edge: { sourcename: "evbuffer_reserve_space" targetname: "__indirect_call" label: "./buffer.c:703:2" }
+edge: { sourcename: "evbuffer_reserve_space" targetname: "./buffer.c:evbuffer_expand_singlechain" label: "./buffer.c:709:16" }
+edge: { sourcename: "evbuffer_reserve_space" targetname: "event_errx" label: "./buffer.c:714:3" }
+edge: { sourcename: "evbuffer_reserve_space" targetname: "evbuffer_expand_fast_" label: "./buffer.c:717:7" }
+edge: { sourcename: "evbuffer_reserve_space" targetname: "evbuffer_read_setup_vecs_" label: "./buffer.c:719:7" }
+edge: { sourcename: "evbuffer_reserve_space" targetname: "__indirect_call" label: "./buffer.c:724:2" }
+edge: { sourcename: "evbuffer_reserve_space" targetname: "__stack_chk_fail" }
+node: { title: "./buffer.c:advance_last_with_data" label: "advance_last_with_data\n./buffer.c:730:1" }
+edge: { sourcename: "./buffer.c:advance_last_with_data" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:735:2" }
+edge: { sourcename: "./buffer.c:advance_last_with_data" targetname: "event_errx" label: "./buffer.c:735:2" }
+node: { title: "evbuffer_commit_space" label: "evbuffer_commit_space\n./buffer.c:750:1" }
+edge: { sourcename: "evbuffer_commit_space" targetname: "__indirect_call" label: "./buffer.c:758:2" }
+edge: { sourcename: "evbuffer_commit_space" targetname: "./buffer.c:advance_last_with_data" label: "./buffer.c:774:4" }
+edge: { sourcename: "evbuffer_commit_space" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:812:2" }
+edge: { sourcename: "evbuffer_commit_space" targetname: "__indirect_call" label: "./buffer.c:815:2" }
+node: { title: "./buffer.c:HAS_PINNED_R" label: "HAS_PINNED_R\n./buffer.c:820:1" }
+node: { title: "./buffer.c:ZERO_CHAIN" label: "ZERO_CHAIN\n./buffer.c:826:1" }
+edge: { sourcename: "./buffer.c:ZERO_CHAIN" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:828:2" }
+edge: { sourcename: "./buffer.c:ZERO_CHAIN" targetname: "event_errx" label: "./buffer.c:828:2" }
+node: { title: "./buffer.c:PRESERVE_PINNED" label: "PRESERVE_PINNED\n./buffer.c:840:1" }
+edge: { sourcename: "./buffer.c:PRESERVE_PINNED" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:845:2" }
+edge: { sourcename: "./buffer.c:PRESERVE_PINNED" targetname: "event_errx" label: "./buffer.c:845:2" }
+edge: { sourcename: "./buffer.c:PRESERVE_PINNED" targetname: "./buffer.c:HAS_PINNED_R" label: "./buffer.c:847:7" }
+edge: { sourcename: "./buffer.c:PRESERVE_PINNED" targetname: "event_errx" label: "./buffer.c:855:2" }
+edge: { sourcename: "./buffer.c:PRESERVE_PINNED" targetname: "event_errx" label: "./buffer.c:864:3" }
+edge: { sourcename: "./buffer.c:PRESERVE_PINNED" targetname: "./buffer.c:evbuffer_chain_new_membuf" label: "./buffer.c:865:9" }
+node: { title: "memcpy" label: "memcpy\n/usr/include/string.h:43:14" shape : ellipse }
+edge: { sourcename: "./buffer.c:PRESERVE_PINNED" targetname: "memcpy" label: "./buffer.c:868:3" }
+node: { title: "./buffer.c:RESTORE_PINNED" label: "RESTORE_PINNED\n./buffer.c:884:1" }
+edge: { sourcename: "./buffer.c:RESTORE_PINNED" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:887:2" }
+edge: { sourcename: "./buffer.c:RESTORE_PINNED" targetname: "event_errx" label: "./buffer.c:887:2" }
+edge: { sourcename: "./buffer.c:RESTORE_PINNED" targetname: "./buffer.c:ZERO_CHAIN" label: "./buffer.c:890:3" }
+node: { title: "./buffer.c:COPY_CHAIN" label: "COPY_CHAIN\n./buffer.c:901:1" }
+edge: { sourcename: "./buffer.c:COPY_CHAIN" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:903:2" }
+edge: { sourcename: "./buffer.c:COPY_CHAIN" targetname: "event_errx" label: "./buffer.c:903:2" }
+edge: { sourcename: "./buffer.c:COPY_CHAIN" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:904:2" }
+edge: { sourcename: "./buffer.c:COPY_CHAIN" targetname: "event_errx" label: "./buffer.c:904:2" }
+node: { title: "./buffer.c:APPEND_CHAIN" label: "APPEND_CHAIN\n./buffer.c:915:1" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:919:2" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN" targetname: "event_errx" label: "./buffer.c:919:2" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:920:2" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN" targetname: "event_errx" label: "./buffer.c:920:2" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN" targetname: "./buffer.c:evbuffer_free_trailing_empty_chains" label: "./buffer.c:922:8" }
+node: { title: "./buffer.c:APPEND_CHAIN_MULTICAST" label: "APPEND_CHAIN_MULTICAST\n./buffer.c:934:1" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:940:2" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "event_errx" label: "./buffer.c:940:2" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:941:2" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "event_errx" label: "./buffer.c:941:2" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "./buffer.c:evbuffer_chain_new" label: "./buffer.c:949:9" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "event_warn" label: "./buffer.c:951:4" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "evbuffer_incref_" label: "./buffer.c:958:3" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "./buffer.c:evbuffer_chain_incref" label: "./buffer.c:961:3" }
+edge: { sourcename: "./buffer.c:APPEND_CHAIN_MULTICAST" targetname: "./buffer.c:evbuffer_chain_insert" label: "./buffer.c:969:3" }
+node: { title: "./buffer.c:PREPEND_CHAIN" label: "PREPEND_CHAIN\n./buffer.c:974:1" }
+edge: { sourcename: "./buffer.c:PREPEND_CHAIN" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:976:2" }
+edge: { sourcename: "./buffer.c:PREPEND_CHAIN" targetname: "event_errx" label: "./buffer.c:976:2" }
+edge: { sourcename: "./buffer.c:PREPEND_CHAIN" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:977:2" }
+edge: { sourcename: "./buffer.c:PREPEND_CHAIN" targetname: "event_errx" label: "./buffer.c:977:2" }
+node: { title: "evbuffer_add_buffer" label: "evbuffer_add_buffer\n./buffer.c:992:1" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "__indirect_call" label: "./buffer.c:998:2" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "__indirect_call" label: "./buffer.c:998:2" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "./buffer.c:PRESERVE_PINNED" label: "./buffer.c:1010:6" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "./buffer.c:evbuffer_free_all_chains" label: "./buffer.c:1018:3" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "./buffer.c:COPY_CHAIN" label: "./buffer.c:1019:3" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "./buffer.c:APPEND_CHAIN" label: "./buffer.c:1021:3" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "./buffer.c:RESTORE_PINNED" label: "./buffer.c:1024:2" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1029:2" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1030:2" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "__indirect_call" label: "./buffer.c:1033:2" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "__indirect_call" label: "./buffer.c:1033:2" }
+edge: { sourcename: "evbuffer_add_buffer" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_add_buffer_reference" label: "evbuffer_add_buffer_reference\n./buffer.c:1038:1" }
+edge: { sourcename: "evbuffer_add_buffer_reference" targetname: "__indirect_call" label: "./buffer.c:1044:2" }
+edge: { sourcename: "evbuffer_add_buffer_reference" targetname: "__indirect_call" label: "./buffer.c:1044:2" }
+edge: { sourcename: "evbuffer_add_buffer_reference" targetname: "./buffer.c:evbuffer_free_all_chains" label: "./buffer.c:1068:3" }
+edge: { sourcename: "evbuffer_add_buffer_reference" targetname: "./buffer.c:APPEND_CHAIN_MULTICAST" label: "./buffer.c:1070:2" }
+edge: { sourcename: "evbuffer_add_buffer_reference" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1073:2" }
+edge: { sourcename: "evbuffer_add_buffer_reference" targetname: "__indirect_call" label: "./buffer.c:1076:2" }
+edge: { sourcename: "evbuffer_add_buffer_reference" targetname: "__indirect_call" label: "./buffer.c:1076:2" }
+node: { title: "evbuffer_prepend_buffer" label: "evbuffer_prepend_buffer\n./buffer.c:1081:1" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "__indirect_call" label: "./buffer.c:1087:2" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "__indirect_call" label: "./buffer.c:1087:2" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "./buffer.c:PRESERVE_PINNED" label: "./buffer.c:1100:6" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "./buffer.c:evbuffer_free_all_chains" label: "./buffer.c:1108:3" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "./buffer.c:COPY_CHAIN" label: "./buffer.c:1109:3" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "./buffer.c:PREPEND_CHAIN" label: "./buffer.c:1111:3" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "./buffer.c:RESTORE_PINNED" label: "./buffer.c:1114:2" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1119:2" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1120:2" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "__indirect_call" label: "./buffer.c:1122:2" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "__indirect_call" label: "./buffer.c:1122:2" }
+edge: { sourcename: "evbuffer_prepend_buffer" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_drain" label: "evbuffer_drain\n./buffer.c:1127:1" }
+edge: { sourcename: "evbuffer_drain" targetname: "__indirect_call" label: "./buffer.c:1133:2" }
+edge: { sourcename: "evbuffer_drain" targetname: "./buffer.c:HAS_PINNED_R" label: "./buffer.c:1144:25" }
+edge: { sourcename: "evbuffer_drain" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:1148:4" }
+edge: { sourcename: "evbuffer_drain" targetname: "./buffer.c:ZERO_CHAIN" label: "./buffer.c:1151:3" }
+edge: { sourcename: "evbuffer_drain" targetname: "event_errx" label: "./buffer.c:1171:5" }
+edge: { sourcename: "evbuffer_drain" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:1176:5" }
+edge: { sourcename: "evbuffer_drain" targetname: "event_errx" label: "./buffer.c:1180:3" }
+edge: { sourcename: "evbuffer_drain" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1187:2" }
+edge: { sourcename: "evbuffer_drain" targetname: "__indirect_call" label: "./buffer.c:1190:2" }
+node: { title: "evbuffer_remove" label: "evbuffer_remove\n./buffer.c:1196:1" }
+edge: { sourcename: "evbuffer_remove" targetname: "__indirect_call" label: "./buffer.c:1199:2" }
+edge: { sourcename: "evbuffer_remove" targetname: "evbuffer_copyout_from" label: "./buffer.c:1200:6" }
+edge: { sourcename: "evbuffer_remove" targetname: "evbuffer_drain" label: "./buffer.c:1202:7" }
+edge: { sourcename: "evbuffer_remove" targetname: "__indirect_call" label: "./buffer.c:1205:2" }
+node: { title: "evbuffer_copyout" label: "evbuffer_copyout\n./buffer.c:1210:1" }
+edge: { sourcename: "evbuffer_copyout" targetname: "evbuffer_copyout_from" label: "./buffer.c:1212:9" }
+node: { title: "evbuffer_copyout_from" label: "evbuffer_copyout_from\n./buffer.c:1216:1" }
+edge: { sourcename: "evbuffer_copyout_from" targetname: "__indirect_call" label: "./buffer.c:1226:2" }
+edge: { sourcename: "evbuffer_copyout_from" targetname: "memcpy" label: "./buffer.c:1257:3" }
+edge: { sourcename: "evbuffer_copyout_from" targetname: "event_errx" label: "./buffer.c:1265:3" }
+edge: { sourcename: "evbuffer_copyout_from" targetname: "event_errx" label: "./buffer.c:1269:3" }
+edge: { sourcename: "evbuffer_copyout_from" targetname: "event_errx" label: "./buffer.c:1270:3" }
+edge: { sourcename: "evbuffer_copyout_from" targetname: "memcpy" label: "./buffer.c:1272:3" }
+edge: { sourcename: "evbuffer_copyout_from" targetname: "__indirect_call" label: "./buffer.c:1278:2" }
+node: { title: "evbuffer_remove_buffer" label: "evbuffer_remove_buffer\n./buffer.c:1286:1" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "__indirect_call" label: "./buffer.c:1296:2" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "__indirect_call" label: "./buffer.c:1296:2" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "evbuffer_add_buffer" label: "./buffer.c:1313:3" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "event_errx" label: "./buffer.c:1323:3" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "./buffer.c:evbuffer_free_trailing_empty_chains" label: "./buffer.c:1335:9" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "./buffer.c:advance_last_with_data" label: "./buffer.c:1345:3" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "evbuffer_add" label: "./buffer.c:1353:2" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1365:3" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1366:3" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "__indirect_call" label: "./buffer.c:1371:2" }
+edge: { sourcename: "evbuffer_remove_buffer" targetname: "__indirect_call" label: "./buffer.c:1371:2" }
+node: { title: "evbuffer_pullup" label: "evbuffer_pullup\n./buffer.c:1376:1" }
+edge: { sourcename: "evbuffer_pullup" targetname: "__indirect_call" label: "./buffer.c:1384:2" }
+edge: { sourcename: "evbuffer_pullup" targetname: "event_errx" label: "./buffer.c:1405:2" }
+edge: { sourcename: "evbuffer_pullup" targetname: "./buffer.c:evbuffer_chain_new_membuf" label: "./buffer.c:1434:14" }
+edge: { sourcename: "evbuffer_pullup" targetname: "event_warn" label: "./buffer.c:1435:4" }
+edge: { sourcename: "evbuffer_pullup" targetname: "memcpy" label: "./buffer.c:1451:4" }
+edge: { sourcename: "evbuffer_pullup" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:1460:3" }
+edge: { sourcename: "evbuffer_pullup" targetname: "memcpy" label: "./buffer.c:1464:3" }
+edge: { sourcename: "evbuffer_pullup" targetname: "__indirect_call" label: "./buffer.c:1485:2" }
+node: { title: "evbuffer_readline" label: "evbuffer_readline\n./buffer.c:1494:1" }
+edge: { sourcename: "evbuffer_readline" targetname: "evbuffer_readln" label: "./buffer.c:1496:9" }
+node: { title: "./buffer.c:evbuffer_strchr" label: "evbuffer_strchr\n./buffer.c:1500:1" }
+node: { title: "memchr" label: "memchr\n/usr/include/string.h:107:14" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_strchr" targetname: "memchr" label: "./buffer.c:1506:14" }
+node: { title: "./buffer.c:find_eol_char" label: "find_eol_char\n./buffer.c:1522:1" }
+edge: { sourcename: "./buffer.c:find_eol_char" targetname: "memchr" label: "./buffer.c:1532:8" }
+edge: { sourcename: "./buffer.c:find_eol_char" targetname: "memchr" label: "./buffer.c:1533:8" }
+node: { title: "./buffer.c:evbuffer_find_eol_char" label: "evbuffer_find_eol_char\n./buffer.c:1549:1" }
+edge: { sourcename: "./buffer.c:evbuffer_find_eol_char" targetname: "./buffer.c:find_eol_char" label: "./buffer.c:1555:14" }
+node: { title: "./buffer.c:evbuffer_strspn" label: "evbuffer_strspn\n./buffer.c:1571:1" }
+node: { title: "./buffer.c:evbuffer_getchr" label: "evbuffer_getchr\n./buffer.c:1611:1" }
+node: { title: "evbuffer_search_eol" label: "evbuffer_search_eol\n./buffer.c:1623:1" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "__indirect_call" label: "./buffer.c:1639:2" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "memcpy" label: "./buffer.c:1642:3" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "./buffer.c:evbuffer_find_eol_char" label: "./buffer.c:1653:7" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "./buffer.c:evbuffer_strspn" label: "./buffer.c:1656:17" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "evbuffer_search" label: "./buffer.c:1659:8" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "./buffer.c:evbuffer_strchr" label: "./buffer.c:1668:7" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "./buffer.c:evbuffer_ptr_subtract" label: "./buffer.c:1678:7" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "./buffer.c:evbuffer_getchr" label: "./buffer.c:1680:7" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "./buffer.c:evbuffer_strchr" label: "./buffer.c:1687:7" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "./buffer.c:evbuffer_strchr" label: "./buffer.c:1692:7" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "__indirect_call" label: "./buffer.c:1702:2" }
+edge: { sourcename: "evbuffer_search_eol" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_readln" label: "evbuffer_readln\n./buffer.c:1713:1" }
+edge: { sourcename: "evbuffer_readln" targetname: "__indirect_call" label: "./buffer.c:1721:2" }
+edge: { sourcename: "evbuffer_readln" targetname: "evbuffer_search_eol" label: "./buffer.c:1727:7" }
+edge: { sourcename: "evbuffer_readln" targetname: "event_mm_malloc_" label: "./buffer.c:1732:14" }
+edge: { sourcename: "evbuffer_readln" targetname: "event_warn" label: "./buffer.c:1733:3" }
+edge: { sourcename: "evbuffer_readln" targetname: "evbuffer_remove" label: "./buffer.c:1737:2" }
+edge: { sourcename: "evbuffer_readln" targetname: "evbuffer_drain" label: "./buffer.c:1740:2" }
+edge: { sourcename: "evbuffer_readln" targetname: "__indirect_call" label: "./buffer.c:1743:2" }
+edge: { sourcename: "evbuffer_readln" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_add" label: "evbuffer_add\n./buffer.c:1756:1" }
+edge: { sourcename: "evbuffer_add" targetname: "__indirect_call" label: "./buffer.c:1763:2" }
+edge: { sourcename: "evbuffer_add" targetname: "./buffer.c:evbuffer_chain_insert_new" label: "./buffer.c:1782:11" }
+edge: { sourcename: "evbuffer_add" targetname: "event_errx" label: "./buffer.c:1789:3" }
+edge: { sourcename: "evbuffer_add" targetname: "memcpy" label: "./buffer.c:1795:4" }
+edge: { sourcename: "evbuffer_add" targetname: "./buffer.c:evbuffer_chain_should_realign" label: "./buffer.c:1802:7" }
+edge: { sourcename: "evbuffer_add" targetname: "./buffer.c:evbuffer_chain_align" label: "./buffer.c:1804:4" }
+edge: { sourcename: "evbuffer_add" targetname: "memcpy" label: "./buffer.c:1806:4" }
+edge: { sourcename: "evbuffer_add" targetname: "./buffer.c:evbuffer_chain_new_membuf" label: "./buffer.c:1823:8" }
+edge: { sourcename: "evbuffer_add" targetname: "memcpy" label: "./buffer.c:1828:3" }
+edge: { sourcename: "evbuffer_add" targetname: "memcpy" label: "./buffer.c:1838:2" }
+edge: { sourcename: "evbuffer_add" targetname: "./buffer.c:evbuffer_chain_insert" label: "./buffer.c:1840:2" }
+edge: { sourcename: "evbuffer_add" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1844:2" }
+edge: { sourcename: "evbuffer_add" targetname: "__indirect_call" label: "./buffer.c:1847:2" }
+node: { title: "evbuffer_prepend" label: "evbuffer_prepend\n./buffer.c:1852:1" }
+edge: { sourcename: "evbuffer_prepend" targetname: "__indirect_call" label: "./buffer.c:1857:2" }
+edge: { sourcename: "evbuffer_prepend" targetname: "./buffer.c:evbuffer_chain_insert_new" label: "./buffer.c:1873:11" }
+edge: { sourcename: "evbuffer_prepend" targetname: "event_errx" label: "./buffer.c:1881:3" }
+edge: { sourcename: "evbuffer_prepend" targetname: "memcpy" label: "./buffer.c:1891:4" }
+edge: { sourcename: "evbuffer_prepend" targetname: "memcpy" label: "./buffer.c:1900:4" }
+edge: { sourcename: "evbuffer_prepend" targetname: "./buffer.c:evbuffer_chain_new_membuf" label: "./buffer.c:1912:13" }
+edge: { sourcename: "evbuffer_prepend" targetname: "event_errx" label: "./buffer.c:1921:2" }
+edge: { sourcename: "evbuffer_prepend" targetname: "memcpy" label: "./buffer.c:1924:2" }
+edge: { sourcename: "evbuffer_prepend" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:1929:2" }
+edge: { sourcename: "evbuffer_prepend" targetname: "__indirect_call" label: "./buffer.c:1932:2" }
+node: { title: "./buffer.c:evbuffer_chain_align" label: "evbuffer_chain_align\n./buffer.c:1938:1" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_align" targetname: "event_errx" label: "./buffer.c:1940:2" }
+edge: { sourcename: "./buffer.c:evbuffer_chain_align" targetname: "event_errx" label: "./buffer.c:1941:2" }
+node: { title: "memmove" label: "memmove\n/usr/include/string.h:47:14" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_chain_align" targetname: "memmove" label: "./buffer.c:1942:2" }
+node: { title: "./buffer.c:evbuffer_chain_should_realign" label: "evbuffer_chain_should_realign\n./buffer.c:1952:1" }
+node: { title: "./buffer.c:evbuffer_expand_singlechain" label: "evbuffer_expand_singlechain\n./buffer.c:1963:1" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:1967:2" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "event_errx" label: "./buffer.c:1967:2" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "./buffer.c:evbuffer_chain_should_realign" label: "./buffer.c:2006:6" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "./buffer.c:evbuffer_chain_align" label: "./buffer.c:2007:3" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "./buffer.c:evbuffer_chain_new_membuf" label: "./buffer.c:2041:32" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "memcpy" label: "./buffer.c:2047:3" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "event_errx" label: "./buffer.c:2050:3" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:2057:3" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "./buffer.c:evbuffer_chain_insert_new" label: "./buffer.c:2062:11" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "event_errx" label: "./buffer.c:2066:2" }
+edge: { sourcename: "./buffer.c:evbuffer_expand_singlechain" targetname: "event_errx" label: "./buffer.c:2067:2" }
+node: { title: "evbuffer_expand_fast_" label: "evbuffer_expand_fast_\n./buffer.c:2075:1" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:2081:2" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "event_errx" label: "./buffer.c:2081:2" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "event_errx" label: "./buffer.c:2082:2" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "./buffer.c:evbuffer_chain_insert_new" label: "./buffer.c:2087:11" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "event_errx" label: "./buffer.c:2102:4" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "event_errx" label: "./buffer.c:2127:3" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "./buffer.c:evbuffer_chain_new_membuf" label: "./buffer.c:2129:9" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "event_errx" label: "./buffer.c:2144:4" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "event_errx" label: "./buffer.c:2157:4" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "./buffer.c:evbuffer_chain_free" label: "./buffer.c:2158:4" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "event_errx" label: "./buffer.c:2160:3" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "./buffer.c:evbuffer_chain_new_membuf" label: "./buffer.c:2161:9" }
+edge: { sourcename: "evbuffer_expand_fast_" targetname: "./buffer.c:ZERO_CHAIN" label: "./buffer.c:2164:5" }
+node: { title: "evbuffer_expand" label: "evbuffer_expand\n./buffer.c:2184:1" }
+edge: { sourcename: "evbuffer_expand" targetname: "__indirect_call" label: "./buffer.c:2188:2" }
+edge: { sourcename: "evbuffer_expand" targetname: "./buffer.c:evbuffer_expand_singlechain" label: "./buffer.c:2189:10" }
+edge: { sourcename: "evbuffer_expand" targetname: "__indirect_call" label: "./buffer.c:2190:2" }
+node: { title: "evbuffer_read_setup_vecs_" label: "evbuffer_read_setup_vecs_\n./buffer.c:2246:1" }
+edge: { sourcename: "evbuffer_read_setup_vecs_" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:2254:2" }
+edge: { sourcename: "evbuffer_read_setup_vecs_" targetname: "event_errx" label: "./buffer.c:2254:2" }
+edge: { sourcename: "evbuffer_read_setup_vecs_" targetname: "event_errx" label: "./buffer.c:2262:2" }
+edge: { sourcename: "evbuffer_read_setup_vecs_" targetname: "event_errx" label: "./buffer.c:2268:2" }
+node: { title: "./buffer.c:get_n_bytes_readable_on_socket" label: "get_n_bytes_readable_on_socket\n./buffer.c:2284:1" }
+node: { title: "ioctl" label: "ioctl\n/usr/include/x86_64-linux-gnu/sys/ioctl.h:42:12" shape : ellipse }
+edge: { sourcename: "./buffer.c:get_n_bytes_readable_on_socket" targetname: "ioctl" label: "./buffer.c:2294:6" }
+edge: { sourcename: "./buffer.c:get_n_bytes_readable_on_socket" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_read" label: "evbuffer_read\n./buffer.c:2305:1" }
+edge: { sourcename: "evbuffer_read" targetname: "__indirect_call" label: "./buffer.c:2318:2" }
+edge: { sourcename: "evbuffer_read" targetname: "./buffer.c:get_n_bytes_readable_on_socket" label: "./buffer.c:2325:6" }
+edge: { sourcename: "evbuffer_read" targetname: "evbuffer_expand_fast_" label: "./buffer.c:2334:6" }
+edge: { sourcename: "evbuffer_read" targetname: "evbuffer_read_setup_vecs_" label: "./buffer.c:2340:11" }
+node: { title: "read" label: "read\n/usr/include/unistd.h:371:16" shape : ellipse }
+edge: { sourcename: "evbuffer_read" targetname: "read" label: "./buffer.c:2370:8" }
+node: { title: "readv" label: "readv\n/usr/include/x86_64-linux-gnu/sys/uio.h:41:16" shape : ellipse }
+edge: { sourcename: "evbuffer_read" targetname: "readv" label: "./buffer.c:2372:8" }
+edge: { sourcename: "evbuffer_read" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:2432:2" }
+edge: { sourcename: "evbuffer_read" targetname: "__indirect_call" label: "./buffer.c:2435:2" }
+edge: { sourcename: "evbuffer_read" targetname: "__stack_chk_fail" }
+node: { title: "./buffer.c:evbuffer_write_iovec" label: "evbuffer_write_iovec\n./buffer.c:2441:1" }
+edge: { sourcename: "./buffer.c:evbuffer_write_iovec" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:2451:2" }
+edge: { sourcename: "./buffer.c:evbuffer_write_iovec" targetname: "event_errx" label: "./buffer.c:2451:2" }
+node: { title: "write" label: "write\n/usr/include/unistd.h:378:16" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_write_iovec" targetname: "write" label: "./buffer.c:2487:7" }
+node: { title: "writev" label: "writev\n/usr/include/x86_64-linux-gnu/sys/uio.h:52:16" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_write_iovec" targetname: "writev" label: "./buffer.c:2489:7" }
+edge: { sourcename: "./buffer.c:evbuffer_write_iovec" targetname: "__stack_chk_fail" }
+node: { title: "./buffer.c:evbuffer_write_sendfile" label: "evbuffer_write_sendfile\n./buffer.c:2497:1" }
+edge: { sourcename: "./buffer.c:evbuffer_write_sendfile" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:2513:2" }
+edge: { sourcename: "./buffer.c:evbuffer_write_sendfile" targetname: "event_errx" label: "./buffer.c:2513:2" }
+node: { title: "sendfile" label: "sendfile\n/usr/include/x86_64-linux-gnu/sys/sendfile.h:33:16" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_write_sendfile" targetname: "sendfile" label: "./buffer.c:2528:8" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_write_sendfile" targetname: "__errno_location" label: "./buffer.c:2529:19" }
+edge: { sourcename: "./buffer.c:evbuffer_write_sendfile" targetname: "__errno_location" label: "./buffer.c:2529:19" }
+edge: { sourcename: "./buffer.c:evbuffer_write_sendfile" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_write_atmost" label: "evbuffer_write_atmost\n./buffer.c:2552:1" }
+edge: { sourcename: "evbuffer_write_atmost" targetname: "__indirect_call" label: "./buffer.c:2557:2" }
+edge: { sourcename: "evbuffer_write_atmost" targetname: "./buffer.c:evbuffer_write_sendfile" label: "./buffer.c:2570:8" }
+edge: { sourcename: "evbuffer_write_atmost" targetname: "./buffer.c:evbuffer_write_iovec" label: "./buffer.c:2574:7" }
+edge: { sourcename: "evbuffer_write_atmost" targetname: "evbuffer_drain" label: "./buffer.c:2592:3" }
+edge: { sourcename: "evbuffer_write_atmost" targetname: "__indirect_call" label: "./buffer.c:2595:2" }
+node: { title: "evbuffer_write" label: "evbuffer_write\n./buffer.c:2600:1" }
+edge: { sourcename: "evbuffer_write" targetname: "evbuffer_write_atmost" label: "./buffer.c:2602:9" }
+node: { title: "evbuffer_find" label: "evbuffer_find\n./buffer.c:2606:1" }
+edge: { sourcename: "evbuffer_find" targetname: "__indirect_call" label: "./buffer.c:2611:2" }
+edge: { sourcename: "evbuffer_find" targetname: "evbuffer_search" label: "./buffer.c:2613:8" }
+edge: { sourcename: "evbuffer_find" targetname: "evbuffer_pullup" label: "./buffer.c:2617:12" }
+edge: { sourcename: "evbuffer_find" targetname: "__indirect_call" label: "./buffer.c:2621:2" }
+edge: { sourcename: "evbuffer_find" targetname: "__stack_chk_fail" }
+node: { title: "./buffer.c:evbuffer_ptr_subtract" label: "evbuffer_ptr_subtract\n./buffer.c:2631:1" }
+edge: { sourcename: "./buffer.c:evbuffer_ptr_subtract" targetname: "evbuffer_ptr_set" label: "./buffer.c:2646:10" }
+node: { title: "evbuffer_ptr_set" label: "evbuffer_ptr_set\n./buffer.c:2651:1" }
+edge: { sourcename: "evbuffer_ptr_set" targetname: "__indirect_call" label: "./buffer.c:2658:2" }
+edge: { sourcename: "evbuffer_ptr_set" targetname: "__indirect_call" label: "./buffer.c:2670:4" }
+edge: { sourcename: "evbuffer_ptr_set" targetname: "event_errx" label: "./buffer.c:2679:2" }
+edge: { sourcename: "evbuffer_ptr_set" targetname: "__indirect_call" label: "./buffer.c:2697:2" }
+node: { title: "./buffer.c:evbuffer_ptr_memcmp" label: "evbuffer_ptr_memcmp\n./buffer.c:2707:1" }
+edge: { sourcename: "./buffer.c:evbuffer_ptr_memcmp" targetname: "evthread_is_debug_lock_held_" label: "./buffer.c:2714:2" }
+edge: { sourcename: "./buffer.c:evbuffer_ptr_memcmp" targetname: "event_errx" label: "./buffer.c:2714:2" }
+node: { title: "memcmp" label: "memcmp\n/usr/include/string.h:64:12" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_ptr_memcmp" targetname: "memcmp" label: "./buffer.c:2729:7" }
+node: { title: "evbuffer_search" label: "evbuffer_search\n./buffer.c:2743:1" }
+edge: { sourcename: "evbuffer_search" targetname: "evbuffer_search_range" label: "./buffer.c:2745:9" }
+edge: { sourcename: "evbuffer_search" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_search_range" label: "evbuffer_search_range\n./buffer.c:2749:1" }
+edge: { sourcename: "evbuffer_search_range" targetname: "__indirect_call" label: "./buffer.c:2756:2" }
+edge: { sourcename: "evbuffer_search_range" targetname: "memcpy" label: "./buffer.c:2759:3" }
+edge: { sourcename: "evbuffer_search_range" targetname: "memchr" label: "./buffer.c:2779:7" }
+edge: { sourcename: "evbuffer_search_range" targetname: "./buffer.c:evbuffer_ptr_memcmp" label: "./buffer.c:2784:9" }
+edge: { sourcename: "evbuffer_search_range" targetname: "__indirect_call" label: "./buffer.c:2808:2" }
+edge: { sourcename: "evbuffer_search_range" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_peek" label: "evbuffer_peek\n./buffer.c:2813:1" }
+edge: { sourcename: "evbuffer_peek" targetname: "__indirect_call" label: "./buffer.c:2825:2" }
+edge: { sourcename: "evbuffer_peek" targetname: "__indirect_call" label: "./buffer.c:2865:2" }
+node: { title: "evbuffer_add_vprintf" label: "evbuffer_add_vprintf\n./buffer.c:2872:1" }
+edge: { sourcename: "evbuffer_add_vprintf" targetname: "__indirect_call" label: "./buffer.c:2881:2" }
+edge: { sourcename: "evbuffer_add_vprintf" targetname: "./buffer.c:evbuffer_expand_singlechain" label: "./buffer.c:2888:15" }
+node: { title: "evutil_vsnprintf" label: "evutil_vsnprintf\n./include/event2/util.h:634:5" shape : ellipse }
+edge: { sourcename: "evbuffer_add_vprintf" targetname: "evutil_vsnprintf" label: "./buffer.c:2906:8" }
+edge: { sourcename: "evbuffer_add_vprintf" targetname: "./buffer.c:advance_last_with_data" label: "./buffer.c:2920:4" }
+edge: { sourcename: "evbuffer_add_vprintf" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:2921:4" }
+edge: { sourcename: "evbuffer_add_vprintf" targetname: "./buffer.c:evbuffer_expand_singlechain" label: "./buffer.c:2925:16" }
+edge: { sourcename: "evbuffer_add_vprintf" targetname: "__indirect_call" label: "./buffer.c:2931:2" }
+edge: { sourcename: "evbuffer_add_vprintf" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_add_printf" label: "evbuffer_add_printf\n./buffer.c:2936:1" }
+edge: { sourcename: "evbuffer_add_printf" targetname: "evbuffer_add_vprintf" label: "./buffer.c:2942:8" }
+edge: { sourcename: "evbuffer_add_printf" targetname: "__stack_chk_fail" }
+node: { title: "evbuffer_add_reference" label: "evbuffer_add_reference\n./buffer.c:2949:1" }
+edge: { sourcename: "evbuffer_add_reference" targetname: "evbuffer_add_reference_with_offset" label: "./buffer.c:2953:9" }
+node: { title: "evbuffer_add_reference_with_offset" label: "evbuffer_add_reference_with_offset\n./buffer.c:2957:1" }
+edge: { sourcename: "evbuffer_add_reference_with_offset" targetname: "./buffer.c:evbuffer_chain_new" label: "./buffer.c:2965:10" }
+edge: { sourcename: "evbuffer_add_reference_with_offset" targetname: "__indirect_call" label: "./buffer.c:2978:2" }
+edge: { sourcename: "evbuffer_add_reference_with_offset" targetname: "event_mm_free_" label: "./buffer.c:2982:3" }
+edge: { sourcename: "evbuffer_add_reference_with_offset" targetname: "./buffer.c:evbuffer_chain_insert" label: "./buffer.c:2985:2" }
+edge: { sourcename: "evbuffer_add_reference_with_offset" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:2988:2" }
+edge: { sourcename: "evbuffer_add_reference_with_offset" targetname: "__indirect_call" label: "./buffer.c:2992:2" }
+node: { title: "evbuffer_file_segment_new" label: "evbuffer_file_segment_new\n./buffer.c:3001:1" }
+edge: { sourcename: "evbuffer_file_segment_new" targetname: "event_mm_calloc_" label: "./buffer.c:3005:6" }
+node: { title: "fstat" label: "fstat\n/usr/include/x86_64-linux-gnu/sys/stat.h:210:12" shape : ellipse }
+edge: { sourcename: "evbuffer_file_segment_new" targetname: "fstat" label: "./buffer.c:3027:7" }
+edge: { sourcename: "evbuffer_file_segment_new" targetname: "./buffer.c:evbuffer_file_segment_materialize" label: "./buffer.c:3045:6" }
+edge: { sourcename: "evbuffer_file_segment_new" targetname: "__indirect_call" label: "./buffer.c:3052:3" }
+edge: { sourcename: "evbuffer_file_segment_new" targetname: "event_mm_free_" label: "./buffer.c:3056:2" }
+edge: { sourcename: "evbuffer_file_segment_new" targetname: "__stack_chk_fail" }
+node: { title: "./buffer.c:get_page_size" label: "get_page_size\n./buffer.c:3062:1" }
+node: { title: "sysconf" label: "sysconf\n/usr/include/unistd.h:640:17" shape : ellipse }
+edge: { sourcename: "./buffer.c:get_page_size" targetname: "sysconf" label: "./buffer.c:3067:9" }
+node: { title: "./buffer.c:evbuffer_file_segment_materialize" label: "evbuffer_file_segment_materialize\n./buffer.c:3077:1" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "./buffer.c:get_page_size" label: "./buffer.c:3094:21" }
+node: { title: "mmap64" label: "mmap64\n/usr/include/x86_64-linux-gnu/sys/mman.h:70:14" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "mmap64" label: "./buffer.c:3101:12" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "event_warn" label: "./buffer.c:3115:4" }
+node: { title: "lseek" label: "lseek\n/usr/include/unistd.h:339:16" shape : ellipse }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "lseek" label: "./buffer.c:3149:24" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "event_mm_malloc_" label: "./buffer.c:3153:15" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "event_mm_free_" label: "./buffer.c:3169:4" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "lseek" label: "./buffer.c:3172:7" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "event_mm_free_" label: "./buffer.c:3173:4" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "read" label: "./buffer.c:3177:8" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "__errno_location" label: "./buffer.c:3183:7" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "lseek" label: "./buffer.c:3184:9" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "event_mm_free_" label: "./buffer.c:3186:4" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "__errno_location" label: "./buffer.c:3187:4" }
+edge: { sourcename: "./buffer.c:evbuffer_file_segment_materialize" targetname: "event_mm_free_" label: "./buffer.c:3190:4" }
+node: { title: "evbuffer_file_segment_add_cleanup_cb" label: "evbuffer_file_segment_add_cleanup_cb\n./buffer.c:3204:6" }
+edge: { sourcename: "evbuffer_file_segment_add_cleanup_cb" targetname: "event_errx" label: "./buffer.c:3207:2" }
+node: { title: "evbuffer_file_segment_free" label: "evbuffer_file_segment_free\n./buffer.c:3213:1" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "__indirect_call" label: "./buffer.c:3216:2" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "__indirect_call" label: "./buffer.c:3218:2" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "event_errx" label: "./buffer.c:3221:2" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "./buffer.c:get_page_size" label: "./buffer.c:3228:40" }
+node: { title: "munmap" label: "munmap\n/usr/include/x86_64-linux-gnu/sys/mman.h:76:12" shape : ellipse }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "munmap" label: "./buffer.c:3229:7" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "event_warn" label: "./buffer.c:3230:4" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "event_mm_free_" label: "./buffer.c:3233:3" }
+node: { title: "close" label: "close\n/usr/include/unistd.h:358:12" shape : ellipse }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "close" label: "./buffer.c:3237:3" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "__indirect_call" label: "./buffer.c:3241:4" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "__indirect_call" label: "./buffer.c:3247:2" }
+edge: { sourcename: "evbuffer_file_segment_free" targetname: "event_mm_free_" label: "./buffer.c:3248:2" }
+node: { title: "evbuffer_add_file_segment" label: "evbuffer_add_file_segment\n./buffer.c:3252:1" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3259:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3260:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "./buffer.c:evbuffer_file_segment_materialize" label: "./buffer.c:3264:7" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3265:4" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3266:4" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3270:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "./buffer.c:evbuffer_chain_new" label: "./buffer.c:3285:10" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3333:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3335:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "./buffer.c:evbuffer_chain_insert" label: "./buffer.c:3338:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "evbuffer_invoke_callbacks_" label: "./buffer.c:3340:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3342:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "__indirect_call" label: "./buffer.c:3346:2" }
+edge: { sourcename: "evbuffer_add_file_segment" targetname: "evbuffer_file_segment_free" label: "./buffer.c:3347:2" }
+node: { title: "evbuffer_add_file" label: "evbuffer_add_file\n./buffer.c:3352:1" }
+edge: { sourcename: "evbuffer_add_file" targetname: "evbuffer_file_segment_new" label: "./buffer.c:3358:8" }
+edge: { sourcename: "evbuffer_add_file" targetname: "evbuffer_add_file_segment" label: "./buffer.c:3361:6" }
+edge: { sourcename: "evbuffer_add_file" targetname: "evbuffer_file_segment_free" label: "./buffer.c:3363:3" }
+node: { title: "evbuffer_setcb" label: "evbuffer_setcb\n./buffer.c:3368:1" }
+edge: { sourcename: "evbuffer_setcb" targetname: "__indirect_call" label: "./buffer.c:3370:2" }
+edge: { sourcename: "evbuffer_setcb" targetname: "./buffer.c:evbuffer_remove_all_callbacks" label: "./buffer.c:3373:3" }
+edge: { sourcename: "evbuffer_setcb" targetname: "evbuffer_add_cb" label: "./buffer.c:3377:7" }
+edge: { sourcename: "evbuffer_setcb" targetname: "__indirect_call" label: "./buffer.c:3379:4" }
+edge: { sourcename: "evbuffer_setcb" targetname: "__indirect_call" label: "./buffer.c:3385:2" }
+node: { title: "evbuffer_add_cb" label: "evbuffer_add_cb\n./buffer.c:3390:1" }
+edge: { sourcename: "evbuffer_add_cb" targetname: "event_mm_calloc_" label: "./buffer.c:3393:13" }
+edge: { sourcename: "evbuffer_add_cb" targetname: "__indirect_call" label: "./buffer.c:3395:2" }
+edge: { sourcename: "evbuffer_add_cb" targetname: "__indirect_call" label: "./buffer.c:3400:2" }
+node: { title: "evbuffer_remove_cb_entry" label: "evbuffer_remove_cb_entry\n./buffer.c:3405:1" }
+edge: { sourcename: "evbuffer_remove_cb_entry" targetname: "__indirect_call" label: "./buffer.c:3408:2" }
+edge: { sourcename: "evbuffer_remove_cb_entry" targetname: "__indirect_call" label: "./buffer.c:3410:2" }
+edge: { sourcename: "evbuffer_remove_cb_entry" targetname: "event_mm_free_" label: "./buffer.c:3411:2" }
+node: { title: "evbuffer_remove_cb" label: "evbuffer_remove_cb\n./buffer.c:3416:1" }
+edge: { sourcename: "evbuffer_remove_cb" targetname: "__indirect_call" label: "./buffer.c:3420:2" }
+edge: { sourcename: "evbuffer_remove_cb" targetname: "evbuffer_remove_cb_entry" label: "./buffer.c:3423:13" }
+edge: { sourcename: "evbuffer_remove_cb" targetname: "__indirect_call" label: "./buffer.c:3428:2" }
+node: { title: "evbuffer_cb_set_flags" label: "evbuffer_cb_set_flags\n./buffer.c:3433:1" }
+edge: { sourcename: "evbuffer_cb_set_flags" targetname: "__indirect_call" label: "./buffer.c:3438:2" }
+edge: { sourcename: "evbuffer_cb_set_flags" targetname: "__indirect_call" label: "./buffer.c:3440:2" }
+node: { title: "evbuffer_cb_clear_flags" label: "evbuffer_cb_clear_flags\n./buffer.c:3445:1" }
+edge: { sourcename: "evbuffer_cb_clear_flags" targetname: "__indirect_call" label: "./buffer.c:3450:2" }
+edge: { sourcename: "evbuffer_cb_clear_flags" targetname: "__indirect_call" label: "./buffer.c:3452:2" }
+node: { title: "evbuffer_freeze" label: "evbuffer_freeze\n./buffer.c:3457:1" }
+edge: { sourcename: "evbuffer_freeze" targetname: "__indirect_call" label: "./buffer.c:3459:2" }
+edge: { sourcename: "evbuffer_freeze" targetname: "__indirect_call" label: "./buffer.c:3464:2" }
+node: { title: "evbuffer_unfreeze" label: "evbuffer_unfreeze\n./buffer.c:3469:1" }
+edge: { sourcename: "evbuffer_unfreeze" targetname: "__indirect_call" label: "./buffer.c:3471:2" }
+edge: { sourcename: "evbuffer_unfreeze" targetname: "__indirect_call" label: "./buffer.c:3476:2" }
+node: { title: "evbuffer_get_callbacks_" label: "evbuffer_get_callbacks_\n./buffer.c:3507:1" }
+edge: { sourcename: "evbuffer_get_callbacks_" targetname: "__indirect_call" label: "./buffer.c:3511:2" }
+edge: { sourcename: "evbuffer_get_callbacks_" targetname: "__indirect_call" label: "./buffer.c:3521:2" }
+}

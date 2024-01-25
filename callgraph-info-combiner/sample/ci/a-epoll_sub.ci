@@ -1,0 +1,9 @@
+graph: { title: "./epoll_sub.c"
+node: { title: "epoll_create" label: "epoll_create\n/usr/include/x86_64-linux-gnu/sys/epoll.h:97:12" }
+node: { title: "syscall" label: "syscall\n/usr/include/unistd.h:1091:17" shape : ellipse }
+edge: { sourcename: "epoll_create" targetname: "syscall" label: "./epoll_sub.c:47:10" }
+node: { title: "epoll_ctl" label: "epoll_ctl\n/usr/include/x86_64-linux-gnu/sys/epoll.h:110:12" }
+edge: { sourcename: "epoll_ctl" targetname: "syscall" label: "./epoll_sub.c:55:10" }
+node: { title: "epoll_wait" label: "epoll_wait\n/usr/include/x86_64-linux-gnu/sys/epoll.h:124:12" }
+edge: { sourcename: "epoll_wait" targetname: "syscall" label: "./epoll_sub.c:64:10" }
+}

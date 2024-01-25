@@ -1,0 +1,455 @@
+graph: { title: "./evutil.c"
+node: { title: "evutil_open_closeonexec_" label: "evutil_open_closeonexec_\n./evutil.c:124:1" }
+node: { title: "open" label: "open\n/usr/include/fcntl.h:181:12" shape : ellipse }
+edge: { sourcename: "evutil_open_closeonexec_" targetname: "open" label: "./evutil.c:129:7" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "evutil_open_closeonexec_" targetname: "__errno_location" label: "./evutil.c:130:17" }
+edge: { sourcename: "evutil_open_closeonexec_" targetname: "open" label: "./evutil.c:134:7" }
+node: { title: "fcntl" label: "fcntl\n/usr/include/fcntl.h:149:12" shape : ellipse }
+edge: { sourcename: "evutil_open_closeonexec_" targetname: "fcntl" label: "./evutil.c:139:6" }
+node: { title: "close" label: "close\n/usr/include/unistd.h:358:12" shape : ellipse }
+edge: { sourcename: "evutil_open_closeonexec_" targetname: "close" label: "./evutil.c:140:3" }
+node: { title: "evutil_read_file_" label: "evutil_read_file_\n./evutil.c:159:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "evutil_read_file_" targetname: "event_errx" label: "./evutil.c:168:2" }
+edge: { sourcename: "evutil_read_file_" targetname: "event_errx" label: "./evutil.c:169:2" }
+edge: { sourcename: "evutil_read_file_" targetname: "evutil_open_closeonexec_" label: "./evutil.c:178:7" }
+node: { title: "fstat" label: "fstat\n/usr/include/x86_64-linux-gnu/sys/stat.h:210:12" shape : ellipse }
+edge: { sourcename: "evutil_read_file_" targetname: "fstat" label: "./evutil.c:181:6" }
+edge: { sourcename: "evutil_read_file_" targetname: "close" label: "./evutil.c:183:3" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "evutil_read_file_" targetname: "event_mm_malloc_" label: "./evutil.c:186:8" }
+edge: { sourcename: "evutil_read_file_" targetname: "close" label: "./evutil.c:188:3" }
+edge: { sourcename: "evutil_read_file_" targetname: "event_errx" label: "./evutil.c:201:3" }
+node: { title: "read" label: "read\n/usr/include/unistd.h:371:16" shape : ellipse }
+edge: { sourcename: "evutil_read_file_" targetname: "read" label: "./evutil.c:197:14" }
+edge: { sourcename: "evutil_read_file_" targetname: "close" label: "./evutil.c:203:2" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "evutil_read_file_" targetname: "event_mm_free_" label: "./evutil.c:205:3" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "evutil_read_file_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_socketpair" label: "evutil_socketpair\n./evutil.c:407:1" }
+node: { title: "socketpair" label: "socketpair\n/usr/include/x86_64-linux-gnu/sys/socket.h:108:12" shape : ellipse }
+edge: { sourcename: "evutil_socketpair" targetname: "socketpair" label: "./evutil.c:410:9" }
+node: { title: "evutil_ersatz_socketpair_" label: "evutil_ersatz_socketpair_\n./evutil.c:417:1" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "__errno_location" label: "./evutil.c:447:3" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "__errno_location" label: "./evutil.c:452:3" }
+node: { title: "socket" label: "socket\n/usr/include/x86_64-linux-gnu/sys/socket.h:102:12" shape : ellipse }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "socket" label: "./evutil.c:456:13" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "memset" label: "./evutil.c:459:2" }
+node: { title: "htonl" label: "htonl\n/usr/include/netinet/in.h:385:17" shape : ellipse }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "htonl" label: "./evutil.c:461:32" }
+node: { title: "bind" label: "bind\n/usr/include/x86_64-linux-gnu/sys/socket.h:112:12" shape : ellipse }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "bind" label: "./evutil.c:463:6" }
+node: { title: "listen" label: "listen\n/usr/include/x86_64-linux-gnu/sys/socket.h:296:12" shape : ellipse }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "listen" label: "./evutil.c:466:6" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "socket" label: "./evutil.c:469:14" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "memset" label: "./evutil.c:473:2" }
+node: { title: "getsockname" label: "getsockname\n/usr/include/x86_64-linux-gnu/sys/socket.h:116:12" shape : ellipse }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "getsockname" label: "./evutil.c:477:6" }
+node: { title: "connect" label: "connect\n/usr/include/x86_64-linux-gnu/sys/socket.h:126:12" shape : ellipse }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "connect" label: "./evutil.c:481:6" }
+node: { title: "accept" label: "accept\n/usr/include/x86_64-linux-gnu/sys/socket.h:306:12" shape : ellipse }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "accept" label: "./evutil.c:486:13" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "getsockname" label: "./evutil.c:493:6" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "evutil_closesocket" label: "./evutil.c:500:2" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "__errno_location" label: "./evutil.c:510:17" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "evutil_closesocket" label: "./evutil.c:512:3" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "evutil_closesocket" label: "./evutil.c:514:3" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "evutil_closesocket" label: "./evutil.c:516:3" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "__errno_location" label: "./evutil.c:518:2" }
+edge: { sourcename: "evutil_ersatz_socketpair_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_make_socket_nonblocking" label: "evutil_make_socket_nonblocking\n./evutil.c:524:1" }
+edge: { sourcename: "evutil_make_socket_nonblocking" targetname: "fcntl" label: "./evutil.c:537:16" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "evutil_make_socket_nonblocking" targetname: "event_warn" label: "./evutil.c:538:4" }
+edge: { sourcename: "evutil_make_socket_nonblocking" targetname: "fcntl" label: "./evutil.c:542:8" }
+edge: { sourcename: "evutil_make_socket_nonblocking" targetname: "event_warn" label: "./evutil.c:543:5" }
+node: { title: "./evutil.c:evutil_fast_socket_nonblocking" label: "evutil_fast_socket_nonblocking\n./evutil.c:557:1" }
+edge: { sourcename: "./evutil.c:evutil_fast_socket_nonblocking" targetname: "fcntl" label: "./evutil.c:562:6" }
+edge: { sourcename: "./evutil.c:evutil_fast_socket_nonblocking" targetname: "event_warn" label: "./evutil.c:563:3" }
+node: { title: "evutil_make_listen_socket_reuseable" label: "evutil_make_listen_socket_reuseable\n./evutil.c:571:1" }
+node: { title: "setsockopt" label: "setsockopt\n/usr/include/x86_64-linux-gnu/sys/socket.h:277:12" shape : ellipse }
+edge: { sourcename: "evutil_make_listen_socket_reuseable" targetname: "setsockopt" label: "./evutil.c:578:9" }
+edge: { sourcename: "evutil_make_listen_socket_reuseable" targetname: "__stack_chk_fail" }
+node: { title: "evutil_make_listen_socket_reuseable_port" label: "evutil_make_listen_socket_reuseable_port\n./evutil.c:586:1" }
+edge: { sourcename: "evutil_make_listen_socket_reuseable_port" targetname: "setsockopt" label: "./evutil.c:592:9" }
+edge: { sourcename: "evutil_make_listen_socket_reuseable_port" targetname: "__stack_chk_fail" }
+node: { title: "evutil_make_listen_socket_ipv6only" label: "evutil_make_listen_socket_ipv6only\n./evutil.c:600:1" }
+edge: { sourcename: "evutil_make_listen_socket_ipv6only" targetname: "setsockopt" label: "./evutil.c:604:9" }
+edge: { sourcename: "evutil_make_listen_socket_ipv6only" targetname: "__stack_chk_fail" }
+node: { title: "evutil_make_listen_socket_not_ipv6only" label: "evutil_make_listen_socket_not_ipv6only\n./evutil.c:611:1" }
+edge: { sourcename: "evutil_make_listen_socket_not_ipv6only" targetname: "setsockopt" label: "./evutil.c:615:9" }
+edge: { sourcename: "evutil_make_listen_socket_not_ipv6only" targetname: "__stack_chk_fail" }
+node: { title: "evutil_make_tcp_listen_socket_deferred" label: "evutil_make_tcp_listen_socket_deferred\n./evutil.c:622:1" }
+edge: { sourcename: "evutil_make_tcp_listen_socket_deferred" targetname: "setsockopt" label: "./evutil.c:629:9" }
+edge: { sourcename: "evutil_make_tcp_listen_socket_deferred" targetname: "__stack_chk_fail" }
+node: { title: "evutil_make_socket_closeonexec" label: "evutil_make_socket_closeonexec\n./evutil.c:636:1" }
+edge: { sourcename: "evutil_make_socket_closeonexec" targetname: "fcntl" label: "./evutil.c:640:15" }
+edge: { sourcename: "evutil_make_socket_closeonexec" targetname: "event_warn" label: "./evutil.c:641:3" }
+edge: { sourcename: "evutil_make_socket_closeonexec" targetname: "fcntl" label: "./evutil.c:645:7" }
+edge: { sourcename: "evutil_make_socket_closeonexec" targetname: "event_warn" label: "./evutil.c:646:4" }
+node: { title: "./evutil.c:evutil_fast_socket_closeonexec" label: "evutil_fast_socket_closeonexec\n./evutil.c:659:1" }
+edge: { sourcename: "./evutil.c:evutil_fast_socket_closeonexec" targetname: "fcntl" label: "./evutil.c:662:6" }
+edge: { sourcename: "./evutil.c:evutil_fast_socket_closeonexec" targetname: "event_warn" label: "./evutil.c:663:3" }
+node: { title: "evutil_closesocket" label: "evutil_closesocket\n./evutil.c:671:1" }
+edge: { sourcename: "evutil_closesocket" targetname: "close" label: "./evutil.c:674:9" }
+node: { title: "evutil_strtoll" label: "evutil_strtoll\n./evutil.c:681:1" }
+node: { title: "strtoll" label: "strtoll\n/usr/include/stdlib.h:201:22" shape : ellipse }
+edge: { sourcename: "evutil_strtoll" targetname: "strtoll" label: "./evutil.c:684:21" }
+node: { title: "evutil_socket_connect_" label: "evutil_socket_connect_\n./evutil.c:760:1" }
+edge: { sourcename: "evutil_socket_connect_" targetname: "socket" label: "./evutil.c:765:18" }
+edge: { sourcename: "evutil_socket_connect_" targetname: "evutil_make_socket_nonblocking" label: "./evutil.c:768:7" }
+edge: { sourcename: "evutil_socket_connect_" targetname: "connect" label: "./evutil.c:773:6" }
+edge: { sourcename: "evutil_socket_connect_" targetname: "__errno_location" label: "./evutil.c:774:11" }
+edge: { sourcename: "evutil_socket_connect_" targetname: "evutil_closesocket" label: "./evutil.c:786:3" }
+node: { title: "evutil_socket_finished_connecting_" label: "evutil_socket_finished_connecting_\n./evutil.c:797:1" }
+node: { title: "getsockopt" label: "getsockopt\n/usr/include/x86_64-linux-gnu/sys/socket.h:255:12" shape : ellipse }
+edge: { sourcename: "evutil_socket_finished_connecting_" targetname: "getsockopt" label: "./evutil.c:802:6" }
+edge: { sourcename: "evutil_socket_finished_connecting_" targetname: "__errno_location" label: "./evutil.c:808:3" }
+edge: { sourcename: "evutil_socket_finished_connecting_" targetname: "__stack_chk_fail" }
+node: { title: "./evutil.c:evutil_v4addr_is_localhost" label: "evutil_v4addr_is_localhost\n./evutil.c:832:19" }
+node: { title: "./evutil.c:evutil_v4addr_is_linklocal" label: "evutil_v4addr_is_linklocal\n./evutil.c:837:19" }
+node: { title: "./evutil.c:evutil_v4addr_is_classd" label: "evutil_v4addr_is_classd\n./evutil.c:842:19" }
+node: { title: "evutil_v4addr_is_local_" label: "evutil_v4addr_is_local_\n./evutil.c:846:1" }
+node: { title: "ntohl" label: "ntohl\n/usr/include/netinet/in.h:382:17" shape : ellipse }
+edge: { sourcename: "evutil_v4addr_is_local_" targetname: "ntohl" label: "./evutil.c:848:27" }
+edge: { sourcename: "evutil_v4addr_is_local_" targetname: "./evutil.c:evutil_v4addr_is_localhost" label: "./evutil.c:850:3" }
+edge: { sourcename: "evutil_v4addr_is_local_" targetname: "./evutil.c:evutil_v4addr_is_linklocal" label: "./evutil.c:851:3" }
+edge: { sourcename: "evutil_v4addr_is_local_" targetname: "./evutil.c:evutil_v4addr_is_classd" label: "./evutil.c:852:3" }
+node: { title: "evutil_v6addr_is_local_" label: "evutil_v6addr_is_local_\n./evutil.c:855:1" }
+node: { title: "memcmp" label: "memcmp\n/usr/include/string.h:64:12" shape : ellipse }
+edge: { sourcename: "evutil_v6addr_is_local_" targetname: "memcmp" label: "./evutil.c:862:10" }
+node: { title: "./evutil.c:evutil_found_ifaddr" label: "evutil_found_ifaddr\n./evutil.c:870:1" }
+edge: { sourcename: "./evutil.c:evutil_found_ifaddr" targetname: "evutil_v4addr_is_local_" label: "./evutil.c:874:8" }
+node: { title: "event_debugx_" label: "event_debugx_\n./log-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_found_ifaddr" targetname: "event_debugx_" label: "./evutil.c:875:4" }
+edge: { sourcename: "./evutil.c:evutil_found_ifaddr" targetname: "evutil_v6addr_is_local_" label: "./evutil.c:880:8" }
+edge: { sourcename: "./evutil.c:evutil_found_ifaddr" targetname: "event_debugx_" label: "./evutil.c:881:4" }
+node: { title: "./evutil.c:evutil_check_ifaddrs" label: "evutil_check_ifaddrs\n./evutil.c:893:1" }
+node: { title: "getifaddrs" label: "getifaddrs\n/usr/include/ifaddrs.h:66:12" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_check_ifaddrs" targetname: "getifaddrs" label: "./evutil.c:900:6" }
+edge: { sourcename: "./evutil.c:evutil_check_ifaddrs" targetname: "event_warn" label: "./evutil.c:901:3" }
+edge: { sourcename: "./evutil.c:evutil_check_ifaddrs" targetname: "./evutil.c:evutil_found_ifaddr" label: "./evutil.c:908:3" }
+node: { title: "freeifaddrs" label: "freeifaddrs\n/usr/include/ifaddrs.h:69:13" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_check_ifaddrs" targetname: "freeifaddrs" label: "./evutil.c:911:2" }
+edge: { sourcename: "./evutil.c:evutil_check_ifaddrs" targetname: "__stack_chk_fail" }
+node: { title: "./evutil.c:evutil_check_interfaces" label: "evutil_check_interfaces\n./evutil.c:975:1" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "./evutil.c:evutil_check_ifaddrs" label: "./evutil.c:989:6" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "memset" label: "./evutil.c:999:2" }
+node: { title: "htons" label: "htons\n/usr/include/netinet/in.h:387:17" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "htons" label: "./evutil.c:1001:17" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "evutil_inet_pton" label: "./evutil.c:1002:6" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "event_errx" label: "./evutil.c:1003:2" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "memset" label: "./evutil.c:1005:2" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "htons" label: "./evutil.c:1007:19" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "evutil_inet_pton" label: "./evutil.c:1008:6" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "event_errx" label: "./evutil.c:1009:2" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "memset" label: "./evutil.c:1011:2" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "memset" label: "./evutil.c:1012:2" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "socket" label: "./evutil.c:1015:12" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "connect" label: "./evutil.c:1016:6" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "getsockname" label: "./evutil.c:1017:6" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "./evutil.c:evutil_found_ifaddr" label: "./evutil.c:1019:3" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "evutil_closesocket" label: "./evutil.c:1022:3" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "socket" label: "./evutil.c:1024:12" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "connect" label: "./evutil.c:1025:6" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "getsockname" label: "./evutil.c:1026:6" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "./evutil.c:evutil_found_ifaddr" label: "./evutil.c:1028:3" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "evutil_closesocket" label: "./evutil.c:1032:3" }
+edge: { sourcename: "./evutil.c:evutil_check_interfaces" targetname: "__stack_chk_fail" }
+node: { title: "evutil_new_addrinfo_" label: "evutil_new_addrinfo_\n./evutil.c:1049:1" }
+edge: { sourcename: "evutil_new_addrinfo_" targetname: "event_errx" label: "./evutil.c:1053:2" }
+node: { title: "memcpy" label: "memcpy\n/usr/include/string.h:43:14" shape : ellipse }
+edge: { sourcename: "evutil_new_addrinfo_" targetname: "memcpy" label: "./evutil.c:1059:3" }
+edge: { sourcename: "evutil_new_addrinfo_" targetname: "evutil_new_addrinfo_" label: "./evutil.c:1061:8" }
+edge: { sourcename: "evutil_new_addrinfo_" targetname: "evutil_new_addrinfo_" label: "./evutil.c:1065:8" }
+edge: { sourcename: "evutil_new_addrinfo_" targetname: "evutil_freeaddrinfo" label: "./evutil.c:1067:4" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./mm-internal.h:58:7" shape : ellipse }
+edge: { sourcename: "evutil_new_addrinfo_" targetname: "event_mm_calloc_" label: "./evutil.c:1075:8" }
+edge: { sourcename: "evutil_new_addrinfo_" targetname: "memcpy" label: "./evutil.c:1080:2" }
+edge: { sourcename: "evutil_new_addrinfo_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_addrinfo_append_" label: "evutil_addrinfo_append_\n./evutil.c:1094:1" }
+node: { title: "./evutil.c:parse_numeric_servname" label: "parse_numeric_servname\n./evutil.c:1108:1" }
+node: { title: "strtol" label: "strtol\n/usr/include/stdlib.h:177:17" shape : ellipse }
+edge: { sourcename: "./evutil.c:parse_numeric_servname" targetname: "strtol" label: "./evutil.c:1112:12" }
+edge: { sourcename: "./evutil.c:parse_numeric_servname" targetname: "__stack_chk_fail" }
+node: { title: "./evutil.c:evutil_parse_servname" label: "evutil_parse_servname\n./evutil.c:1123:1" }
+edge: { sourcename: "./evutil.c:evutil_parse_servname" targetname: "./evutil.c:parse_numeric_servname" label: "./evutil.c:1126:10" }
+node: { title: "getservbyname" label: "getservbyname\n/usr/include/netdb.h:288:24" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_parse_servname" targetname: "getservbyname" label: "./evutil.c:1131:25" }
+node: { title: "ntohs" label: "ntohs\n/usr/include/netinet/in.h:383:17" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_parse_servname" targetname: "ntohs" label: "./evutil.c:1133:11" }
+node: { title: "./evutil.c:evutil_unparse_protoname" label: "evutil_unparse_protoname\n./evutil.c:1143:1" }
+node: { title: "getprotobynumber" label: "getprotobynumber\n/usr/include/netdb.h:361:25" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_unparse_protoname" targetname: "getprotobynumber" label: "./evutil.c:1159:27" }
+node: { title: "./evutil.c:evutil_getaddrinfo_infer_protocols" label: "evutil_getaddrinfo_infer_protocols\n./evutil.c:1169:1" }
+node: { title: "evutil_getaddrinfo_common_" label: "evutil_getaddrinfo_common_\n./evutil.c:1210:1" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "./evutil.c:evutil_getaddrinfo_infer_protocols" label: "./evutil.c:1225:2" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "./evutil.c:evutil_unparse_protoname" label: "./evutil.c:1228:10" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "./evutil.c:evutil_parse_servname" label: "./evutil.c:1232:10" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "memset" label: "./evutil.c:1244:4" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "htons" label: "./evutil.c:1246:21" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "evutil_new_addrinfo_" label: "./evutil.c:1253:11" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "memset" label: "./evutil.c:1261:4" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "htons" label: "./evutil.c:1263:19" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "htonl" label: "./evutil.c:1268:27" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "evutil_new_addrinfo_" label: "./evutil.c:1270:11" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "evutil_freeaddrinfo" label: "./evutil.c:1274:6" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "evutil_addrinfo_append_" label: "./evutil.c:1278:10" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "memset" label: "./evutil.c:1287:3" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "evutil_inet_pton_scope" label: "./evutil.c:1288:12" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "htons" label: "./evutil.c:1292:21" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "evutil_new_addrinfo_" label: "./evutil.c:1294:11" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "memset" label: "./evutil.c:1305:3" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "evutil_inet_pton" label: "./evutil.c:1306:10" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "htons" label: "./evutil.c:1309:19" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "evutil_new_addrinfo_" label: "./evutil.c:1310:11" }
+edge: { sourcename: "evutil_getaddrinfo_common_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_adjust_hints_for_addrconfig_" label: "evutil_adjust_hints_for_addrconfig_\n./evutil.c:1453:1" }
+edge: { sourcename: "evutil_adjust_hints_for_addrconfig_" targetname: "./evutil.c:evutil_check_interfaces" label: "./evutil.c:1459:2" }
+node: { title: "./evutil.c:ai_find_protocol" label: "ai_find_protocol\n./evutil.c:1491:32" }
+node: { title: "./evutil.c:test_for_getaddrinfo_hacks" label: "test_for_getaddrinfo_hacks\n./evutil.c:1501:1" }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "memset" label: "./evutil.c:1507:2" }
+node: { title: "getaddrinfo" label: "getaddrinfo\n/usr/include/netdb.h:660:12" shape : ellipse }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "getaddrinfo" label: "./evutil.c:1517:6" }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "getaddrinfo" label: "./evutil.c:1518:2" }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "getaddrinfo" label: "./evutil.c:1520:7" }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "./evutil.c:ai_find_protocol" label: "./evutil.c:1524:7" }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "./evutil.c:ai_find_protocol" label: "./evutil.c:1524:33" }
+node: { title: "freeaddrinfo" label: "freeaddrinfo\n/usr/include/netdb.h:666:13" shape : ellipse }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "freeaddrinfo" label: "./evutil.c:1529:3" }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "freeaddrinfo" label: "./evutil.c:1531:3" }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "freeaddrinfo" label: "./evutil.c:1533:3" }
+edge: { sourcename: "./evutil.c:test_for_getaddrinfo_hacks" targetname: "__stack_chk_fail" }
+node: { title: "./evutil.c:need_numeric_port_hack" label: "need_numeric_port_hack\n./evutil.c:1538:1" }
+edge: { sourcename: "./evutil.c:need_numeric_port_hack" targetname: "./evutil.c:test_for_getaddrinfo_hacks" label: "./evutil.c:1541:3" }
+node: { title: "./evutil.c:need_socktype_protocol_hack" label: "need_socktype_protocol_hack\n./evutil.c:1546:1" }
+edge: { sourcename: "./evutil.c:need_socktype_protocol_hack" targetname: "./evutil.c:test_for_getaddrinfo_hacks" label: "./evutil.c:1549:3" }
+node: { title: "./evutil.c:apply_numeric_port_hack" label: "apply_numeric_port_hack\n./evutil.c:1554:1" }
+edge: { sourcename: "./evutil.c:apply_numeric_port_hack" targetname: "htons" label: "./evutil.c:1562:20" }
+edge: { sourcename: "./evutil.c:apply_numeric_port_hack" targetname: "htons" label: "./evutil.c:1565:22" }
+edge: { sourcename: "./evutil.c:apply_numeric_port_hack" targetname: "freeaddrinfo" label: "./evutil.c:1572:4" }
+node: { title: "./evutil.c:apply_socktype_protocol_hack" label: "apply_socktype_protocol_hack\n./evutil.c:1578:1" }
+edge: { sourcename: "./evutil.c:apply_socktype_protocol_hack" targetname: "./evutil.c:evutil_getaddrinfo_infer_protocols" label: "./evutil.c:1582:3" }
+edge: { sourcename: "./evutil.c:apply_socktype_protocol_hack" targetname: "event_mm_malloc_" label: "./evutil.c:1585:12" }
+edge: { sourcename: "./evutil.c:apply_socktype_protocol_hack" targetname: "memcpy" label: "./evutil.c:1588:3" }
+node: { title: "event_mm_strdup_" label: "event_mm_strdup_\n./mm-internal.h:69:7" shape : ellipse }
+edge: { sourcename: "./evutil.c:apply_socktype_protocol_hack" targetname: "event_mm_strdup_" label: "./evutil.c:1595:27" }
+edge: { sourcename: "./evutil.c:apply_socktype_protocol_hack" targetname: "event_mm_free_" label: "./evutil.c:1597:5" }
+node: { title: "evutil_getaddrinfo" label: "evutil_getaddrinfo\n./evutil.c:1610:1" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "memcpy" label: "./evutil.c:1618:3" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "memset" label: "./evutil.c:1620:3" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "./evutil.c:need_numeric_port_hack" label: "./evutil.c:1666:17" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "./evutil.c:parse_numeric_servname" label: "./evutil.c:1667:19" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "evutil_getaddrinfo_common_" label: "./evutil.c:1670:11" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "./evutil.c:need_socktype_protocol_hack" label: "./evutil.c:1675:6" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "./evutil.c:evutil_getaddrinfo_infer_protocols" label: "./evutil.c:1676:3" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "event_errx" label: "./evutil.c:1686:2" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "getaddrinfo" label: "./evutil.c:1691:8" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "./evutil.c:apply_numeric_port_hack" label: "./evutil.c:1693:3" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "./evutil.c:need_socktype_protocol_hack" label: "./evutil.c:1695:6" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "./evutil.c:apply_socktype_protocol_hack" label: "./evutil.c:1696:7" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "evutil_freeaddrinfo" label: "./evutil.c:1697:4" }
+edge: { sourcename: "evutil_getaddrinfo" targetname: "__stack_chk_fail" }
+node: { title: "evutil_freeaddrinfo" label: "evutil_freeaddrinfo\n./evutil.c:1801:1" }
+edge: { sourcename: "evutil_freeaddrinfo" targetname: "event_mm_free_" label: "./evutil.c:1815:5" }
+edge: { sourcename: "evutil_freeaddrinfo" targetname: "event_mm_free_" label: "./evutil.c:1816:4" }
+edge: { sourcename: "evutil_freeaddrinfo" targetname: "freeaddrinfo" label: "./evutil.c:1829:3" }
+node: { title: "evutil_set_evdns_getaddrinfo_fn_" label: "evutil_set_evdns_getaddrinfo_fn_\n./evutil.c:1845:1" }
+node: { title: "evutil_set_evdns_getaddrinfo_cancel_fn_" label: "evutil_set_evdns_getaddrinfo_cancel_fn_\n./evutil.c:1851:1" }
+node: { title: "evutil_set_resolvconf_filename_" label: "evutil_set_resolvconf_filename_\n./evutil.c:1860:1" }
+node: { title: "evutil_resolvconf_filename_" label: "evutil_resolvconf_filename_\n./evutil.c:1866:1" }
+node: { title: "evutil_getaddrinfo_async_" label: "evutil_getaddrinfo_async_\n./evutil.c:1878:35" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "evutil_getaddrinfo_async_" targetname: "__indirect_call" label: "./evutil.c:1885:10" }
+edge: { sourcename: "evutil_getaddrinfo_async_" targetname: "evutil_getaddrinfo" label: "./evutil.c:1890:9" }
+edge: { sourcename: "evutil_getaddrinfo_async_" targetname: "__indirect_call" label: "./evutil.c:1891:3" }
+edge: { sourcename: "evutil_getaddrinfo_async_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_getaddrinfo_cancel_async_" label: "evutil_getaddrinfo_cancel_async_\n./evutil.c:1896:6" }
+edge: { sourcename: "evutil_getaddrinfo_cancel_async_" targetname: "__indirect_call" label: "./evutil.c:1899:3" }
+node: { title: "evutil_gai_strerror" label: "evutil_gai_strerror\n./evutil.c:1904:1" }
+node: { title: "gai_strerror" label: "gai_strerror\n/usr/include/netdb.h:669:20" shape : ellipse }
+edge: { sourcename: "evutil_gai_strerror" targetname: "gai_strerror" label: "./evutil.c:1941:10" }
+node: { title: "evutil_global_setup_locks_" label: "evutil_global_setup_locks_\n./evutil.c:2109:1" }
+node: { title: "./evutil.c:evutil_free_sock_err_globals" label: "evutil_free_sock_err_globals\n./evutil.c:2116:1" }
+node: { title: "evutil_snprintf" label: "evutil_snprintf\n./evutil.c:2123:1" }
+edge: { sourcename: "evutil_snprintf" targetname: "evutil_vsnprintf" label: "./evutil.c:2128:6" }
+edge: { sourcename: "evutil_snprintf" targetname: "__stack_chk_fail" }
+node: { title: "evutil_vsnprintf" label: "evutil_vsnprintf\n./evutil.c:2134:1" }
+node: { title: "vsnprintf" label: "vsnprintf\n/usr/include/stdio.h:382:12" shape : ellipse }
+edge: { sourcename: "evutil_vsnprintf" targetname: "vsnprintf" label: "./evutil.c:2151:6" }
+node: { title: "evutil_inet_ntop" label: "evutil_inet_ntop\n./evutil.c:2161:1" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "ntohl" label: "./evutil.c:2168:25" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "evutil_snprintf" label: "./evutil.c:2170:7" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "evutil_snprintf" label: "./evutil.c:2195:5" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "evutil_snprintf" label: "./evutil.c:2199:5" }
+node: { title: "strlen" label: "strlen\n/usr/include/string.h:407:15" shape : ellipse }
+edge: { sourcename: "evutil_inet_ntop" targetname: "strlen" label: "./evutil.c:2203:8" }
+node: { title: "event_strlcpy_" label: "event_strlcpy_\n./strlcpy-internal.h:15:8" shape : ellipse }
+edge: { sourcename: "evutil_inet_ntop" targetname: "event_strlcpy_" label: "./evutil.c:2205:4" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "evutil_snprintf" label: "./evutil.c:2237:5" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "strlen" label: "./evutil.c:2239:11" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "strlen" label: "./evutil.c:2245:7" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "event_strlcpy_" label: "./evutil.c:2247:3" }
+edge: { sourcename: "evutil_inet_ntop" targetname: "__stack_chk_fail" }
+node: { title: "evutil_inet_pton_scope" label: "evutil_inet_pton_scope\n./evutil.c:2257:1" }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "evutil_inet_pton" label: "./evutil.c:2267:10" }
+node: { title: "strchr" label: "strchr\n/usr/include/string.h:246:14" shape : ellipse }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "strchr" label: "./evutil.c:2269:7" }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "evutil_inet_pton" label: "./evutil.c:2273:10" }
+node: { title: "if_nametoindex" label: "if_nametoindex\n/usr/include/net/if.h:193:21" shape : ellipse }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "if_nametoindex" label: "./evutil.c:2275:13" }
+node: { title: "strtoul" label: "strtoul\n/usr/include/stdlib.h:181:26" shape : ellipse }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "strtoul" label: "./evutil.c:2278:14" }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "event_mm_strdup_" label: "./evutil.c:2283:18" }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "strchr" label: "./evutil.c:2286:7" }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "evutil_inet_pton" label: "./evutil.c:2288:6" }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "event_mm_free_" label: "./evutil.c:2289:2" }
+edge: { sourcename: "evutil_inet_pton_scope" targetname: "__stack_chk_fail" }
+node: { title: "evutil_inet_pton" label: "evutil_inet_pton\n./evutil.c:2294:1" }
+node: { title: "*__isoc99_sscanf" label: "sscanf\n/usr/include/stdio.h:439:12" shape : ellipse }
+edge: { sourcename: "evutil_inet_pton" targetname: "*__isoc99_sscanf" label: "./evutil.c:2303:7" }
+edge: { sourcename: "evutil_inet_pton" targetname: "htonl" label: "./evutil.c:2309:18" }
+edge: { sourcename: "evutil_inet_pton" targetname: "strchr" label: "./evutil.c:2316:21" }
+edge: { sourcename: "evutil_inet_pton" targetname: "strlen" label: "./evutil.c:2321:14" }
+edge: { sourcename: "evutil_inet_pton" targetname: "EVUTIL_ISDIGIT_" label: "./evutil.c:2325:36" }
+edge: { sourcename: "evutil_inet_pton" targetname: "*__isoc99_sscanf" label: "./evutil.c:2331:8" }
+edge: { sourcename: "evutil_inet_pton" targetname: "EVUTIL_ISXDIGIT_" label: "./evutil.c:2350:8" }
+edge: { sourcename: "evutil_inet_pton" targetname: "strtol" label: "./evutil.c:2352:14" }
+node: { title: "memmove" label: "memmove\n/usr/include/string.h:47:14" shape : ellipse }
+edge: { sourcename: "evutil_inet_pton" targetname: "memmove" label: "./evutil.c:2388:4" }
+edge: { sourcename: "evutil_inet_pton" targetname: "memset" label: "./evutil.c:2390:4" }
+edge: { sourcename: "evutil_inet_pton" targetname: "__stack_chk_fail" }
+node: { title: "evutil_parse_sockaddr_port" label: "evutil_parse_sockaddr_port\n./evutil.c:2406:1" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "strchr" label: "./evutil.c:2421:7" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "strchr" label: "./evutil.c:2424:14" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "memcpy" label: "./evutil.c:2431:3" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "strchr" label: "./evutil.c:2439:19" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "memcpy" label: "./evutil.c:2448:3" }
+node: { title: "atoi" label: "atoi\n/usr/include/stdlib.h:105:12" shape : ellipse }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "atoi" label: "./evutil.c:2461:10" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "memset" label: "./evutil.c:2473:3" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "htons" label: "./evutil.c:2478:20" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "evutil_inet_pton_scope" label: "./evutil.c:2479:12" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "memset" label: "./evutil.c:2486:3" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "memcpy" label: "./evutil.c:2487:3" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "memset" label: "./evutil.c:2495:3" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "htons" label: "./evutil.c:2500:18" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "evutil_inet_pton" label: "./evutil.c:2501:12" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "memset" label: "./evutil.c:2505:3" }
+edge: { sourcename: "evutil_parse_sockaddr_port" targetname: "__stack_chk_fail" }
+node: { title: "evutil_format_sockaddr_port_" label: "evutil_format_sockaddr_port_\n./evutil.c:2513:1" }
+edge: { sourcename: "evutil_format_sockaddr_port_" targetname: "evutil_inet_ntop" label: "./evutil.c:2520:9" }
+edge: { sourcename: "evutil_format_sockaddr_port_" targetname: "ntohs" label: "./evutil.c:2521:10" }
+edge: { sourcename: "evutil_format_sockaddr_port_" targetname: "evutil_snprintf" label: "./evutil.c:2523:4" }
+edge: { sourcename: "evutil_format_sockaddr_port_" targetname: "evutil_inet_ntop" label: "./evutil.c:2528:9" }
+edge: { sourcename: "evutil_format_sockaddr_port_" targetname: "ntohs" label: "./evutil.c:2529:10" }
+edge: { sourcename: "evutil_format_sockaddr_port_" targetname: "evutil_snprintf" label: "./evutil.c:2531:4" }
+edge: { sourcename: "evutil_format_sockaddr_port_" targetname: "evutil_snprintf" label: "./evutil.c:2536:2" }
+edge: { sourcename: "evutil_format_sockaddr_port_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_sockaddr_cmp" label: "evutil_sockaddr_cmp\n./evutil.c:2542:1" }
+edge: { sourcename: "evutil_sockaddr_cmp" targetname: "memcmp" label: "./evutil.c:2568:12" }
+node: { title: "EVUTIL_ISALPHA_" label: "EVUTIL_ISALPHA_\n./evutil.c:2641:1" }
+node: { title: "EVUTIL_ISALNUM_" label: "EVUTIL_ISALNUM_\n./evutil.c:2642:1" }
+node: { title: "EVUTIL_ISSPACE_" label: "EVUTIL_ISSPACE_\n./evutil.c:2643:1" }
+node: { title: "EVUTIL_ISDIGIT_" label: "EVUTIL_ISDIGIT_\n./evutil.c:2644:1" }
+node: { title: "EVUTIL_ISXDIGIT_" label: "EVUTIL_ISXDIGIT_\n./evutil.c:2645:1" }
+node: { title: "EVUTIL_ISPRINT_" label: "EVUTIL_ISPRINT_\n./evutil.c:2646:1" }
+node: { title: "EVUTIL_ISLOWER_" label: "EVUTIL_ISLOWER_\n./evutil.c:2647:1" }
+node: { title: "EVUTIL_ISUPPER_" label: "EVUTIL_ISUPPER_\n./evutil.c:2648:1" }
+node: { title: "EVUTIL_TOLOWER_" label: "EVUTIL_TOLOWER_\n./evutil.c:2650:6" }
+node: { title: "EVUTIL_TOUPPER_" label: "EVUTIL_TOUPPER_\n./evutil.c:2654:6" }
+node: { title: "evutil_ascii_strcasecmp" label: "evutil_ascii_strcasecmp\n./evutil.c:2659:1" }
+edge: { sourcename: "evutil_ascii_strcasecmp" targetname: "EVUTIL_TOLOWER_" label: "./evutil.c:2663:8" }
+edge: { sourcename: "evutil_ascii_strcasecmp" targetname: "EVUTIL_TOLOWER_" label: "./evutil.c:2664:8" }
+node: { title: "evutil_ascii_strncasecmp" label: "evutil_ascii_strncasecmp\n./evutil.c:2673:5" }
+edge: { sourcename: "evutil_ascii_strncasecmp" targetname: "EVUTIL_TOLOWER_" label: "./evutil.c:2677:8" }
+edge: { sourcename: "evutil_ascii_strncasecmp" targetname: "EVUTIL_TOLOWER_" label: "./evutil.c:2678:8" }
+node: { title: "evutil_rtrim_lws_" label: "evutil_rtrim_lws_\n./evutil.c:2690:1" }
+node: { title: "strlen" label: "__builtin_strlen\n<built-in>" shape : ellipse }
+edge: { sourcename: "evutil_rtrim_lws_" targetname: "strlen" label: "./evutil.c:2697:12" }
+node: { title: "./evutil.c:evutil_issetugid" label: "evutil_issetugid\n./evutil.c:2711:1" }
+node: { title: "getuid" label: "getuid\n/usr/include/unistd.h:697:16" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_issetugid" targetname: "getuid" label: "./evutil.c:2718:6" }
+node: { title: "geteuid" label: "geteuid\n/usr/include/unistd.h:700:16" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_issetugid" targetname: "geteuid" label: "./evutil.c:2718:18" }
+node: { title: "getgid" label: "getgid\n/usr/include/unistd.h:703:16" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_issetugid" targetname: "getgid" label: "./evutil.c:2722:6" }
+node: { title: "getegid" label: "getegid\n/usr/include/unistd.h:706:16" shape : ellipse }
+edge: { sourcename: "./evutil.c:evutil_issetugid" targetname: "getegid" label: "./evutil.c:2722:18" }
+node: { title: "evutil_getenv_" label: "evutil_getenv_\n./evutil.c:2730:1" }
+edge: { sourcename: "evutil_getenv_" targetname: "./evutil.c:evutil_issetugid" label: "./evutil.c:2732:6" }
+node: { title: "getenv" label: "getenv\n/usr/include/stdlib.h:641:14" shape : ellipse }
+edge: { sourcename: "evutil_getenv_" targetname: "getenv" label: "./evutil.c:2735:9" }
+node: { title: "evutil_weakrand_seed_" label: "evutil_weakrand_seed_\n./evutil.c:2739:1" }
+node: { title: "gettimeofday" label: "gettimeofday\n/usr/include/x86_64-linux-gnu/sys/time.h:67:12" shape : ellipse }
+edge: { sourcename: "evutil_weakrand_seed_" targetname: "gettimeofday" label: "./evutil.c:2743:3" }
+node: { title: "getpid" label: "getpid\n/usr/include/unistd.h:650:16" shape : ellipse }
+edge: { sourcename: "evutil_weakrand_seed_" targetname: "getpid" label: "./evutil.c:2748:25" }
+edge: { sourcename: "evutil_weakrand_seed_" targetname: "__stack_chk_fail" }
+node: { title: "evutil_weakrand_" label: "evutil_weakrand_\n./evutil.c:2756:1" }
+node: { title: "evutil_weakrand_range_" label: "evutil_weakrand_range_\n./evutil.c:2771:1" }
+edge: { sourcename: "evutil_weakrand_range_" targetname: "evutil_weakrand_" label: "./evutil.c:2781:12" }
+node: { title: "evutil_memclear_" label: "evutil_memclear_\n./evutil.c:2793:1" }
+edge: { sourcename: "evutil_memclear_" targetname: "__indirect_call" label: "./evutil.c:2795:2" }
+node: { title: "evutil_sockaddr_is_loopback_" label: "evutil_sockaddr_is_loopback_\n./evutil.c:2799:1" }
+edge: { sourcename: "evutil_sockaddr_is_loopback_" targetname: "ntohl" label: "./evutil.c:2805:11" }
+edge: { sourcename: "evutil_sockaddr_is_loopback_" targetname: "memcmp" label: "./evutil.c:2808:11" }
+node: { title: "evutil_hex_char_to_int_" label: "evutil_hex_char_to_int_\n./evutil.c:2814:1" }
+node: { title: "evutil_socket_" label: "evutil_socket_\n./evutil.c:2862:1" }
+edge: { sourcename: "evutil_socket_" targetname: "socket" label: "./evutil.c:2866:6" }
+edge: { sourcename: "evutil_socket_" targetname: "socket" label: "./evutil.c:2873:6" }
+edge: { sourcename: "evutil_socket_" targetname: "./evutil.c:evutil_fast_socket_nonblocking" label: "./evutil.c:2877:7" }
+edge: { sourcename: "evutil_socket_" targetname: "evutil_closesocket" label: "./evutil.c:2878:4" }
+edge: { sourcename: "evutil_socket_" targetname: "./evutil.c:evutil_fast_socket_closeonexec" label: "./evutil.c:2883:7" }
+edge: { sourcename: "evutil_socket_" targetname: "evutil_closesocket" label: "./evutil.c:2884:4" }
+node: { title: "evutil_accept4_" label: "evutil_accept4_\n./evutil.c:2900:1" }
+node: { title: "accept4" label: "accept4\n/usr/include/x86_64-linux-gnu/sys/socket.h:314:12" shape : ellipse }
+edge: { sourcename: "evutil_accept4_" targetname: "accept4" label: "./evutil.c:2905:11" }
+edge: { sourcename: "evutil_accept4_" targetname: "__errno_location" label: "./evutil.c:2906:22" }
+edge: { sourcename: "evutil_accept4_" targetname: "__errno_location" label: "./evutil.c:2906:41" }
+edge: { sourcename: "evutil_accept4_" targetname: "accept" label: "./evutil.c:2915:11" }
+edge: { sourcename: "evutil_accept4_" targetname: "./evutil.c:evutil_fast_socket_closeonexec" label: "./evutil.c:2920:7" }
+edge: { sourcename: "evutil_accept4_" targetname: "evutil_closesocket" label: "./evutil.c:2921:4" }
+edge: { sourcename: "evutil_accept4_" targetname: "./evutil.c:evutil_fast_socket_nonblocking" label: "./evutil.c:2926:7" }
+edge: { sourcename: "evutil_accept4_" targetname: "evutil_closesocket" label: "./evutil.c:2927:4" }
+node: { title: "evutil_make_internal_pipe_" label: "evutil_make_internal_pipe_\n./evutil.c:2939:1" }
+node: { title: "pipe2" label: "pipe2\n/usr/include/unistd.h:442:12" shape : ellipse }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "pipe2" label: "./evutil.c:2951:6" }
+node: { title: "pipe" label: "pipe\n/usr/include/unistd.h:437:12" shape : ellipse }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "pipe" label: "./evutil.c:2955:6" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "./evutil.c:evutil_fast_socket_nonblocking" label: "./evutil.c:2956:7" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "./evutil.c:evutil_fast_socket_nonblocking" label: "./evutil.c:2957:7" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "./evutil.c:evutil_fast_socket_closeonexec" label: "./evutil.c:2958:7" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "./evutil.c:evutil_fast_socket_closeonexec" label: "./evutil.c:2959:7" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "close" label: "./evutil.c:2960:4" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "close" label: "./evutil.c:2961:4" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "event_warn" label: "./evutil.c:2967:3" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "evutil_socketpair" label: "./evutil.c:2976:6" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "./evutil.c:evutil_fast_socket_nonblocking" label: "./evutil.c:2977:7" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "./evutil.c:evutil_fast_socket_nonblocking" label: "./evutil.c:2978:7" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "./evutil.c:evutil_fast_socket_closeonexec" label: "./evutil.c:2979:7" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "./evutil.c:evutil_fast_socket_closeonexec" label: "./evutil.c:2980:7" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "evutil_closesocket" label: "./evutil.c:2981:4" }
+edge: { sourcename: "evutil_make_internal_pipe_" targetname: "evutil_closesocket" label: "./evutil.c:2982:4" }
+node: { title: "evutil_eventfd_" label: "evutil_eventfd_\n./evutil.c:2997:1" }
+node: { title: "eventfd" label: "eventfd\n/usr/include/x86_64-linux-gnu/sys/eventfd.h:34:12" shape : ellipse }
+edge: { sourcename: "evutil_eventfd_" targetname: "eventfd" label: "./evutil.c:3002:6" }
+edge: { sourcename: "evutil_eventfd_" targetname: "eventfd" label: "./evutil.c:3006:6" }
+edge: { sourcename: "evutil_eventfd_" targetname: "./evutil.c:evutil_fast_socket_closeonexec" label: "./evutil.c:3010:7" }
+edge: { sourcename: "evutil_eventfd_" targetname: "evutil_closesocket" label: "./evutil.c:3011:4" }
+edge: { sourcename: "evutil_eventfd_" targetname: "./evutil.c:evutil_fast_socket_nonblocking" label: "./evutil.c:3016:7" }
+edge: { sourcename: "evutil_eventfd_" targetname: "evutil_closesocket" label: "./evutil.c:3017:4" }
+node: { title: "evutil_free_globals_" label: "evutil_free_globals_\n./evutil.c:3028:1" }
+node: { title: "evutil_free_secure_rng_globals_" label: "evutil_free_secure_rng_globals_\n./util-internal.h:462:6" shape : ellipse }
+edge: { sourcename: "evutil_free_globals_" targetname: "evutil_free_secure_rng_globals_" label: "./evutil.c:3030:2" }
+edge: { sourcename: "evutil_free_globals_" targetname: "./evutil.c:evutil_free_sock_err_globals" label: "./evutil.c:3031:2" }
+node: { title: "evutil_set_tcp_keepalive" label: "evutil_set_tcp_keepalive\n./evutil.c:3035:1" }
+edge: { sourcename: "evutil_set_tcp_keepalive" targetname: "setsockopt" label: "./evutil.c:3049:6" }
+edge: { sourcename: "evutil_set_tcp_keepalive" targetname: "setsockopt" label: "./evutil.c:3133:6" }
+edge: { sourcename: "evutil_set_tcp_keepalive" targetname: "setsockopt" label: "./evutil.c:3150:6" }
+edge: { sourcename: "evutil_set_tcp_keepalive" targetname: "setsockopt" label: "./evutil.c:3159:6" }
+edge: { sourcename: "evutil_set_tcp_keepalive" targetname: "__stack_chk_fail" }
+}

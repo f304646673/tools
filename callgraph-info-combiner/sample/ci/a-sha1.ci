@@ -1,0 +1,27 @@
+graph: { title: "./sha1.c"
+node: { title: "./sha1.c:SHA1Transform" label: "SHA1Transform\n./sha1.c:88:13" }
+node: { title: "memcpy" label: "memcpy\n/usr/include/string.h:43:14" shape : ellipse }
+edge: { sourcename: "./sha1.c:SHA1Transform" targetname: "memcpy" label: "./sha1.c:99:5" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./sha1.c:SHA1Transform" targetname: "memset" label: "./sha1.c:202:5" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./sha1.c:SHA1Transform" targetname: "__stack_chk_fail" }
+node: { title: "./sha1.c:SHA1Init" label: "SHA1Init\n./sha1.c:208:13" }
+node: { title: "./sha1.c:SHA1Update" label: "SHA1Update\n./sha1.c:220:13" }
+edge: { sourcename: "./sha1.c:SHA1Update" targetname: "memcpy" label: "./sha1.c:231:9" }
+edge: { sourcename: "./sha1.c:SHA1Update" targetname: "./sha1.c:SHA1Transform" label: "./sha1.c:232:9" }
+edge: { sourcename: "./sha1.c:SHA1Update" targetname: "./sha1.c:SHA1Transform" label: "./sha1.c:234:13" }
+edge: { sourcename: "./sha1.c:SHA1Update" targetname: "memcpy" label: "./sha1.c:239:5" }
+node: { title: "./sha1.c:SHA1Final" label: "SHA1Final\n./sha1.c:244:13" }
+edge: { sourcename: "./sha1.c:SHA1Final" targetname: "./sha1.c:SHA1Update" label: "./sha1.c:275:5" }
+edge: { sourcename: "./sha1.c:SHA1Final" targetname: "./sha1.c:SHA1Update" label: "./sha1.c:278:9" }
+edge: { sourcename: "./sha1.c:SHA1Final" targetname: "./sha1.c:SHA1Update" label: "./sha1.c:280:5" }
+edge: { sourcename: "./sha1.c:SHA1Final" targetname: "memset" label: "./sha1.c:287:5" }
+edge: { sourcename: "./sha1.c:SHA1Final" targetname: "memset" label: "./sha1.c:288:5" }
+edge: { sourcename: "./sha1.c:SHA1Final" targetname: "__stack_chk_fail" }
+node: { title: "builtin_SHA1" label: "builtin_SHA1\n./sha1.c:291:6" }
+edge: { sourcename: "builtin_SHA1" targetname: "./sha1.c:SHA1Init" label: "./sha1.c:295:5" }
+edge: { sourcename: "builtin_SHA1" targetname: "./sha1.c:SHA1Update" label: "./sha1.c:297:9" }
+edge: { sourcename: "builtin_SHA1" targetname: "./sha1.c:SHA1Final" label: "./sha1.c:298:5" }
+edge: { sourcename: "builtin_SHA1" targetname: "__stack_chk_fail" }
+}

@@ -1,0 +1,99 @@
+graph: { title: "./epoll.c"
+node: { title: "./epoll.c:close_epoll_handle" label: "close_epoll_handle\n./epoll.c:101:13" }
+node: { title: "close" label: "close\n/usr/include/unistd.h:358:12" shape : ellipse }
+edge: { sourcename: "./epoll.c:close_epoll_handle" targetname: "close" label: "./epoll.c:101:41" }
+node: { title: "./epoll.c:epoll_init" label: "epoll_init\n./epoll.c:174:1" }
+node: { title: "epoll_create1" label: "epoll_create1\n/usr/include/x86_64-linux-gnu/sys/epoll.h:101:12" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "epoll_create1" label: "./epoll.c:181:9" }
+node: { title: "epoll_create" label: "epoll_create\n/usr/include/x86_64-linux-gnu/sys/epoll.h:97:12" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "epoll_create" label: "./epoll.c:186:15" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "__errno_location" label: "./epoll.c:187:8" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "event_warn" label: "./epoll.c:188:5" }
+node: { title: "evutil_make_socket_closeonexec" label: "evutil_make_socket_closeonexec\n./include/event2/util.h:461:5" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "evutil_make_socket_closeonexec" label: "./epoll.c:192:3" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./mm-internal.h:58:7" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "event_mm_calloc_" label: "./epoll.c:196:18" }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "./epoll.c:close_epoll_handle" label: "./epoll.c:197:3" }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "event_mm_calloc_" label: "./epoll.c:204:20" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "event_mm_free_" label: "./epoll.c:206:3" }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "./epoll.c:close_epoll_handle" label: "./epoll.c:207:3" }
+node: { title: "evutil_getenv_" label: "evutil_getenv_\n./util-internal.h:317:13" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "evutil_getenv_" label: "./epoll.c:215:3" }
+node: { title: "sigfd_init_" label: "sigfd_init_\n./evsignal-internal.h:65:5" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "sigfd_init_" label: "./epoll.c:258:6" }
+node: { title: "evsig_init_" label: "evsig_init_\n./evsignal-internal.h:71:5" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_init" targetname: "evsig_init_" label: "./epoll.c:259:3" }
+node: { title: "./epoll.c:change_to_string" label: "change_to_string\n./epoll.c:265:1" }
+node: { title: "./epoll.c:epoll_op_to_string" label: "epoll_op_to_string\n./epoll.c:280:1" }
+node: { title: "./epoll.c:epoll_apply_one_change" label: "epoll_apply_one_change\n./epoll.c:306:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "event_errx" label: "./epoll.c:319:3" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "memset" label: "./epoll.c:326:2" }
+node: { title: "epoll_ctl" label: "epoll_ctl\n/usr/include/x86_64-linux-gnu/sys/epoll.h:110:12" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "epoll_ctl" label: "./epoll.c:333:6" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "./epoll.c:change_to_string" label: "./epoll.c:334:3" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "./epoll.c:change_to_string" label: "./epoll.c:334:3" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "./epoll.c:change_to_string" label: "./epoll.c:334:3" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "./epoll.c:epoll_op_to_string" label: "./epoll.c:334:3" }
+node: { title: "event_debugx_" label: "event_debugx_\n./log-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "event_debugx_" label: "./epoll.c:334:3" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "__errno_location" label: "./epoll.c:340:7" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "epoll_ctl" label: "./epoll.c:345:8" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "event_warn" label: "./epoll.c:346:5" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "event_debugx_" label: "./epoll.c:350:5" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "__errno_location" label: "./epoll.c:358:7" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "epoll_ctl" label: "./epoll.c:366:8" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "event_warn" label: "./epoll.c:367:5" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "event_debugx_" label: "./epoll.c:371:5" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "__errno_location" label: "./epoll.c:379:7" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "__errno_location" label: "./epoll.c:379:26" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "__errno_location" label: "./epoll.c:379:44" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "__errno_location" label: "./epoll.c:383:4" }
+node: { title: "strerror" label: "strerror\n/usr/include/string.h:419:14" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "strerror" label: "./epoll.c:383:4" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "event_debugx_" label: "./epoll.c:383:4" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "./epoll.c:change_to_string" label: "./epoll.c:394:2" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "./epoll.c:change_to_string" label: "./epoll.c:394:2" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "./epoll.c:change_to_string" label: "./epoll.c:394:2" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "./epoll.c:epoll_op_to_string" label: "./epoll.c:394:2" }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "event_warn" label: "./epoll.c:394:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_apply_one_change" targetname: "__stack_chk_fail" }
+node: { title: "./epoll.c:epoll_apply_changes" label: "epoll_apply_changes\n./epoll.c:399:1" }
+edge: { sourcename: "./epoll.c:epoll_apply_changes" targetname: "./epoll.c:epoll_apply_one_change" label: "./epoll.c:410:7" }
+node: { title: "./epoll.c:epoll_nochangelist_add" label: "epoll_nochangelist_add\n./epoll.c:418:1" }
+edge: { sourcename: "./epoll.c:epoll_nochangelist_add" targetname: "./epoll.c:epoll_apply_one_change" label: "./epoll.c:435:9" }
+edge: { sourcename: "./epoll.c:epoll_nochangelist_add" targetname: "__stack_chk_fail" }
+node: { title: "./epoll.c:epoll_nochangelist_del" label: "epoll_nochangelist_del\n./epoll.c:439:1" }
+edge: { sourcename: "./epoll.c:epoll_nochangelist_del" targetname: "./epoll.c:epoll_apply_one_change" label: "./epoll.c:456:9" }
+edge: { sourcename: "./epoll.c:epoll_nochangelist_del" targetname: "__stack_chk_fail" }
+node: { title: "./epoll.c:epoll_dispatch" label: "epoll_dispatch\n./epoll.c:460:1" }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "./epoll.c:epoll_apply_changes" label: "./epoll.c:511:2" }
+node: { title: "event_changelist_remove_all_" label: "event_changelist_remove_all_\n./changelist-internal.h:90:6" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "event_changelist_remove_all_" label: "./epoll.c:512:2" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "__indirect_call" label: "./epoll.c:514:2" }
+node: { title: "epoll_pwait2" label: "epoll_pwait2\n/usr/include/x86_64-linux-gnu/sys/epoll.h:142:12" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "epoll_pwait2" label: "./epoll.c:517:8" }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "__indirect_call" label: "./epoll.c:522:2" }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "__errno_location" label: "./epoll.c:525:7" }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "event_warn" label: "./epoll.c:526:4" }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "event_debugx_" label: "./epoll.c:533:2" }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "event_errx" label: "./epoll.c:534:2" }
+node: { title: "evmap_io_active_" label: "evmap_io_active_\n./evmap-internal.h:78:6" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "evmap_io_active_" label: "./epoll.c:563:3" }
+node: { title: "event_mm_realloc_" label: "event_mm_realloc_\n./mm-internal.h:72:7" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "event_mm_realloc_" label: "./epoll.c:573:16" }
+edge: { sourcename: "./epoll.c:epoll_dispatch" targetname: "__stack_chk_fail" }
+node: { title: "./epoll.c:epoll_dealloc" label: "epoll_dealloc\n./epoll.c:586:1" }
+node: { title: "evsig_dealloc_" label: "evsig_dealloc_\n./evsignal-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "./epoll.c:epoll_dealloc" targetname: "evsig_dealloc_" label: "./epoll.c:590:2" }
+edge: { sourcename: "./epoll.c:epoll_dealloc" targetname: "event_mm_free_" label: "./epoll.c:592:3" }
+edge: { sourcename: "./epoll.c:epoll_dealloc" targetname: "./epoll.c:close_epoll_handle" label: "./epoll.c:594:3" }
+edge: { sourcename: "./epoll.c:epoll_dealloc" targetname: "memset" label: "./epoll.c:600:2" }
+edge: { sourcename: "./epoll.c:epoll_dealloc" targetname: "event_mm_free_" label: "./epoll.c:601:2" }
+}

@@ -1,0 +1,928 @@
+graph: { title: "./event.c"
+node: { title: "./event.c:min_heap_ctor_" label: "min_heap_ctor_\n./minheap-internal.h:64:6" }
+node: { title: "./event.c:min_heap_dtor_" label: "min_heap_dtor_\n./minheap-internal.h:65:6" }
+edge: { sourcename: "./event.c:min_heap_dtor_" targetname: "event_mm_free_" label: "./minheap-internal.h:65:48" }
+node: { title: "./event.c:min_heap_elem_init_" label: "min_heap_elem_init_\n./minheap-internal.h:66:6" }
+node: { title: "./event.c:min_heap_empty_" label: "min_heap_empty_\n./minheap-internal.h:67:5" }
+node: { title: "./event.c:min_heap_size_" label: "min_heap_size_\n./minheap-internal.h:68:8" }
+node: { title: "./event.c:min_heap_top_" label: "min_heap_top_\n./minheap-internal.h:69:15" }
+node: { title: "./event.c:min_heap_push_" label: "min_heap_push_\n./minheap-internal.h:71:5" }
+edge: { sourcename: "./event.c:min_heap_push_" targetname: "./event.c:min_heap_reserve_" label: "./minheap-internal.h:73:6" }
+edge: { sourcename: "./event.c:min_heap_push_" targetname: "./event.c:min_heap_shift_up_" label: "./minheap-internal.h:75:2" }
+node: { title: "./event.c:min_heap_elt_is_top_" label: "min_heap_elt_is_top_\n./minheap-internal.h:91:5" }
+node: { title: "./event.c:min_heap_erase_" label: "min_heap_erase_\n./minheap-internal.h:96:5" }
+edge: { sourcename: "./event.c:min_heap_erase_" targetname: "./event.c:min_heap_shift_up_unconditional_" label: "./minheap-internal.h:108:4" }
+edge: { sourcename: "./event.c:min_heap_erase_" targetname: "./event.c:min_heap_shift_down_" label: "./minheap-internal.h:110:4" }
+node: { title: "./event.c:min_heap_reserve_" label: "min_heap_reserve_\n./minheap-internal.h:133:5" }
+edge: { sourcename: "./event.c:min_heap_reserve_" targetname: "event_mm_realloc_" label: "./minheap-internal.h:141:29" }
+node: { title: "./event.c:min_heap_shift_up_unconditional_" label: "min_heap_shift_up_unconditional_\n./minheap-internal.h:149:6" }
+node: { title: "./event.c:min_heap_shift_up_" label: "min_heap_shift_up_\n./minheap-internal.h:161:6" }
+node: { title: "./event.c:min_heap_shift_down_" label: "min_heap_shift_down_\n./minheap-internal.h:173:6" }
+node: { title: "./event.c:hash_debug_entry" label: "hash_debug_entry\n./event.c:192:1" }
+node: { title: "./event.c:eq_debug_entry" label: "eq_debug_entry\n./event.c:206:1" }
+node: { title: "./event.c:event_debug_map_HT_INIT" label: "event_debug_map_HT_INIT\n./event.c:237:1" }
+node: { title: "./event.c:event_debug_map_HT_FIND_P_" label: "event_debug_map_HT_FIND_P_\n./event.c:237:1" }
+edge: { sourcename: "./event.c:event_debug_map_HT_FIND_P_" targetname: "./event.c:hash_debug_entry" label: "./event.c:237:1" }
+edge: { sourcename: "./event.c:event_debug_map_HT_FIND_P_" targetname: "./event.c:eq_debug_entry" label: "./event.c:237:1" }
+node: { title: "./event.c:event_debug_map_HT_FIND" label: "event_debug_map_HT_FIND\n./event.c:237:1" }
+edge: { sourcename: "./event.c:event_debug_map_HT_FIND" targetname: "./event.c:event_debug_map_HT_FIND_P_" label: "./event.c:237:1" }
+node: { title: "./event.c:event_debug_map_HT_INSERT" label: "event_debug_map_HT_INSERT\n./event.c:237:1" }
+edge: { sourcename: "./event.c:event_debug_map_HT_INSERT" targetname: "event_debug_map_HT_GROW" label: "./event.c:237:1" }
+edge: { sourcename: "./event.c:event_debug_map_HT_INSERT" targetname: "./event.c:hash_debug_entry" label: "./event.c:237:1" }
+node: { title: "./event.c:event_debug_map_HT_REMOVE" label: "event_debug_map_HT_REMOVE\n./event.c:237:1" }
+edge: { sourcename: "./event.c:event_debug_map_HT_REMOVE" targetname: "./event.c:event_debug_map_HT_FIND_P_" label: "./event.c:237:1" }
+node: { title: "./event.c:event_debug_map_HT_START" label: "event_debug_map_HT_START\n./event.c:237:1" }
+node: { title: "./event.c:event_debug_map_HT_NEXT_RMV" label: "event_debug_map_HT_NEXT_RMV\n./event.c:237:1" }
+edge: { sourcename: "./event.c:event_debug_map_HT_NEXT_RMV" targetname: "./event.c:hash_debug_entry" label: "./event.c:237:1" }
+node: { title: "event_debug_map_HT_GROW" label: "event_debug_map_HT_GROW\n./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_GROW" targetname: "event_mm_malloc_" label: "./event.c:239:1" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "event_debug_map_HT_GROW" targetname: "memset" label: "./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_GROW" targetname: "./event.c:hash_debug_entry" label: "./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_GROW" targetname: "event_mm_free_" label: "./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_GROW" targetname: "event_mm_realloc_" label: "./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_GROW" targetname: "memset" label: "./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_GROW" targetname: "./event.c:hash_debug_entry" label: "./event.c:239:1" }
+node: { title: "event_debug_map_HT_CLEAR" label: "event_debug_map_HT_CLEAR\n./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_CLEAR" targetname: "event_mm_free_" label: "./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_CLEAR" targetname: "./event.c:event_debug_map_HT_INIT" label: "./event.c:239:1" }
+node: { title: "event_debug_map_HT_REP_IS_BAD_" label: "event_debug_map_HT_REP_IS_BAD_\n./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_REP_IS_BAD_" targetname: "./event.c:hash_debug_entry" label: "./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_REP_IS_BAD_" targetname: "./event.c:hash_debug_entry" label: "./event.c:239:1" }
+edge: { sourcename: "event_debug_map_HT_REP_IS_BAD_" targetname: "./event.c:hash_debug_entry" label: "./event.c:239:1" }
+node: { title: "./event.c:event_debug_note_setup_" label: "event_debug_note_setup_\n./event.c:243:13" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./event.c:event_debug_note_setup_" targetname: "__indirect_call" label: "./event.c:251:2" }
+edge: { sourcename: "./event.c:event_debug_note_setup_" targetname: "./event.c:event_debug_map_HT_FIND" label: "./event.c:252:9" }
+edge: { sourcename: "./event.c:event_debug_note_setup_" targetname: "event_mm_malloc_" label: "./event.c:256:10" }
+node: { title: "event_err" label: "event_err\n./log-internal.h:58:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_debug_note_setup_" targetname: "event_err" label: "./event.c:258:4" }
+edge: { sourcename: "./event.c:event_debug_note_setup_" targetname: "./event.c:event_debug_map_HT_INSERT" label: "./event.c:262:3" }
+edge: { sourcename: "./event.c:event_debug_note_setup_" targetname: "__indirect_call" label: "./event.c:264:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./event.c:event_debug_note_setup_" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_debug_note_teardown_" label: "event_debug_note_teardown_\n./event.c:270:13" }
+edge: { sourcename: "./event.c:event_debug_note_teardown_" targetname: "__indirect_call" label: "./event.c:278:2" }
+edge: { sourcename: "./event.c:event_debug_note_teardown_" targetname: "./event.c:event_debug_map_HT_REMOVE" label: "./event.c:279:9" }
+edge: { sourcename: "./event.c:event_debug_note_teardown_" targetname: "event_mm_free_" label: "./event.c:281:3" }
+edge: { sourcename: "./event.c:event_debug_note_teardown_" targetname: "__indirect_call" label: "./event.c:282:2" }
+edge: { sourcename: "./event.c:event_debug_note_teardown_" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_debug_note_add_" label: "event_debug_note_add_\n./event.c:288:13" }
+edge: { sourcename: "./event.c:event_debug_note_add_" targetname: "__indirect_call" label: "./event.c:296:2" }
+edge: { sourcename: "./event.c:event_debug_note_add_" targetname: "./event.c:event_debug_map_HT_FIND" label: "./event.c:297:9" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_debug_note_add_" targetname: "event_errx" label: "./event.c:301:3" }
+edge: { sourcename: "./event.c:event_debug_note_add_" targetname: "__indirect_call" label: "./event.c:308:2" }
+edge: { sourcename: "./event.c:event_debug_note_add_" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_debug_note_del_" label: "event_debug_note_del_\n./event.c:314:13" }
+edge: { sourcename: "./event.c:event_debug_note_del_" targetname: "__indirect_call" label: "./event.c:322:2" }
+edge: { sourcename: "./event.c:event_debug_note_del_" targetname: "./event.c:event_debug_map_HT_FIND" label: "./event.c:323:9" }
+edge: { sourcename: "./event.c:event_debug_note_del_" targetname: "event_errx" label: "./event.c:327:3" }
+edge: { sourcename: "./event.c:event_debug_note_del_" targetname: "__indirect_call" label: "./event.c:334:2" }
+edge: { sourcename: "./event.c:event_debug_note_del_" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_debug_assert_is_setup_" label: "event_debug_assert_is_setup_\n./event.c:340:13" }
+edge: { sourcename: "./event.c:event_debug_assert_is_setup_" targetname: "__indirect_call" label: "./event.c:348:2" }
+edge: { sourcename: "./event.c:event_debug_assert_is_setup_" targetname: "./event.c:event_debug_map_HT_FIND" label: "./event.c:349:9" }
+edge: { sourcename: "./event.c:event_debug_assert_is_setup_" targetname: "event_errx" label: "./event.c:351:3" }
+edge: { sourcename: "./event.c:event_debug_assert_is_setup_" targetname: "__indirect_call" label: "./event.c:358:2" }
+edge: { sourcename: "./event.c:event_debug_assert_is_setup_" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_debug_assert_not_added_" label: "event_debug_assert_not_added_\n./event.c:361:13" }
+edge: { sourcename: "./event.c:event_debug_assert_not_added_" targetname: "__indirect_call" label: "./event.c:369:2" }
+edge: { sourcename: "./event.c:event_debug_assert_not_added_" targetname: "./event.c:event_debug_map_HT_FIND" label: "./event.c:370:9" }
+edge: { sourcename: "./event.c:event_debug_assert_not_added_" targetname: "event_errx" label: "./event.c:372:3" }
+edge: { sourcename: "./event.c:event_debug_assert_not_added_" targetname: "__indirect_call" label: "./event.c:379:2" }
+edge: { sourcename: "./event.c:event_debug_assert_not_added_" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_debug_assert_socket_nonblocking_" label: "event_debug_assert_socket_nonblocking_\n./event.c:381:13" }
+node: { title: "fcntl" label: "fcntl\n/usr/include/fcntl.h:149:12" shape : ellipse }
+edge: { sourcename: "./event.c:event_debug_assert_socket_nonblocking_" targetname: "fcntl" label: "./event.c:391:16" }
+edge: { sourcename: "./event.c:event_debug_assert_socket_nonblocking_" targetname: "event_errx" label: "./event.c:392:4" }
+node: { title: "./event.c:gettime" label: "gettime\n./event.c:420:1" }
+node: { title: "evthread_is_debug_lock_held_" label: "evthread_is_debug_lock_held_\n./evthread-internal.h:371:5" shape : ellipse }
+edge: { sourcename: "./event.c:gettime" targetname: "evthread_is_debug_lock_held_" label: "./event.c:422:2" }
+edge: { sourcename: "./event.c:gettime" targetname: "event_errx" label: "./event.c:422:2" }
+node: { title: "evutil_gettime_monotonic_" label: "evutil_gettime_monotonic_\n./time-internal.h:94:5" shape : ellipse }
+edge: { sourcename: "./event.c:gettime" targetname: "evutil_gettime_monotonic_" label: "./event.c:429:6" }
+node: { title: "gettimeofday" label: "gettimeofday\n/usr/include/x86_64-linux-gnu/sys/time.h:67:12" shape : ellipse }
+edge: { sourcename: "./event.c:gettime" targetname: "gettimeofday" label: "./event.c:436:3" }
+edge: { sourcename: "./event.c:gettime" targetname: "__stack_chk_fail" }
+node: { title: "event_base_gettimeofday_cached" label: "event_base_gettimeofday_cached\n./event.c:445:1" }
+edge: { sourcename: "event_base_gettimeofday_cached" targetname: "gettimeofday" label: "./event.c:451:11" }
+edge: { sourcename: "event_base_gettimeofday_cached" targetname: "__indirect_call" label: "./event.c:454:2" }
+edge: { sourcename: "event_base_gettimeofday_cached" targetname: "gettimeofday" label: "./event.c:456:7" }
+edge: { sourcename: "event_base_gettimeofday_cached" targetname: "__indirect_call" label: "./event.c:461:2" }
+node: { title: "./event.c:clear_time_cache" label: "clear_time_cache\n./event.c:467:1" }
+node: { title: "./event.c:update_time_cache" label: "update_time_cache\n./event.c:474:1" }
+edge: { sourcename: "./event.c:update_time_cache" targetname: "./event.c:gettime" label: "./event.c:478:3" }
+node: { title: "event_base_update_cache_time" label: "event_base_update_cache_time\n./event.c:482:1" }
+edge: { sourcename: "event_base_update_cache_time" targetname: "__indirect_call" label: "./event.c:491:2" }
+edge: { sourcename: "event_base_update_cache_time" targetname: "./event.c:update_time_cache" label: "./event.c:493:3" }
+edge: { sourcename: "event_base_update_cache_time" targetname: "__indirect_call" label: "./event.c:494:2" }
+node: { title: "./event.c:event_callback_to_event" label: "event_callback_to_event\n./event.c:499:1" }
+edge: { sourcename: "./event.c:event_callback_to_event" targetname: "event_errx" label: "./event.c:501:2" }
+node: { title: "./event.c:event_to_event_callback" label: "event_to_event_callback\n./event.c:506:1" }
+node: { title: "event_init" label: "event_init\n./event.c:512:1" }
+edge: { sourcename: "event_init" targetname: "event_base_new_with_config" label: "./event.c:514:28" }
+edge: { sourcename: "event_init" targetname: "event_errx" label: "./event.c:517:3" }
+node: { title: "event_base_new" label: "event_base_new\n./event.c:527:1" }
+edge: { sourcename: "event_base_new" targetname: "event_config_new" label: "./event.c:530:29" }
+edge: { sourcename: "event_base_new" targetname: "event_base_new_with_config" label: "./event.c:532:10" }
+edge: { sourcename: "event_base_new" targetname: "event_config_free" label: "./event.c:533:3" }
+node: { title: "./event.c:event_config_is_avoided_method" label: "event_config_is_avoided_method\n./event.c:541:1" }
+node: { title: "strcmp" label: "strcmp\n/usr/include/string.h:156:12" shape : ellipse }
+edge: { sourcename: "./event.c:event_config_is_avoided_method" targetname: "strcmp" label: "./event.c:548:7" }
+node: { title: "./event.c:event_is_method_disabled" label: "event_is_method_disabled\n./event.c:557:1" }
+node: { title: "evutil_snprintf" label: "evutil_snprintf\n./include/event2/util.h:625:5" shape : ellipse }
+edge: { sourcename: "./event.c:event_is_method_disabled" targetname: "evutil_snprintf" label: "./event.c:562:2" }
+node: { title: "EVUTIL_TOUPPER_" label: "EVUTIL_TOUPPER_\n./util-internal.h:263:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_is_method_disabled" targetname: "EVUTIL_TOUPPER_" label: "./event.c:564:20" }
+node: { title: "evutil_getenv_" label: "evutil_getenv_\n./util-internal.h:317:13" shape : ellipse }
+edge: { sourcename: "./event.c:event_is_method_disabled" targetname: "evutil_getenv_" label: "./event.c:567:10" }
+edge: { sourcename: "./event.c:event_is_method_disabled" targetname: "__stack_chk_fail" }
+node: { title: "event_base_get_features" label: "event_base_get_features\n./event.c:571:1" }
+node: { title: "event_enable_debug_mode" label: "event_enable_debug_mode\n./event.c:577:1" }
+edge: { sourcename: "event_enable_debug_mode" targetname: "event_errx" label: "./event.c:581:3" }
+edge: { sourcename: "event_enable_debug_mode" targetname: "event_errx" label: "./event.c:583:3" }
+edge: { sourcename: "event_enable_debug_mode" targetname: "./event.c:event_debug_map_HT_INIT" label: "./event.c:588:2" }
+node: { title: "event_disable_debug_mode" label: "event_disable_debug_mode\n./event.c:593:1" }
+edge: { sourcename: "event_disable_debug_mode" targetname: "__indirect_call" label: "./event.c:598:2" }
+edge: { sourcename: "event_disable_debug_mode" targetname: "./event.c:event_debug_map_HT_START" label: "./event.c:599:13" }
+edge: { sourcename: "event_disable_debug_mode" targetname: "./event.c:event_debug_map_HT_NEXT_RMV" label: "./event.c:601:9" }
+edge: { sourcename: "event_disable_debug_mode" targetname: "event_mm_free_" label: "./event.c:602:3" }
+edge: { sourcename: "event_disable_debug_mode" targetname: "event_debug_map_HT_CLEAR" label: "./event.c:604:2" }
+edge: { sourcename: "event_disable_debug_mode" targetname: "__indirect_call" label: "./event.c:605:2" }
+node: { title: "event_base_new_with_config" label: "event_base_new_with_config\n./event.c:612:1" }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_mm_calloc_" label: "./event.c:622:14" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_warn" label: "./event.c:623:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "evutil_getenv_" label: "./event.c:639:19" }
+node: { title: "evutil_configure_monotonic_time_" label: "evutil_configure_monotonic_time_\n./time-internal.h:91:5" shape : ellipse }
+edge: { sourcename: "event_base_new_with_config" targetname: "evutil_configure_monotonic_time_" label: "./event.c:645:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "./event.c:gettime" label: "./event.c:647:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "./event.c:min_heap_ctor_" label: "./event.c:650:2" }
+node: { title: "evmap_io_initmap_" label: "evmap_io_initmap_\n./evmap-internal.h:42:6" shape : ellipse }
+edge: { sourcename: "event_base_new_with_config" targetname: "evmap_io_initmap_" label: "./event.c:659:2" }
+node: { title: "evmap_signal_initmap_" label: "evmap_signal_initmap_\n./evmap-internal.h:43:6" shape : ellipse }
+edge: { sourcename: "event_base_new_with_config" targetname: "evmap_signal_initmap_" label: "./event.c:660:2" }
+node: { title: "event_changelist_init_" label: "event_changelist_init_\n./changelist-internal.h:86:6" shape : ellipse }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_changelist_init_" label: "./event.c:661:2" }
+edge: { sourcename: "event_base_new_with_config" targetname: "./event.c:event_config_is_avoided_method" label: "./event.c:686:8" }
+edge: { sourcename: "event_base_new_with_config" targetname: "./event.c:event_is_method_disabled" label: "./event.c:696:7" }
+edge: { sourcename: "event_base_new_with_config" targetname: "__indirect_call" label: "./event.c:701:18" }
+node: { title: "event_warnx" label: "event_warnx\n./log-internal.h:68:6" shape : ellipse }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_warnx" label: "./event.c:705:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_base_free" label: "./event.c:708:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "evutil_getenv_" label: "./event.c:712:6" }
+node: { title: "event_msgx" label: "event_msgx\n./log-internal.h:70:6" shape : ellipse }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_msgx" label: "./event.c:713:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_base_priority_init" label: "./event.c:716:6" }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_base_free" label: "./event.c:717:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "__indirect_call" label: "./event.c:731:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "__indirect_call" label: "./event.c:732:3" }
+edge: { sourcename: "event_base_new_with_config" targetname: "evthread_make_base_notifiable" label: "./event.c:733:7" }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_warnx" label: "./event.c:735:4" }
+edge: { sourcename: "event_base_new_with_config" targetname: "event_base_free" label: "./event.c:736:4" }
+edge: { sourcename: "event_base_new_with_config" targetname: "__stack_chk_fail" }
+node: { title: "event_base_start_iocp_" label: "event_base_start_iocp_\n./event.c:755:1" }
+node: { title: "event_base_stop_iocp_" label: "event_base_stop_iocp_\n./event.c:772:1" }
+node: { title: "./event.c:event_base_cancel_single_callback_" label: "event_base_cancel_single_callback_\n./event.c:786:1" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "./event.c:event_callback_to_event" label: "./event.c:793:22" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "./event.c:event_del_" label: "./event.c:795:4" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "__indirect_call" label: "./event.c:799:3" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "event_callback_cancel_nolock_" label: "./event.c:800:3" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "__indirect_call" label: "./event.c:801:3" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "./event.c:event_callback_to_event" label: "./event.c:809:23" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "__indirect_call" label: "./event.c:810:4" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "event_mm_free_" label: "./event.c:812:5" }
+edge: { sourcename: "./event.c:event_base_cancel_single_callback_" targetname: "__indirect_call" label: "./event.c:816:4" }
+node: { title: "./event.c:event_base_free_queues_" label: "event_base_free_queues_\n./event.c:825:12" }
+edge: { sourcename: "./event.c:event_base_free_queues_" targetname: "./event.c:event_base_cancel_single_callback_" label: "./event.c:833:15" }
+edge: { sourcename: "./event.c:event_base_free_queues_" targetname: "./event.c:event_base_cancel_single_callback_" label: "./event.c:841:15" }
+node: { title: "./event.c:event_base_free_" label: "event_base_free_\n./event.c:849:1" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_warnx" label: "./event.c:864:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_del" label: "./event.c:875:3" }
+node: { title: "evutil_closesocket" label: "evutil_closesocket\n./include/event2/util.h:471:5" shape : ellipse }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "evutil_closesocket" label: "./event.c:876:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "evutil_closesocket" label: "./event.c:878:4" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_debug_unassign" label: "./event.c:881:3" }
+node: { title: "evmap_delete_all_" label: "evmap_delete_all_\n./evmap-internal.h:101:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "evmap_delete_all_" label: "./event.c:885:2" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_del" label: "./event.c:888:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "./event.c:min_heap_top_" label: "./event.c:887:15" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_del" label: "./event.c:894:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_debug_unassign" label: "./event.c:895:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_del" label: "./event.c:900:5" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_mm_free_" label: "./event.c:905:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_mm_free_" label: "./event.c:908:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "./event.c:event_base_free_queues_" label: "./event.c:919:11" }
+node: { title: "event_debugx_" label: "event_debugx_\n./log-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_debugx_" label: "./event.c:920:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_debugx_" label: "./event.c:928:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_mm_free_" label: "./event.c:934:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "__indirect_call" label: "./event.c:938:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_errx" label: "./event.c:941:3" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "./event.c:min_heap_empty_" label: "./event.c:943:2" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_errx" label: "./event.c:943:2" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "./event.c:min_heap_dtor_" label: "./event.c:944:2" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_mm_free_" label: "./event.c:946:2" }
+node: { title: "evmap_io_clear_" label: "evmap_io_clear_\n./evmap-internal.h:49:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "evmap_io_clear_" label: "./event.c:948:2" }
+node: { title: "evmap_signal_clear_" label: "evmap_signal_clear_\n./evmap-internal.h:50:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "evmap_signal_clear_" label: "./event.c:949:2" }
+node: { title: "event_changelist_freemem_" label: "event_changelist_freemem_\n./changelist-internal.h:93:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_changelist_freemem_" label: "./event.c:950:2" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "__indirect_call" label: "./event.c:952:2" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "__indirect_call" label: "./event.c:953:2" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_mm_free_" label: "./event.c:960:4" }
+edge: { sourcename: "./event.c:event_base_free_" targetname: "event_mm_free_" label: "./event.c:967:2" }
+node: { title: "event_base_free_nofinalize" label: "event_base_free_nofinalize\n./event.c:971:1" }
+edge: { sourcename: "event_base_free_nofinalize" targetname: "./event.c:event_base_free_" label: "./event.c:973:2" }
+node: { title: "event_base_free" label: "event_base_free\n./event.c:977:1" }
+edge: { sourcename: "event_base_free" targetname: "./event.c:event_base_free_" label: "./event.c:979:2" }
+node: { title: "./event.c:nil_backend_del" label: "nil_backend_del\n./event.c:986:1" }
+node: { title: "event_reinit" label: "event_reinit\n./event.c:1003:1" }
+edge: { sourcename: "event_reinit" targetname: "__indirect_call" label: "./event.c:1010:2" }
+edge: { sourcename: "event_reinit" targetname: "event_del_nolock_" label: "./event.c:1034:3" }
+edge: { sourcename: "event_reinit" targetname: "event_debug_unassign" label: "./event.c:1035:3" }
+edge: { sourcename: "event_reinit" targetname: "memset" label: "./event.c:1036:3" }
+edge: { sourcename: "event_reinit" targetname: "evutil_closesocket" label: "./event.c:1041:3" }
+edge: { sourcename: "event_reinit" targetname: "evutil_closesocket" label: "./event.c:1043:3" }
+edge: { sourcename: "event_reinit" targetname: "event_del_nolock_" label: "./event.c:1049:3" }
+edge: { sourcename: "event_reinit" targetname: "evutil_closesocket" label: "./event.c:1050:3" }
+edge: { sourcename: "event_reinit" targetname: "evutil_closesocket" label: "./event.c:1052:4" }
+edge: { sourcename: "event_reinit" targetname: "event_debug_unassign" label: "./event.c:1055:3" }
+edge: { sourcename: "event_reinit" targetname: "__indirect_call" label: "./event.c:1072:4" }
+edge: { sourcename: "event_reinit" targetname: "__indirect_call" label: "./event.c:1073:18" }
+edge: { sourcename: "event_reinit" targetname: "event_errx" label: "./event.c:1075:4" }
+edge: { sourcename: "event_reinit" targetname: "event_changelist_freemem_" label: "./event.c:1084:3" }
+node: { title: "evmap_reinit_" label: "evmap_reinit_\n./evmap-internal.h:96:5" shape : ellipse }
+edge: { sourcename: "event_reinit" targetname: "evmap_reinit_" label: "./event.c:1089:7" }
+node: { title: "evsig_init_" label: "evsig_init_\n./evsignal-internal.h:71:5" shape : ellipse }
+edge: { sourcename: "event_reinit" targetname: "evsig_init_" label: "./event.c:1092:9" }
+edge: { sourcename: "event_reinit" targetname: "event_add_nolock_" label: "./event.c:1094:10" }
+edge: { sourcename: "event_reinit" targetname: "./event.c:evthread_make_base_notifiable_nolock_" label: "./event.c:1103:9" }
+edge: { sourcename: "event_reinit" targetname: "__indirect_call" label: "./event.c:1106:2" }
+node: { title: "event_gettime_monotonic" label: "event_gettime_monotonic\n./event.c:1112:1" }
+edge: { sourcename: "event_gettime_monotonic" targetname: "__indirect_call" label: "./event.c:1117:3" }
+edge: { sourcename: "event_gettime_monotonic" targetname: "evutil_gettime_monotonic_" label: "./event.c:1118:8" }
+edge: { sourcename: "event_gettime_monotonic" targetname: "__indirect_call" label: "./event.c:1119:3" }
+node: { title: "event_get_supported_methods" label: "event_get_supported_methods\n./event.c:1126:1" }
+edge: { sourcename: "event_get_supported_methods" targetname: "event_mm_calloc_" label: "./event.c:1139:8" }
+edge: { sourcename: "event_get_supported_methods" targetname: "event_mm_free_" label: "./event.c:1150:3" }
+node: { title: "event_config_new" label: "event_config_new\n./event.c:1158:1" }
+edge: { sourcename: "event_config_new" targetname: "event_mm_calloc_" label: "./event.c:1160:29" }
+node: { title: "./event.c:event_config_entry_free" label: "event_config_entry_free\n./event.c:1174:1" }
+edge: { sourcename: "./event.c:event_config_entry_free" targetname: "event_mm_free_" label: "./event.c:1177:3" }
+edge: { sourcename: "./event.c:event_config_entry_free" targetname: "event_mm_free_" label: "./event.c:1178:2" }
+node: { title: "event_config_free" label: "event_config_free\n./event.c:1182:1" }
+edge: { sourcename: "event_config_free" targetname: "./event.c:event_config_entry_free" label: "./event.c:1188:3" }
+edge: { sourcename: "event_config_free" targetname: "event_mm_free_" label: "./event.c:1190:2" }
+node: { title: "event_config_set_flag" label: "event_config_set_flag\n./event.c:1194:1" }
+node: { title: "event_config_avoid_method" label: "event_config_avoid_method\n./event.c:1203:1" }
+edge: { sourcename: "event_config_avoid_method" targetname: "event_mm_malloc_" label: "./event.c:1205:37" }
+edge: { sourcename: "event_config_avoid_method" targetname: "event_mm_strdup_" label: "./event.c:1209:29" }
+edge: { sourcename: "event_config_avoid_method" targetname: "event_mm_free_" label: "./event.c:1210:3" }
+node: { title: "event_config_require_features" label: "event_config_require_features\n./event.c:1220:1" }
+node: { title: "event_config_set_num_cpus_hint" label: "event_config_set_num_cpus_hint\n./event.c:1230:1" }
+node: { title: "event_config_set_max_dispatch_interval" label: "event_config_set_max_dispatch_interval\n./event.c:1239:1" }
+node: { title: "event_priority_init" label: "event_priority_init\n./event.c:1256:1" }
+edge: { sourcename: "event_priority_init" targetname: "event_base_priority_init" label: "./event.c:1258:9" }
+node: { title: "event_base_priority_init" label: "event_base_priority_init\n./event.c:1262:1" }
+edge: { sourcename: "event_base_priority_init" targetname: "__indirect_call" label: "./event.c:1267:2" }
+edge: { sourcename: "event_base_priority_init" targetname: "event_mm_free_" label: "./event.c:1277:3" }
+edge: { sourcename: "event_base_priority_init" targetname: "event_mm_calloc_" label: "./event.c:1283:4" }
+edge: { sourcename: "event_base_priority_init" targetname: "event_warn" label: "./event.c:1285:3" }
+edge: { sourcename: "event_base_priority_init" targetname: "__indirect_call" label: "./event.c:1297:2" }
+node: { title: "event_base_get_npriorities" label: "event_base_get_npriorities\n./event.c:1302:1" }
+edge: { sourcename: "event_base_get_npriorities" targetname: "__indirect_call" label: "./event.c:1309:2" }
+edge: { sourcename: "event_base_get_npriorities" targetname: "__indirect_call" label: "./event.c:1311:2" }
+node: { title: "event_base_get_num_events" label: "event_base_get_num_events\n./event.c:1316:1" }
+edge: { sourcename: "event_base_get_num_events" targetname: "__indirect_call" label: "./event.c:1320:2" }
+edge: { sourcename: "event_base_get_num_events" targetname: "__indirect_call" label: "./event.c:1331:2" }
+node: { title: "event_base_get_max_events" label: "event_base_get_max_events\n./event.c:1337:1" }
+edge: { sourcename: "event_base_get_max_events" targetname: "__indirect_call" label: "./event.c:1341:2" }
+edge: { sourcename: "event_base_get_max_events" targetname: "__indirect_call" label: "./event.c:1361:2" }
+node: { title: "./event.c:event_haveevents" label: "event_haveevents\n./event.c:1368:1" }
+node: { title: "./event.c:event_signal_closure" label: "event_signal_closure\n./event.c:1376:1" }
+edge: { sourcename: "./event.c:event_signal_closure" targetname: "__indirect_call" label: "./event.c:1394:2" }
+edge: { sourcename: "./event.c:event_signal_closure" targetname: "__indirect_call" label: "./event.c:1400:4" }
+edge: { sourcename: "./event.c:event_signal_closure" targetname: "__indirect_call" label: "./event.c:1402:3" }
+edge: { sourcename: "./event.c:event_signal_closure" targetname: "__indirect_call" label: "./event.c:1404:3" }
+edge: { sourcename: "./event.c:event_signal_closure" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:is_common_timeout" label: "is_common_timeout\n./event.c:1444:1" }
+node: { title: "./event.c:is_same_common_timeout" label: "is_same_common_timeout\n./event.c:1457:1" }
+node: { title: "./event.c:get_common_timeout_list" label: "get_common_timeout_list\n./event.c:1466:1" }
+node: { title: "./event.c:common_timeout_schedule" label: "common_timeout_schedule\n./event.c:1486:1" }
+edge: { sourcename: "./event.c:common_timeout_schedule" targetname: "event_add_nolock_" label: "./event.c:1491:2" }
+edge: { sourcename: "./event.c:common_timeout_schedule" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:common_timeout_callback" label: "common_timeout_callback\n./event.c:1498:1" }
+edge: { sourcename: "./event.c:common_timeout_callback" targetname: "__indirect_call" label: "./event.c:1504:2" }
+edge: { sourcename: "./event.c:common_timeout_callback" targetname: "./event.c:gettime" label: "./event.c:1505:2" }
+edge: { sourcename: "./event.c:common_timeout_callback" targetname: "event_del_nolock_" label: "./event.c:1512:3" }
+edge: { sourcename: "./event.c:common_timeout_callback" targetname: "event_active_nolock_" label: "./event.c:1513:3" }
+edge: { sourcename: "./event.c:common_timeout_callback" targetname: "./event.c:common_timeout_schedule" label: "./event.c:1516:3" }
+edge: { sourcename: "./event.c:common_timeout_callback" targetname: "__indirect_call" label: "./event.c:1517:2" }
+edge: { sourcename: "./event.c:common_timeout_callback" targetname: "__stack_chk_fail" }
+node: { title: "event_base_init_common_timeout" label: "event_base_init_common_timeout\n./event.c:1523:1" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "__indirect_call" label: "./event.c:1531:2" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "./event.c:is_common_timeout" label: "./event.c:1534:7" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "./event.c:is_common_timeout" label: "./event.c:1546:4" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_errx" label: "./event.c:1546:4" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_warnx" label: "./event.c:1552:3" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_mm_realloc_" label: "./event.c:1561:7" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_warn" label: "./event.c:1564:4" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_mm_calloc_" label: "./event.c:1570:12" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_warn" label: "./event.c:1572:3" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_assign" label: "./event.c:1580:2" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_priority_set" label: "./event.c:1583:2" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "./event.c:is_common_timeout" label: "./event.c:1590:3" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "event_errx" label: "./event.c:1590:3" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "__indirect_call" label: "./event.c:1592:2" }
+edge: { sourcename: "event_base_init_common_timeout" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_persist_closure" label: "event_persist_closure\n./event.c:1598:1" }
+edge: { sourcename: "./event.c:event_persist_closure" targetname: "./event.c:is_same_common_timeout" label: "./event.c:1615:3" }
+edge: { sourcename: "./event.c:event_persist_closure" targetname: "event_errx" label: "./event.c:1615:3" }
+edge: { sourcename: "./event.c:event_persist_closure" targetname: "./event.c:gettime" label: "./event.c:1617:3" }
+edge: { sourcename: "./event.c:event_persist_closure" targetname: "./event.c:is_common_timeout" label: "./event.c:1618:7" }
+edge: { sourcename: "./event.c:event_persist_closure" targetname: "event_add_nolock_" label: "./event.c:1646:3" }
+edge: { sourcename: "./event.c:event_persist_closure" targetname: "__indirect_call" label: "./event.c:1656:3" }
+edge: { sourcename: "./event.c:event_persist_closure" targetname: "__indirect_call" label: "./event.c:1659:2" }
+edge: { sourcename: "./event.c:event_persist_closure" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_process_active_single_queue" label: "event_process_active_single_queue\n./event.c:1670:1" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_errx" label: "./event.c:1677:2" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "./event.c:event_callback_to_event" label: "./event.c:1682:9" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "./event.c:event_queue_remove_active" label: "./event.c:1685:5" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_del_nolock_" label: "./event.c:1687:5" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_debugx_" label: "./event.c:1688:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "./event.c:event_queue_remove_active" label: "./event.c:1696:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_debugx_" label: "./event.c:1697:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_errx" label: "./event.c:1713:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "./event.c:event_signal_closure" label: "./event.c:1714:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_errx" label: "./event.c:1717:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "./event.c:event_persist_closure" label: "./event.c:1718:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_errx" label: "./event.c:1723:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1726:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1727:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1732:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1733:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_errx" label: "./event.c:1740:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_errx" label: "./event.c:1743:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1744:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "./event.c:event_debug_note_teardown_" label: "./event.c:1745:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1746:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_mm_free_" label: "./event.c:1748:5" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_errx" label: "./event.c:1754:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1755:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1756:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "event_errx" label: "./event.c:1760:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1763:3" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__indirect_call" label: "./event.c:1768:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "./event.c:update_time_cache" label: "./event.c:1778:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "./event.c:gettime" label: "./event.c:1779:4" }
+edge: { sourcename: "./event.c:event_process_active_single_queue" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_process_active" label: "event_process_active\n./event.c:1796:1" }
+edge: { sourcename: "./event.c:event_process_active" targetname: "./event.c:update_time_cache" label: "./event.c:1806:3" }
+edge: { sourcename: "./event.c:event_process_active" targetname: "./event.c:gettime" label: "./event.c:1807:3" }
+edge: { sourcename: "./event.c:event_process_active" targetname: "./event.c:event_process_active_single_queue" label: "./event.c:1819:9" }
+edge: { sourcename: "./event.c:event_process_active" targetname: "./event.c:event_process_active_single_queue" label: "./event.c:1822:9" }
+edge: { sourcename: "./event.c:event_process_active" targetname: "__stack_chk_fail" }
+node: { title: "event_dispatch" label: "event_dispatch\n./event.c:1845:1" }
+edge: { sourcename: "event_dispatch" targetname: "event_loop" label: "./event.c:1847:10" }
+node: { title: "event_base_dispatch" label: "event_base_dispatch\n./event.c:1851:1" }
+edge: { sourcename: "event_base_dispatch" targetname: "event_base_loop" label: "./event.c:1853:10" }
+node: { title: "event_base_get_method" label: "event_base_get_method\n./event.c:1857:1" }
+edge: { sourcename: "event_base_get_method" targetname: "event_errx" label: "./event.c:1859:2" }
+node: { title: "event_base_get_signal_method" label: "event_base_get_signal_method\n./event.c:1864:1" }
+edge: { sourcename: "event_base_get_signal_method" targetname: "event_errx" label: "./event.c:1866:2" }
+node: { title: "./event.c:event_loopexit_cb" label: "event_loopexit_cb\n./event.c:1873:1" }
+node: { title: "event_loopexit" label: "event_loopexit\n./event.c:1880:1" }
+edge: { sourcename: "event_loopexit" targetname: "event_once" label: "./event.c:1882:10" }
+node: { title: "event_base_loopexit" label: "event_base_loopexit\n./event.c:1887:1" }
+edge: { sourcename: "event_base_loopexit" targetname: "event_base_once" label: "./event.c:1889:10" }
+node: { title: "event_loopbreak" label: "event_loopbreak\n./event.c:1894:1" }
+edge: { sourcename: "event_loopbreak" targetname: "event_base_loopbreak" label: "./event.c:1896:10" }
+node: { title: "event_base_loopbreak" label: "event_base_loopbreak\n./event.c:1900:1" }
+edge: { sourcename: "event_base_loopbreak" targetname: "__indirect_call" label: "./event.c:1906:2" }
+edge: { sourcename: "event_base_loopbreak" targetname: "__indirect_call" label: "./event.c:1909:6" }
+edge: { sourcename: "event_base_loopbreak" targetname: "./event.c:evthread_notify_base" label: "./event.c:1910:7" }
+edge: { sourcename: "event_base_loopbreak" targetname: "__indirect_call" label: "./event.c:1914:2" }
+node: { title: "event_base_loopcontinue" label: "event_base_loopcontinue\n./event.c:1919:1" }
+edge: { sourcename: "event_base_loopcontinue" targetname: "__indirect_call" label: "./event.c:1925:2" }
+edge: { sourcename: "event_base_loopcontinue" targetname: "__indirect_call" label: "./event.c:1928:6" }
+edge: { sourcename: "event_base_loopcontinue" targetname: "./event.c:evthread_notify_base" label: "./event.c:1929:7" }
+edge: { sourcename: "event_base_loopcontinue" targetname: "__indirect_call" label: "./event.c:1933:2" }
+node: { title: "event_base_got_break" label: "event_base_got_break\n./event.c:1938:1" }
+edge: { sourcename: "event_base_got_break" targetname: "__indirect_call" label: "./event.c:1941:2" }
+edge: { sourcename: "event_base_got_break" targetname: "__indirect_call" label: "./event.c:1943:2" }
+node: { title: "event_base_got_exit" label: "event_base_got_exit\n./event.c:1948:1" }
+edge: { sourcename: "event_base_got_exit" targetname: "__indirect_call" label: "./event.c:1951:2" }
+edge: { sourcename: "event_base_got_exit" targetname: "__indirect_call" label: "./event.c:1953:2" }
+node: { title: "event_loop" label: "event_loop\n./event.c:1960:1" }
+edge: { sourcename: "event_loop" targetname: "event_base_loop" label: "./event.c:1962:9" }
+node: { title: "event_base_loop" label: "event_base_loop\n./event.c:1966:1" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:1978:2" }
+edge: { sourcename: "event_base_loop" targetname: "event_warnx" label: "./event.c:1981:3" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:1983:3" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:clear_time_cache" label: "./event.c:1989:2" }
+node: { title: "evsig_set_base_" label: "evsig_set_base_\n./evsignal-internal.h:75:6" shape : ellipse }
+edge: { sourcename: "event_base_loop" targetname: "evsig_set_base_" label: "./event.c:1992:3" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:1997:22" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:timeout_next" label: "./event.c:2017:4" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:event_haveevents" label: "./event.c:2028:8" }
+edge: { sourcename: "event_base_loop" targetname: "event_debugx_" label: "./event.c:2029:4" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:event_queue_make_later_events_active" label: "./event.c:2034:3" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:2039:4" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:2040:5" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:2041:4" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:clear_time_cache" label: "./event.c:2044:3" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:2046:9" }
+edge: { sourcename: "event_base_loop" targetname: "event_debugx_" label: "./event.c:2049:4" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:update_time_cache" label: "./event.c:2055:3" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:2060:4" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:2061:5" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:2062:4" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:timeout_process" label: "./event.c:2065:3" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:event_process_active" label: "./event.c:2068:12" }
+edge: { sourcename: "event_base_loop" targetname: "event_debugx_" label: "./event.c:2076:2" }
+edge: { sourcename: "event_base_loop" targetname: "./event.c:clear_time_cache" label: "./event.c:2079:2" }
+edge: { sourcename: "event_base_loop" targetname: "__indirect_call" label: "./event.c:2082:2" }
+edge: { sourcename: "event_base_loop" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_once_cb" label: "event_once_cb\n./event.c:2090:1" }
+edge: { sourcename: "./event.c:event_once_cb" targetname: "__indirect_call" label: "./event.c:2094:3" }
+edge: { sourcename: "./event.c:event_once_cb" targetname: "__indirect_call" label: "./event.c:2095:2" }
+edge: { sourcename: "./event.c:event_once_cb" targetname: "__indirect_call" label: "./event.c:2097:2" }
+edge: { sourcename: "./event.c:event_once_cb" targetname: "event_debug_unassign" label: "./event.c:2098:2" }
+edge: { sourcename: "./event.c:event_once_cb" targetname: "event_mm_free_" label: "./event.c:2099:2" }
+node: { title: "event_once" label: "event_once\n./event.c:2104:1" }
+edge: { sourcename: "event_once" targetname: "event_base_once" label: "./event.c:2108:9" }
+node: { title: "event_base_once" label: "event_base_once\n./event.c:2113:1" }
+edge: { sourcename: "event_base_once" targetname: "event_mm_calloc_" label: "./event.c:2129:15" }
+edge: { sourcename: "event_base_once" targetname: "event_assign" label: "./event.c:2136:3" }
+edge: { sourcename: "event_base_once" targetname: "event_assign" label: "./event.c:2148:3" }
+edge: { sourcename: "event_base_once" targetname: "event_mm_free_" label: "./event.c:2151:3" }
+edge: { sourcename: "event_base_once" targetname: "__indirect_call" label: "./event.c:2156:3" }
+edge: { sourcename: "event_base_once" targetname: "event_active_nolock_" label: "./event.c:2158:4" }
+edge: { sourcename: "event_base_once" targetname: "event_add_nolock_" label: "./event.c:2160:10" }
+edge: { sourcename: "event_base_once" targetname: "event_mm_free_" label: "./event.c:2163:4" }
+edge: { sourcename: "event_base_once" targetname: "__indirect_call" label: "./event.c:2168:3" }
+node: { title: "event_assign" label: "event_assign\n./event.c:2179:1" }
+edge: { sourcename: "event_assign" targetname: "./event.c:event_debug_assert_socket_nonblocking_" label: "./event.c:2187:3" }
+edge: { sourcename: "event_assign" targetname: "./event.c:event_debug_assert_not_added_" label: "./event.c:2188:2" }
+edge: { sourcename: "event_assign" targetname: "event_warnx" label: "./event.c:2203:4" }
+edge: { sourcename: "event_assign" targetname: "./event.c:min_heap_elem_init_" label: "./event.c:2217:2" }
+edge: { sourcename: "event_assign" targetname: "./event.c:event_debug_note_setup_" label: "./event.c:2224:2" }
+node: { title: "event_base_set" label: "event_base_set\n./event.c:2230:1" }
+edge: { sourcename: "event_base_set" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2236:2" }
+node: { title: "event_set" label: "event_set\n./event.c:2245:1" }
+edge: { sourcename: "event_set" targetname: "event_assign" label: "./event.c:2249:6" }
+edge: { sourcename: "event_set" targetname: "event_errx" label: "./event.c:2250:2" }
+node: { title: "event_self_cbarg" label: "event_self_cbarg\n./event.c:2254:1" }
+node: { title: "event_base_get_running_event" label: "event_base_get_running_event\n./event.c:2260:1" }
+edge: { sourcename: "event_base_get_running_event" targetname: "__indirect_call" label: "./event.c:2263:2" }
+edge: { sourcename: "event_base_get_running_event" targetname: "__indirect_call" label: "./event.c:2264:6" }
+edge: { sourcename: "event_base_get_running_event" targetname: "./event.c:event_callback_to_event" label: "./event.c:2267:9" }
+edge: { sourcename: "event_base_get_running_event" targetname: "__indirect_call" label: "./event.c:2269:2" }
+node: { title: "event_new" label: "event_new\n./event.c:2274:1" }
+edge: { sourcename: "event_new" targetname: "event_mm_malloc_" label: "./event.c:2277:7" }
+edge: { sourcename: "event_new" targetname: "event_assign" label: "./event.c:2280:6" }
+edge: { sourcename: "event_new" targetname: "event_mm_free_" label: "./event.c:2281:3" }
+node: { title: "event_free" label: "event_free\n./event.c:2289:1" }
+edge: { sourcename: "event_free" targetname: "event_del" label: "./event.c:2296:2" }
+edge: { sourcename: "event_free" targetname: "./event.c:event_debug_note_teardown_" label: "./event.c:2297:2" }
+edge: { sourcename: "event_free" targetname: "event_mm_free_" label: "./event.c:2298:2" }
+node: { title: "event_debug_unassign" label: "event_debug_unassign\n./event.c:2303:1" }
+edge: { sourcename: "event_debug_unassign" targetname: "./event.c:event_debug_assert_not_added_" label: "./event.c:2305:2" }
+edge: { sourcename: "event_debug_unassign" targetname: "./event.c:event_debug_note_teardown_" label: "./event.c:2306:2" }
+node: { title: "./event.c:event_finalize_nolock_" label: "event_finalize_nolock_\n./event.c:2313:1" }
+edge: { sourcename: "./event.c:event_finalize_nolock_" targetname: "event_del_nolock_" label: "./event.c:2318:2" }
+edge: { sourcename: "./event.c:event_finalize_nolock_" targetname: "event_active_nolock_" label: "./event.c:2321:2" }
+node: { title: "./event.c:event_finalize_impl_" label: "event_finalize_impl_\n./event.c:2327:1" }
+edge: { sourcename: "./event.c:event_finalize_impl_" targetname: "event_warnx" label: "./event.c:2332:3" }
+edge: { sourcename: "./event.c:event_finalize_impl_" targetname: "__indirect_call" label: "./event.c:2336:2" }
+edge: { sourcename: "./event.c:event_finalize_impl_" targetname: "./event.c:event_finalize_nolock_" label: "./event.c:2337:6" }
+edge: { sourcename: "./event.c:event_finalize_impl_" targetname: "__indirect_call" label: "./event.c:2338:2" }
+node: { title: "event_finalize" label: "event_finalize\n./event.c:2343:1" }
+edge: { sourcename: "event_finalize" targetname: "./event.c:event_finalize_impl_" label: "./event.c:2345:9" }
+node: { title: "event_free_finalize" label: "event_free_finalize\n./event.c:2349:1" }
+edge: { sourcename: "event_free_finalize" targetname: "./event.c:event_finalize_impl_" label: "./event.c:2351:9" }
+node: { title: "event_callback_finalize_nolock_" label: "event_callback_finalize_nolock_\n./event.c:2355:1" }
+edge: { sourcename: "event_callback_finalize_nolock_" targetname: "./event.c:event_callback_to_event" label: "./event.c:2359:8" }
+edge: { sourcename: "event_callback_finalize_nolock_" targetname: "event_del_nolock_" label: "./event.c:2360:3" }
+edge: { sourcename: "event_callback_finalize_nolock_" targetname: "event_callback_cancel_nolock_" label: "./event.c:2362:3" }
+edge: { sourcename: "event_callback_finalize_nolock_" targetname: "event_callback_activate_nolock_" label: "./event.c:2367:2" }
+node: { title: "event_callback_finalize_" label: "event_callback_finalize_\n./event.c:2372:1" }
+edge: { sourcename: "event_callback_finalize_" targetname: "__indirect_call" label: "./event.c:2374:2" }
+edge: { sourcename: "event_callback_finalize_" targetname: "event_callback_finalize_nolock_" label: "./event.c:2375:2" }
+edge: { sourcename: "event_callback_finalize_" targetname: "__indirect_call" label: "./event.c:2376:2" }
+node: { title: "event_callback_finalize_many_" label: "event_callback_finalize_many_\n./event.c:2383:1" }
+edge: { sourcename: "event_callback_finalize_many_" targetname: "__indirect_call" label: "./event.c:2390:2" }
+edge: { sourcename: "event_callback_finalize_many_" targetname: "event_debugx_" label: "./event.c:2392:2" }
+edge: { sourcename: "event_callback_finalize_many_" targetname: "event_callback_finalize_nolock_" label: "./event.c:2400:4" }
+edge: { sourcename: "event_callback_finalize_many_" targetname: "event_callback_cancel_nolock_" label: "./event.c:2403:4" }
+edge: { sourcename: "event_callback_finalize_many_" targetname: "event_callback_finalize_nolock_" label: "./event.c:2409:3" }
+edge: { sourcename: "event_callback_finalize_many_" targetname: "__indirect_call" label: "./event.c:2412:2" }
+node: { title: "event_priority_set" label: "event_priority_set\n./event.c:2422:1" }
+edge: { sourcename: "event_priority_set" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2424:2" }
+node: { title: "event_pending" label: "event_pending\n./event.c:2441:1" }
+edge: { sourcename: "event_pending" targetname: "event_warnx" label: "./event.c:2446:3" }
+edge: { sourcename: "event_pending" targetname: "__indirect_call" label: "./event.c:2450:2" }
+edge: { sourcename: "event_pending" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2451:2" }
+edge: { sourcename: "event_pending" targetname: "__indirect_call" label: "./event.c:2470:2" }
+edge: { sourcename: "event_pending" targetname: "__stack_chk_fail" }
+node: { title: "event_initialized" label: "event_initialized\n./event.c:2476:1" }
+node: { title: "event_get_assignment" label: "event_get_assignment\n./event.c:2485:1" }
+edge: { sourcename: "event_get_assignment" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2487:2" }
+node: { title: "event_get_struct_event_size" label: "event_get_struct_event_size\n./event.c:2502:1" }
+node: { title: "event_get_fd" label: "event_get_fd\n./event.c:2508:1" }
+edge: { sourcename: "event_get_fd" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2510:2" }
+node: { title: "event_get_base" label: "event_get_base\n./event.c:2515:1" }
+edge: { sourcename: "event_get_base" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2517:2" }
+node: { title: "event_get_events" label: "event_get_events\n./event.c:2522:1" }
+edge: { sourcename: "event_get_events" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2524:2" }
+node: { title: "event_get_callback" label: "event_get_callback\n./event.c:2529:1" }
+edge: { sourcename: "event_get_callback" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2531:2" }
+node: { title: "event_get_callback_arg" label: "event_get_callback_arg\n./event.c:2536:1" }
+edge: { sourcename: "event_get_callback_arg" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2538:2" }
+node: { title: "event_get_priority" label: "event_get_priority\n./event.c:2543:1" }
+edge: { sourcename: "event_get_priority" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2545:2" }
+node: { title: "event_add" label: "event_add\n./event.c:2550:1" }
+edge: { sourcename: "event_add" targetname: "event_warnx" label: "./event.c:2555:3" }
+edge: { sourcename: "event_add" targetname: "__indirect_call" label: "./event.c:2559:2" }
+edge: { sourcename: "event_add" targetname: "event_add_nolock_" label: "./event.c:2561:8" }
+edge: { sourcename: "event_add" targetname: "__indirect_call" label: "./event.c:2563:2" }
+node: { title: "./event.c:evthread_notify_base_default" label: "evthread_notify_base_default\n./event.c:2573:1" }
+node: { title: "write" label: "write\n/usr/include/unistd.h:378:16" shape : ellipse }
+edge: { sourcename: "./event.c:evthread_notify_base_default" targetname: "write" label: "./event.c:2581:6" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "./event.c:evthread_notify_base_default" targetname: "__errno_location" label: "./event.c:2583:21" }
+edge: { sourcename: "./event.c:evthread_notify_base_default" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:evthread_notify_base_eventfd" label: "evthread_notify_base_eventfd\n./event.c:2590:1" }
+edge: { sourcename: "./event.c:evthread_notify_base_eventfd" targetname: "write" label: "./event.c:2595:7" }
+edge: { sourcename: "./event.c:evthread_notify_base_eventfd" targetname: "__errno_location" label: "./event.c:2596:20" }
+edge: { sourcename: "./event.c:evthread_notify_base_eventfd" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:evthread_notify_base" label: "evthread_notify_base\n./event.c:2607:1" }
+edge: { sourcename: "./event.c:evthread_notify_base" targetname: "evthread_is_debug_lock_held_" label: "./event.c:2609:2" }
+edge: { sourcename: "./event.c:evthread_notify_base" targetname: "event_errx" label: "./event.c:2609:2" }
+edge: { sourcename: "./event.c:evthread_notify_base" targetname: "__indirect_call" label: "./event.c:2615:9" }
+node: { title: "event_remove_timer_nolock_" label: "event_remove_timer_nolock_\n./event.c:2621:1" }
+edge: { sourcename: "event_remove_timer_nolock_" targetname: "evthread_is_debug_lock_held_" label: "./event.c:2625:2" }
+edge: { sourcename: "event_remove_timer_nolock_" targetname: "event_errx" label: "./event.c:2625:2" }
+edge: { sourcename: "event_remove_timer_nolock_" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2626:2" }
+edge: { sourcename: "event_remove_timer_nolock_" targetname: "event_debugx_" label: "./event.c:2628:2" }
+edge: { sourcename: "event_remove_timer_nolock_" targetname: "./event.c:event_queue_remove_timeout" label: "./event.c:2632:3" }
+node: { title: "event_remove_timer" label: "event_remove_timer\n./event.c:2640:1" }
+edge: { sourcename: "event_remove_timer" targetname: "event_warnx" label: "./event.c:2645:3" }
+edge: { sourcename: "event_remove_timer" targetname: "__indirect_call" label: "./event.c:2649:2" }
+edge: { sourcename: "event_remove_timer" targetname: "event_remove_timer_nolock_" label: "./event.c:2651:8" }
+edge: { sourcename: "event_remove_timer" targetname: "__indirect_call" label: "./event.c:2653:2" }
+node: { title: "event_add_nolock_" label: "event_add_nolock_\n./event.c:2663:1" }
+edge: { sourcename: "event_add_nolock_" targetname: "evthread_is_debug_lock_held_" label: "./event.c:2670:2" }
+edge: { sourcename: "event_add_nolock_" targetname: "event_errx" label: "./event.c:2670:2" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2671:2" }
+edge: { sourcename: "event_add_nolock_" targetname: "event_debugx_" label: "./event.c:2673:2" }
+edge: { sourcename: "event_add_nolock_" targetname: "event_errx" label: "./event.c:2683:2" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:min_heap_size_" label: "./event.c:2696:8" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:min_heap_reserve_" label: "./event.c:2695:7" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:event_to_event_callback" label: "./event.c:2705:29" }
+edge: { sourcename: "event_add_nolock_" targetname: "__indirect_call" label: "./event.c:2707:10" }
+edge: { sourcename: "event_add_nolock_" targetname: "__indirect_call" label: "./event.c:2709:3" }
+node: { title: "evmap_io_add_" label: "evmap_io_add_\n./evmap-internal.h:62:5" shape : ellipse }
+edge: { sourcename: "event_add_nolock_" targetname: "evmap_io_add_" label: "./event.c:2716:10" }
+node: { title: "evmap_signal_add_" label: "evmap_signal_add_\n./evmap-internal.h:84:5" shape : ellipse }
+edge: { sourcename: "event_add_nolock_" targetname: "evmap_signal_add_" label: "./event.c:2718:10" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:event_queue_insert_inserted" label: "./event.c:2720:4" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:event_queue_remove_timeout" label: "./event.c:2751:4" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:event_to_event_callback" label: "./event.c:2770:4" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:event_queue_remove_active" label: "./event.c:2770:4" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:gettime" label: "./event.c:2773:3" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:is_common_timeout" label: "./event.c:2775:20" }
+edge: { sourcename: "event_add_nolock_" targetname: "event_debugx_" label: "./event.c:2793:3" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:event_queue_insert_timeout" label: "./event.c:2800:3" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:get_common_timeout_list" label: "./event.c:2805:8" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:common_timeout_schedule" label: "./event.c:2807:5" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:min_heap_elt_is_top_" label: "./event.c:2817:8" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:min_heap_top_" label: "./event.c:2819:20" }
+edge: { sourcename: "event_add_nolock_" targetname: "__indirect_call" label: "./event.c:2826:29" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:evthread_notify_base" label: "./event.c:2827:3" }
+edge: { sourcename: "event_add_nolock_" targetname: "./event.c:event_debug_note_add_" label: "./event.c:2829:2" }
+edge: { sourcename: "event_add_nolock_" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_del_" label: "event_del_\n./event.c:2835:1" }
+edge: { sourcename: "./event.c:event_del_" targetname: "event_warnx" label: "./event.c:2841:3" }
+edge: { sourcename: "./event.c:event_del_" targetname: "__indirect_call" label: "./event.c:2845:2" }
+edge: { sourcename: "./event.c:event_del_" targetname: "event_del_nolock_" label: "./event.c:2846:8" }
+edge: { sourcename: "./event.c:event_del_" targetname: "__indirect_call" label: "./event.c:2847:2" }
+node: { title: "event_del" label: "event_del\n./event.c:2853:1" }
+edge: { sourcename: "event_del" targetname: "./event.c:event_del_" label: "./event.c:2855:9" }
+node: { title: "event_del_block" label: "event_del_block\n./event.c:2859:1" }
+edge: { sourcename: "event_del_block" targetname: "./event.c:event_del_" label: "./event.c:2861:9" }
+node: { title: "event_del_noblock" label: "event_del_noblock\n./event.c:2865:1" }
+edge: { sourcename: "event_del_noblock" targetname: "./event.c:event_del_" label: "./event.c:2867:9" }
+node: { title: "event_del_nolock_" label: "event_del_nolock_\n./event.c:2876:1" }
+edge: { sourcename: "event_del_nolock_" targetname: "event_debugx_" label: "./event.c:2881:2" }
+edge: { sourcename: "event_del_nolock_" targetname: "evthread_is_debug_lock_held_" label: "./event.c:2888:2" }
+edge: { sourcename: "event_del_nolock_" targetname: "event_errx" label: "./event.c:2888:2" }
+edge: { sourcename: "event_del_nolock_" targetname: "event_errx" label: "./event.c:2899:2" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_queue_remove_timeout" label: "./event.c:2917:3" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_to_event_callback" label: "./event.c:2921:3" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_queue_remove_active" label: "./event.c:2921:3" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_to_event_callback" label: "./event.c:2923:3" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_queue_remove_active_later" label: "./event.c:2923:3" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_queue_remove_inserted" label: "./event.c:2926:3" }
+node: { title: "evmap_io_del_" label: "evmap_io_del_\n./evmap-internal.h:71:5" shape : ellipse }
+edge: { sourcename: "event_del_nolock_" targetname: "evmap_io_del_" label: "./event.c:2928:10" }
+node: { title: "evmap_signal_del_" label: "evmap_signal_del_\n./evmap-internal.h:85:5" shape : ellipse }
+edge: { sourcename: "event_del_nolock_" targetname: "evmap_signal_del_" label: "./event.c:2930:10" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_haveevents" label: "./event.c:2938:8" }
+edge: { sourcename: "event_del_nolock_" targetname: "__indirect_call" label: "./event.c:2943:29" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:evthread_notify_base" label: "./event.c:2944:3" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_debug_note_del_" label: "./event.c:2946:2" }
+edge: { sourcename: "event_del_nolock_" targetname: "./event.c:event_to_event_callback" label: "./event.c:2955:29" }
+edge: { sourcename: "event_del_nolock_" targetname: "__indirect_call" label: "./event.c:2956:7" }
+edge: { sourcename: "event_del_nolock_" targetname: "__indirect_call" label: "./event.c:2959:3" }
+node: { title: "event_active" label: "event_active\n./event.c:2967:1" }
+edge: { sourcename: "event_active" targetname: "event_warnx" label: "./event.c:2970:3" }
+edge: { sourcename: "event_active" targetname: "__indirect_call" label: "./event.c:2974:2" }
+edge: { sourcename: "event_active" targetname: "./event.c:event_debug_assert_is_setup_" label: "./event.c:2976:2" }
+edge: { sourcename: "event_active" targetname: "event_active_nolock_" label: "./event.c:2978:2" }
+edge: { sourcename: "event_active" targetname: "__indirect_call" label: "./event.c:2980:2" }
+node: { title: "event_active_nolock_" label: "event_active_nolock_\n./event.c:2985:1" }
+edge: { sourcename: "event_active_nolock_" targetname: "event_debugx_" label: "./event.c:2989:2" }
+edge: { sourcename: "event_active_nolock_" targetname: "evthread_is_debug_lock_held_" label: "./event.c:2993:2" }
+edge: { sourcename: "event_active_nolock_" targetname: "event_errx" label: "./event.c:2993:2" }
+edge: { sourcename: "event_active_nolock_" targetname: "event_errx" label: "./event.c:3003:3" }
+edge: { sourcename: "event_active_nolock_" targetname: "./event.c:event_to_event_callback" label: "./event.c:3022:30" }
+edge: { sourcename: "event_active_nolock_" targetname: "__indirect_call" label: "./event.c:3023:8" }
+edge: { sourcename: "event_active_nolock_" targetname: "__indirect_call" label: "./event.c:3025:4" }
+edge: { sourcename: "event_active_nolock_" targetname: "./event.c:event_to_event_callback" label: "./event.c:3032:2" }
+edge: { sourcename: "event_active_nolock_" targetname: "event_callback_activate_nolock_" label: "./event.c:3032:2" }
+node: { title: "event_active_later_" label: "event_active_later_\n./event.c:3036:1" }
+edge: { sourcename: "event_active_later_" targetname: "__indirect_call" label: "./event.c:3038:2" }
+edge: { sourcename: "event_active_later_" targetname: "event_active_later_nolock_" label: "./event.c:3039:2" }
+edge: { sourcename: "event_active_later_" targetname: "__indirect_call" label: "./event.c:3040:2" }
+node: { title: "event_active_later_nolock_" label: "event_active_later_nolock_\n./event.c:3044:1" }
+edge: { sourcename: "event_active_later_nolock_" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3047:2" }
+edge: { sourcename: "event_active_later_nolock_" targetname: "event_errx" label: "./event.c:3047:2" }
+edge: { sourcename: "event_active_later_nolock_" targetname: "./event.c:event_to_event_callback" label: "./event.c:3057:2" }
+edge: { sourcename: "event_active_later_nolock_" targetname: "event_callback_activate_later_nolock_" label: "./event.c:3057:2" }
+node: { title: "event_callback_activate_" label: "event_callback_activate_\n./event.c:3061:1" }
+edge: { sourcename: "event_callback_activate_" targetname: "__indirect_call" label: "./event.c:3065:2" }
+edge: { sourcename: "event_callback_activate_" targetname: "event_callback_activate_nolock_" label: "./event.c:3066:6" }
+edge: { sourcename: "event_callback_activate_" targetname: "__indirect_call" label: "./event.c:3067:2" }
+node: { title: "event_callback_activate_nolock_" label: "event_callback_activate_nolock_\n./event.c:3072:1" }
+edge: { sourcename: "event_callback_activate_nolock_" targetname: "event_errx" label: "./event.c:3082:3" }
+edge: { sourcename: "event_callback_activate_nolock_" targetname: "./event.c:event_queue_remove_active_later" label: "./event.c:3085:3" }
+edge: { sourcename: "event_callback_activate_nolock_" targetname: "./event.c:event_queue_insert_active" label: "./event.c:3094:2" }
+edge: { sourcename: "event_callback_activate_nolock_" targetname: "__indirect_call" label: "./event.c:3096:6" }
+edge: { sourcename: "event_callback_activate_nolock_" targetname: "./event.c:evthread_notify_base" label: "./event.c:3097:3" }
+node: { title: "event_callback_activate_later_nolock_" label: "event_callback_activate_later_nolock_\n./event.c:3103:1" }
+edge: { sourcename: "event_callback_activate_later_nolock_" targetname: "./event.c:event_queue_insert_active_later" label: "./event.c:3109:2" }
+edge: { sourcename: "event_callback_activate_later_nolock_" targetname: "__indirect_call" label: "./event.c:3110:6" }
+edge: { sourcename: "event_callback_activate_later_nolock_" targetname: "./event.c:evthread_notify_base" label: "./event.c:3111:3" }
+node: { title: "event_callback_init_" label: "event_callback_init_\n./event.c:3116:1" }
+edge: { sourcename: "event_callback_init_" targetname: "memset" label: "./event.c:3119:2" }
+node: { title: "event_callback_cancel_" label: "event_callback_cancel_\n./event.c:3124:1" }
+edge: { sourcename: "event_callback_cancel_" targetname: "__indirect_call" label: "./event.c:3128:2" }
+edge: { sourcename: "event_callback_cancel_" targetname: "event_callback_cancel_nolock_" label: "./event.c:3129:6" }
+edge: { sourcename: "event_callback_cancel_" targetname: "__indirect_call" label: "./event.c:3130:2" }
+node: { title: "event_callback_cancel_nolock_" label: "event_callback_cancel_nolock_\n./event.c:3135:1" }
+edge: { sourcename: "event_callback_cancel_nolock_" targetname: "./event.c:event_callback_to_event" label: "./event.c:3142:10" }
+edge: { sourcename: "event_callback_cancel_nolock_" targetname: "event_del_nolock_" label: "./event.c:3142:10" }
+edge: { sourcename: "event_callback_cancel_nolock_" targetname: "event_errx" label: "./event.c:3148:3" }
+edge: { sourcename: "event_callback_cancel_nolock_" targetname: "./event.c:event_queue_remove_active" label: "./event.c:3152:3" }
+edge: { sourcename: "event_callback_cancel_nolock_" targetname: "./event.c:event_queue_remove_active_later" label: "./event.c:3155:3" }
+node: { title: "event_deferred_cb_init_" label: "event_deferred_cb_init_\n./event.c:3165:1" }
+edge: { sourcename: "event_deferred_cb_init_" targetname: "memset" label: "./event.c:3167:2" }
+node: { title: "event_deferred_cb_set_priority_" label: "event_deferred_cb_set_priority_\n./event.c:3175:1" }
+node: { title: "event_deferred_cb_cancel_" label: "event_deferred_cb_cancel_\n./event.c:3181:1" }
+edge: { sourcename: "event_deferred_cb_cancel_" targetname: "event_callback_cancel_" label: "./event.c:3185:2" }
+node: { title: "event_deferred_cb_schedule_" label: "event_deferred_cb_schedule_\n./event.c:3190:1" }
+edge: { sourcename: "event_deferred_cb_schedule_" targetname: "__indirect_call" label: "./event.c:3195:2" }
+edge: { sourcename: "event_deferred_cb_schedule_" targetname: "event_callback_activate_later_nolock_" label: "./event.c:3197:7" }
+edge: { sourcename: "event_deferred_cb_schedule_" targetname: "event_callback_activate_nolock_" label: "./event.c:3199:7" }
+edge: { sourcename: "event_deferred_cb_schedule_" targetname: "__indirect_call" label: "./event.c:3204:2" }
+node: { title: "./event.c:timeout_next" label: "timeout_next\n./event.c:3209:1" }
+edge: { sourcename: "./event.c:timeout_next" targetname: "./event.c:min_heap_top_" label: "./event.c:3217:7" }
+edge: { sourcename: "./event.c:timeout_next" targetname: "./event.c:gettime" label: "./event.c:3225:6" }
+edge: { sourcename: "./event.c:timeout_next" targetname: "event_errx" label: "./event.c:3237:2" }
+edge: { sourcename: "./event.c:timeout_next" targetname: "event_errx" label: "./event.c:3238:2" }
+edge: { sourcename: "./event.c:timeout_next" targetname: "event_debugx_" label: "./event.c:3239:2" }
+edge: { sourcename: "./event.c:timeout_next" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:timeout_process" label: "timeout_process\n./event.c:3247:1" }
+edge: { sourcename: "./event.c:timeout_process" targetname: "./event.c:min_heap_empty_" label: "./event.c:3253:6" }
+edge: { sourcename: "./event.c:timeout_process" targetname: "./event.c:gettime" label: "./event.c:3257:2" }
+edge: { sourcename: "./event.c:timeout_process" targetname: "event_del_nolock_" label: "./event.c:3264:3" }
+edge: { sourcename: "./event.c:timeout_process" targetname: "event_debugx_" label: "./event.c:3266:3" }
+edge: { sourcename: "./event.c:timeout_process" targetname: "event_active_nolock_" label: "./event.c:3268:3" }
+edge: { sourcename: "./event.c:timeout_process" targetname: "./event.c:min_heap_top_" label: "./event.c:3259:15" }
+edge: { sourcename: "./event.c:timeout_process" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:event_queue_remove_inserted" label: "event_queue_remove_inserted\n./event.c:3290:1" }
+edge: { sourcename: "./event.c:event_queue_remove_inserted" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3292:2" }
+edge: { sourcename: "./event.c:event_queue_remove_inserted" targetname: "event_errx" label: "./event.c:3292:2" }
+edge: { sourcename: "./event.c:event_queue_remove_inserted" targetname: "event_errx" label: "./event.c:3294:3" }
+node: { title: "./event.c:event_queue_remove_active" label: "event_queue_remove_active\n./event.c:3302:1" }
+edge: { sourcename: "./event.c:event_queue_remove_active" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3304:2" }
+edge: { sourcename: "./event.c:event_queue_remove_active" targetname: "event_errx" label: "./event.c:3304:2" }
+edge: { sourcename: "./event.c:event_queue_remove_active" targetname: "event_errx" label: "./event.c:3306:3" }
+node: { title: "./event.c:event_queue_remove_active_later" label: "event_queue_remove_active_later\n./event.c:3318:1" }
+edge: { sourcename: "./event.c:event_queue_remove_active_later" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3320:2" }
+edge: { sourcename: "./event.c:event_queue_remove_active_later" targetname: "event_errx" label: "./event.c:3320:2" }
+edge: { sourcename: "./event.c:event_queue_remove_active_later" targetname: "event_errx" label: "./event.c:3322:3" }
+node: { title: "./event.c:event_queue_remove_timeout" label: "event_queue_remove_timeout\n./event.c:3333:1" }
+edge: { sourcename: "./event.c:event_queue_remove_timeout" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3335:2" }
+edge: { sourcename: "./event.c:event_queue_remove_timeout" targetname: "event_errx" label: "./event.c:3335:2" }
+edge: { sourcename: "./event.c:event_queue_remove_timeout" targetname: "event_errx" label: "./event.c:3337:3" }
+edge: { sourcename: "./event.c:event_queue_remove_timeout" targetname: "./event.c:is_common_timeout" label: "./event.c:3344:6" }
+edge: { sourcename: "./event.c:event_queue_remove_timeout" targetname: "./event.c:get_common_timeout_list" label: "./event.c:3346:7" }
+edge: { sourcename: "./event.c:event_queue_remove_timeout" targetname: "./event.c:min_heap_erase_" label: "./event.c:3350:3" }
+node: { title: "./event.c:insert_common_timeout_inorder" label: "insert_common_timeout_inorder\n./event.c:3397:1" }
+edge: { sourcename: "./event.c:insert_common_timeout_inorder" targetname: "./event.c:is_same_common_timeout" label: "./event.c:3414:3" }
+edge: { sourcename: "./event.c:insert_common_timeout_inorder" targetname: "event_errx" label: "./event.c:3414:3" }
+node: { title: "./event.c:event_queue_insert_inserted" label: "event_queue_insert_inserted\n./event.c:3427:1" }
+edge: { sourcename: "./event.c:event_queue_insert_inserted" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3429:2" }
+edge: { sourcename: "./event.c:event_queue_insert_inserted" targetname: "event_errx" label: "./event.c:3429:2" }
+edge: { sourcename: "./event.c:event_queue_insert_inserted" targetname: "event_errx" label: "./event.c:3432:3" }
+node: { title: "./event.c:event_queue_insert_active" label: "event_queue_insert_active\n./event.c:3443:1" }
+edge: { sourcename: "./event.c:event_queue_insert_active" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3445:2" }
+edge: { sourcename: "./event.c:event_queue_insert_active" targetname: "event_errx" label: "./event.c:3445:2" }
+edge: { sourcename: "./event.c:event_queue_insert_active" targetname: "event_errx" label: "./event.c:3458:2" }
+node: { title: "./event.c:event_queue_insert_active_later" label: "event_queue_insert_active_later\n./event.c:3464:1" }
+edge: { sourcename: "./event.c:event_queue_insert_active_later" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3466:2" }
+edge: { sourcename: "./event.c:event_queue_insert_active_later" targetname: "event_errx" label: "./event.c:3466:2" }
+edge: { sourcename: "./event.c:event_queue_insert_active_later" targetname: "event_errx" label: "./event.c:3476:2" }
+node: { title: "./event.c:event_queue_insert_timeout" label: "event_queue_insert_timeout\n./event.c:3481:1" }
+edge: { sourcename: "./event.c:event_queue_insert_timeout" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3483:2" }
+edge: { sourcename: "./event.c:event_queue_insert_timeout" targetname: "event_errx" label: "./event.c:3483:2" }
+edge: { sourcename: "./event.c:event_queue_insert_timeout" targetname: "event_errx" label: "./event.c:3486:3" }
+edge: { sourcename: "./event.c:event_queue_insert_timeout" targetname: "./event.c:is_common_timeout" label: "./event.c:3495:6" }
+edge: { sourcename: "./event.c:event_queue_insert_timeout" targetname: "./event.c:get_common_timeout_list" label: "./event.c:3497:7" }
+edge: { sourcename: "./event.c:event_queue_insert_timeout" targetname: "./event.c:insert_common_timeout_inorder" label: "./event.c:3498:3" }
+edge: { sourcename: "./event.c:event_queue_insert_timeout" targetname: "./event.c:min_heap_push_" label: "./event.c:3500:3" }
+node: { title: "./event.c:event_queue_make_later_events_active" label: "event_queue_make_later_events_active\n./event.c:3505:1" }
+edge: { sourcename: "./event.c:event_queue_make_later_events_active" targetname: "evthread_is_debug_lock_held_" label: "./event.c:3508:2" }
+edge: { sourcename: "./event.c:event_queue_make_later_events_active" targetname: "event_errx" label: "./event.c:3508:2" }
+edge: { sourcename: "./event.c:event_queue_make_later_events_active" targetname: "event_errx" label: "./event.c:3513:3" }
+node: { title: "event_get_version" label: "event_get_version\n./event.c:3522:1" }
+node: { title: "event_get_version_number" label: "event_get_version_number\n./event.c:3528:1" }
+node: { title: "event_get_method" label: "event_get_method\n./event.c:3539:1" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./event.c:3550:1" }
+edge: { sourcename: "event_mm_malloc_" targetname: "__indirect_call" label: "./event.c:3556:10" }
+node: { title: "malloc" label: "malloc\n/usr/include/stdlib.h:540:14" shape : ellipse }
+edge: { sourcename: "event_mm_malloc_" targetname: "malloc" label: "./event.c:3558:10" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./event.c:3562:1" }
+edge: { sourcename: "event_mm_calloc_" targetname: "__indirect_call" label: "./event.c:3572:7" }
+edge: { sourcename: "event_mm_calloc_" targetname: "memset" label: "./event.c:3574:11" }
+node: { title: "calloc" label: "calloc\n/usr/include/stdlib.h:543:14" shape : ellipse }
+edge: { sourcename: "event_mm_calloc_" targetname: "calloc" label: "./event.c:3576:13" }
+edge: { sourcename: "event_mm_calloc_" targetname: "__errno_location" label: "./event.c:3586:2" }
+node: { title: "event_mm_strdup_" label: "event_mm_strdup_\n./event.c:3591:1" }
+edge: { sourcename: "event_mm_strdup_" targetname: "__errno_location" label: "./event.c:3594:3" }
+node: { title: "strlen" label: "strlen\n/usr/include/string.h:407:15" shape : ellipse }
+edge: { sourcename: "event_mm_strdup_" targetname: "strlen" label: "./event.c:3599:15" }
+edge: { sourcename: "event_mm_strdup_" targetname: "__indirect_call" label: "./event.c:3603:7" }
+node: { title: "memcpy" label: "memcpy\n/usr/include/string.h:43:14" shape : ellipse }
+edge: { sourcename: "event_mm_strdup_" targetname: "memcpy" label: "./event.c:3605:11" }
+node: { title: "strdup" label: "strdup\n/usr/include/string.h:187:14" shape : ellipse }
+edge: { sourcename: "event_mm_strdup_" targetname: "strdup" label: "./event.c:3610:10" }
+edge: { sourcename: "event_mm_strdup_" targetname: "__errno_location" label: "./event.c:3614:2" }
+node: { title: "event_mm_realloc_" label: "event_mm_realloc_\n./event.c:3619:1" }
+edge: { sourcename: "event_mm_realloc_" targetname: "__indirect_call" label: "./event.c:3622:10" }
+node: { title: "realloc" label: "realloc\n/usr/include/stdlib.h:551:14" shape : ellipse }
+edge: { sourcename: "event_mm_realloc_" targetname: "realloc" label: "./event.c:3624:10" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./event.c:3628:1" }
+edge: { sourcename: "event_mm_free_" targetname: "__indirect_call" label: "./event.c:3631:3" }
+node: { title: "free" label: "free\n/usr/include/stdlib.h:555:13" shape : ellipse }
+edge: { sourcename: "event_mm_free_" targetname: "free" label: "./event.c:3633:3" }
+node: { title: "event_set_mem_functions" label: "event_set_mem_functions\n./event.c:3637:1" }
+node: { title: "./event.c:evthread_notify_drain_eventfd" label: "evthread_notify_drain_eventfd\n./event.c:3649:1" }
+node: { title: "read" label: "read\n/usr/include/unistd.h:371:16" shape : ellipse }
+edge: { sourcename: "./event.c:evthread_notify_drain_eventfd" targetname: "read" label: "./event.c:3655:6" }
+edge: { sourcename: "./event.c:evthread_notify_drain_eventfd" targetname: "__errno_location" label: "./event.c:3656:13" }
+node: { title: "event_sock_warn" label: "event_sock_warn\n./log-internal.h:64:6" shape : ellipse }
+edge: { sourcename: "./event.c:evthread_notify_drain_eventfd" targetname: "event_sock_warn" label: "./event.c:3657:3" }
+edge: { sourcename: "./event.c:evthread_notify_drain_eventfd" targetname: "__indirect_call" label: "./event.c:3659:2" }
+edge: { sourcename: "./event.c:evthread_notify_drain_eventfd" targetname: "__indirect_call" label: "./event.c:3661:2" }
+edge: { sourcename: "./event.c:evthread_notify_drain_eventfd" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:evthread_notify_drain_default" label: "evthread_notify_drain_default\n./event.c:3666:1" }
+edge: { sourcename: "./event.c:evthread_notify_drain_default" targetname: "read" label: "./event.c:3674:9" }
+edge: { sourcename: "./event.c:evthread_notify_drain_default" targetname: "__indirect_call" label: "./event.c:3678:2" }
+edge: { sourcename: "./event.c:evthread_notify_drain_default" targetname: "__indirect_call" label: "./event.c:3680:2" }
+edge: { sourcename: "./event.c:evthread_notify_drain_default" targetname: "__stack_chk_fail" }
+node: { title: "evthread_make_base_notifiable" label: "evthread_make_base_notifiable\n./event.c:3684:1" }
+edge: { sourcename: "evthread_make_base_notifiable" targetname: "__indirect_call" label: "./event.c:3690:2" }
+edge: { sourcename: "evthread_make_base_notifiable" targetname: "./event.c:evthread_make_base_notifiable_nolock_" label: "./event.c:3691:6" }
+edge: { sourcename: "evthread_make_base_notifiable" targetname: "__indirect_call" label: "./event.c:3692:2" }
+node: { title: "./event.c:evthread_make_base_notifiable_nolock_" label: "evthread_make_base_notifiable_nolock_\n./event.c:3697:1" }
+node: { title: "evutil_eventfd_" label: "evutil_eventfd_\n./util-internal.h:529:17" shape : ellipse }
+edge: { sourcename: "./event.c:evthread_make_base_notifiable_nolock_" targetname: "evutil_eventfd_" label: "./event.c:3717:26" }
+node: { title: "evutil_make_internal_pipe_" label: "evutil_make_internal_pipe_\n./util-internal.h:528:5" shape : ellipse }
+edge: { sourcename: "./event.c:evthread_make_base_notifiable_nolock_" targetname: "evutil_make_internal_pipe_" label: "./event.c:3725:6" }
+edge: { sourcename: "./event.c:evthread_make_base_notifiable_nolock_" targetname: "event_assign" label: "./event.c:3735:2" }
+edge: { sourcename: "./event.c:evthread_make_base_notifiable_nolock_" targetname: "event_priority_set" label: "./event.c:3740:2" }
+edge: { sourcename: "./event.c:evthread_make_base_notifiable_nolock_" targetname: "event_add_nolock_" label: "./event.c:3742:9" }
+node: { title: "event_base_foreach_event_nolock_" label: "event_base_foreach_event_nolock_\n./event.c:3746:1" }
+node: { title: "evmap_foreach_event_" label: "evmap_foreach_event_\n./evmap-internal.h:113:5" shape : ellipse }
+edge: { sourcename: "event_base_foreach_event_nolock_" targetname: "evmap_foreach_event_" label: "./event.c:3754:11" }
+edge: { sourcename: "event_base_foreach_event_nolock_" targetname: "__indirect_call" label: "./event.c:3765:12" }
+edge: { sourcename: "event_base_foreach_event_nolock_" targetname: "__indirect_call" label: "./event.c:3780:13" }
+edge: { sourcename: "event_base_foreach_event_nolock_" targetname: "./event.c:event_callback_to_event" label: "./event.c:3796:9" }
+edge: { sourcename: "event_base_foreach_event_nolock_" targetname: "__indirect_call" label: "./event.c:3797:13" }
+node: { title: "./event.c:dump_inserted_event_fn" label: "dump_inserted_event_fn\n./event.c:3808:1" }
+node: { title: "fprintf" label: "fprintf\n/usr/include/stdio.h:350:12" shape : ellipse }
+edge: { sourcename: "./event.c:dump_inserted_event_fn" targetname: "fprintf" label: "./event.c:3817:2" }
+edge: { sourcename: "./event.c:dump_inserted_event_fn" targetname: "fprintf" label: "./event.c:3831:3" }
+node: { title: "fputc" label: "fputc\n/usr/include/stdio.h:549:12" shape : ellipse }
+edge: { sourcename: "./event.c:dump_inserted_event_fn" targetname: "fputc" label: "./event.c:3834:2" }
+edge: { sourcename: "./event.c:dump_inserted_event_fn" targetname: "__stack_chk_fail" }
+node: { title: "./event.c:dump_active_event_fn" label: "dump_active_event_fn\n./event.c:3842:1" }
+edge: { sourcename: "./event.c:dump_active_event_fn" targetname: "fprintf" label: "./event.c:3851:2" }
+node: { title: "event_base_foreach_event" label: "event_base_foreach_event\n./event.c:3865:1" }
+edge: { sourcename: "event_base_foreach_event" targetname: "__indirect_call" label: "./event.c:3872:2" }
+edge: { sourcename: "event_base_foreach_event" targetname: "event_base_foreach_event_nolock_" label: "./event.c:3873:6" }
+edge: { sourcename: "event_base_foreach_event" targetname: "__indirect_call" label: "./event.c:3874:2" }
+node: { title: "event_base_dump_events" label: "event_base_dump_events\n./event.c:3880:1" }
+edge: { sourcename: "event_base_dump_events" targetname: "__indirect_call" label: "./event.c:3882:2" }
+node: { title: "fwrite" label: "__builtin_fwrite\n<built-in>" shape : ellipse }
+edge: { sourcename: "event_base_dump_events" targetname: "fwrite" label: "./event.c:3883:2" }
+edge: { sourcename: "event_base_dump_events" targetname: "event_base_foreach_event_nolock_" label: "./event.c:3884:2" }
+edge: { sourcename: "event_base_dump_events" targetname: "fwrite" label: "./event.c:3886:2" }
+edge: { sourcename: "event_base_dump_events" targetname: "event_base_foreach_event_nolock_" label: "./event.c:3887:2" }
+edge: { sourcename: "event_base_dump_events" targetname: "__indirect_call" label: "./event.c:3888:2" }
+node: { title: "event_base_active_by_fd" label: "event_base_active_by_fd\n./event.c:3892:1" }
+edge: { sourcename: "event_base_active_by_fd" targetname: "__indirect_call" label: "./event.c:3894:2" }
+node: { title: "evmap_io_active_" label: "evmap_io_active_\n./evmap-internal.h:78:6" shape : ellipse }
+edge: { sourcename: "event_base_active_by_fd" targetname: "evmap_io_active_" label: "./event.c:3898:3" }
+edge: { sourcename: "event_base_active_by_fd" targetname: "event_active_nolock_" label: "./event.c:3909:5" }
+edge: { sourcename: "event_base_active_by_fd" targetname: "event_active_nolock_" label: "./event.c:3918:6" }
+edge: { sourcename: "event_base_active_by_fd" targetname: "__indirect_call" label: "./event.c:3924:2" }
+node: { title: "event_base_active_by_signal" label: "event_base_active_by_signal\n./event.c:3928:1" }
+edge: { sourcename: "event_base_active_by_signal" targetname: "__indirect_call" label: "./event.c:3930:2" }
+node: { title: "evmap_signal_active_" label: "evmap_signal_active_\n./evmap-internal.h:86:6" shape : ellipse }
+edge: { sourcename: "event_base_active_by_signal" targetname: "evmap_signal_active_" label: "./event.c:3931:2" }
+edge: { sourcename: "event_base_active_by_signal" targetname: "__indirect_call" label: "./event.c:3932:2" }
+node: { title: "event_base_add_virtual_" label: "event_base_add_virtual_\n./event.c:3937:1" }
+edge: { sourcename: "event_base_add_virtual_" targetname: "__indirect_call" label: "./event.c:3939:2" }
+edge: { sourcename: "event_base_add_virtual_" targetname: "__indirect_call" label: "./event.c:3942:2" }
+node: { title: "event_base_del_virtual_" label: "event_base_del_virtual_\n./event.c:3946:1" }
+edge: { sourcename: "event_base_del_virtual_" targetname: "__indirect_call" label: "./event.c:3948:2" }
+edge: { sourcename: "event_base_del_virtual_" targetname: "event_errx" label: "./event.c:3949:2" }
+edge: { sourcename: "event_base_del_virtual_" targetname: "__indirect_call" label: "./event.c:3951:40" }
+edge: { sourcename: "event_base_del_virtual_" targetname: "./event.c:evthread_notify_base" label: "./event.c:3952:3" }
+edge: { sourcename: "event_base_del_virtual_" targetname: "__indirect_call" label: "./event.c:3953:2" }
+node: { title: "./event.c:event_free_debug_globals_locks" label: "event_free_debug_globals_locks\n./event.c:3957:1" }
+edge: { sourcename: "./event.c:event_free_debug_globals_locks" targetname: "__indirect_call" label: "./event.c:3962:3" }
+node: { title: "evthreadimpl_disable_lock_debugging_" label: "evthreadimpl_disable_lock_debugging_\n./evthread-internal.h:398:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_free_debug_globals_locks" targetname: "evthreadimpl_disable_lock_debugging_" label: "./event.c:3964:3" }
+node: { title: "./event.c:event_free_debug_globals" label: "event_free_debug_globals\n./event.c:3972:1" }
+edge: { sourcename: "./event.c:event_free_debug_globals" targetname: "./event.c:event_free_debug_globals_locks" label: "./event.c:3974:2" }
+node: { title: "./event.c:event_free_evsig_globals" label: "event_free_evsig_globals\n./event.c:3978:1" }
+node: { title: "evsig_free_globals_" label: "evsig_free_globals_\n./evsignal-internal.h:76:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_free_evsig_globals" targetname: "evsig_free_globals_" label: "./event.c:3980:2" }
+node: { title: "./event.c:event_free_evutil_globals" label: "event_free_evutil_globals\n./event.c:3984:1" }
+node: { title: "evutil_free_globals_" label: "evutil_free_globals_\n./util-internal.h:463:6" shape : ellipse }
+edge: { sourcename: "./event.c:event_free_evutil_globals" targetname: "evutil_free_globals_" label: "./event.c:3986:2" }
+node: { title: "./event.c:event_free_globals" label: "event_free_globals\n./event.c:3990:1" }
+edge: { sourcename: "./event.c:event_free_globals" targetname: "./event.c:event_free_debug_globals" label: "./event.c:3992:2" }
+edge: { sourcename: "./event.c:event_free_globals" targetname: "./event.c:event_free_evsig_globals" label: "./event.c:3993:2" }
+edge: { sourcename: "./event.c:event_free_globals" targetname: "./event.c:event_free_evutil_globals" label: "./event.c:3994:2" }
+node: { title: "libevent_global_shutdown" label: "libevent_global_shutdown\n./event.c:3998:1" }
+edge: { sourcename: "libevent_global_shutdown" targetname: "event_disable_debug_mode" label: "./event.c:4000:2" }
+edge: { sourcename: "libevent_global_shutdown" targetname: "./event.c:event_free_globals" label: "./event.c:4001:2" }
+node: { title: "event_global_setup_locks_" label: "event_global_setup_locks_\n./event.c:4006:1" }
+node: { title: "evthread_setup_global_lock_" label: "evthread_setup_global_lock_\n./evthread-internal.h:374:7" shape : ellipse }
+edge: { sourcename: "event_global_setup_locks_" targetname: "evthread_setup_global_lock_" label: "./event.c:4009:2" }
+edge: { sourcename: "event_global_setup_locks_" targetname: "event_warn" label: "./event.c:4009:2" }
+node: { title: "evsig_global_setup_locks_" label: "evsig_global_setup_locks_\n./evthread-internal.h:388:5" shape : ellipse }
+edge: { sourcename: "event_global_setup_locks_" targetname: "evsig_global_setup_locks_" label: "./event.c:4011:6" }
+node: { title: "evutil_global_setup_locks_" label: "evutil_global_setup_locks_\n./evthread-internal.h:389:5" shape : ellipse }
+edge: { sourcename: "event_global_setup_locks_" targetname: "evutil_global_setup_locks_" label: "./event.c:4013:6" }
+node: { title: "evutil_secure_rng_global_setup_locks_" label: "evutil_secure_rng_global_setup_locks_\n./evthread-internal.h:390:5" shape : ellipse }
+edge: { sourcename: "event_global_setup_locks_" targetname: "evutil_secure_rng_global_setup_locks_" label: "./event.c:4015:6" }
+node: { title: "event_base_assert_ok_" label: "event_base_assert_ok_\n./event.c:4022:1" }
+edge: { sourcename: "event_base_assert_ok_" targetname: "__indirect_call" label: "./event.c:4024:2" }
+edge: { sourcename: "event_base_assert_ok_" targetname: "event_base_assert_ok_nolock_" label: "./event.c:4025:2" }
+edge: { sourcename: "event_base_assert_ok_" targetname: "__indirect_call" label: "./event.c:4026:2" }
+node: { title: "event_base_assert_ok_nolock_" label: "event_base_assert_ok_nolock_\n./event.c:4030:1" }
+node: { title: "evmap_check_integrity_" label: "evmap_check_integrity_\n./evmap-internal.h:106:6" shape : ellipse }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "evmap_check_integrity_" label: "./event.c:4037:2" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4045:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4046:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4047:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4055:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4055:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4055:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4055:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4055:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4059:5" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4060:4" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "./event.c:is_common_timeout" label: "./event.c:4061:4" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4061:4" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4062:4" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4071:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4071:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4071:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4071:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4071:3" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4073:4" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4074:4" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4082:4" }
+edge: { sourcename: "event_base_assert_ok_nolock_" targetname: "event_errx" label: "./event.c:4086:2" }
+}

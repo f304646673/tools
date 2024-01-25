@@ -1,0 +1,1297 @@
+graph: { title: "./evdns.c"
+node: { title: "evdns_get_global_base" label: "evdns_get_global_base\n./evdns.c:453:1" }
+node: { title: "evdns_set_log_fn" label: "evdns_set_log_fn\n./evdns.c:513:1" }
+node: { title: "./evdns.c:evdns_log_" label: "evdns_log_\n./evdns.c:526:1" }
+node: { title: "evutil_vsnprintf" label: "evutil_vsnprintf\n./include/event2/util.h:634:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_log_" targetname: "evutil_vsnprintf" label: "./evdns.c:533:3" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_log_" targetname: "__indirect_call" label: "./evdns.c:534:3" }
+node: { title: "event_logv_" label: "event_logv_\n./log-internal.h:75:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_log_" targetname: "event_logv_" label: "./evdns.c:536:3" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_log_" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:init_tcp_connection" label: "init_tcp_connection\n./evdns.c:545:1" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./evdns.c:init_tcp_connection" targetname: "memset" label: "./evdns.c:547:2" }
+node: { title: "./evdns.c:evdns_tcp_disconnect" label: "evdns_tcp_disconnect\n./evdns.c:555:1" }
+node: { title: "bufferevent_free" label: "bufferevent_free\n./include/event2/bufferevent.h:327:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_tcp_disconnect" targetname: "bufferevent_free" label: "./evdns.c:562:3" }
+node: { title: "./evdns.c:evdns_add_tcp_client" label: "evdns_add_tcp_client\n./evdns.c:569:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_add_tcp_client" targetname: "event_errx" label: "./evdns.c:572:2" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./mm-internal.h:58:7" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_add_tcp_client" targetname: "event_mm_calloc_" label: "./evdns.c:576:11" }
+edge: { sourcename: "./evdns.c:evdns_add_tcp_client" targetname: "./evdns.c:init_tcp_connection" label: "./evdns.c:579:2" }
+node: { title: "./evdns.c:evdns_remove_tcp_client" label: "evdns_remove_tcp_client\n./evdns.c:593:1" }
+edge: { sourcename: "./evdns.c:evdns_remove_tcp_client" targetname: "./evdns.c:evdns_tcp_disconnect" label: "./evdns.c:598:2" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_remove_tcp_client" targetname: "event_mm_free_" label: "./evdns.c:600:2" }
+node: { title: "./evdns.c:evdns_remove_all_tcp_clients" label: "evdns_remove_all_tcp_clients\n./evdns.c:610:1" }
+edge: { sourcename: "./evdns.c:evdns_remove_all_tcp_clients" targetname: "./evdns.c:evdns_remove_tcp_client" label: "./evdns.c:614:3" }
+node: { title: "./evdns.c:new_tcp_connecton" label: "new_tcp_connecton\n./evdns.c:620:1" }
+edge: { sourcename: "./evdns.c:new_tcp_connecton" targetname: "event_mm_calloc_" label: "./evdns.c:626:9" }
+edge: { sourcename: "./evdns.c:new_tcp_connecton" targetname: "./evdns.c:init_tcp_connection" label: "./evdns.c:629:2" }
+node: { title: "./evdns.c:disconnect_and_free_connection" label: "disconnect_and_free_connection\n./evdns.c:635:1" }
+edge: { sourcename: "./evdns.c:disconnect_and_free_connection" targetname: "./evdns.c:evdns_tcp_disconnect" label: "./evdns.c:639:2" }
+edge: { sourcename: "./evdns.c:disconnect_and_free_connection" targetname: "event_mm_free_" label: "./evdns.c:640:2" }
+node: { title: "./evdns.c:request_find_from_trans_id" label: "request_find_from_trans_id\n./evdns.c:647:1" }
+node: { title: "evthread_is_debug_lock_held_" label: "evthread_is_debug_lock_held_\n./evthread-internal.h:371:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:request_find_from_trans_id" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:651:2" }
+edge: { sourcename: "./evdns.c:request_find_from_trans_id" targetname: "event_errx" label: "./evdns.c:651:2" }
+node: { title: "./evdns.c:nameserver_prod_callback" label: "nameserver_prod_callback\n./evdns.c:666:1" }
+edge: { sourcename: "./evdns.c:nameserver_prod_callback" targetname: "__indirect_call" label: "./evdns.c:671:2" }
+edge: { sourcename: "./evdns.c:nameserver_prod_callback" targetname: "./evdns.c:nameserver_send_probe" label: "./evdns.c:672:2" }
+edge: { sourcename: "./evdns.c:nameserver_prod_callback" targetname: "__indirect_call" label: "./evdns.c:673:2" }
+node: { title: "./evdns.c:nameserver_probe_failed" label: "nameserver_probe_failed\n./evdns.c:680:1" }
+edge: { sourcename: "./evdns.c:nameserver_probe_failed" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:684:2" }
+edge: { sourcename: "./evdns.c:nameserver_probe_failed" targetname: "event_errx" label: "./evdns.c:684:2" }
+node: { title: "event_del" label: "event_del\n./include/event2/event.h:1293:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_probe_failed" targetname: "event_del" label: "./evdns.c:685:9" }
+node: { title: "event_add" label: "event_add\n./include/event2/event.h:1267:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_probe_failed" targetname: "event_add" label: "./evdns.c:709:6" }
+node: { title: "evutil_format_sockaddr_port_" label: "evutil_format_sockaddr_port_\n./util-internal.h:457:13" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_probe_failed" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:711:3" }
+edge: { sourcename: "./evdns.c:nameserver_probe_failed" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:711:3" }
+edge: { sourcename: "./evdns.c:nameserver_probe_failed" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:request_swap_ns" label: "request_swap_ns\n./evdns.c:720:1" }
+edge: { sourcename: "./evdns.c:request_swap_ns" targetname: "event_errx" label: "./evdns.c:722:3" }
+node: { title: "./evdns.c:nameserver_failed" label: "nameserver_failed\n./evdns.c:733:1" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:739:2" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "event_errx" label: "./evdns.c:739:2" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:744:2" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:744:2" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "event_errx" label: "./evdns.c:751:2" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:753:3" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:760:3" }
+node: { title: "evutil_closesocket" label: "evutil_closesocket\n./include/event2/util.h:471:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "evutil_closesocket" label: "./evdns.c:770:3" }
+node: { title: "evutil_socket_" label: "evutil_socket_\n./util-internal.h:522:17" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "evutil_socket_" label: "./evdns.c:771:16" }
+node: { title: "evutil_sockaddr_is_loopback_" label: "evutil_sockaddr_is_loopback_\n./util-internal.h:448:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "evutil_sockaddr_is_loopback_" label: "./evdns.c:775:5" }
+node: { title: "bind" label: "bind\n/usr/include/x86_64-linux-gnu/sys/socket.h:112:12" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "bind" label: "./evdns.c:776:8" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:779:5" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "event_del" label: "./evdns.c:783:3" }
+node: { title: "event_assign" label: "event_assign\n./include/event2/event.h:1166:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "event_assign" label: "./evdns.c:784:3" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "event_add" label: "./evdns.c:787:39" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:788:4" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "event_add" label: "./evdns.c:792:6" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:794:3" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:794:3" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "./evdns.c:nameserver_pick" label: "./evdns.c:817:6" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "./evdns.c:request_swap_ns" label: "./evdns.c:817:6" }
+edge: { sourcename: "./evdns.c:nameserver_failed" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:nameserver_up" label: "nameserver_up\n./evdns.c:826:1" }
+edge: { sourcename: "./evdns.c:nameserver_up" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:829:2" }
+edge: { sourcename: "./evdns.c:nameserver_up" targetname: "event_errx" label: "./evdns.c:829:2" }
+edge: { sourcename: "./evdns.c:nameserver_up" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:831:2" }
+edge: { sourcename: "./evdns.c:nameserver_up" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:831:2" }
+edge: { sourcename: "./evdns.c:nameserver_up" targetname: "event_del" label: "./evdns.c:835:2" }
+edge: { sourcename: "./evdns.c:nameserver_up" targetname: "evdns_cancel_request" label: "./evdns.c:837:3" }
+edge: { sourcename: "./evdns.c:nameserver_up" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:request_trans_id_set" label: "request_trans_id_set\n./evdns.c:847:1" }
+node: { title: "htons" label: "htons\n/usr/include/netinet/in.h:387:17" shape : ellipse }
+edge: { sourcename: "./evdns.c:request_trans_id_set" targetname: "htons" label: "./evdns.c:849:28" }
+node: { title: "./evdns.c:request_finished" label: "request_finished\n./evdns.c:857:1" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "__indirect_call" label: "./evdns.c:860:2" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_errx" label: "./evdns.c:861:2" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "./evdns.c:evdns_request_remove" label: "./evdns.c:864:3" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:866:2" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_del" label: "./evdns.c:868:3" }
+node: { title: "event_debug_unassign" label: "event_debug_unassign\n./include/event2/event.h:334:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_debug_unassign" label: "./evdns.c:875:2" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_del" label: "./evdns.c:880:3" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_del" label: "./evdns.c:881:3" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_mm_free_" label: "./evdns.c:886:3" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_errx" label: "./evdns.c:893:3" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "./evdns.c:search_request_finished" label: "./evdns.c:896:4" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_mm_free_" label: "./evdns.c:901:5" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "event_mm_free_" label: "./evdns.c:910:2" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "./evdns.c:evdns_requests_pump_waiting_queue" label: "./evdns.c:912:2" }
+edge: { sourcename: "./evdns.c:request_finished" targetname: "__indirect_call" label: "./evdns.c:913:2" }
+node: { title: "./evdns.c:request_reissue" label: "request_reissue\n./evdns.c:923:1" }
+edge: { sourcename: "./evdns.c:request_reissue" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:925:2" }
+edge: { sourcename: "./evdns.c:request_reissue" targetname: "event_errx" label: "./evdns.c:925:2" }
+edge: { sourcename: "./evdns.c:request_reissue" targetname: "event_errx" label: "./evdns.c:926:2" }
+edge: { sourcename: "./evdns.c:request_reissue" targetname: "./evdns.c:nameserver_pick" label: "./evdns.c:930:2" }
+edge: { sourcename: "./evdns.c:request_reissue" targetname: "./evdns.c:request_swap_ns" label: "./evdns.c:930:2" }
+node: { title: "./evdns.c:evdns_requests_pump_waiting_queue" label: "evdns_requests_pump_waiting_queue\n./evdns.c:951:1" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:952:2" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "event_errx" label: "./evdns.c:952:2" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "event_errx" label: "./evdns.c:957:3" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "./evdns.c:nameserver_pick" label: "./evdns.c:960:13" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "./evdns.c:evdns_request_remove" label: "./evdns.c:967:3" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "./evdns.c:transaction_id_pick" label: "./evdns.c:972:29" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "./evdns.c:request_trans_id_set" label: "./evdns.c:972:3" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "./evdns.c:evdns_request_insert" label: "./evdns.c:974:3" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "./evdns.c:evdns_request_transmit" label: "./evdns.c:975:3" }
+edge: { sourcename: "./evdns.c:evdns_requests_pump_waiting_queue" targetname: "./evdns.c:evdns_transmit" label: "./evdns.c:976:3" }
+node: { title: "./evdns.c:reply_run_callback" label: "reply_run_callback\n./evdns.c:981:1" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__indirect_call" label: "./evdns.c:989:4" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__indirect_call" label: "./evdns.c:994:5" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__indirect_call" label: "./evdns.c:997:4" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__indirect_call" label: "./evdns.c:1002:4" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__indirect_call" label: "./evdns.c:1005:4" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__indirect_call" label: "./evdns.c:1010:4" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__indirect_call" label: "./evdns.c:1015:5" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__indirect_call" label: "./evdns.c:1018:4" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "event_errx" label: "./evdns.c:1021:3" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "event_mm_free_" label: "./evdns.c:1025:3" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "event_mm_free_" label: "./evdns.c:1029:3" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "event_mm_free_" label: "./evdns.c:1032:2" }
+edge: { sourcename: "./evdns.c:reply_run_callback" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:reply_schedule_callback" label: "reply_schedule_callback\n./evdns.c:1036:1" }
+edge: { sourcename: "./evdns.c:reply_schedule_callback" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1040:2" }
+edge: { sourcename: "./evdns.c:reply_schedule_callback" targetname: "event_errx" label: "./evdns.c:1040:2" }
+node: { title: "memcpy" label: "memcpy\n/usr/include/string.h:43:14" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_schedule_callback" targetname: "memcpy" label: "./evdns.c:1047:3" }
+node: { title: "event_get_priority" label: "event_get_priority\n./include/event2/event.h:1411:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_schedule_callback" targetname: "event_get_priority" label: "./evdns.c:1056:6" }
+node: { title: "event_deferred_cb_init_" label: "event_deferred_cb_init_\n./defer-internal.h:50:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_schedule_callback" targetname: "event_deferred_cb_init_" label: "./evdns.c:1054:2" }
+node: { title: "event_deferred_cb_schedule_" label: "event_deferred_cb_schedule_\n./defer-internal.h:66:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_schedule_callback" targetname: "event_deferred_cb_schedule_" label: "./evdns.c:1059:2" }
+node: { title: "./evdns.c:client_retransmit_through_tcp" label: "client_retransmit_through_tcp\n./evdns.c:1065:1" }
+edge: { sourcename: "./evdns.c:client_retransmit_through_tcp" targetname: "./evdns.c:request_clone" label: "./evdns.c:1069:27" }
+edge: { sourcename: "./evdns.c:client_retransmit_through_tcp" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1070:2" }
+edge: { sourcename: "./evdns.c:client_retransmit_through_tcp" targetname: "event_errx" label: "./evdns.c:1070:2" }
+edge: { sourcename: "./evdns.c:client_retransmit_through_tcp" targetname: "./evdns.c:request_finished" label: "./evdns.c:1073:2" }
+edge: { sourcename: "./evdns.c:client_retransmit_through_tcp" targetname: "./evdns.c:request_submit" label: "./evdns.c:1076:2" }
+node: { title: "./evdns.c:reply_handle" label: "reply_handle\n./evdns.c:1094:1" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1103:2" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "event_errx" label: "./evdns.c:1103:2" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "event_errx" label: "./evdns.c:1104:2" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "evdns_err_to_string" label: "./evdns.c:1130:5" }
+node: { title: "evutil_snprintf" label: "evutil_snprintf\n./include/event2/util.h:625:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "evutil_snprintf" label: "./evdns.c:1130:5" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:nameserver_failed" label: "./evdns.c:1132:5" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:request_reissue" label: "./evdns.c:1133:10" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:1142:4" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:1142:4" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:evdns_request_timeout_callback" label: "./evdns.c:1148:4" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:nameserver_up" label: "./evdns.c:1157:4" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:1161:4" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:client_retransmit_through_tcp" label: "./evdns.c:1164:4" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:search_try_next" label: "./evdns.c:1172:9" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:reply_schedule_callback" label: "./evdns.c:1183:3" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:request_finished" label: "./evdns.c:1184:3" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:reply_schedule_callback" label: "./evdns.c:1187:3" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:nameserver_up" label: "./evdns.c:1190:3" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "./evdns.c:request_finished" label: "./evdns.c:1191:3" }
+edge: { sourcename: "./evdns.c:reply_handle" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:name_parse" label: "name_parse\n./evdns.c:1196:1" }
+edge: { sourcename: "./evdns.c:name_parse" targetname: "memcpy" label: "./evdns.c:1236:3" }
+node: { title: "./evdns.c:reply_parse" label: "reply_parse\n./evdns.c:1253:1" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "memset" label: "./evdns.c:1268:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1270:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "event_errx" label: "./evdns.c:1270:2" }
+node: { title: "ntohs" label: "ntohs\n/usr/include/netinet/in.h:383:17" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1272:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1273:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1274:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1275:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1276:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1277:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:request_find_from_trans_id" label: "./evdns.c:1281:8" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "event_errx" label: "./evdns.c:1283:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1311:7" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1313:7" }
+node: { title: "strcmp" label: "strcmp\n/usr/include/string.h:156:12" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "strcmp" label: "./evdns.c:1317:8" }
+node: { title: "evutil_ascii_strcasecmp" label: "evutil_ascii_strcasecmp\n./include/event2/util.h:690:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "evutil_ascii_strcasecmp" label: "./evdns.c:1320:8" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "event_mm_malloc_" label: "./evdns.c:1337:19" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1346:3" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1347:3" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1348:3" }
+node: { title: "ntohl" label: "ntohl\n/usr/include/netinet/in.h:382:17" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohl" label: "./evdns.c:1349:3" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1350:3" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "memcpy" label: "./evdns.c:1364:4" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1373:8" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1381:8" }
+node: { title: "event_mm_strdup_" label: "event_mm_strdup_\n./mm-internal.h:69:7" shape : ellipse }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "event_mm_strdup_" label: "./evdns.c:1385:19" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "event_mm_strdup_" label: "./evdns.c:1387:30" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "memcpy" label: "./evdns.c:1400:4" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1414:4" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1415:4" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1416:4" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohl" label: "./evdns.c:1417:4" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohs" label: "./evdns.c:1418:4" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1421:5" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1422:5" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohl" label: "./evdns.c:1423:5" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohl" label: "./evdns.c:1424:5" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohl" label: "./evdns.c:1425:5" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohl" label: "./evdns.c:1426:5" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "ntohl" label: "./evdns.c:1427:5" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:reply_handle" label: "./evdns.c:1444:2" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "event_mm_free_" label: "./evdns.c:1446:3" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "./evdns.c:reply_handle" label: "./evdns.c:1450:3" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "event_mm_free_" label: "./evdns.c:1452:3" }
+edge: { sourcename: "./evdns.c:reply_parse" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:request_parse" label: "request_parse\n./evdns.c:1460:1" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1474:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "event_errx" label: "./evdns.c:1474:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1477:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1478:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1479:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1480:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1481:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1482:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "event_mm_malloc_" label: "./evdns.c:1487:15" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "memset" label: "./evdns.c:1489:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "memcpy" label: "./evdns.c:1493:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "event_mm_calloc_" label: "./evdns.c:1501:31" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1509:7" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1511:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1512:3" }
+node: { title: "strlen" label: "strlen\n/usr/include/string.h:407:15" shape : ellipse }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "strlen" label: "./evdns.c:1513:18" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "event_mm_malloc_" label: "./evdns.c:1514:7" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "memcpy" label: "./evdns.c:1519:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1532:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1532:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1536:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1536:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "./evdns.c:name_parse" label: "./evdns.c:1541:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1542:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1543:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohl" label: "./evdns.c:1544:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "ntohs" label: "./evdns.c:1545:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "evdns_server_request_add_reply" label: "./evdns.c:1552:4" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "evdns_server_request_respond" label: "./evdns.c:1570:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "__indirect_call" label: "./evdns.c:1574:2" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "event_mm_free_" label: "./evdns.c:1581:5" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "event_mm_free_" label: "./evdns.c:1582:4" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "event_mm_free_" label: "./evdns.c:1584:3" }
+edge: { sourcename: "./evdns.c:request_parse" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:transaction_id_pick" label: "transaction_id_pick\n./evdns.c:1597:1" }
+edge: { sourcename: "./evdns.c:transaction_id_pick" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1598:2" }
+edge: { sourcename: "./evdns.c:transaction_id_pick" targetname: "event_errx" label: "./evdns.c:1598:2" }
+node: { title: "evutil_secure_rng_get_bytes" label: "evutil_secure_rng_get_bytes\n./include/event2/util.h:856:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:transaction_id_pick" targetname: "evutil_secure_rng_get_bytes" label: "./evdns.c:1601:3" }
+edge: { sourcename: "./evdns.c:transaction_id_pick" targetname: "./evdns.c:request_find_from_trans_id" label: "./evdns.c:1605:7" }
+edge: { sourcename: "./evdns.c:transaction_id_pick" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:nameserver_pick" label: "nameserver_pick\n./evdns.c:1614:1" }
+edge: { sourcename: "./evdns.c:nameserver_pick" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1616:2" }
+edge: { sourcename: "./evdns.c:nameserver_pick" targetname: "event_errx" label: "./evdns.c:1616:2" }
+edge: { sourcename: "./evdns.c:nameserver_pick" targetname: "event_errx" label: "./evdns.c:1640:4" }
+node: { title: "./evdns.c:nameserver_read" label: "nameserver_read\n./evdns.c:1650:1" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "event_mm_malloc_" label: "./evdns.c:1655:15" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1656:2" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "event_errx" label: "./evdns.c:1656:2" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "./evdns.c:nameserver_failed" label: "./evdns.c:1659:3" }
+node: { title: "recvfrom" label: "recvfrom\n/usr/include/x86_64-linux-gnu/sys/socket.h:163:16" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "recvfrom" label: "./evdns.c:1664:17" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "__errno_location" label: "./evdns.c:1668:14" }
+node: { title: "strerror" label: "strerror\n/usr/include/string.h:419:14" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "strerror" label: "./evdns.c:1672:8" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "./evdns.c:nameserver_failed" label: "./evdns.c:1671:4" }
+node: { title: "evutil_sockaddr_cmp" label: "evutil_sockaddr_cmp\n./include/event2/util.h:683:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "evutil_sockaddr_cmp" label: "./evdns.c:1675:7" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:1677:4" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:1677:4" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "./evdns.c:reply_parse" label: "./evdns.c:1686:3" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "event_mm_free_" label: "./evdns.c:1689:2" }
+edge: { sourcename: "./evdns.c:nameserver_read" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:server_udp_port_read" label: "server_udp_port_read\n./evdns.c:1695:1" }
+edge: { sourcename: "./evdns.c:server_udp_port_read" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1700:2" }
+edge: { sourcename: "./evdns.c:server_udp_port_read" targetname: "event_errx" label: "./evdns.c:1700:2" }
+edge: { sourcename: "./evdns.c:server_udp_port_read" targetname: "recvfrom" label: "./evdns.c:1704:7" }
+edge: { sourcename: "./evdns.c:server_udp_port_read" targetname: "__errno_location" label: "./evdns.c:1707:14" }
+edge: { sourcename: "./evdns.c:server_udp_port_read" targetname: "strerror" label: "./evdns.c:1710:4" }
+edge: { sourcename: "./evdns.c:server_udp_port_read" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:1710:4" }
+edge: { sourcename: "./evdns.c:server_udp_port_read" targetname: "./evdns.c:request_parse" label: "./evdns.c:1715:3" }
+edge: { sourcename: "./evdns.c:server_udp_port_read" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:server_send_response" label: "server_send_response\n./evdns.c:1720:1" }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "event_errx" label: "./evdns.c:1726:3" }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "event_errx" label: "./evdns.c:1727:3" }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "htons" label: "./evdns.c:1728:17" }
+node: { title: "bufferevent_write" label: "bufferevent_write\n./include/event2/bufferevent.h:420:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "bufferevent_write" label: "./evdns.c:1729:7" }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "bufferevent_write" label: "./evdns.c:1731:7" }
+node: { title: "sendto" label: "sendto\n/usr/include/x86_64-linux-gnu/sys/socket.h:152:16" shape : ellipse }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "sendto" label: "./evdns.c:1735:11" }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:1741:2" }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "./evdns.c:evdns_remove_tcp_client" label: "./evdns.c:1743:2" }
+edge: { sourcename: "./evdns.c:server_send_response" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:server_port_flush" label: "server_port_flush\n./evdns.c:1749:1" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1752:2" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "event_errx" label: "./evdns.c:1752:2" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "./evdns.c:server_send_response" label: "./evdns.c:1754:11" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "__errno_location" label: "./evdns.c:1756:14" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "strerror" label: "./evdns.c:1759:4" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:1759:4" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "./evdns.c:server_request_free" label: "./evdns.c:1761:7" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "event_errx" label: "./evdns.c:1765:4" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "event_del" label: "./evdns.c:1771:9" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "event_assign" label: "./evdns.c:1772:2" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "event_add" label: "./evdns.c:1776:6" }
+edge: { sourcename: "./evdns.c:server_port_flush" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:1777:3" }
+node: { title: "./evdns.c:nameserver_write_waiting" label: "nameserver_write_waiting\n./evdns.c:1786:1" }
+edge: { sourcename: "./evdns.c:nameserver_write_waiting" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:1787:2" }
+edge: { sourcename: "./evdns.c:nameserver_write_waiting" targetname: "event_errx" label: "./evdns.c:1787:2" }
+edge: { sourcename: "./evdns.c:nameserver_write_waiting" targetname: "event_del" label: "./evdns.c:1791:9" }
+edge: { sourcename: "./evdns.c:nameserver_write_waiting" targetname: "event_assign" label: "./evdns.c:1792:2" }
+edge: { sourcename: "./evdns.c:nameserver_write_waiting" targetname: "event_add" label: "./evdns.c:1795:6" }
+edge: { sourcename: "./evdns.c:nameserver_write_waiting" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:1797:3" }
+edge: { sourcename: "./evdns.c:nameserver_write_waiting" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:1797:3" }
+edge: { sourcename: "./evdns.c:nameserver_write_waiting" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:nameserver_ready_callback" label: "nameserver_ready_callback\n./evdns.c:1808:1" }
+edge: { sourcename: "./evdns.c:nameserver_ready_callback" targetname: "__indirect_call" label: "./evdns.c:1812:2" }
+edge: { sourcename: "./evdns.c:nameserver_ready_callback" targetname: "./evdns.c:evdns_transmit" label: "./evdns.c:1815:8" }
+edge: { sourcename: "./evdns.c:nameserver_ready_callback" targetname: "./evdns.c:nameserver_write_waiting" label: "./evdns.c:1816:4" }
+edge: { sourcename: "./evdns.c:nameserver_ready_callback" targetname: "./evdns.c:nameserver_read" label: "./evdns.c:1820:3" }
+edge: { sourcename: "./evdns.c:nameserver_ready_callback" targetname: "__indirect_call" label: "./evdns.c:1822:2" }
+node: { title: "./evdns.c:server_port_ready_callback" label: "server_port_ready_callback\n./evdns.c:1828:1" }
+edge: { sourcename: "./evdns.c:server_port_ready_callback" targetname: "__indirect_call" label: "./evdns.c:1832:2" }
+edge: { sourcename: "./evdns.c:server_port_ready_callback" targetname: "./evdns.c:server_port_flush" label: "./evdns.c:1835:3" }
+edge: { sourcename: "./evdns.c:server_port_ready_callback" targetname: "./evdns.c:server_udp_port_read" label: "./evdns.c:1838:3" }
+edge: { sourcename: "./evdns.c:server_port_ready_callback" targetname: "__indirect_call" label: "./evdns.c:1840:2" }
+node: { title: "./evdns.c:dnslabel_table_init" label: "dnslabel_table_init\n./evdns.c:1856:1" }
+node: { title: "./evdns.c:dnslabel_clear" label: "dnslabel_clear\n./evdns.c:1863:1" }
+edge: { sourcename: "./evdns.c:dnslabel_clear" targetname: "event_mm_free_" label: "./evdns.c:1867:3" }
+node: { title: "./evdns.c:dnslabel_table_get_pos" label: "dnslabel_table_get_pos\n./evdns.c:1874:1" }
+edge: { sourcename: "./evdns.c:dnslabel_table_get_pos" targetname: "strcmp" label: "./evdns.c:1878:8" }
+node: { title: "./evdns.c:dnslabel_table_add" label: "dnslabel_table_add\n./evdns.c:1886:1" }
+edge: { sourcename: "./evdns.c:dnslabel_table_add" targetname: "event_mm_strdup_" label: "./evdns.c:1892:6" }
+node: { title: "./evdns.c:dnsname_to_labels" label: "dnsname_to_labels\n./evdns.c:1914:1" }
+edge: { sourcename: "./evdns.c:dnsname_to_labels" targetname: "./evdns.c:dnslabel_table_get_pos" label: "./evdns.c:1940:23" }
+edge: { sourcename: "./evdns.c:dnsname_to_labels" targetname: "htons" label: "./evdns.c:1941:4" }
+node: { title: "strchr" label: "strchr\n/usr/include/string.h:246:14" shape : ellipse }
+edge: { sourcename: "./evdns.c:dnsname_to_labels" targetname: "strchr" label: "./evdns.c:1944:10" }
+edge: { sourcename: "./evdns.c:dnsname_to_labels" targetname: "./evdns.c:dnslabel_table_add" label: "./evdns.c:1949:15" }
+edge: { sourcename: "./evdns.c:dnsname_to_labels" targetname: "memcpy" label: "./evdns.c:1952:4" }
+edge: { sourcename: "./evdns.c:dnsname_to_labels" targetname: "./evdns.c:dnslabel_table_add" label: "./evdns.c:1960:15" }
+edge: { sourcename: "./evdns.c:dnsname_to_labels" targetname: "memcpy" label: "./evdns.c:1963:4" }
+edge: { sourcename: "./evdns.c:dnsname_to_labels" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:evdns_request_len" label: "evdns_request_len\n./evdns.c:1983:1" }
+node: { title: "./evdns.c:evdns_request_data_build" label: "evdns_request_data_build\n./evdns.c:2004:1" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2013:2" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2014:2" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2015:2" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2016:2" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2017:2" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2018:2" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "./evdns.c:dnsname_to_labels" label: "./evdns.c:2020:6" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2025:2" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2026:2" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2042:3" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2043:3" }
+node: { title: "htonl" label: "htonl\n/usr/include/netinet/in.h:385:17" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htonl" label: "./evdns.c:2044:3" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "htons" label: "./evdns.c:2045:3" }
+edge: { sourcename: "./evdns.c:evdns_request_data_build" targetname: "__stack_chk_fail" }
+node: { title: "evdns_add_server_port_with_base" label: "evdns_add_server_port_with_base\n./evdns.c:2055:1" }
+edge: { sourcename: "evdns_add_server_port_with_base" targetname: "event_mm_malloc_" label: "./evdns.c:2060:15" }
+edge: { sourcename: "evdns_add_server_port_with_base" targetname: "memset" label: "./evdns.c:2062:2" }
+edge: { sourcename: "evdns_add_server_port_with_base" targetname: "event_assign" label: "./evdns.c:2078:2" }
+edge: { sourcename: "evdns_add_server_port_with_base" targetname: "event_add" label: "./evdns.c:2081:6" }
+edge: { sourcename: "evdns_add_server_port_with_base" targetname: "event_mm_free_" label: "./evdns.c:2082:3" }
+edge: { sourcename: "evdns_add_server_port_with_base" targetname: "__indirect_call" label: "./evdns.c:2085:2" }
+node: { title: "evdns_add_server_port_with_listener" label: "evdns_add_server_port_with_listener\n./evdns.c:2091:1" }
+edge: { sourcename: "evdns_add_server_port_with_listener" targetname: "event_mm_calloc_" label: "./evdns.c:2099:15" }
+node: { title: "evconnlistener_set_cb" label: "evconnlistener_set_cb\n./include/event2/listener.h:190:6" shape : ellipse }
+edge: { sourcename: "evdns_add_server_port_with_listener" targetname: "evconnlistener_set_cb" label: "./evdns.c:2113:2" }
+edge: { sourcename: "evdns_add_server_port_with_listener" targetname: "__indirect_call" label: "./evdns.c:2115:2" }
+node: { title: "./evdns.c:tcp_read_message" label: "tcp_read_message\n./evdns.c:2123:1" }
+node: { title: "bufferevent_get_input" label: "bufferevent_get_input\n./include/event2/bufferevent.h:472:18" shape : ellipse }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "bufferevent_get_input" label: "./evdns.c:2126:27" }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "event_errx" label: "./evdns.c:2130:2" }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "event_errx" label: "./evdns.c:2131:2" }
+node: { title: "evbuffer_get_length" label: "evbuffer_get_length\n./include/event2/buffer.h:256:8" shape : ellipse }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "evbuffer_get_length" label: "./evdns.c:2135:7" }
+node: { title: "bufferevent_read" label: "bufferevent_read\n./include/event2/bufferevent.h:449:8" shape : ellipse }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "bufferevent_read" label: "./evdns.c:2138:3" }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "ntohs" label: "./evdns.c:2140:32" }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "evbuffer_get_length" label: "./evdns.c:2146:6" }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "event_mm_malloc_" label: "./evdns.c:2149:11" }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "bufferevent_read" label: "./evdns.c:2153:11" }
+edge: { sourcename: "./evdns.c:tcp_read_message" targetname: "event_mm_free_" label: "./evdns.c:2155:3" }
+node: { title: "./evdns.c:server_tcp_read_packet_cb" label: "server_tcp_read_packet_cb\n./evdns.c:2169:1" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "event_errx" label: "./evdns.c:2177:2" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "__indirect_call" label: "./evdns.c:2178:2" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "./evdns.c:tcp_read_message" label: "./evdns.c:2181:7" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2182:4" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "./evdns.c:evdns_remove_tcp_client" label: "./evdns.c:2183:4" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "__indirect_call" label: "./evdns.c:2185:4" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "./evdns.c:server_port_free" label: "./evdns.c:2187:5" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "./evdns.c:request_parse" label: "./evdns.c:2195:3" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "event_mm_free_" label: "./evdns.c:2196:3" }
+node: { title: "bufferevent_setwatermark" label: "bufferevent_setwatermark\n./include/event2/bufferevent.h:572:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "bufferevent_setwatermark" label: "./evdns.c:2201:2" }
+node: { title: "bufferevent_setcb" label: "bufferevent_setcb\n./include/event2/bufferevent.h:345:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "bufferevent_setcb" label: "./evdns.c:2203:2" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "__indirect_call" label: "./evdns.c:2204:2" }
+edge: { sourcename: "./evdns.c:server_tcp_read_packet_cb" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:server_tcp_event_cb" label: "server_tcp_event_cb\n./evdns.c:2208:1" }
+edge: { sourcename: "./evdns.c:server_tcp_event_cb" targetname: "event_errx" label: "./evdns.c:2213:2" }
+edge: { sourcename: "./evdns.c:server_tcp_event_cb" targetname: "__indirect_call" label: "./evdns.c:2214:2" }
+edge: { sourcename: "./evdns.c:server_tcp_event_cb" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2216:3" }
+edge: { sourcename: "./evdns.c:server_tcp_event_cb" targetname: "./evdns.c:evdns_remove_tcp_client" label: "./evdns.c:2217:3" }
+edge: { sourcename: "./evdns.c:server_tcp_event_cb" targetname: "__indirect_call" label: "./evdns.c:2220:2" }
+edge: { sourcename: "./evdns.c:server_tcp_event_cb" targetname: "./evdns.c:server_port_free" label: "./evdns.c:2222:3" }
+node: { title: "./evdns.c:incoming_conn_cb" label: "incoming_conn_cb\n./evdns.c:2226:1" }
+node: { title: "bufferevent_socket_new" label: "bufferevent_socket_new\n./include/event2/bufferevent.h:191:21" shape : ellipse }
+edge: { sourcename: "./evdns.c:incoming_conn_cb" targetname: "bufferevent_socket_new" label: "./evdns.c:2230:28" }
+edge: { sourcename: "./evdns.c:incoming_conn_cb" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2236:2" }
+node: { title: "bufferevent_set_timeouts" label: "bufferevent_set_timeouts\n./include/event2/bufferevent.h:547:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:incoming_conn_cb" targetname: "bufferevent_set_timeouts" label: "./evdns.c:2238:2" }
+edge: { sourcename: "./evdns.c:incoming_conn_cb" targetname: "./evdns.c:evdns_add_tcp_client" label: "./evdns.c:2240:11" }
+edge: { sourcename: "./evdns.c:incoming_conn_cb" targetname: "bufferevent_setwatermark" label: "./evdns.c:2246:2" }
+edge: { sourcename: "./evdns.c:incoming_conn_cb" targetname: "bufferevent_setcb" label: "./evdns.c:2247:2" }
+node: { title: "bufferevent_enable" label: "bufferevent_enable\n./include/event2/bufferevent.h:498:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:incoming_conn_cb" targetname: "bufferevent_enable" label: "./evdns.c:2248:2" }
+edge: { sourcename: "./evdns.c:incoming_conn_cb" targetname: "bufferevent_free" label: "./evdns.c:2253:3" }
+node: { title: "evdns_add_server_port" label: "evdns_add_server_port\n./evdns.c:2258:1" }
+edge: { sourcename: "evdns_add_server_port" targetname: "evdns_add_server_port_with_base" label: "./evdns.c:2260:9" }
+node: { title: "evdns_close_server_port" label: "evdns_close_server_port\n./evdns.c:2265:1" }
+edge: { sourcename: "evdns_close_server_port" targetname: "__indirect_call" label: "./evdns.c:2267:2" }
+edge: { sourcename: "evdns_close_server_port" targetname: "./evdns.c:evdns_remove_all_tcp_clients" label: "./evdns.c:2268:2" }
+edge: { sourcename: "evdns_close_server_port" targetname: "__indirect_call" label: "./evdns.c:2270:3" }
+edge: { sourcename: "evdns_close_server_port" targetname: "./evdns.c:server_port_free" label: "./evdns.c:2271:3" }
+edge: { sourcename: "evdns_close_server_port" targetname: "__indirect_call" label: "./evdns.c:2274:3" }
+node: { title: "evdns_server_request_add_reply" label: "evdns_server_request_add_reply\n./evdns.c:2280:1" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "__indirect_call" label: "./evdns.c:2287:2" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_malloc_" label: "./evdns.c:2310:9" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_strdup_" label: "./evdns.c:2314:21" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_free_" label: "./evdns.c:2315:3" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_strdup_" label: "./evdns.c:2326:23" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_free_" label: "./evdns.c:2327:5" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_free_" label: "./evdns.c:2328:5" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_malloc_" label: "./evdns.c:2333:23" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_free_" label: "./evdns.c:2334:5" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "event_mm_free_" label: "./evdns.c:2335:5" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "memcpy" label: "./evdns.c:2339:4" }
+edge: { sourcename: "evdns_server_request_add_reply" targetname: "__indirect_call" label: "./evdns.c:2347:2" }
+node: { title: "evdns_server_request_add_a_reply" label: "evdns_server_request_add_a_reply\n./evdns.c:2353:1" }
+edge: { sourcename: "evdns_server_request_add_a_reply" targetname: "evdns_server_request_add_reply" label: "./evdns.c:2355:9" }
+node: { title: "evdns_server_request_add_aaaa_reply" label: "evdns_server_request_add_aaaa_reply\n./evdns.c:2362:1" }
+edge: { sourcename: "evdns_server_request_add_aaaa_reply" targetname: "evdns_server_request_add_reply" label: "./evdns.c:2364:9" }
+node: { title: "evdns_server_request_add_ptr_reply" label: "evdns_server_request_add_ptr_reply\n./evdns.c:2371:1" }
+edge: { sourcename: "evdns_server_request_add_ptr_reply" targetname: "ntohl" label: "./evdns.c:2380:7" }
+edge: { sourcename: "evdns_server_request_add_ptr_reply" targetname: "evutil_snprintf" label: "./evdns.c:2381:3" }
+edge: { sourcename: "evdns_server_request_add_ptr_reply" targetname: "evdns_server_request_add_reply" label: "./evdns.c:2388:9" }
+edge: { sourcename: "evdns_server_request_add_ptr_reply" targetname: "__stack_chk_fail" }
+node: { title: "evdns_server_request_add_cname_reply" label: "evdns_server_request_add_cname_reply\n./evdns.c:2395:1" }
+edge: { sourcename: "evdns_server_request_add_cname_reply" targetname: "evdns_server_request_add_reply" label: "./evdns.c:2397:9" }
+node: { title: "evdns_server_request_set_flags" label: "evdns_server_request_set_flags\n./evdns.c:2404:1" }
+node: { title: "./evdns.c:evdns_server_request_format_response" label: "evdns_server_request_format_response\n./evdns.c:2412:1" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:dnslabel_table_init" label: "./evdns.c:2430:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2431:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2432:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2433:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2434:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2435:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2436:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "strlen" label: "./evdns.c:2441:7" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:dnsname_to_labels" label: "./evdns.c:2441:7" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:dnslabel_clear" label: "./evdns.c:2443:4" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2446:3" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2447:3" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "strlen" label: "./evdns.c:2460:8" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:dnsname_to_labels" label: "./evdns.c:2460:8" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2465:4" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2466:4" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htonl" label: "./evdns.c:2467:4" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "strlen" label: "./evdns.c:2472:9" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:dnsname_to_labels" label: "./evdns.c:2472:9" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2476:10" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "htons" label: "./evdns.c:2479:5" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "memcpy" label: "./evdns.c:2483:6" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "event_errx" label: "./evdns.c:2486:6" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "event_mm_malloc_" label: "./evdns.c:2501:24" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:server_request_free_answers" label: "./evdns.c:2502:3" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:dnslabel_clear" label: "./evdns.c:2503:3" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "memcpy" label: "./evdns.c:2506:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:server_request_free_answers" label: "./evdns.c:2507:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "./evdns.c:dnslabel_clear" label: "./evdns.c:2508:2" }
+edge: { sourcename: "./evdns.c:evdns_server_request_format_response" targetname: "__stack_chk_fail" }
+node: { title: "evdns_server_request_respond" label: "evdns_server_request_respond\n./evdns.c:2514:1" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "__indirect_call" label: "./evdns.c:2520:2" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "./evdns.c:evdns_server_request_format_response" label: "./evdns.c:2522:12" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "./evdns.c:server_send_response" label: "./evdns.c:2526:6" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "__errno_location" label: "./evdns.c:2528:18" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "event_del" label: "./evdns.c:2542:11" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "event_assign" label: "./evdns.c:2543:4" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "event_add" label: "./evdns.c:2545:8" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2546:5" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "./evdns.c:server_request_free" label: "./evdns.c:2554:6" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "./evdns.c:server_port_flush" label: "./evdns.c:2560:3" }
+edge: { sourcename: "evdns_server_request_respond" targetname: "__indirect_call" label: "./evdns.c:2564:2" }
+node: { title: "./evdns.c:server_request_free_answers" label: "server_request_free_answers\n./evdns.c:2570:1" }
+edge: { sourcename: "./evdns.c:server_request_free_answers" targetname: "event_mm_free_" label: "./evdns.c:2585:4" }
+edge: { sourcename: "./evdns.c:server_request_free_answers" targetname: "event_mm_free_" label: "./evdns.c:2588:5" }
+edge: { sourcename: "./evdns.c:server_request_free_answers" targetname: "event_mm_free_" label: "./evdns.c:2591:4" }
+node: { title: "./evdns.c:server_request_free" label: "server_request_free\n./evdns.c:2601:1" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "event_mm_free_" label: "./evdns.c:2606:4" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "event_mm_free_" label: "./evdns.c:2609:3" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "__indirect_call" label: "./evdns.c:2614:3" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "event_mm_free_" label: "./evdns.c:2626:3" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "./evdns.c:server_request_free_answers" label: "./evdns.c:2630:2" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "__indirect_call" label: "./evdns.c:2638:3" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "./evdns.c:server_port_free" label: "./evdns.c:2639:3" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "event_mm_free_" label: "./evdns.c:2640:3" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "__indirect_call" label: "./evdns.c:2644:3" }
+edge: { sourcename: "./evdns.c:server_request_free" targetname: "event_mm_free_" label: "./evdns.c:2645:2" }
+node: { title: "./evdns.c:server_port_free" label: "server_port_free\n./evdns.c:2651:1" }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "event_errx" label: "./evdns.c:2653:2" }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "event_errx" label: "./evdns.c:2654:2" }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "event_errx" label: "./evdns.c:2655:2" }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "evutil_closesocket" label: "./evdns.c:2657:3" }
+node: { title: "evconnlistener_free" label: "evconnlistener_free\n./include/event2/listener.h:167:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "evconnlistener_free" label: "./evdns.c:2663:3" }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "event_del" label: "./evdns.c:2665:10" }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "event_debug_unassign" label: "./evdns.c:2666:3" }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "__indirect_call" label: "./evdns.c:2669:2" }
+edge: { sourcename: "./evdns.c:server_port_free" targetname: "event_mm_free_" label: "./evdns.c:2670:2" }
+node: { title: "evdns_server_request_drop" label: "evdns_server_request_drop\n./evdns.c:2675:1" }
+edge: { sourcename: "evdns_server_request_drop" targetname: "./evdns.c:server_request_free" label: "./evdns.c:2678:2" }
+node: { title: "evdns_server_request_get_requesting_addr" label: "evdns_server_request_get_requesting_addr\n./evdns.c:2684:1" }
+edge: { sourcename: "evdns_server_request_get_requesting_addr" targetname: "memcpy" label: "./evdns.c:2689:2" }
+node: { title: "./evdns.c:retransmit_all_tcp_requests_for" label: "retransmit_all_tcp_requests_for\n./evdns.c:2694:1" }
+edge: { sourcename: "./evdns.c:retransmit_all_tcp_requests_for" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2706:6" }
+edge: { sourcename: "./evdns.c:retransmit_all_tcp_requests_for" targetname: "./evdns.c:reply_schedule_callback" label: "./evdns.c:2708:6" }
+edge: { sourcename: "./evdns.c:retransmit_all_tcp_requests_for" targetname: "./evdns.c:request_finished" label: "./evdns.c:2709:6" }
+edge: { sourcename: "./evdns.c:retransmit_all_tcp_requests_for" targetname: "event_del" label: "./evdns.c:2711:13" }
+edge: { sourcename: "./evdns.c:retransmit_all_tcp_requests_for" targetname: "./evdns.c:evdns_request_transmit" label: "./evdns.c:2712:6" }
+node: { title: "./evdns.c:evdns_request_timeout_callback" label: "evdns_request_timeout_callback\n./evdns.c:2723:1" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2730:2" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "__indirect_call" label: "./evdns.c:2731:2" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2736:3" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:reply_schedule_callback" label: "./evdns.c:2738:3" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:request_finished" label: "./evdns.c:2740:3" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:nameserver_failed" label: "./evdns.c:2741:3" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:2745:4" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:retransmit_all_tcp_requests_for" label: "./evdns.c:2749:4" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2752:4" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "event_del" label: "./evdns.c:2753:11" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:nameserver_pick" label: "./evdns.c:2754:4" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:request_swap_ns" label: "./evdns.c:2754:4" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:evdns_request_transmit" label: "./evdns.c:2755:4" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "./evdns.c:nameserver_failed" label: "./evdns.c:2760:5" }
+edge: { sourcename: "./evdns.c:evdns_request_timeout_callback" targetname: "__indirect_call" label: "./evdns.c:2765:2" }
+node: { title: "./evdns.c:evdns_request_transmit_to" label: "evdns_request_transmit_to\n./evdns.c:2775:1" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_to" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:2777:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_to" targetname: "event_errx" label: "./evdns.c:2777:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_to" targetname: "event_errx" label: "./evdns.c:2778:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_to" targetname: "event_add" label: "./evdns.c:2782:3" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_to" targetname: "sendto" label: "./evdns.c:2786:6" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_to" targetname: "__errno_location" label: "./evdns.c:2789:13" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_to" targetname: "strerror" label: "./evdns.c:2792:30" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_to" targetname: "./evdns.c:nameserver_failed" label: "./evdns.c:2792:3" }
+node: { title: "./evdns.c:evdns_tcp_connect_if_disconnected" label: "evdns_tcp_connect_if_disconnected\n./evdns.c:2808:1" }
+edge: { sourcename: "./evdns.c:evdns_tcp_connect_if_disconnected" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:2815:2" }
+edge: { sourcename: "./evdns.c:evdns_tcp_connect_if_disconnected" targetname: "bufferevent_socket_new" label: "./evdns.c:2816:9" }
+edge: { sourcename: "./evdns.c:evdns_tcp_connect_if_disconnected" targetname: "./evdns.c:new_tcp_connecton" label: "./evdns.c:2816:9" }
+edge: { sourcename: "./evdns.c:evdns_tcp_connect_if_disconnected" targetname: "bufferevent_set_timeouts" label: "./evdns.c:2821:6" }
+edge: { sourcename: "./evdns.c:evdns_tcp_connect_if_disconnected" targetname: "event_errx" label: "./evdns.c:2824:2" }
+node: { title: "bufferevent_socket_connect" label: "bufferevent_socket_connect\n./include/event2/bufferevent.h:213:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_tcp_connect_if_disconnected" targetname: "bufferevent_socket_connect" label: "./evdns.c:2825:6" }
+edge: { sourcename: "./evdns.c:evdns_tcp_connect_if_disconnected" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2829:2" }
+node: { title: "./evdns.c:client_tcp_read_packet_cb" label: "client_tcp_read_packet_cb\n./evdns.c:2838:1" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "event_errx" label: "./evdns.c:2844:2" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "__indirect_call" label: "./evdns.c:2845:2" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "./evdns.c:tcp_read_message" label: "./evdns.c:2848:7" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:2849:4" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "__indirect_call" label: "./evdns.c:2851:4" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "./evdns.c:reply_parse" label: "./evdns.c:2859:3" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "event_mm_free_" label: "./evdns.c:2860:3" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "bufferevent_setwatermark" label: "./evdns.c:2865:2" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "bufferevent_setcb" label: "./evdns.c:2867:2" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "__indirect_call" label: "./evdns.c:2868:2" }
+edge: { sourcename: "./evdns.c:client_tcp_read_packet_cb" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:client_tcp_event_cb" label: "client_tcp_event_cb\n./evdns.c:2872:1" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "event_errx" label: "./evdns.c:2875:2" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "__indirect_call" label: "./evdns.c:2876:2" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "event_errx" label: "./evdns.c:2877:2" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2879:2" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:2882:3" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:2885:3" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "event_errx" label: "./evdns.c:2888:3" }
+node: { title: "bufferevent_getfd" label: "bufferevent_getfd\n./include/event2/bufferevent.h:397:17" shape : ellipse }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "bufferevent_getfd" label: "./evdns.c:2890:3" }
+node: { title: "evutil_make_socket_nonblocking" label: "evutil_make_socket_nonblocking\n./include/event2/util.h:397:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "evutil_make_socket_nonblocking" label: "./evdns.c:2890:3" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "bufferevent_setcb" label: "./evdns.c:2891:3" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "bufferevent_setwatermark" label: "./evdns.c:2892:3" }
+edge: { sourcename: "./evdns.c:client_tcp_event_cb" targetname: "__indirect_call" label: "./evdns.c:2894:2" }
+node: { title: "./evdns.c:evdns_request_transmit_through_tcp" label: "evdns_request_transmit_through_tcp\n./evdns.c:2904:1" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:2908:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "event_errx" label: "./evdns.c:2908:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "event_errx" label: "./evdns.c:2909:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "./evdns.c:evdns_tcp_connect_if_disconnected" label: "./evdns.c:2911:11" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "bufferevent_setcb" label: "./evdns.c:2915:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2917:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "htons" label: "./evdns.c:2918:16" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "bufferevent_write" label: "./evdns.c:2919:6" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "bufferevent_write" label: "./evdns.c:2921:6" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "bufferevent_enable" label: "./evdns.c:2923:6" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "event_add" label: "./evdns.c:2925:6" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2930:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:2931:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit_through_tcp" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:evdns_request_transmit" label: "evdns_request_transmit\n./evdns.c:2943:1" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:2946:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "event_errx" label: "./evdns.c:2946:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "event_errx" label: "./evdns.c:2947:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "event_errx" label: "./evdns.c:2951:2" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "./evdns.c:evdns_request_transmit_through_tcp" label: "./evdns.c:2966:7" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "./evdns.c:evdns_request_transmit_to" label: "./evdns.c:2975:7" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "./evdns.c:nameserver_write_waiting" label: "./evdns.c:2981:3" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2991:3" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "event_add" label: "./evdns.c:2993:7" }
+edge: { sourcename: "./evdns.c:evdns_request_transmit" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:2994:4" }
+node: { title: "./evdns.c:nameserver_probe_callback" label: "nameserver_probe_callback\n./evdns.c:3006:1" }
+edge: { sourcename: "./evdns.c:nameserver_probe_callback" targetname: "__indirect_call" label: "./evdns.c:3020:2" }
+edge: { sourcename: "./evdns.c:nameserver_probe_callback" targetname: "./evdns.c:nameserver_up" label: "./evdns.c:3024:3" }
+edge: { sourcename: "./evdns.c:nameserver_probe_callback" targetname: "./evdns.c:nameserver_probe_failed" label: "./evdns.c:3026:3" }
+edge: { sourcename: "./evdns.c:nameserver_probe_callback" targetname: "__indirect_call" label: "./evdns.c:3028:2" }
+node: { title: "./evdns.c:nameserver_send_probe" label: "nameserver_send_probe\n./evdns.c:3032:1" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3039:2" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "event_errx" label: "./evdns.c:3039:2" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:3040:2" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3040:2" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "event_mm_calloc_" label: "./evdns.c:3044:11" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "./evdns.c:request_new" label: "./evdns.c:3048:8" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "event_mm_free_" label: "./evdns.c:3050:3" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "./evdns.c:transaction_id_pick" label: "./evdns.c:3055:28" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "./evdns.c:request_trans_id_set" label: "./evdns.c:3055:2" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "./evdns.c:request_submit" label: "./evdns.c:3057:2" }
+edge: { sourcename: "./evdns.c:nameserver_send_probe" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:evdns_transmit" label: "evdns_transmit\n./evdns.c:3064:1" }
+edge: { sourcename: "./evdns.c:evdns_transmit" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3068:2" }
+edge: { sourcename: "./evdns.c:evdns_transmit" targetname: "event_errx" label: "./evdns.c:3068:2" }
+edge: { sourcename: "./evdns.c:evdns_transmit" targetname: "./evdns.c:evdns_request_transmit" label: "./evdns.c:3076:6" }
+node: { title: "evdns_base_count_nameservers" label: "evdns_base_count_nameservers\n./evdns.c:3089:1" }
+edge: { sourcename: "evdns_base_count_nameservers" targetname: "__indirect_call" label: "./evdns.c:3094:2" }
+edge: { sourcename: "evdns_base_count_nameservers" targetname: "__indirect_call" label: "./evdns.c:3103:2" }
+node: { title: "evdns_count_nameservers" label: "evdns_count_nameservers\n./evdns.c:3108:1" }
+edge: { sourcename: "evdns_count_nameservers" targetname: "evdns_base_count_nameservers" label: "./evdns.c:3110:9" }
+node: { title: "evdns_base_clear_nameservers_and_suspend" label: "evdns_base_clear_nameservers_and_suspend\n./evdns.c:3115:1" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "__indirect_call" label: "./evdns.c:3120:2" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "__indirect_call" label: "./evdns.c:3124:3" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:3129:3" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "event_del" label: "./evdns.c:3131:10" }
+node: { title: "event_initialized" label: "event_initialized\n./include/event2/event.h:1368:5" shape : ellipse }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "event_initialized" label: "./evdns.c:3132:7" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "event_del" label: "./evdns.c:3133:11" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "evdns_cancel_request" label: "./evdns.c:3135:4" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "evutil_closesocket" label: "./evdns.c:3139:4" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "event_mm_free_" label: "./evdns.c:3140:3" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "event_del" label: "./evdns.c:3156:11" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "./evdns.c:evdns_request_insert" label: "./evdns.c:3161:4" }
+edge: { sourcename: "evdns_base_clear_nameservers_and_suspend" targetname: "__indirect_call" label: "./evdns.c:3177:2" }
+node: { title: "evdns_clear_nameservers_and_suspend" label: "evdns_clear_nameservers_and_suspend\n./evdns.c:3182:1" }
+edge: { sourcename: "evdns_clear_nameservers_and_suspend" targetname: "evdns_base_clear_nameservers_and_suspend" label: "./evdns.c:3184:9" }
+node: { title: "evdns_base_resume" label: "evdns_base_resume\n./evdns.c:3190:1" }
+edge: { sourcename: "evdns_base_resume" targetname: "__indirect_call" label: "./evdns.c:3192:2" }
+edge: { sourcename: "evdns_base_resume" targetname: "./evdns.c:evdns_requests_pump_waiting_queue" label: "./evdns.c:3193:2" }
+edge: { sourcename: "evdns_base_resume" targetname: "__indirect_call" label: "./evdns.c:3194:2" }
+node: { title: "evdns_resume" label: "evdns_resume\n./evdns.c:3200:1" }
+edge: { sourcename: "evdns_resume" targetname: "evdns_base_resume" label: "./evdns.c:3202:9" }
+node: { title: "./evdns.c:evdns_nameserver_add_impl_" label: "evdns_nameserver_add_impl_\n./evdns.c:3206:1" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3214:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "event_errx" label: "./evdns.c:3214:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "evutil_sockaddr_cmp" label: "./evdns.c:3217:9" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3222:3" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "event_mm_malloc_" label: "./evdns.c:3226:29" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "memset" label: "./evdns.c:3229:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "event_assign" label: "./evdns.c:3232:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "evutil_socket_" label: "./evdns.c:3234:15" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "evutil_sockaddr_is_loopback_" label: "./evdns.c:3239:7" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "bind" label: "./evdns.c:3240:7" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3243:4" }
+node: { title: "setsockopt" label: "setsockopt\n/usr/include/x86_64-linux-gnu/sys/socket.h:277:12" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "setsockopt" label: "./evdns.c:3250:7" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3252:4" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "setsockopt" label: "./evdns.c:3258:7" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3260:4" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "memcpy" label: "./evdns.c:3266:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "event_assign" label: "./evdns.c:3270:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "event_add" label: "./evdns.c:3272:38" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:3277:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3277:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "evutil_closesocket" label: "./evdns.c:3296:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "event_debug_unassign" label: "./evdns.c:3298:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "event_mm_free_" label: "./evdns.c:3299:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "evutil_format_sockaddr_port_" label: "./evdns.c:3300:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3300:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_add_impl_" targetname: "__stack_chk_fail" }
+node: { title: "evdns_base_nameserver_add" label: "evdns_base_nameserver_add\n./evdns.c:3307:1" }
+edge: { sourcename: "evdns_base_nameserver_add" targetname: "memset" label: "./evdns.c:3311:2" }
+edge: { sourcename: "evdns_base_nameserver_add" targetname: "htons" label: "./evdns.c:3313:17" }
+edge: { sourcename: "evdns_base_nameserver_add" targetname: "__indirect_call" label: "./evdns.c:3318:2" }
+edge: { sourcename: "evdns_base_nameserver_add" targetname: "./evdns.c:evdns_nameserver_add_impl_" label: "./evdns.c:3319:8" }
+edge: { sourcename: "evdns_base_nameserver_add" targetname: "__indirect_call" label: "./evdns.c:3320:2" }
+edge: { sourcename: "evdns_base_nameserver_add" targetname: "__stack_chk_fail" }
+node: { title: "evdns_nameserver_add" label: "evdns_nameserver_add\n./evdns.c:3325:1" }
+edge: { sourcename: "evdns_nameserver_add" targetname: "evdns_base_new" label: "./evdns.c:3327:18" }
+edge: { sourcename: "evdns_nameserver_add" targetname: "evdns_base_nameserver_add" label: "./evdns.c:3328:9" }
+node: { title: "./evdns.c:sockaddr_setport" label: "sockaddr_setport\n./evdns.c:3332:1" }
+edge: { sourcename: "./evdns.c:sockaddr_setport" targetname: "htons" label: "./evdns.c:3335:42" }
+edge: { sourcename: "./evdns.c:sockaddr_setport" targetname: "htons" label: "./evdns.c:3337:44" }
+node: { title: "./evdns.c:sockaddr_getport" label: "sockaddr_getport\n./evdns.c:3342:1" }
+edge: { sourcename: "./evdns.c:sockaddr_getport" targetname: "ntohs" label: "./evdns.c:3345:10" }
+edge: { sourcename: "./evdns.c:sockaddr_getport" targetname: "ntohs" label: "./evdns.c:3347:10" }
+node: { title: "evdns_base_nameserver_ip_add" label: "evdns_base_nameserver_ip_add\n./evdns.c:3355:1" }
+node: { title: "evutil_parse_sockaddr_port" label: "evutil_parse_sockaddr_port\n./include/event2/util.h:675:5" shape : ellipse }
+edge: { sourcename: "evdns_base_nameserver_ip_add" targetname: "evutil_parse_sockaddr_port" label: "./evdns.c:3360:6" }
+edge: { sourcename: "evdns_base_nameserver_ip_add" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3362:3" }
+edge: { sourcename: "evdns_base_nameserver_ip_add" targetname: "./evdns.c:sockaddr_getport" label: "./evdns.c:3367:6" }
+edge: { sourcename: "evdns_base_nameserver_ip_add" targetname: "./evdns.c:sockaddr_setport" label: "./evdns.c:3368:3" }
+edge: { sourcename: "evdns_base_nameserver_ip_add" targetname: "__indirect_call" label: "./evdns.c:3370:2" }
+edge: { sourcename: "evdns_base_nameserver_ip_add" targetname: "./evdns.c:evdns_nameserver_add_impl_" label: "./evdns.c:3371:8" }
+edge: { sourcename: "evdns_base_nameserver_ip_add" targetname: "__indirect_call" label: "./evdns.c:3372:2" }
+edge: { sourcename: "evdns_base_nameserver_ip_add" targetname: "__stack_chk_fail" }
+node: { title: "evdns_nameserver_ip_add" label: "evdns_nameserver_ip_add\n./evdns.c:3377:1" }
+edge: { sourcename: "evdns_nameserver_ip_add" targetname: "evdns_base_new" label: "./evdns.c:3379:18" }
+edge: { sourcename: "evdns_nameserver_ip_add" targetname: "evdns_base_nameserver_ip_add" label: "./evdns.c:3380:9" }
+node: { title: "evdns_base_nameserver_sockaddr_add" label: "evdns_base_nameserver_sockaddr_add\n./evdns.c:3384:1" }
+edge: { sourcename: "evdns_base_nameserver_sockaddr_add" targetname: "event_errx" label: "./evdns.c:3388:2" }
+edge: { sourcename: "evdns_base_nameserver_sockaddr_add" targetname: "__indirect_call" label: "./evdns.c:3389:2" }
+edge: { sourcename: "evdns_base_nameserver_sockaddr_add" targetname: "./evdns.c:evdns_nameserver_add_impl_" label: "./evdns.c:3390:8" }
+edge: { sourcename: "evdns_base_nameserver_sockaddr_add" targetname: "__indirect_call" label: "./evdns.c:3391:2" }
+node: { title: "evdns_base_get_nameserver_addr" label: "evdns_base_get_nameserver_addr\n./evdns.c:3396:1" }
+edge: { sourcename: "evdns_base_get_nameserver_addr" targetname: "__indirect_call" label: "./evdns.c:3402:2" }
+edge: { sourcename: "evdns_base_get_nameserver_addr" targetname: "memcpy" label: "./evdns.c:3416:2" }
+edge: { sourcename: "evdns_base_get_nameserver_addr" targetname: "__indirect_call" label: "./evdns.c:3419:2" }
+node: { title: "evdns_base_get_nameserver_fd" label: "evdns_base_get_nameserver_fd\n./evdns.c:3424:1" }
+edge: { sourcename: "evdns_base_get_nameserver_fd" targetname: "__indirect_call" label: "./evdns.c:3429:2" }
+edge: { sourcename: "evdns_base_get_nameserver_fd" targetname: "__indirect_call" label: "./evdns.c:3439:2" }
+node: { title: "./evdns.c:evdns_request_remove" label: "evdns_request_remove\n./evdns.c:3446:1" }
+edge: { sourcename: "./evdns.c:evdns_request_remove" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3448:2" }
+edge: { sourcename: "./evdns.c:evdns_request_remove" targetname: "event_errx" label: "./evdns.c:3448:2" }
+edge: { sourcename: "./evdns.c:evdns_request_remove" targetname: "event_errx" label: "./evdns.c:3449:2" }
+node: { title: "./evdns.c:evdns_request_insert" label: "evdns_request_insert\n./evdns.c:3484:1" }
+edge: { sourcename: "./evdns.c:evdns_request_insert" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3485:2" }
+edge: { sourcename: "./evdns.c:evdns_request_insert" targetname: "event_errx" label: "./evdns.c:3485:2" }
+edge: { sourcename: "./evdns.c:evdns_request_insert" targetname: "event_errx" label: "./evdns.c:3486:2" }
+node: { title: "./evdns.c:string_num_dots" label: "string_num_dots\n./evdns.c:3500:1" }
+edge: { sourcename: "./evdns.c:string_num_dots" targetname: "strchr" label: "./evdns.c:3502:14" }
+node: { title: "./evdns.c:request_new" label: "request_new\n./evdns.c:3510:1" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "strlen" label: "./evdns.c:3516:26" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "./evdns.c:evdns_request_len" label: "./evdns.c:3517:33" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "./evdns.c:transaction_id_pick" label: "./evdns.c:3518:37" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "event_mm_malloc_" label: "./evdns.c:3521:6" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3526:2" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "event_errx" label: "./evdns.c:3526:2" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "event_mm_free_" label: "./evdns.c:3531:3" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "memset" label: "./evdns.c:3535:2" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "event_assign" label: "./evdns.c:3539:2" }
+node: { title: "event_strlcpy_" label: "event_strlcpy_\n./strlcpy-internal.h:15:8" shape : ellipse }
+edge: { sourcename: "./evdns.c:request_new" targetname: "event_strlcpy_" label: "./evdns.c:3544:3" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "evutil_secure_rng_get_bytes" label: "./evdns.c:3545:3" }
+node: { title: "EVUTIL_ISALPHA_" label: "EVUTIL_ISALPHA_\n./util-internal.h:251:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:request_new" targetname: "EVUTIL_ISALPHA_" label: "./evdns.c:3547:8" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "./evdns.c:evdns_request_data_build" label: "./evdns.c:3561:9" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "./evdns.c:nameserver_pick" label: "./evdns.c:3570:26" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "event_mm_free_" label: "./evdns.c:3583:2" }
+edge: { sourcename: "./evdns.c:request_new" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:request_clone" label: "request_clone\n./evdns.c:3588:1" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "./evdns.c:transaction_id_pick" label: "./evdns.c:3592:37" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "event_mm_malloc_" label: "./evdns.c:3594:30" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "event_errx" label: "./evdns.c:3595:2" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3596:2" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "event_errx" label: "./evdns.c:3596:2" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "memcpy" label: "./evdns.c:3600:2" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "event_assign" label: "./evdns.c:3602:2" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "./evdns.c:request_trans_id_set" label: "./evdns.c:3607:2" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "./evdns.c:nameserver_pick" label: "./evdns.c:3610:26" }
+edge: { sourcename: "./evdns.c:request_clone" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3613:2" }
+node: { title: "./evdns.c:request_submit" label: "request_submit\n./evdns.c:3619:1" }
+edge: { sourcename: "./evdns.c:request_submit" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3621:2" }
+edge: { sourcename: "./evdns.c:request_submit" targetname: "event_errx" label: "./evdns.c:3621:2" }
+edge: { sourcename: "./evdns.c:request_submit" targetname: "event_errx" label: "./evdns.c:3622:2" }
+edge: { sourcename: "./evdns.c:request_submit" targetname: "./evdns.c:evdns_request_insert" label: "./evdns.c:3626:3" }
+edge: { sourcename: "./evdns.c:request_submit" targetname: "./evdns.c:evdns_request_transmit" label: "./evdns.c:3631:3" }
+edge: { sourcename: "./evdns.c:request_submit" targetname: "./evdns.c:evdns_request_insert" label: "./evdns.c:3633:3" }
+node: { title: "evdns_cancel_request" label: "evdns_cancel_request\n./evdns.c:3640:1" }
+edge: { sourcename: "evdns_cancel_request" targetname: "__indirect_call" label: "./evdns.c:3654:2" }
+edge: { sourcename: "evdns_cancel_request" targetname: "__indirect_call" label: "./evdns.c:3656:3" }
+edge: { sourcename: "evdns_cancel_request" targetname: "event_errx" label: "./evdns.c:3661:2" }
+edge: { sourcename: "evdns_cancel_request" targetname: "./evdns.c:reply_schedule_callback" label: "./evdns.c:3663:2" }
+edge: { sourcename: "evdns_cancel_request" targetname: "./evdns.c:request_finished" label: "./evdns.c:3666:3" }
+edge: { sourcename: "evdns_cancel_request" targetname: "./evdns.c:request_finished" label: "./evdns.c:3669:3" }
+edge: { sourcename: "evdns_cancel_request" targetname: "__indirect_call" label: "./evdns.c:3671:2" }
+node: { title: "evdns_base_resolve_ipv4" label: "evdns_base_resolve_ipv4\n./evdns.c:3676:1" }
+edge: { sourcename: "evdns_base_resolve_ipv4" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3680:2" }
+edge: { sourcename: "evdns_base_resolve_ipv4" targetname: "event_mm_calloc_" label: "./evdns.c:3681:11" }
+edge: { sourcename: "evdns_base_resolve_ipv4" targetname: "__indirect_call" label: "./evdns.c:3686:2" }
+edge: { sourcename: "evdns_base_resolve_ipv4" targetname: "./evdns.c:request_new" label: "./evdns.c:3691:4" }
+edge: { sourcename: "evdns_base_resolve_ipv4" targetname: "./evdns.c:request_submit" label: "./evdns.c:3693:4" }
+edge: { sourcename: "evdns_base_resolve_ipv4" targetname: "./evdns.c:search_request_new" label: "./evdns.c:3695:3" }
+edge: { sourcename: "evdns_base_resolve_ipv4" targetname: "event_mm_free_" label: "./evdns.c:3698:3" }
+edge: { sourcename: "evdns_base_resolve_ipv4" targetname: "__indirect_call" label: "./evdns.c:3701:2" }
+node: { title: "evdns_resolve_ipv4" label: "evdns_resolve_ipv4\n./evdns.c:3705:5" }
+edge: { sourcename: "evdns_resolve_ipv4" targetname: "evdns_base_resolve_ipv4" label: "./evdns.c:3708:9" }
+node: { title: "evdns_base_resolve_ipv6" label: "evdns_base_resolve_ipv6\n./evdns.c:3715:1" }
+edge: { sourcename: "evdns_base_resolve_ipv6" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3721:2" }
+edge: { sourcename: "evdns_base_resolve_ipv6" targetname: "event_mm_calloc_" label: "./evdns.c:3722:11" }
+edge: { sourcename: "evdns_base_resolve_ipv6" targetname: "__indirect_call" label: "./evdns.c:3727:2" }
+edge: { sourcename: "evdns_base_resolve_ipv6" targetname: "./evdns.c:request_new" label: "./evdns.c:3731:9" }
+edge: { sourcename: "evdns_base_resolve_ipv6" targetname: "./evdns.c:request_submit" label: "./evdns.c:3733:4" }
+edge: { sourcename: "evdns_base_resolve_ipv6" targetname: "./evdns.c:search_request_new" label: "./evdns.c:3735:3" }
+edge: { sourcename: "evdns_base_resolve_ipv6" targetname: "event_mm_free_" label: "./evdns.c:3738:3" }
+edge: { sourcename: "evdns_base_resolve_ipv6" targetname: "__indirect_call" label: "./evdns.c:3741:2" }
+node: { title: "evdns_resolve_ipv6" label: "evdns_resolve_ipv6\n./evdns.c:3745:5" }
+edge: { sourcename: "evdns_resolve_ipv6" targetname: "evdns_base_resolve_ipv6" label: "./evdns.c:3747:9" }
+node: { title: "evdns_base_resolve_reverse" label: "evdns_base_resolve_reverse\n./evdns.c:3752:1" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "event_errx" label: "./evdns.c:3757:2" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "ntohl" label: "./evdns.c:3758:6" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "evutil_snprintf" label: "./evdns.c:3759:2" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "event_mm_calloc_" label: "./evdns.c:3764:11" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3769:2" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "__indirect_call" label: "./evdns.c:3770:2" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "./evdns.c:request_new" label: "./evdns.c:3773:8" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "./evdns.c:request_submit" label: "./evdns.c:3775:3" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "event_mm_free_" label: "./evdns.c:3777:3" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "__indirect_call" label: "./evdns.c:3780:2" }
+edge: { sourcename: "evdns_base_resolve_reverse" targetname: "__stack_chk_fail" }
+node: { title: "evdns_resolve_reverse" label: "evdns_resolve_reverse\n./evdns.c:3784:5" }
+edge: { sourcename: "evdns_resolve_reverse" targetname: "evdns_base_resolve_reverse" label: "./evdns.c:3785:9" }
+node: { title: "evdns_base_resolve_reverse_ipv6" label: "evdns_base_resolve_reverse_ipv6\n./evdns.c:3790:1" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "event_errx" label: "./evdns.c:3797:2" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "event_errx" label: "./evdns.c:3806:2" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "memcpy" label: "./evdns.c:3807:2" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "event_mm_calloc_" label: "./evdns.c:3808:11" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:3813:2" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "__indirect_call" label: "./evdns.c:3814:2" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "./evdns.c:request_new" label: "./evdns.c:3817:8" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "./evdns.c:request_submit" label: "./evdns.c:3819:3" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "event_mm_free_" label: "./evdns.c:3821:3" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "__indirect_call" label: "./evdns.c:3824:2" }
+edge: { sourcename: "evdns_base_resolve_reverse_ipv6" targetname: "__stack_chk_fail" }
+node: { title: "evdns_resolve_reverse_ipv6" label: "evdns_resolve_reverse_ipv6\n./evdns.c:3828:5" }
+edge: { sourcename: "evdns_resolve_reverse_ipv6" targetname: "evdns_base_resolve_reverse_ipv6" label: "./evdns.c:3829:9" }
+node: { title: "./evdns.c:search_state_decref" label: "search_state_decref\n./evdns.c:3860:1" }
+edge: { sourcename: "./evdns.c:search_state_decref" targetname: "event_mm_free_" label: "./evdns.c:3867:4" }
+edge: { sourcename: "./evdns.c:search_state_decref" targetname: "event_mm_free_" label: "./evdns.c:3869:3" }
+node: { title: "./evdns.c:search_state_new" label: "search_state_new\n./evdns.c:3874:1" }
+edge: { sourcename: "./evdns.c:search_state_new" targetname: "event_mm_malloc_" label: "./evdns.c:3875:55" }
+edge: { sourcename: "./evdns.c:search_state_new" targetname: "memset" label: "./evdns.c:3877:2" }
+node: { title: "./evdns.c:search_postfix_clear" label: "search_postfix_clear\n./evdns.c:3885:1" }
+edge: { sourcename: "./evdns.c:search_postfix_clear" targetname: "./evdns.c:search_state_decref" label: "./evdns.c:3886:2" }
+edge: { sourcename: "./evdns.c:search_postfix_clear" targetname: "./evdns.c:search_state_new" label: "./evdns.c:3888:30" }
+node: { title: "evdns_base_search_clear" label: "evdns_base_search_clear\n./evdns.c:3893:1" }
+edge: { sourcename: "evdns_base_search_clear" targetname: "__indirect_call" label: "./evdns.c:3895:2" }
+edge: { sourcename: "evdns_base_search_clear" targetname: "./evdns.c:search_postfix_clear" label: "./evdns.c:3896:2" }
+edge: { sourcename: "evdns_base_search_clear" targetname: "__indirect_call" label: "./evdns.c:3897:2" }
+node: { title: "evdns_search_clear" label: "evdns_search_clear\n./evdns.c:3901:1" }
+edge: { sourcename: "evdns_search_clear" targetname: "evdns_base_search_clear" label: "./evdns.c:3902:2" }
+node: { title: "./evdns.c:search_postfix_add" label: "search_postfix_add\n./evdns.c:3906:1" }
+edge: { sourcename: "./evdns.c:search_postfix_add" targetname: "strlen" label: "./evdns.c:3910:15" }
+edge: { sourcename: "./evdns.c:search_postfix_add" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3912:2" }
+edge: { sourcename: "./evdns.c:search_postfix_add" targetname: "event_errx" label: "./evdns.c:3912:2" }
+edge: { sourcename: "./evdns.c:search_postfix_add" targetname: "./evdns.c:search_state_new" label: "./evdns.c:3913:62" }
+edge: { sourcename: "./evdns.c:search_postfix_add" targetname: "event_mm_malloc_" label: "./evdns.c:3917:37" }
+edge: { sourcename: "./evdns.c:search_postfix_add" targetname: "memcpy" label: "./evdns.c:3919:2" }
+node: { title: "./evdns.c:search_reverse" label: "search_reverse\n./evdns.c:3929:1" }
+edge: { sourcename: "./evdns.c:search_reverse" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3931:2" }
+edge: { sourcename: "./evdns.c:search_reverse" targetname: "event_errx" label: "./evdns.c:3931:2" }
+node: { title: "evdns_base_search_add" label: "evdns_base_search_add\n./evdns.c:3945:1" }
+edge: { sourcename: "evdns_base_search_add" targetname: "__indirect_call" label: "./evdns.c:3946:2" }
+edge: { sourcename: "evdns_base_search_add" targetname: "./evdns.c:search_postfix_add" label: "./evdns.c:3947:2" }
+edge: { sourcename: "evdns_base_search_add" targetname: "__indirect_call" label: "./evdns.c:3948:2" }
+node: { title: "evdns_search_add" label: "evdns_search_add\n./evdns.c:3951:1" }
+edge: { sourcename: "evdns_search_add" targetname: "evdns_base_search_add" label: "./evdns.c:3952:2" }
+node: { title: "evdns_base_search_ndots_set" label: "evdns_base_search_ndots_set\n./evdns.c:3957:1" }
+edge: { sourcename: "evdns_base_search_ndots_set" targetname: "__indirect_call" label: "./evdns.c:3958:2" }
+edge: { sourcename: "evdns_base_search_ndots_set" targetname: "./evdns.c:search_state_new" label: "./evdns.c:3959:62" }
+edge: { sourcename: "evdns_base_search_ndots_set" targetname: "__indirect_call" label: "./evdns.c:3962:2" }
+node: { title: "evdns_search_ndots_set" label: "evdns_search_ndots_set\n./evdns.c:3965:1" }
+edge: { sourcename: "evdns_search_ndots_set" targetname: "evdns_base_search_ndots_set" label: "./evdns.c:3966:2" }
+node: { title: "./evdns.c:search_set_from_hostname" label: "search_set_from_hostname\n./evdns.c:3970:1" }
+edge: { sourcename: "./evdns.c:search_set_from_hostname" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:3973:2" }
+edge: { sourcename: "./evdns.c:search_set_from_hostname" targetname: "event_errx" label: "./evdns.c:3973:2" }
+edge: { sourcename: "./evdns.c:search_set_from_hostname" targetname: "./evdns.c:search_postfix_clear" label: "./evdns.c:3974:2" }
+node: { title: "gethostname" label: "gethostname\n/usr/include/unistd.h:911:12" shape : ellipse }
+edge: { sourcename: "./evdns.c:search_set_from_hostname" targetname: "gethostname" label: "./evdns.c:3975:6" }
+edge: { sourcename: "./evdns.c:search_set_from_hostname" targetname: "strchr" label: "./evdns.c:3976:15" }
+edge: { sourcename: "./evdns.c:search_set_from_hostname" targetname: "./evdns.c:search_postfix_add" label: "./evdns.c:3978:2" }
+edge: { sourcename: "./evdns.c:search_set_from_hostname" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:search_make_new" label: "search_make_new\n./evdns.c:3983:1" }
+edge: { sourcename: "./evdns.c:search_make_new" targetname: "strlen" label: "./evdns.c:3984:26" }
+edge: { sourcename: "./evdns.c:search_make_new" targetname: "event_mm_malloc_" label: "./evdns.c:3997:35" }
+edge: { sourcename: "./evdns.c:search_make_new" targetname: "memcpy" label: "./evdns.c:3999:4" }
+edge: { sourcename: "./evdns.c:search_make_new" targetname: "memcpy" label: "./evdns.c:4001:4" }
+edge: { sourcename: "./evdns.c:search_make_new" targetname: "event_errx" label: "./evdns.c:4008:2" }
+node: { title: "./evdns.c:search_request_new" label: "search_request_new\n./evdns.c:4013:1" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:4015:2" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "event_errx" label: "./evdns.c:4015:2" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "event_errx" label: "./evdns.c:4016:2" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "event_errx" label: "./evdns.c:4017:2" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "./evdns.c:string_num_dots" label: "./evdns.c:4023:7" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "./evdns.c:request_new" label: "./evdns.c:4024:10" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "./evdns.c:search_make_new" label: "./evdns.c:4028:27" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "./evdns.c:request_new" label: "./evdns.c:4030:10" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "event_mm_free_" label: "./evdns.c:4031:4" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "event_errx" label: "./evdns.c:4035:3" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "event_mm_strdup_" label: "./evdns.c:4036:29" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "event_mm_free_" label: "./evdns.c:4040:5" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "./evdns.c:request_submit" label: "./evdns.c:4046:3" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "./evdns.c:request_new" label: "./evdns.c:4049:31" }
+edge: { sourcename: "./evdns.c:search_request_new" targetname: "./evdns.c:request_submit" label: "./evdns.c:4051:3" }
+node: { title: "./evdns.c:search_try_next" label: "search_try_next\n./evdns.c:4062:1" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:4066:2" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "event_errx" label: "./evdns.c:4066:2" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:string_num_dots" label: "./evdns.c:4074:8" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:request_new" label: "./evdns.c:4076:14" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4077:5" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:search_request_finished" label: "./evdns.c:4079:6" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:search_make_new" label: "./evdns.c:4086:14" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4088:3" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:request_new" label: "./evdns.c:4089:12" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "event_mm_free_" label: "./evdns.c:4090:3" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:request_finished" label: "./evdns.c:4097:2" }
+edge: { sourcename: "./evdns.c:search_try_next" targetname: "./evdns.c:request_submit" label: "./evdns.c:4100:2" }
+node: { title: "./evdns.c:search_request_finished" label: "search_request_finished\n./evdns.c:4105:1" }
+edge: { sourcename: "./evdns.c:search_request_finished" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:4106:2" }
+edge: { sourcename: "./evdns.c:search_request_finished" targetname: "event_errx" label: "./evdns.c:4106:2" }
+edge: { sourcename: "./evdns.c:search_request_finished" targetname: "./evdns.c:search_state_decref" label: "./evdns.c:4108:3" }
+edge: { sourcename: "./evdns.c:search_request_finished" targetname: "event_mm_free_" label: "./evdns.c:4112:3" }
+node: { title: "./evdns.c:evdns_resolv_set_defaults" label: "evdns_resolv_set_defaults\n./evdns.c:4121:1" }
+edge: { sourcename: "./evdns.c:evdns_resolv_set_defaults" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:4127:2" }
+edge: { sourcename: "./evdns.c:evdns_resolv_set_defaults" targetname: "event_errx" label: "./evdns.c:4127:2" }
+edge: { sourcename: "./evdns.c:evdns_resolv_set_defaults" targetname: "./evdns.c:search_set_from_hostname" label: "./evdns.c:4129:3" }
+edge: { sourcename: "./evdns.c:evdns_resolv_set_defaults" targetname: "evdns_base_nameserver_ip_add" label: "./evdns.c:4131:3" }
+node: { title: "./evdns.c:strtoint" label: "strtoint\n./evdns.c:4158:1" }
+node: { title: "strtol" label: "strtol\n/usr/include/stdlib.h:177:17" shape : ellipse }
+edge: { sourcename: "./evdns.c:strtoint" targetname: "strtol" label: "./evdns.c:4161:16" }
+edge: { sourcename: "./evdns.c:strtoint" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:evdns_strtotimeval" label: "evdns_strtotimeval\n./evdns.c:4168:1" }
+node: { title: "strtod" label: "strtod\n/usr/include/stdlib.h:118:15" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_strtotimeval" targetname: "strtod" label: "./evdns.c:4172:6" }
+edge: { sourcename: "./evdns.c:evdns_strtotimeval" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:strtoint_clipped" label: "strtoint_clipped\n./evdns.c:4184:1" }
+edge: { sourcename: "./evdns.c:strtoint_clipped" targetname: "./evdns.c:strtoint" label: "./evdns.c:4186:10" }
+node: { title: "./evdns.c:evdns_base_set_max_requests_inflight" label: "evdns_base_set_max_requests_inflight\n./evdns.c:4198:1" }
+edge: { sourcename: "./evdns.c:evdns_base_set_max_requests_inflight" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:4204:2" }
+edge: { sourcename: "./evdns.c:evdns_base_set_max_requests_inflight" targetname: "event_errx" label: "./evdns.c:4204:2" }
+edge: { sourcename: "./evdns.c:evdns_base_set_max_requests_inflight" targetname: "event_errx" label: "./evdns.c:4208:2" }
+edge: { sourcename: "./evdns.c:evdns_base_set_max_requests_inflight" targetname: "event_mm_calloc_" label: "./evdns.c:4209:14" }
+edge: { sourcename: "./evdns.c:evdns_base_set_max_requests_inflight" targetname: "./evdns.c:evdns_request_remove" label: "./evdns.c:4216:5" }
+edge: { sourcename: "./evdns.c:evdns_base_set_max_requests_inflight" targetname: "./evdns.c:evdns_request_insert" label: "./evdns.c:4217:5" }
+edge: { sourcename: "./evdns.c:evdns_base_set_max_requests_inflight" targetname: "event_mm_free_" label: "./evdns.c:4220:3" }
+node: { title: "evdns_base_set_option" label: "evdns_base_set_option\n./evdns.c:4230:1" }
+edge: { sourcename: "evdns_base_set_option" targetname: "__indirect_call" label: "./evdns.c:4234:2" }
+edge: { sourcename: "evdns_base_set_option" targetname: "./evdns.c:evdns_base_set_option_impl" label: "./evdns.c:4235:8" }
+edge: { sourcename: "evdns_base_set_option" targetname: "__indirect_call" label: "./evdns.c:4236:2" }
+node: { title: "./evdns.c:str_matches_option" label: "str_matches_option\n./evdns.c:4241:1" }
+edge: { sourcename: "./evdns.c:str_matches_option" targetname: "strlen" label: "./evdns.c:4246:18" }
+edge: { sourcename: "./evdns.c:str_matches_option" targetname: "strlen" label: "./evdns.c:4247:16" }
+node: { title: "strncmp" label: "strncmp\n/usr/include/string.h:159:12" shape : ellipse }
+edge: { sourcename: "./evdns.c:str_matches_option" targetname: "strncmp" label: "./evdns.c:4249:11" }
+edge: { sourcename: "./evdns.c:str_matches_option" targetname: "strncmp" label: "./evdns.c:4251:11" }
+node: { title: "evdns_server_port_set_option" label: "evdns_server_port_set_option\n./evdns.c:4258:1" }
+edge: { sourcename: "evdns_server_port_set_option" targetname: "__indirect_call" label: "./evdns.c:4262:2" }
+edge: { sourcename: "evdns_server_port_set_option" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4266:4" }
+edge: { sourcename: "evdns_server_port_set_option" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4271:3" }
+edge: { sourcename: "evdns_server_port_set_option" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4275:4" }
+edge: { sourcename: "evdns_server_port_set_option" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4281:3" }
+edge: { sourcename: "evdns_server_port_set_option" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4285:3" }
+edge: { sourcename: "evdns_server_port_set_option" targetname: "__indirect_call" label: "./evdns.c:4290:2" }
+node: { title: "./evdns.c:evdns_base_set_option_impl" label: "evdns_base_set_option_impl\n./evdns.c:4295:1" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:4298:2" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "event_errx" label: "./evdns.c:4298:2" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4299:6" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint" label: "./evdns.c:4300:21" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4303:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:search_state_new" label: "./evdns.c:4304:63" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4307:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_strtotimeval" label: "./evdns.c:4309:7" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4311:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4313:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_strtotimeval" label: "./evdns.c:4315:7" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4317:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4321:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint_clipped" label: "./evdns.c:4322:26" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4325:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4328:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint_clipped" label: "./evdns.c:4329:27" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4332:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_base_set_max_requests_inflight" label: "./evdns.c:4334:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4335:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint" label: "./evdns.c:4336:17" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4340:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4342:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint" label: "./evdns.c:4343:18" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4347:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "evutil_parse_sockaddr_port" label: "./evdns.c:4352:7" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4356:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_strtotimeval" label: "./evdns.c:4358:7" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4362:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4366:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint_clipped" label: "./evdns.c:4367:33" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4370:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4376:4" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4379:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint_clipped" label: "./evdns.c:4380:31" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4383:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4386:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint" label: "./evdns.c:4387:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4390:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4392:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint" label: "./evdns.c:4393:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4396:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4398:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_strtotimeval" label: "./evdns.c:4400:7" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4402:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4404:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4407:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4409:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4412:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:str_matches_option" label: "./evdns.c:4414:13" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:strtoint_clipped" label: "./evdns.c:4415:18" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4418:3" }
+edge: { sourcename: "./evdns.c:evdns_base_set_option_impl" targetname: "__stack_chk_fail" }
+node: { title: "evdns_set_option" label: "evdns_set_option\n./evdns.c:4425:1" }
+edge: { sourcename: "evdns_set_option" targetname: "evdns_base_new" label: "./evdns.c:4428:18" }
+edge: { sourcename: "evdns_set_option" targetname: "evdns_base_set_option" label: "./evdns.c:4429:9" }
+node: { title: "./evdns.c:resolv_conf_parse_line" label: "resolv_conf_parse_line\n./evdns.c:4433:1" }
+node: { title: "strtok_r" label: "strtok_r\n/usr/include/string.h:366:14" shape : ellipse }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strtok_r" label: "./evdns.c:4439:28" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:4440:2" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "event_errx" label: "./evdns.c:4440:2" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strcmp" label: "./evdns.c:4443:7" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strtok_r" label: "./evdns.c:4444:34" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "evdns_base_nameserver_ip_add" label: "./evdns.c:4447:4" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strcmp" label: "./evdns.c:4448:14" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strtok_r" label: "./evdns.c:4449:30" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "./evdns.c:search_postfix_clear" label: "./evdns.c:4451:4" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "./evdns.c:search_postfix_add" label: "./evdns.c:4452:4" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strcmp" label: "./evdns.c:4454:14" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "./evdns.c:search_postfix_clear" label: "./evdns.c:4456:3" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "./evdns.c:search_postfix_add" label: "./evdns.c:4459:4" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strtok_r" label: "./evdns.c:4458:20" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "./evdns.c:search_reverse" label: "./evdns.c:4461:3" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strcmp" label: "./evdns.c:4462:14" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strchr" label: "./evdns.c:4465:22" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "./evdns.c:evdns_base_set_option_impl" label: "./evdns.c:4466:4" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "strtok_r" label: "./evdns.c:4464:20" }
+edge: { sourcename: "./evdns.c:resolv_conf_parse_line" targetname: "__stack_chk_fail" }
+node: { title: "evdns_base_resolv_conf_parse" label: "evdns_base_resolv_conf_parse\n./evdns.c:4482:1" }
+edge: { sourcename: "evdns_base_resolv_conf_parse" targetname: "__indirect_call" label: "./evdns.c:4484:2" }
+edge: { sourcename: "evdns_base_resolv_conf_parse" targetname: "./evdns.c:evdns_base_resolv_conf_parse_impl" label: "./evdns.c:4485:8" }
+edge: { sourcename: "evdns_base_resolv_conf_parse" targetname: "__indirect_call" label: "./evdns.c:4486:2" }
+node: { title: "./evdns.c:evdns_get_default_hosts_filename" label: "evdns_get_default_hosts_filename\n./evdns.c:4491:1" }
+edge: { sourcename: "./evdns.c:evdns_get_default_hosts_filename" targetname: "event_mm_strdup_" label: "./evdns.c:4511:9" }
+node: { title: "./evdns.c:evdns_base_resolv_conf_parse_impl" label: "evdns_base_resolv_conf_parse_impl\n./evdns.c:4516:1" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4523:2" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "./evdns.c:evdns_get_default_hosts_filename" label: "./evdns.c:4530:17" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "evdns_base_load_hosts" label: "./evdns.c:4531:3" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "event_mm_free_" label: "./evdns.c:4533:4" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "./evdns.c:evdns_resolv_set_defaults" label: "./evdns.c:4537:3" }
+node: { title: "evutil_read_file_" label: "evutil_read_file_\n./util-internal.h:297:5" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "evutil_read_file_" label: "./evdns.c:4541:13" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "./evdns.c:evdns_resolv_set_defaults" label: "./evdns.c:4544:4" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "strchr" label: "./evdns.c:4553:25" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "./evdns.c:resolv_conf_parse_line" label: "./evdns.c:4555:4" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "./evdns.c:resolv_conf_parse_line" label: "./evdns.c:4559:4" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "evdns_base_nameserver_ip_add" label: "./evdns.c:4566:3" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "./evdns.c:search_set_from_hostname" label: "./evdns.c:4570:3" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "event_mm_free_" label: "./evdns.c:4573:2" }
+edge: { sourcename: "./evdns.c:evdns_base_resolv_conf_parse_impl" targetname: "__stack_chk_fail" }
+node: { title: "evdns_resolv_conf_parse" label: "evdns_resolv_conf_parse\n./evdns.c:4578:1" }
+edge: { sourcename: "evdns_resolv_conf_parse" targetname: "evdns_base_new" label: "./evdns.c:4580:18" }
+edge: { sourcename: "evdns_resolv_conf_parse" targetname: "evdns_base_resolv_conf_parse" label: "./evdns.c:4581:9" }
+node: { title: "evdns_base_new" label: "evdns_base_new\n./evdns.c:4816:1" }
+node: { title: "evutil_secure_rng_init" label: "evutil_secure_rng_init\n./include/event2/util.h:875:5" shape : ellipse }
+edge: { sourcename: "evdns_base_new" targetname: "evutil_secure_rng_init" label: "./evdns.c:4820:6" }
+edge: { sourcename: "evdns_base_new" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4821:3" }
+node: { title: "evutil_set_evdns_getaddrinfo_fn_" label: "evutil_set_evdns_getaddrinfo_fn_\n./util-internal.h:414:6" shape : ellipse }
+edge: { sourcename: "evdns_base_new" targetname: "evutil_set_evdns_getaddrinfo_fn_" label: "./evdns.c:4829:2" }
+node: { title: "evutil_set_evdns_getaddrinfo_cancel_fn_" label: "evutil_set_evdns_getaddrinfo_cancel_fn_\n./util-internal.h:418:6" shape : ellipse }
+edge: { sourcename: "evdns_base_new" targetname: "evutil_set_evdns_getaddrinfo_cancel_fn_" label: "./evdns.c:4830:2" }
+edge: { sourcename: "evdns_base_new" targetname: "event_mm_malloc_" label: "./evdns.c:4832:9" }
+edge: { sourcename: "evdns_base_new" targetname: "memset" label: "./evdns.c:4835:2" }
+edge: { sourcename: "evdns_base_new" targetname: "__indirect_call" label: "./evdns.c:4838:2" }
+edge: { sourcename: "evdns_base_new" targetname: "__indirect_call" label: "./evdns.c:4839:2" }
+edge: { sourcename: "evdns_base_new" targetname: "./evdns.c:evdns_base_set_max_requests_inflight" label: "./evdns.c:4844:2" }
+edge: { sourcename: "evdns_base_new" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:4877:3" }
+node: { title: "evutil_resolvconf_filename_" label: "evutil_resolvconf_filename_\n./util-internal.h:424:13" shape : ellipse }
+edge: { sourcename: "evdns_base_new" targetname: "evutil_resolvconf_filename_" label: "./evdns.c:4897:7" }
+edge: { sourcename: "evdns_base_new" targetname: "evdns_base_resolv_conf_parse" label: "./evdns.c:4897:7" }
+edge: { sourcename: "evdns_base_new" targetname: "./evdns.c:evdns_base_free_and_unlock" label: "./evdns.c:4900:4" }
+edge: { sourcename: "evdns_base_new" targetname: "__indirect_call" label: "./evdns.c:4905:2" }
+node: { title: "evdns_init" label: "evdns_init\n./evdns.c:4910:1" }
+edge: { sourcename: "evdns_init" targetname: "evdns_base_new" label: "./evdns.c:4912:28" }
+node: { title: "evdns_err_to_string" label: "evdns_err_to_string\n./evdns.c:4922:1" }
+node: { title: "./evdns.c:evdns_nameserver_free" label: "evdns_nameserver_free\n./evdns.c:4943:1" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_free" targetname: "evutil_closesocket" label: "./evdns.c:4946:3" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_free" targetname: "event_del" label: "./evdns.c:4947:9" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_free" targetname: "event_debug_unassign" label: "./evdns.c:4948:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_free" targetname: "event_del" label: "./evdns.c:4950:10" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_free" targetname: "evdns_cancel_request" label: "./evdns.c:4952:3" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_free" targetname: "event_debug_unassign" label: "./evdns.c:4955:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_free" targetname: "./evdns.c:disconnect_and_free_connection" label: "./evdns.c:4956:2" }
+edge: { sourcename: "./evdns.c:evdns_nameserver_free" targetname: "event_mm_free_" label: "./evdns.c:4957:2" }
+node: { title: "./evdns.c:evdns_base_free_and_unlock" label: "evdns_base_free_and_unlock\n./evdns.c:4961:1" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "./evdns.c:reply_schedule_callback" label: "./evdns.c:4973:4" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "./evdns.c:request_finished" label: "./evdns.c:4974:3" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "./evdns.c:reply_schedule_callback" label: "./evdns.c:4979:5" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "./evdns.c:request_finished" label: "./evdns.c:4980:4" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "./evdns.c:evdns_nameserver_free" label: "./evdns.c:4989:3" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "event_mm_free_" label: "./evdns.c:4999:4" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "event_mm_free_" label: "./evdns.c:5001:3" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "event_mm_free_" label: "./evdns.c:5009:4" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "event_mm_free_" label: "./evdns.c:5013:2" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "__indirect_call" label: "./evdns.c:5015:2" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "__indirect_call" label: "./evdns.c:5016:2" }
+edge: { sourcename: "./evdns.c:evdns_base_free_and_unlock" targetname: "event_mm_free_" label: "./evdns.c:5018:2" }
+node: { title: "evdns_base_free" label: "evdns_base_free\n./evdns.c:5022:1" }
+edge: { sourcename: "evdns_base_free" targetname: "__indirect_call" label: "./evdns.c:5024:2" }
+edge: { sourcename: "evdns_base_free" targetname: "./evdns.c:evdns_base_free_and_unlock" label: "./evdns.c:5025:2" }
+node: { title: "evdns_base_clear_host_addresses" label: "evdns_base_clear_host_addresses\n./evdns.c:5029:1" }
+edge: { sourcename: "evdns_base_clear_host_addresses" targetname: "__indirect_call" label: "./evdns.c:5032:2" }
+edge: { sourcename: "evdns_base_clear_host_addresses" targetname: "event_mm_free_" label: "./evdns.c:5035:3" }
+edge: { sourcename: "evdns_base_clear_host_addresses" targetname: "__indirect_call" label: "./evdns.c:5037:2" }
+node: { title: "evdns_shutdown" label: "evdns_shutdown\n./evdns.c:5041:1" }
+edge: { sourcename: "evdns_shutdown" targetname: "evdns_base_free" label: "./evdns.c:5046:3" }
+node: { title: "./evdns.c:evdns_base_parse_hosts_line" label: "evdns_base_parse_hosts_line\n./evdns.c:5052:1" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "strtok_r" label: "./evdns.c:5056:21" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:5060:2" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "event_errx" label: "./evdns.c:5060:2" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "memset" label: "./evdns.c:5067:2" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "evutil_parse_sockaddr_port" label: "./evdns.c:5068:6" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "./evdns.c:sockaddr_getport" label: "./evdns.c:5073:6" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "strchr" label: "./evdns.c:5079:15" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "strlen" label: "./evdns.c:5085:13" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "event_mm_calloc_" label: "./evdns.c:5087:8" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "event_errx" label: "./evdns.c:5090:3" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "memcpy" label: "./evdns.c:5091:3" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "memcpy" label: "./evdns.c:5092:3" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "strtok_r" label: "./evdns.c:5076:21" }
+edge: { sourcename: "./evdns.c:evdns_base_parse_hosts_line" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:evdns_base_load_hosts_impl" label: "evdns_base_load_hosts_impl\n./evdns.c:5106:1" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "evthread_is_debug_lock_held_" label: "./evdns.c:5112:2" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "event_errx" label: "./evdns.c:5112:2" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "evutil_read_file_" label: "./evdns.c:5115:13" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "event_strlcpy_" label: "./evdns.c:5117:3" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "./evdns.c:evdns_base_parse_hosts_line" label: "./evdns.c:5118:3" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "event_strlcpy_" label: "./evdns.c:5119:3" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "./evdns.c:evdns_base_parse_hosts_line" label: "./evdns.c:5120:3" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "strchr" label: "./evdns.c:5128:9" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "./evdns.c:evdns_base_parse_hosts_line" label: "./evdns.c:5132:4" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "./evdns.c:evdns_base_parse_hosts_line" label: "./evdns.c:5135:4" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "event_mm_free_" label: "./evdns.c:5140:2" }
+edge: { sourcename: "./evdns.c:evdns_base_load_hosts_impl" targetname: "__stack_chk_fail" }
+node: { title: "evdns_base_load_hosts" label: "evdns_base_load_hosts\n./evdns.c:5145:1" }
+edge: { sourcename: "evdns_base_load_hosts" targetname: "__indirect_call" label: "./evdns.c:5150:2" }
+edge: { sourcename: "evdns_base_load_hosts" targetname: "./evdns.c:evdns_base_load_hosts_impl" label: "./evdns.c:5151:8" }
+edge: { sourcename: "evdns_base_load_hosts" targetname: "__indirect_call" label: "./evdns.c:5152:2" }
+node: { title: "./evdns.c:evdns_err_to_getaddrinfo_err" label: "evdns_err_to_getaddrinfo_err\n./evdns.c:5200:1" }
+node: { title: "./evdns.c:getaddrinfo_merge_err" label: "getaddrinfo_merge_err\n./evdns.c:5213:1" }
+node: { title: "./evdns.c:free_getaddrinfo_request" label: "free_getaddrinfo_request\n./evdns.c:5223:1" }
+node: { title: "evutil_freeaddrinfo" label: "evutil_freeaddrinfo\n./include/event2/util.h:841:6" shape : ellipse }
+edge: { sourcename: "./evdns.c:free_getaddrinfo_request" targetname: "evutil_freeaddrinfo" label: "./evdns.c:5228:3" }
+edge: { sourcename: "./evdns.c:free_getaddrinfo_request" targetname: "event_mm_free_" label: "./evdns.c:5230:3" }
+edge: { sourcename: "./evdns.c:free_getaddrinfo_request" targetname: "event_del" label: "./evdns.c:5231:2" }
+edge: { sourcename: "./evdns.c:free_getaddrinfo_request" targetname: "event_mm_free_" label: "./evdns.c:5232:2" }
+node: { title: "./evdns.c:add_cname_to_reply" label: "add_cname_to_reply\n./evdns.c:5237:1" }
+node: { title: "./evdns.c:evdns_getaddrinfo_timeout_cb" label: "evdns_getaddrinfo_timeout_cb\n./evdns.c:5251:1" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "evdns_cancel_request" label: "./evdns.c:5260:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "__indirect_call" label: "./evdns.c:5262:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "__indirect_call" label: "./evdns.c:5264:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "evdns_cancel_request" label: "./evdns.c:5269:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "__indirect_call" label: "./evdns.c:5271:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "__indirect_call" label: "./evdns.c:5273:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "event_errx" label: "./evdns.c:5278:2" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "./evdns.c:add_cname_to_reply" label: "./evdns.c:5282:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "__indirect_call" label: "./evdns.c:5283:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "__indirect_call" label: "./evdns.c:5289:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_timeout_cb" targetname: "./evdns.c:free_getaddrinfo_request" label: "./evdns.c:5298:3" }
+node: { title: "./evdns.c:evdns_getaddrinfo_set_timeout" label: "evdns_getaddrinfo_set_timeout\n./evdns.c:5303:1" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_set_timeout" targetname: "event_add" label: "./evdns.c:5306:9" }
+node: { title: "./evdns.c:evdns_result_is_answer" label: "evdns_result_is_answer\n./evdns.c:5310:1" }
+node: { title: "./evdns.c:evdns_getaddrinfo_gotresolve" label: "evdns_getaddrinfo_gotresolve\n./evdns.c:5317:1" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "event_errx" label: "./evdns.c:5335:2" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__indirect_call" label: "./evdns.c:5346:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:evdns_result_is_answer" label: "./evdns.c:5347:7" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__indirect_call" label: "./evdns.c:5356:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:free_getaddrinfo_request" label: "./evdns.c:5368:4" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:free_getaddrinfo_request" label: "./evdns.c:5375:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:evdns_err_to_getaddrinfo_err" label: "./evdns.c:5385:9" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:evdns_getaddrinfo_set_timeout" label: "./evdns.c:5395:5" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__indirect_call" label: "./evdns.c:5402:4" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:add_cname_to_reply" label: "./evdns.c:5406:4" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__indirect_call" label: "./evdns.c:5407:4" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:getaddrinfo_merge_err" label: "./evdns.c:5411:11" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__indirect_call" label: "./evdns.c:5413:4" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:free_getaddrinfo_request" label: "./evdns.c:5415:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__indirect_call" label: "./evdns.c:5424:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:free_getaddrinfo_request" label: "./evdns.c:5425:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "event_errx" label: "./evdns.c:5431:2" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "memset" label: "./evdns.c:5434:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "htons" label: "./evdns.c:5436:18" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "memset" label: "./evdns.c:5446:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "htons" label: "./evdns.c:5448:20" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "memcpy" label: "./evdns.c:5462:3" }
+node: { title: "evutil_new_addrinfo_" label: "evutil_new_addrinfo_\n./util-internal.h:427:25" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "evutil_new_addrinfo_" label: "./evdns.c:5463:8" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "evdns_cancel_request" label: "./evdns.c:5466:5" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__indirect_call" label: "./evdns.c:5468:4" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "evutil_freeaddrinfo" label: "./evdns.c:5470:5" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:free_getaddrinfo_request" label: "./evdns.c:5473:5" }
+node: { title: "evutil_addrinfo_append_" label: "evutil_addrinfo_append_\n./util-internal.h:430:25" shape : ellipse }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "evutil_addrinfo_append_" label: "./evdns.c:5476:9" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:evdns_getaddrinfo_set_timeout" label: "./evdns.c:5482:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "evutil_addrinfo_append_" label: "./evdns.c:5490:11" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "evutil_addrinfo_append_" label: "./evdns.c:5493:11" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:add_cname_to_reply" label: "./evdns.c:5499:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__indirect_call" label: "./evdns.c:5500:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "./evdns.c:free_getaddrinfo_request" label: "./evdns.c:5503:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_gotresolve" targetname: "__stack_chk_fail" }
+node: { title: "./evdns.c:find_hosts_entry" label: "find_hosts_entry\n./evdns.c:5508:1" }
+edge: { sourcename: "./evdns.c:find_hosts_entry" targetname: "evutil_ascii_strcasecmp" label: "./evdns.c:5519:8" }
+node: { title: "./evdns.c:evdns_getaddrinfo_fromhosts" label: "evdns_getaddrinfo_fromhosts\n./evdns.c:5526:1" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_fromhosts" targetname: "__indirect_call" label: "./evdns.c:5535:2" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_fromhosts" targetname: "./evdns.c:find_hosts_entry" label: "./evdns.c:5536:11" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_fromhosts" targetname: "evutil_new_addrinfo_" label: "./evdns.c:5543:12" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_fromhosts" targetname: "./evdns.c:sockaddr_setport" label: "./evdns.c:5548:3" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_fromhosts" targetname: "evutil_addrinfo_append_" label: "./evdns.c:5549:8" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_fromhosts" targetname: "./evdns.c:find_hosts_entry" label: "./evdns.c:5537:10" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_fromhosts" targetname: "__indirect_call" label: "./evdns.c:5551:2" }
+edge: { sourcename: "./evdns.c:evdns_getaddrinfo_fromhosts" targetname: "evutil_freeaddrinfo" label: "./evdns.c:5560:4" }
+node: { title: "evdns_getaddrinfo" label: "evdns_getaddrinfo\n./evdns.c:5566:1" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:5582:4" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__indirect_call" label: "./evdns.c:5585:4" }
+node: { title: "evutil_getaddrinfo" label: "evutil_getaddrinfo\n./include/event2/util.h:836:5" shape : ellipse }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "evutil_getaddrinfo" label: "./evdns.c:5593:9" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__indirect_call" label: "./evdns.c:5594:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "memcpy" label: "./evdns.c:5599:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "memset" label: "./evdns.c:5601:3" }
+node: { title: "evutil_adjust_hints_for_addrconfig_" label: "evutil_adjust_hints_for_addrconfig_\n./util-internal.h:433:6" shape : ellipse }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "evutil_adjust_hints_for_addrconfig_" label: "./evdns.c:5605:2" }
+node: { title: "evutil_getaddrinfo_common_" label: "evutil_getaddrinfo_common_\n./util-internal.h:435:5" shape : ellipse }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "evutil_getaddrinfo_common_" label: "./evdns.c:5612:8" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__indirect_call" label: "./evdns.c:5614:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "./evdns.c:evdns_getaddrinfo_fromhosts" label: "./evdns.c:5619:7" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__indirect_call" label: "./evdns.c:5620:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "event_mm_calloc_" label: "./evdns.c:5627:9" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__indirect_call" label: "./evdns.c:5629:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "memcpy" label: "./evdns.c:5633:2" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__indirect_call" label: "./evdns.c:5656:2" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:5659:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "evdns_base_resolve_ipv4" label: "./evdns.c:5662:26" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "./evdns.c:evdns_log_" label: "./evdns.c:5670:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "evdns_base_resolve_ipv6" label: "./evdns.c:5673:26" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "event_assign" label: "./evdns.c:5681:2" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__indirect_call" label: "./evdns.c:5686:2" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "event_mm_free_" label: "./evdns.c:5691:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__indirect_call" label: "./evdns.c:5692:3" }
+edge: { sourcename: "evdns_getaddrinfo" targetname: "__stack_chk_fail" }
+node: { title: "evdns_getaddrinfo_cancel" label: "evdns_getaddrinfo_cancel\n./evdns.c:5698:1" }
+edge: { sourcename: "evdns_getaddrinfo_cancel" targetname: "__indirect_call" label: "./evdns.c:5700:2" }
+edge: { sourcename: "evdns_getaddrinfo_cancel" targetname: "__indirect_call" label: "./evdns.c:5702:3" }
+edge: { sourcename: "evdns_getaddrinfo_cancel" targetname: "event_del" label: "./evdns.c:5705:2" }
+edge: { sourcename: "evdns_getaddrinfo_cancel" targetname: "evdns_cancel_request" label: "./evdns.c:5708:3" }
+edge: { sourcename: "evdns_getaddrinfo_cancel" targetname: "evdns_cancel_request" label: "./evdns.c:5710:3" }
+edge: { sourcename: "evdns_getaddrinfo_cancel" targetname: "__indirect_call" label: "./evdns.c:5711:2" }
+}

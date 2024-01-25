@@ -1,0 +1,130 @@
+graph: { title: "./event_tagging.c"
+node: { title: "evtag_init" label: "evtag_init\n./event_tagging.c:106:1" }
+node: { title: "./event_tagging.c:encode_int_internal" label: "encode_int_internal\n./event_tagging.c:145:1" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./event_tagging.c:encode_int_internal" targetname: "memset" label: "./event_tagging.c:147:2" }
+node: { title: "./event_tagging.c:encode_int64_internal" label: "encode_int64_internal\n./event_tagging.c:151:1" }
+edge: { sourcename: "./event_tagging.c:encode_int64_internal" targetname: "memset" label: "./event_tagging.c:153:2" }
+node: { title: "evtag_encode_int" label: "evtag_encode_int\n./event_tagging.c:157:1" }
+edge: { sourcename: "evtag_encode_int" targetname: "./event_tagging.c:encode_int_internal" label: "./event_tagging.c:160:12" }
+node: { title: "evbuffer_add" label: "evbuffer_add\n./include/event2/buffer.h:358:5" shape : ellipse }
+edge: { sourcename: "evtag_encode_int" targetname: "evbuffer_add" label: "./event_tagging.c:161:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "evtag_encode_int" targetname: "__stack_chk_fail" }
+node: { title: "evtag_encode_int64" label: "evtag_encode_int64\n./event_tagging.c:165:1" }
+edge: { sourcename: "evtag_encode_int64" targetname: "./event_tagging.c:encode_int64_internal" label: "./event_tagging.c:168:12" }
+edge: { sourcename: "evtag_encode_int64" targetname: "evbuffer_add" label: "./event_tagging.c:169:2" }
+edge: { sourcename: "evtag_encode_int64" targetname: "__stack_chk_fail" }
+node: { title: "evtag_encode_tag" label: "evtag_encode_tag\n./event_tagging.c:178:1" }
+edge: { sourcename: "evtag_encode_tag" targetname: "memset" label: "./event_tagging.c:183:2" }
+edge: { sourcename: "evtag_encode_tag" targetname: "evbuffer_add" label: "./event_tagging.c:195:3" }
+edge: { sourcename: "evtag_encode_tag" targetname: "__stack_chk_fail" }
+node: { title: "./event_tagging.c:decode_tag_internal" label: "decode_tag_internal\n./event_tagging.c:201:1" }
+node: { title: "evbuffer_get_length" label: "evbuffer_get_length\n./include/event2/buffer.h:256:8" shape : ellipse }
+edge: { sourcename: "./event_tagging.c:decode_tag_internal" targetname: "evbuffer_get_length" label: "./event_tagging.c:204:15" }
+node: { title: "evbuffer_pullup" label: "evbuffer_pullup\n./include/event2/buffer.h:1041:16" shape : ellipse }
+edge: { sourcename: "./event_tagging.c:decode_tag_internal" targetname: "evbuffer_pullup" label: "./event_tagging.c:213:9" }
+node: { title: "evbuffer_drain" label: "evbuffer_drain\n./include/event2/buffer.h:739:5" shape : ellipse }
+edge: { sourcename: "./event_tagging.c:decode_tag_internal" targetname: "evbuffer_drain" label: "./event_tagging.c:240:3" }
+node: { title: "evtag_decode_tag" label: "evtag_decode_tag\n./event_tagging.c:249:1" }
+edge: { sourcename: "evtag_decode_tag" targetname: "./event_tagging.c:decode_tag_internal" label: "./event_tagging.c:251:10" }
+node: { title: "evtag_marshal" label: "evtag_marshal\n./event_tagging.c:261:1" }
+edge: { sourcename: "evtag_marshal" targetname: "evtag_encode_tag" label: "./event_tagging.c:264:2" }
+edge: { sourcename: "evtag_marshal" targetname: "evtag_encode_int" label: "./event_tagging.c:265:2" }
+edge: { sourcename: "evtag_marshal" targetname: "evbuffer_add" label: "./event_tagging.c:266:2" }
+node: { title: "evtag_marshal_buffer" label: "evtag_marshal_buffer\n./event_tagging.c:270:1" }
+edge: { sourcename: "evtag_marshal_buffer" targetname: "evtag_encode_tag" label: "./event_tagging.c:273:2" }
+edge: { sourcename: "evtag_marshal_buffer" targetname: "evbuffer_get_length" label: "./event_tagging.c:275:39" }
+edge: { sourcename: "evtag_marshal_buffer" targetname: "evtag_encode_int" label: "./event_tagging.c:275:2" }
+node: { title: "evbuffer_add_buffer" label: "evbuffer_add_buffer\n./include/event2/buffer.h:476:5" shape : ellipse }
+edge: { sourcename: "evtag_marshal_buffer" targetname: "evbuffer_add_buffer" label: "./event_tagging.c:276:2" }
+node: { title: "evtag_marshal_int" label: "evtag_marshal_int\n./event_tagging.c:281:1" }
+edge: { sourcename: "evtag_marshal_int" targetname: "./event_tagging.c:encode_int_internal" label: "./event_tagging.c:284:12" }
+edge: { sourcename: "evtag_marshal_int" targetname: "evtag_encode_tag" label: "./event_tagging.c:286:2" }
+edge: { sourcename: "evtag_marshal_int" targetname: "evtag_encode_int" label: "./event_tagging.c:287:2" }
+edge: { sourcename: "evtag_marshal_int" targetname: "evbuffer_add" label: "./event_tagging.c:288:2" }
+edge: { sourcename: "evtag_marshal_int" targetname: "__stack_chk_fail" }
+node: { title: "evtag_marshal_int64" label: "evtag_marshal_int64\n./event_tagging.c:292:1" }
+edge: { sourcename: "evtag_marshal_int64" targetname: "./event_tagging.c:encode_int64_internal" label: "./event_tagging.c:296:12" }
+edge: { sourcename: "evtag_marshal_int64" targetname: "evtag_encode_tag" label: "./event_tagging.c:298:2" }
+edge: { sourcename: "evtag_marshal_int64" targetname: "evtag_encode_int" label: "./event_tagging.c:299:2" }
+edge: { sourcename: "evtag_marshal_int64" targetname: "evbuffer_add" label: "./event_tagging.c:300:2" }
+edge: { sourcename: "evtag_marshal_int64" targetname: "__stack_chk_fail" }
+node: { title: "evtag_marshal_string" label: "evtag_marshal_string\n./event_tagging.c:304:1" }
+node: { title: "strlen" label: "strlen\n/usr/include/string.h:407:15" shape : ellipse }
+edge: { sourcename: "evtag_marshal_string" targetname: "strlen" label: "./event_tagging.c:307:47" }
+edge: { sourcename: "evtag_marshal_string" targetname: "evtag_marshal" label: "./event_tagging.c:307:2" }
+node: { title: "evtag_marshal_timeval" label: "evtag_marshal_timeval\n./event_tagging.c:311:1" }
+edge: { sourcename: "evtag_marshal_timeval" targetname: "./event_tagging.c:encode_int_internal" label: "./event_tagging.c:314:12" }
+edge: { sourcename: "evtag_marshal_timeval" targetname: "./event_tagging.c:encode_int_internal" label: "./event_tagging.c:315:9" }
+edge: { sourcename: "evtag_marshal_timeval" targetname: "evtag_marshal" label: "./event_tagging.c:316:2" }
+edge: { sourcename: "evtag_marshal_timeval" targetname: "__stack_chk_fail" }
+node: { title: "./event_tagging.c:decode_int_internal" label: "decode_int_internal\n./event_tagging.c:366:1" }
+edge: { sourcename: "./event_tagging.c:decode_int_internal" targetname: "evbuffer_get_length" label: "./event_tagging.c:369:2" }
+edge: { sourcename: "./event_tagging.c:decode_int_internal" targetname: "evbuffer_pullup" label: "./event_tagging.c:369:2" }
+edge: { sourcename: "./event_tagging.c:decode_int_internal" targetname: "evbuffer_pullup" label: "./event_tagging.c:369:2" }
+node: { title: "./event_tagging.c:decode_int64_internal" label: "decode_int64_internal\n./event_tagging.c:373:1" }
+edge: { sourcename: "./event_tagging.c:decode_int64_internal" targetname: "evbuffer_get_length" label: "./event_tagging.c:376:2" }
+edge: { sourcename: "./event_tagging.c:decode_int64_internal" targetname: "evbuffer_pullup" label: "./event_tagging.c:376:2" }
+edge: { sourcename: "./event_tagging.c:decode_int64_internal" targetname: "evbuffer_pullup" label: "./event_tagging.c:376:2" }
+node: { title: "evtag_decode_int" label: "evtag_decode_int\n./event_tagging.c:380:1" }
+edge: { sourcename: "evtag_decode_int" targetname: "./event_tagging.c:decode_int_internal" label: "./event_tagging.c:382:12" }
+edge: { sourcename: "evtag_decode_int" targetname: "evbuffer_drain" label: "./event_tagging.c:384:3" }
+node: { title: "evtag_decode_int64" label: "evtag_decode_int64\n./event_tagging.c:390:1" }
+edge: { sourcename: "evtag_decode_int64" targetname: "./event_tagging.c:decode_int64_internal" label: "./event_tagging.c:392:12" }
+edge: { sourcename: "evtag_decode_int64" targetname: "evbuffer_drain" label: "./event_tagging.c:394:3" }
+node: { title: "evtag_peek" label: "evtag_peek\n./event_tagging.c:400:1" }
+edge: { sourcename: "evtag_peek" targetname: "./event_tagging.c:decode_tag_internal" label: "./event_tagging.c:402:10" }
+node: { title: "evtag_peek_length" label: "evtag_peek_length\n./event_tagging.c:406:1" }
+edge: { sourcename: "evtag_peek_length" targetname: "./event_tagging.c:decode_tag_internal" label: "./event_tagging.c:410:8" }
+edge: { sourcename: "evtag_peek_length" targetname: "./event_tagging.c:decode_int_internal" label: "./event_tagging.c:414:8" }
+node: { title: "evtag_payload_length" label: "evtag_payload_length\n./event_tagging.c:424:1" }
+edge: { sourcename: "evtag_payload_length" targetname: "./event_tagging.c:decode_tag_internal" label: "./event_tagging.c:428:8" }
+edge: { sourcename: "evtag_payload_length" targetname: "./event_tagging.c:decode_int_internal" label: "./event_tagging.c:432:8" }
+node: { title: "evtag_unmarshal_header" label: "evtag_unmarshal_header\n./event_tagging.c:442:1" }
+edge: { sourcename: "evtag_unmarshal_header" targetname: "./event_tagging.c:decode_tag_internal" label: "./event_tagging.c:446:6" }
+edge: { sourcename: "evtag_unmarshal_header" targetname: "evtag_decode_int" label: "./event_tagging.c:448:6" }
+edge: { sourcename: "evtag_unmarshal_header" targetname: "evbuffer_get_length" label: "./event_tagging.c:451:6" }
+edge: { sourcename: "evtag_unmarshal_header" targetname: "__stack_chk_fail" }
+node: { title: "evtag_consume" label: "evtag_consume\n./event_tagging.c:458:1" }
+edge: { sourcename: "evtag_consume" targetname: "evtag_unmarshal_header" label: "./event_tagging.c:461:13" }
+edge: { sourcename: "evtag_consume" targetname: "evbuffer_drain" label: "./event_tagging.c:463:2" }
+node: { title: "evtag_unmarshal" label: "evtag_unmarshal\n./event_tagging.c:471:1" }
+edge: { sourcename: "evtag_unmarshal" targetname: "evtag_unmarshal_header" label: "./event_tagging.c:475:13" }
+edge: { sourcename: "evtag_unmarshal" targetname: "evbuffer_pullup" label: "./event_tagging.c:478:24" }
+edge: { sourcename: "evtag_unmarshal" targetname: "evbuffer_add" label: "./event_tagging.c:478:6" }
+edge: { sourcename: "evtag_unmarshal" targetname: "evbuffer_drain" label: "./event_tagging.c:481:2" }
+node: { title: "evtag_unmarshal_int" label: "evtag_unmarshal_int\n./event_tagging.c:489:1" }
+edge: { sourcename: "evtag_unmarshal_int" targetname: "./event_tagging.c:decode_tag_internal" label: "./event_tagging.c:496:6" }
+edge: { sourcename: "evtag_unmarshal_int" targetname: "evtag_decode_int" label: "./event_tagging.c:500:6" }
+edge: { sourcename: "evtag_unmarshal_int" targetname: "evbuffer_get_length" label: "./event_tagging.c:503:6" }
+edge: { sourcename: "evtag_unmarshal_int" targetname: "./event_tagging.c:decode_int_internal" label: "./event_tagging.c:506:11" }
+edge: { sourcename: "evtag_unmarshal_int" targetname: "evbuffer_drain" label: "./event_tagging.c:507:2" }
+edge: { sourcename: "evtag_unmarshal_int" targetname: "__stack_chk_fail" }
+node: { title: "evtag_unmarshal_int64" label: "evtag_unmarshal_int64\n./event_tagging.c:515:1" }
+edge: { sourcename: "evtag_unmarshal_int64" targetname: "./event_tagging.c:decode_tag_internal" label: "./event_tagging.c:522:6" }
+edge: { sourcename: "evtag_unmarshal_int64" targetname: "evtag_decode_int" label: "./event_tagging.c:526:6" }
+edge: { sourcename: "evtag_unmarshal_int64" targetname: "evbuffer_get_length" label: "./event_tagging.c:529:6" }
+edge: { sourcename: "evtag_unmarshal_int64" targetname: "./event_tagging.c:decode_int64_internal" label: "./event_tagging.c:532:11" }
+edge: { sourcename: "evtag_unmarshal_int64" targetname: "evbuffer_drain" label: "./event_tagging.c:533:2" }
+edge: { sourcename: "evtag_unmarshal_int64" targetname: "__stack_chk_fail" }
+node: { title: "evtag_unmarshal_fixed" label: "evtag_unmarshal_fixed\n./event_tagging.c:543:1" }
+edge: { sourcename: "evtag_unmarshal_fixed" targetname: "evtag_unmarshal_header" label: "./event_tagging.c:550:17" }
+node: { title: "evbuffer_remove" label: "evbuffer_remove\n./include/event2/buffer.h:373:5" shape : ellipse }
+edge: { sourcename: "evtag_unmarshal_fixed" targetname: "evbuffer_remove" label: "./event_tagging.c:557:2" }
+edge: { sourcename: "evtag_unmarshal_fixed" targetname: "__stack_chk_fail" }
+node: { title: "evtag_unmarshal_string" label: "evtag_unmarshal_string\n./event_tagging.c:562:1" }
+edge: { sourcename: "evtag_unmarshal_string" targetname: "evtag_unmarshal_header" label: "./event_tagging.c:568:17" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "evtag_unmarshal_string" targetname: "event_mm_malloc_" label: "./event_tagging.c:572:13" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "evtag_unmarshal_string" targetname: "event_warn" label: "./event_tagging.c:574:3" }
+edge: { sourcename: "evtag_unmarshal_string" targetname: "evbuffer_remove" label: "./event_tagging.c:577:2" }
+edge: { sourcename: "evtag_unmarshal_string" targetname: "__stack_chk_fail" }
+node: { title: "evtag_unmarshal_timeval" label: "evtag_unmarshal_timeval\n./event_tagging.c:584:1" }
+edge: { sourcename: "evtag_unmarshal_timeval" targetname: "evtag_unmarshal_header" label: "./event_tagging.c:592:13" }
+edge: { sourcename: "evtag_unmarshal_timeval" targetname: "./event_tagging.c:decode_int_internal" label: "./event_tagging.c:596:16" }
+edge: { sourcename: "evtag_unmarshal_timeval" targetname: "./event_tagging.c:decode_int_internal" label: "./event_tagging.c:599:17" }
+edge: { sourcename: "evtag_unmarshal_timeval" targetname: "evbuffer_drain" label: "./event_tagging.c:607:2" }
+edge: { sourcename: "evtag_unmarshal_timeval" targetname: "__stack_chk_fail" }
+}

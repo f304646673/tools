@@ -1,0 +1,34 @@
+graph: { title: "./test/test-time.c"
+node: { title: "./test/test-time.c:rand_int" label: "rand_int\n./test/test-time.c:55:1" }
+node: { title: "evutil_weakrand_" label: "evutil_weakrand_\n./util-internal.h:343:12" shape : ellipse }
+edge: { sourcename: "./test/test-time.c:rand_int" targetname: "evutil_weakrand_" label: "./test/test-time.c:57:9" }
+node: { title: "./test/test-time.c:time_cb" label: "time_cb\n./test/test-time.c:61:1" }
+edge: { sourcename: "./test/test-time.c:time_cb" targetname: "./test/test-time.c:rand_int" label: "./test/test-time.c:70:8" }
+edge: { sourcename: "./test/test-time.c:time_cb" targetname: "./test/test-time.c:rand_int" label: "./test/test-time.c:72:17" }
+node: { title: "event_add" label: "event_add\n./include/event2/event.h:1267:5" shape : ellipse }
+edge: { sourcename: "./test/test-time.c:time_cb" targetname: "event_add" label: "./test/test-time.c:74:5" }
+node: { title: "event_del" label: "event_del\n./include/event2/event.h:1293:5" shape : ellipse }
+edge: { sourcename: "./test/test-time.c:time_cb" targetname: "event_del" label: "./test/test-time.c:76:5" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./test/test-time.c:time_cb" targetname: "__stack_chk_fail" }
+node: { title: "main" label: "main\n./test/test-time.c:82:1" }
+node: { title: "evutil_weakrand_seed_" label: "evutil_weakrand_seed_\n./util-internal.h:337:13" shape : ellipse }
+edge: { sourcename: "main" targetname: "evutil_weakrand_seed_" label: "./test/test-time.c:97:2" }
+node: { title: "getenv" label: "getenv\n/usr/include/stdlib.h:641:14" shape : ellipse }
+edge: { sourcename: "main" targetname: "getenv" label: "./test/test-time.c:99:6" }
+node: { title: "event_enable_debug_logging" label: "event_enable_debug_logging\n./include/event2/event.h:808:6" shape : ellipse }
+edge: { sourcename: "main" targetname: "event_enable_debug_logging" label: "./test/test-time.c:100:3" }
+node: { title: "event_base_new" label: "event_base_new\n./include/event2/event.h:344:20" shape : ellipse }
+edge: { sourcename: "main" targetname: "event_base_new" label: "./test/test-time.c:103:9" }
+node: { title: "event_self_cbarg" label: "event_self_cbarg\n./include/event2/event.h:1073:7" shape : ellipse }
+edge: { sourcename: "main" targetname: "event_self_cbarg" label: "./test/test-time.c:106:11" }
+node: { title: "event_new" label: "event_new\n./include/event2/event.h:1124:15" shape : ellipse }
+edge: { sourcename: "main" targetname: "event_new" label: "./test/test-time.c:106:11" }
+edge: { sourcename: "main" targetname: "./test/test-time.c:rand_int" label: "./test/test-time.c:108:16" }
+edge: { sourcename: "main" targetname: "event_add" label: "./test/test-time.c:109:3" }
+node: { title: "event_base_dispatch" label: "event_base_dispatch\n./include/event2/event.h:373:5" shape : ellipse }
+edge: { sourcename: "main" targetname: "event_base_dispatch" label: "./test/test-time.c:112:6" }
+node: { title: "printf" label: "printf\n/usr/include/stdio.h:356:12" shape : ellipse }
+edge: { sourcename: "main" targetname: "printf" label: "./test/test-time.c:114:2" }
+edge: { sourcename: "main" targetname: "__stack_chk_fail" }
+}

@@ -1,0 +1,135 @@
+graph: { title: "./evmap.c"
+node: { title: "evmap_io_initmap_" label: "evmap_io_initmap_\n./evmap.c:189:1" }
+edge: { sourcename: "evmap_io_initmap_" targetname: "evmap_signal_initmap_" label: "./evmap.c:191:2" }
+node: { title: "evmap_io_clear_" label: "evmap_io_clear_\n./evmap.c:194:1" }
+edge: { sourcename: "evmap_io_clear_" targetname: "evmap_signal_clear_" label: "./evmap.c:196:2" }
+node: { title: "./evmap.c:evmap_make_space" label: "evmap_make_space\n./evmap.c:205:1" }
+node: { title: "event_mm_realloc_" label: "event_mm_realloc_\n./mm-internal.h:72:7" shape : ellipse }
+edge: { sourcename: "./evmap.c:evmap_make_space" targetname: "event_mm_realloc_" label: "./evmap.c:220:18" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./evmap.c:evmap_make_space" targetname: "memset" label: "./evmap.c:224:3" }
+node: { title: "evmap_signal_initmap_" label: "evmap_signal_initmap_\n./evmap.c:235:1" }
+node: { title: "evmap_signal_clear_" label: "evmap_signal_clear_\n./evmap.c:242:1" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "evmap_signal_clear_" targetname: "event_mm_free_" label: "./evmap.c:248:5" }
+edge: { sourcename: "evmap_signal_clear_" targetname: "event_mm_free_" label: "./evmap.c:250:3" }
+node: { title: "./evmap.c:evmap_io_init" label: "evmap_io_init\n./evmap.c:261:1" }
+node: { title: "evmap_io_add_" label: "evmap_io_add_\n./evmap.c:273:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "evmap_io_add_" targetname: "event_errx" label: "./evmap.c:282:2" }
+edge: { sourcename: "evmap_io_add_" targetname: "./evmap.c:evmap_make_space" label: "./evmap.c:289:7" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./mm-internal.h:58:7" shape : ellipse }
+edge: { sourcename: "evmap_io_add_" targetname: "event_mm_calloc_" label: "./evmap.c:293:2" }
+edge: { sourcename: "evmap_io_add_" targetname: "./evmap.c:evmap_io_init" label: "./evmap.c:293:2" }
+node: { title: "event_warnx" label: "event_warnx\n./log-internal.h:68:6" shape : ellipse }
+edge: { sourcename: "evmap_io_add_" targetname: "event_warnx" label: "./evmap.c:320:3" }
+edge: { sourcename: "evmap_io_add_" targetname: "event_warnx" label: "./evmap.c:327:3" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "evmap_io_add_" targetname: "__indirect_call" label: "./evmap.c:337:7" }
+node: { title: "evmap_io_del_" label: "evmap_io_del_\n./evmap.c:354:1" }
+edge: { sourcename: "evmap_io_del_" targetname: "event_errx" label: "./evmap.c:365:2" }
+edge: { sourcename: "evmap_io_del_" targetname: "event_errx" label: "./evmap.c:388:3" }
+edge: { sourcename: "evmap_io_del_" targetname: "event_errx" label: "./evmap.c:393:3" }
+edge: { sourcename: "evmap_io_del_" targetname: "event_errx" label: "./evmap.c:398:3" }
+edge: { sourcename: "evmap_io_del_" targetname: "__indirect_call" label: "./evmap.c:403:7" }
+node: { title: "evmap_io_active_" label: "evmap_io_active_\n./evmap.c:420:1" }
+node: { title: "event_active_nolock_" label: "event_active_nolock_\n./event-internal.h:476:6" shape : ellipse }
+edge: { sourcename: "evmap_io_active_" targetname: "event_active_nolock_" label: "./evmap.c:436:4" }
+node: { title: "./evmap.c:evmap_signal_init" label: "evmap_signal_init\n./evmap.c:443:1" }
+node: { title: "evmap_signal_add_" label: "evmap_signal_add_\n./evmap.c:450:1" }
+edge: { sourcename: "evmap_signal_add_" targetname: "./evmap.c:evmap_make_space" label: "./evmap.c:460:7" }
+edge: { sourcename: "evmap_signal_add_" targetname: "event_mm_calloc_" label: "./evmap.c:464:2" }
+edge: { sourcename: "evmap_signal_add_" targetname: "./evmap.c:evmap_signal_init" label: "./evmap.c:464:2" }
+edge: { sourcename: "evmap_signal_add_" targetname: "__indirect_call" label: "./evmap.c:468:7" }
+node: { title: "evmap_signal_del_" label: "evmap_signal_del_\n./evmap.c:479:1" }
+edge: { sourcename: "evmap_signal_del_" targetname: "__indirect_call" label: "./evmap.c:493:7" }
+node: { title: "evmap_signal_active_" label: "evmap_signal_active_\n./evmap.c:501:1" }
+edge: { sourcename: "evmap_signal_active_" targetname: "event_active_nolock_" label: "./evmap.c:514:3" }
+node: { title: "evmap_io_get_fdinfo_" label: "evmap_io_get_fdinfo_\n./evmap.c:518:1" }
+node: { title: "./evmap.c:evmap_io_foreach_fd" label: "evmap_io_foreach_fd\n./evmap.c:546:1" }
+edge: { sourcename: "./evmap.c:evmap_io_foreach_fd" targetname: "__indirect_call" label: "./evmap.c:564:12" }
+node: { title: "./evmap.c:evmap_signal_foreach_signal" label: "evmap_signal_foreach_signal\n./evmap.c:585:1" }
+edge: { sourcename: "./evmap.c:evmap_signal_foreach_signal" targetname: "__indirect_call" label: "./evmap.c:597:12" }
+node: { title: "./evmap.c:evmap_io_reinit_iter_fn" label: "evmap_io_reinit_iter_fn\n./evmap.c:607:1" }
+edge: { sourcename: "./evmap.c:evmap_io_reinit_iter_fn" targetname: "event_errx" label: "./evmap.c:615:2" }
+edge: { sourcename: "./evmap.c:evmap_io_reinit_iter_fn" targetname: "memset" label: "./evmap.c:625:3" }
+edge: { sourcename: "./evmap.c:evmap_io_reinit_iter_fn" targetname: "__indirect_call" label: "./evmap.c:630:6" }
+node: { title: "./evmap.c:evmap_signal_reinit_iter_fn" label: "evmap_signal_reinit_iter_fn\n./evmap.c:639:1" }
+edge: { sourcename: "./evmap.c:evmap_signal_reinit_iter_fn" targetname: "__indirect_call" label: "./evmap.c:646:7" }
+node: { title: "evmap_reinit_" label: "evmap_reinit_\n./evmap.c:654:1" }
+edge: { sourcename: "evmap_reinit_" targetname: "./evmap.c:evmap_io_foreach_fd" label: "./evmap.c:658:2" }
+edge: { sourcename: "evmap_reinit_" targetname: "./evmap.c:evmap_signal_foreach_signal" label: "./evmap.c:661:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "evmap_reinit_" targetname: "__stack_chk_fail" }
+node: { title: "./evmap.c:delete_all_in_dlist" label: "delete_all_in_dlist\n./evmap.c:669:1" }
+node: { title: "event_del" label: "event_del\n./include/event2/event.h:1293:5" shape : ellipse }
+edge: { sourcename: "./evmap.c:delete_all_in_dlist" targetname: "event_del" label: "./evmap.c:673:3" }
+node: { title: "./evmap.c:evmap_io_delete_all_iter_fn" label: "evmap_io_delete_all_iter_fn\n./evmap.c:679:1" }
+edge: { sourcename: "./evmap.c:evmap_io_delete_all_iter_fn" targetname: "./evmap.c:delete_all_in_dlist" label: "./evmap.c:682:9" }
+node: { title: "./evmap.c:evmap_signal_delete_all_iter_fn" label: "evmap_signal_delete_all_iter_fn\n./evmap.c:687:1" }
+edge: { sourcename: "./evmap.c:evmap_signal_delete_all_iter_fn" targetname: "./evmap.c:delete_all_in_dlist" label: "./evmap.c:690:9" }
+node: { title: "evmap_delete_all_" label: "evmap_delete_all_\n./evmap.c:694:1" }
+edge: { sourcename: "evmap_delete_all_" targetname: "./evmap.c:evmap_signal_foreach_signal" label: "./evmap.c:696:2" }
+edge: { sourcename: "evmap_delete_all_" targetname: "./evmap.c:evmap_io_foreach_fd" label: "./evmap.c:697:2" }
+node: { title: "event_changelist_init_" label: "event_changelist_init_\n./evmap.c:709:1" }
+node: { title: "./evmap.c:event_change_get_fdinfo" label: "event_change_get_fdinfo\n./evmap.c:718:1" }
+node: { title: "./evmap.c:event_changelist_assert_ok_foreach_iter_fn" label: "event_changelist_assert_ok_foreach_iter_fn\n./evmap.c:736:1" }
+edge: { sourcename: "./evmap.c:event_changelist_assert_ok_foreach_iter_fn" targetname: "event_errx" label: "./evmap.c:746:3" }
+node: { title: "./evmap.c:event_changelist_assert_ok" label: "event_changelist_assert_ok\n./evmap.c:753:1" }
+edge: { sourcename: "./evmap.c:event_changelist_assert_ok" targetname: "event_errx" label: "./evmap.c:758:2" }
+edge: { sourcename: "./evmap.c:event_changelist_assert_ok" targetname: "event_errx" label: "./evmap.c:762:3" }
+edge: { sourcename: "./evmap.c:event_changelist_assert_ok" targetname: "./evmap.c:event_change_get_fdinfo" label: "./evmap.c:763:7" }
+edge: { sourcename: "./evmap.c:event_changelist_assert_ok" targetname: "event_errx" label: "./evmap.c:764:3" }
+edge: { sourcename: "./evmap.c:event_changelist_assert_ok" targetname: "event_errx" label: "./evmap.c:765:3" }
+edge: { sourcename: "./evmap.c:event_changelist_assert_ok" targetname: "./evmap.c:evmap_io_foreach_fd" label: "./evmap.c:768:2" }
+node: { title: "event_changelist_remove_all_" label: "event_changelist_remove_all_\n./evmap.c:780:1" }
+edge: { sourcename: "event_changelist_remove_all_" targetname: "./evmap.c:event_change_get_fdinfo" label: "./evmap.c:790:7" }
+edge: { sourcename: "event_changelist_remove_all_" targetname: "event_errx" label: "./evmap.c:791:3" }
+node: { title: "event_changelist_freemem_" label: "event_changelist_freemem_\n./evmap.c:801:1" }
+edge: { sourcename: "event_changelist_freemem_" targetname: "event_mm_free_" label: "./evmap.c:804:3" }
+edge: { sourcename: "event_changelist_freemem_" targetname: "event_changelist_init_" label: "./evmap.c:805:2" }
+node: { title: "./evmap.c:event_changelist_grow" label: "event_changelist_grow\n./evmap.c:810:1" }
+edge: { sourcename: "./evmap.c:event_changelist_grow" targetname: "event_mm_realloc_" label: "./evmap.c:819:16" }
+node: { title: "./evmap.c:event_changelist_get_or_construct" label: "event_changelist_get_or_construct\n./evmap.c:836:1" }
+edge: { sourcename: "./evmap.c:event_changelist_get_or_construct" targetname: "event_errx" label: "./evmap.c:845:3" }
+edge: { sourcename: "./evmap.c:event_changelist_get_or_construct" targetname: "./evmap.c:event_changelist_grow" label: "./evmap.c:848:8" }
+edge: { sourcename: "./evmap.c:event_changelist_get_or_construct" targetname: "memset" label: "./evmap.c:856:3" }
+edge: { sourcename: "./evmap.c:event_changelist_get_or_construct" targetname: "event_errx" label: "./evmap.c:861:3" }
+node: { title: "event_changelist_add_" label: "event_changelist_add_\n./evmap.c:867:1" }
+edge: { sourcename: "event_changelist_add_" targetname: "./evmap.c:event_changelist_get_or_construct" label: "./evmap.c:877:11" }
+node: { title: "event_changelist_del_" label: "event_changelist_del_\n./evmap.c:897:1" }
+edge: { sourcename: "event_changelist_del_" targetname: "./evmap.c:event_changelist_get_or_construct" label: "./evmap.c:906:11" }
+node: { title: "./evmap.c:evmap_io_check_integrity_fn" label: "evmap_io_check_integrity_fn\n./evmap.c:953:1" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:961:2" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:961:2" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:961:2" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:961:2" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:964:3" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:965:3" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:966:3" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:967:3" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:976:2" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:977:2" }
+edge: { sourcename: "./evmap.c:evmap_io_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:978:2" }
+node: { title: "./evmap.c:evmap_signal_check_integrity_fn" label: "evmap_signal_check_integrity_fn\n./evmap.c:986:1" }
+edge: { sourcename: "./evmap.c:evmap_signal_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:991:2" }
+edge: { sourcename: "./evmap.c:evmap_signal_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:991:2" }
+edge: { sourcename: "./evmap.c:evmap_signal_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:991:2" }
+edge: { sourcename: "./evmap.c:evmap_signal_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:991:2" }
+edge: { sourcename: "./evmap.c:evmap_signal_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:994:3" }
+edge: { sourcename: "./evmap.c:evmap_signal_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:995:3" }
+edge: { sourcename: "./evmap.c:evmap_signal_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:996:3" }
+edge: { sourcename: "./evmap.c:evmap_signal_check_integrity_fn" targetname: "event_errx" label: "./evmap.c:997:3" }
+node: { title: "evmap_check_integrity_" label: "evmap_check_integrity_\n./evmap.c:1003:1" }
+edge: { sourcename: "evmap_check_integrity_" targetname: "./evmap.c:evmap_io_foreach_fd" label: "./evmap.c:1005:2" }
+edge: { sourcename: "evmap_check_integrity_" targetname: "./evmap.c:evmap_signal_foreach_signal" label: "./evmap.c:1006:2" }
+edge: { sourcename: "evmap_check_integrity_" targetname: "./evmap.c:event_changelist_assert_ok" label: "./evmap.c:1009:3" }
+node: { title: "./evmap.c:evmap_io_foreach_event_fn" label: "evmap_io_foreach_event_fn\n./evmap.c:1022:1" }
+edge: { sourcename: "./evmap.c:evmap_io_foreach_event_fn" targetname: "__indirect_call" label: "./evmap.c:1029:12" }
+node: { title: "./evmap.c:evmap_signal_foreach_event_fn" label: "evmap_signal_foreach_event_fn\n./evmap.c:1038:1" }
+edge: { sourcename: "./evmap.c:evmap_signal_foreach_event_fn" targetname: "__indirect_call" label: "./evmap.c:1045:12" }
+node: { title: "evmap_foreach_event_" label: "evmap_foreach_event_\n./evmap.c:1052:1" }
+edge: { sourcename: "evmap_foreach_event_" targetname: "./evmap.c:evmap_io_foreach_fd" label: "./evmap.c:1059:11" }
+edge: { sourcename: "evmap_foreach_event_" targetname: "./evmap.c:evmap_signal_foreach_signal" label: "./evmap.c:1061:9" }
+edge: { sourcename: "evmap_foreach_event_" targetname: "__stack_chk_fail" }
+}

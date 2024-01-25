@@ -1,0 +1,301 @@
+graph: { title: "./bufferevent.c"
+node: { title: "./bufferevent.c:bufferevent_trigger_nolock_" label: "bufferevent_trigger_nolock_\n./bufferevent-internal.h:414:1" }
+node: { title: "evbuffer_get_length" label: "evbuffer_get_length\n./include/event2/buffer.h:256:8" shape : ellipse }
+edge: { sourcename: "./bufferevent.c:bufferevent_trigger_nolock_" targetname: "evbuffer_get_length" label: "./bufferevent-internal.h:417:6" }
+edge: { sourcename: "./bufferevent.c:bufferevent_trigger_nolock_" targetname: "bufferevent_run_readcb_" label: "./bufferevent-internal.h:418:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_trigger_nolock_" targetname: "evbuffer_get_length" label: "./bufferevent-internal.h:420:6" }
+edge: { sourcename: "./bufferevent.c:bufferevent_trigger_nolock_" targetname: "bufferevent_run_writecb_" label: "./bufferevent-internal.h:421:3" }
+node: { title: "bufferevent_suspend_read_" label: "bufferevent_suspend_read_\n./bufferevent.c:67:1" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "bufferevent_suspend_read_" targetname: "__indirect_call" label: "./bufferevent.c:70:2" }
+edge: { sourcename: "bufferevent_suspend_read_" targetname: "__indirect_call" label: "./bufferevent.c:72:3" }
+edge: { sourcename: "bufferevent_suspend_read_" targetname: "__indirect_call" label: "./bufferevent.c:74:2" }
+node: { title: "bufferevent_unsuspend_read_" label: "bufferevent_unsuspend_read_\n./bufferevent.c:78:1" }
+edge: { sourcename: "bufferevent_unsuspend_read_" targetname: "__indirect_call" label: "./bufferevent.c:81:2" }
+edge: { sourcename: "bufferevent_unsuspend_read_" targetname: "__indirect_call" label: "./bufferevent.c:84:3" }
+edge: { sourcename: "bufferevent_unsuspend_read_" targetname: "__indirect_call" label: "./bufferevent.c:85:2" }
+node: { title: "bufferevent_suspend_write_" label: "bufferevent_suspend_write_\n./bufferevent.c:89:1" }
+edge: { sourcename: "bufferevent_suspend_write_" targetname: "__indirect_call" label: "./bufferevent.c:92:2" }
+edge: { sourcename: "bufferevent_suspend_write_" targetname: "__indirect_call" label: "./bufferevent.c:94:3" }
+edge: { sourcename: "bufferevent_suspend_write_" targetname: "__indirect_call" label: "./bufferevent.c:96:2" }
+node: { title: "bufferevent_unsuspend_write_" label: "bufferevent_unsuspend_write_\n./bufferevent.c:100:1" }
+edge: { sourcename: "bufferevent_unsuspend_write_" targetname: "__indirect_call" label: "./bufferevent.c:103:2" }
+edge: { sourcename: "bufferevent_unsuspend_write_" targetname: "__indirect_call" label: "./bufferevent.c:106:3" }
+edge: { sourcename: "bufferevent_unsuspend_write_" targetname: "__indirect_call" label: "./bufferevent.c:107:2" }
+node: { title: "./bufferevent.c:bufferevent_inbuf_wm_check" label: "bufferevent_inbuf_wm_check\n./bufferevent.c:121:13" }
+edge: { sourcename: "./bufferevent.c:bufferevent_inbuf_wm_check" targetname: "evbuffer_get_length" label: "./bufferevent.c:127:6" }
+edge: { sourcename: "./bufferevent.c:bufferevent_inbuf_wm_check" targetname: "bufferevent_trigger" label: "./bufferevent.c:130:2" }
+node: { title: "./bufferevent.c:bufferevent_inbuf_wm_cb" label: "bufferevent_inbuf_wm_cb\n./bufferevent.c:136:1" }
+edge: { sourcename: "./bufferevent.c:bufferevent_inbuf_wm_cb" targetname: "evbuffer_get_length" label: "./bufferevent.c:143:9" }
+edge: { sourcename: "./bufferevent.c:bufferevent_inbuf_wm_cb" targetname: "bufferevent_suspend_read_" label: "./bufferevent.c:146:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_inbuf_wm_cb" targetname: "bufferevent_unsuspend_read_" label: "./bufferevent.c:148:3" }
+node: { title: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" label: "bufferevent_run_deferred_callbacks_locked\n./bufferevent.c:152:1" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" targetname: "__indirect_call" label: "./bufferevent.c:157:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" targetname: "__indirect_call" label: "./bufferevent.c:163:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" targetname: "__indirect_call" label: "./bufferevent.c:167:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" targetname: "./bufferevent.c:bufferevent_inbuf_wm_check" label: "./bufferevent.c:168:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" targetname: "__indirect_call" label: "./bufferevent.c:172:3" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" targetname: "__errno_location" label: "./bufferevent.c:179:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" targetname: "__indirect_call" label: "./bufferevent.c:180:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_locked" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:182:2" }
+node: { title: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" label: "bufferevent_run_deferred_callbacks_unlocked\n./bufferevent.c:186:1" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:191:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:202:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:202:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:202:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:208:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:208:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:208:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "./bufferevent.c:bufferevent_inbuf_wm_check" label: "./bufferevent.c:209:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:215:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:215:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:215:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__errno_location" label: "./bufferevent.c:224:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:225:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:225:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "__indirect_call" label: "./bufferevent.c:225:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_run_deferred_callbacks_unlocked" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:227:2" }
+node: { title: "bufferevent_run_readcb_" label: "bufferevent_run_readcb_\n./bufferevent.c:241:1" }
+node: { title: "event_deferred_cb_schedule_" label: "event_deferred_cb_schedule_\n./defer-internal.h:66:5" shape : ellipse }
+edge: { sourcename: "bufferevent_run_readcb_" targetname: "event_deferred_cb_schedule_" label: "./bufferevent.c:249:3" }
+edge: { sourcename: "bufferevent_run_readcb_" targetname: "bufferevent_incref" label: "./bufferevent.c:249:3" }
+edge: { sourcename: "bufferevent_run_readcb_" targetname: "__indirect_call" label: "./bufferevent.c:251:3" }
+edge: { sourcename: "bufferevent_run_readcb_" targetname: "./bufferevent.c:bufferevent_inbuf_wm_check" label: "./bufferevent.c:252:3" }
+node: { title: "bufferevent_run_writecb_" label: "bufferevent_run_writecb_\n./bufferevent.c:257:1" }
+edge: { sourcename: "bufferevent_run_writecb_" targetname: "event_deferred_cb_schedule_" label: "./bufferevent.c:265:3" }
+edge: { sourcename: "bufferevent_run_writecb_" targetname: "bufferevent_incref" label: "./bufferevent.c:265:3" }
+edge: { sourcename: "bufferevent_run_writecb_" targetname: "__indirect_call" label: "./bufferevent.c:267:3" }
+node: { title: "bufferevent_trigger" label: "bufferevent_trigger\n./bufferevent.c:277:1" }
+edge: { sourcename: "bufferevent_trigger" targetname: "bufferevent_incref_and_lock_" label: "./bufferevent.c:279:2" }
+edge: { sourcename: "bufferevent_trigger" targetname: "./bufferevent.c:bufferevent_trigger_nolock_" label: "./bufferevent.c:280:2" }
+edge: { sourcename: "bufferevent_trigger" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:281:2" }
+node: { title: "bufferevent_run_eventcb_" label: "bufferevent_run_eventcb_\n./bufferevent.c:285:1" }
+edge: { sourcename: "bufferevent_run_eventcb_" targetname: "__errno_location" label: "./bufferevent.c:293:22" }
+edge: { sourcename: "bufferevent_run_eventcb_" targetname: "event_deferred_cb_schedule_" label: "./bufferevent.c:294:3" }
+edge: { sourcename: "bufferevent_run_eventcb_" targetname: "bufferevent_incref" label: "./bufferevent.c:294:3" }
+edge: { sourcename: "bufferevent_run_eventcb_" targetname: "__indirect_call" label: "./bufferevent.c:296:3" }
+node: { title: "bufferevent_trigger_event" label: "bufferevent_trigger_event\n./bufferevent.c:301:1" }
+edge: { sourcename: "bufferevent_trigger_event" targetname: "bufferevent_incref_and_lock_" label: "./bufferevent.c:303:2" }
+edge: { sourcename: "bufferevent_trigger_event" targetname: "bufferevent_run_eventcb_" label: "./bufferevent.c:304:2" }
+edge: { sourcename: "bufferevent_trigger_event" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:305:2" }
+node: { title: "bufferevent_init_common_" label: "bufferevent_init_common_\n./bufferevent.c:309:1" }
+node: { title: "evbuffer_new" label: "evbuffer_new\n./include/event2/buffer.h:152:18" shape : ellipse }
+edge: { sourcename: "bufferevent_init_common_" targetname: "evbuffer_new" label: "./bufferevent.c:317:23" }
+edge: { sourcename: "bufferevent_init_common_" targetname: "evbuffer_new" label: "./bufferevent.c:322:24" }
+node: { title: "bufferevent_ratelim_init_" label: "bufferevent_ratelim_init_\n./bufferevent-internal.h:518:5" shape : ellipse }
+edge: { sourcename: "bufferevent_init_common_" targetname: "bufferevent_ratelim_init_" label: "./bufferevent.c:335:6" }
+edge: { sourcename: "bufferevent_init_common_" targetname: "bufferevent_enable_locking_" label: "./bufferevent.c:347:7" }
+node: { title: "event_warnx" label: "event_warnx\n./log-internal.h:68:6" shape : ellipse }
+edge: { sourcename: "bufferevent_init_common_" targetname: "event_warnx" label: "./bufferevent.c:353:3" }
+node: { title: "event_base_get_npriorities" label: "event_base_get_npriorities\n./include/event2/event.h:1513:5" shape : ellipse }
+edge: { sourcename: "bufferevent_init_common_" targetname: "event_base_get_npriorities" label: "./bufferevent.c:359:7" }
+node: { title: "event_deferred_cb_init_" label: "event_deferred_cb_init_\n./defer-internal.h:50:6" shape : ellipse }
+edge: { sourcename: "bufferevent_init_common_" targetname: "event_deferred_cb_init_" label: "./bufferevent.c:357:3" }
+edge: { sourcename: "bufferevent_init_common_" targetname: "event_base_get_npriorities" label: "./bufferevent.c:365:7" }
+edge: { sourcename: "bufferevent_init_common_" targetname: "event_deferred_cb_init_" label: "./bufferevent.c:363:3" }
+node: { title: "evbuffer_set_parent_" label: "evbuffer_set_parent_\n./evbuffer-internal.h:340:6" shape : ellipse }
+edge: { sourcename: "bufferevent_init_common_" targetname: "evbuffer_set_parent_" label: "./bufferevent.c:371:2" }
+edge: { sourcename: "bufferevent_init_common_" targetname: "evbuffer_set_parent_" label: "./bufferevent.c:372:2" }
+node: { title: "evbuffer_free" label: "evbuffer_free\n./include/event2/buffer.h:159:6" shape : ellipse }
+edge: { sourcename: "bufferevent_init_common_" targetname: "evbuffer_free" label: "./bufferevent.c:378:3" }
+edge: { sourcename: "bufferevent_init_common_" targetname: "evbuffer_free" label: "./bufferevent.c:382:3" }
+node: { title: "bufferevent_setcb" label: "bufferevent_setcb\n./bufferevent.c:389:1" }
+edge: { sourcename: "bufferevent_setcb" targetname: "__indirect_call" label: "./bufferevent.c:393:2" }
+edge: { sourcename: "bufferevent_setcb" targetname: "__indirect_call" label: "./bufferevent.c:400:2" }
+node: { title: "bufferevent_getcb" label: "bufferevent_getcb\n./bufferevent.c:404:1" }
+edge: { sourcename: "bufferevent_getcb" targetname: "__indirect_call" label: "./bufferevent.c:410:2" }
+edge: { sourcename: "bufferevent_getcb" targetname: "__indirect_call" label: "./bufferevent.c:420:2" }
+node: { title: "bufferevent_get_input" label: "bufferevent_get_input\n./bufferevent.c:424:1" }
+node: { title: "bufferevent_get_output" label: "bufferevent_get_output\n./bufferevent.c:430:1" }
+node: { title: "bufferevent_get_base" label: "bufferevent_get_base\n./bufferevent.c:436:1" }
+node: { title: "bufferevent_get_priority" label: "bufferevent_get_priority\n./bufferevent.c:442:1" }
+node: { title: "event_initialized" label: "event_initialized\n./include/event2/event.h:1368:5" shape : ellipse }
+edge: { sourcename: "bufferevent_get_priority" targetname: "event_initialized" label: "./bufferevent.c:444:6" }
+node: { title: "event_get_priority" label: "event_get_priority\n./include/event2/event.h:1411:5" shape : ellipse }
+edge: { sourcename: "bufferevent_get_priority" targetname: "event_get_priority" label: "./bufferevent.c:445:10" }
+edge: { sourcename: "bufferevent_get_priority" targetname: "event_base_get_npriorities" label: "./bufferevent.c:447:10" }
+node: { title: "bufferevent_write" label: "bufferevent_write\n./bufferevent.c:452:1" }
+node: { title: "evbuffer_add" label: "evbuffer_add\n./include/event2/buffer.h:358:5" shape : ellipse }
+edge: { sourcename: "bufferevent_write" targetname: "evbuffer_add" label: "./bufferevent.c:454:6" }
+node: { title: "bufferevent_write_buffer" label: "bufferevent_write_buffer\n./bufferevent.c:461:1" }
+node: { title: "evbuffer_add_buffer" label: "evbuffer_add_buffer\n./include/event2/buffer.h:476:5" shape : ellipse }
+edge: { sourcename: "bufferevent_write_buffer" targetname: "evbuffer_add_buffer" label: "./bufferevent.c:463:6" }
+node: { title: "bufferevent_read" label: "bufferevent_read\n./bufferevent.c:470:1" }
+node: { title: "evbuffer_remove" label: "evbuffer_remove\n./include/event2/buffer.h:373:5" shape : ellipse }
+edge: { sourcename: "bufferevent_read" targetname: "evbuffer_remove" label: "./bufferevent.c:472:10" }
+node: { title: "bufferevent_read_buffer" label: "bufferevent_read_buffer\n./bufferevent.c:481:1" }
+edge: { sourcename: "bufferevent_read_buffer" targetname: "evbuffer_add_buffer" label: "./bufferevent.c:483:10" }
+node: { title: "bufferevent_enable" label: "bufferevent_enable\n./bufferevent.c:487:1" }
+edge: { sourcename: "bufferevent_enable" targetname: "bufferevent_incref_and_lock_" label: "./bufferevent.c:493:2" }
+edge: { sourcename: "bufferevent_enable" targetname: "__indirect_call" label: "./bufferevent.c:501:21" }
+node: { title: "event_debugx_" label: "event_debugx_\n./log-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "bufferevent_enable" targetname: "event_debugx_" label: "./bufferevent.c:504:3" }
+edge: { sourcename: "bufferevent_enable" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:506:2" }
+node: { title: "bufferevent_set_timeouts" label: "bufferevent_set_timeouts\n./bufferevent.c:511:1" }
+edge: { sourcename: "bufferevent_set_timeouts" targetname: "__indirect_call" label: "./bufferevent.c:516:2" }
+edge: { sourcename: "bufferevent_set_timeouts" targetname: "__indirect_call" label: "./bufferevent.c:529:7" }
+edge: { sourcename: "bufferevent_set_timeouts" targetname: "__indirect_call" label: "./bufferevent.c:530:2" }
+node: { title: "bufferevent_settimeout" label: "bufferevent_settimeout\n./bufferevent.c:538:1" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "bufferevent_settimeout" targetname: "memset" label: "./bufferevent.c:544:2" }
+edge: { sourcename: "bufferevent_settimeout" targetname: "memset" label: "./bufferevent.c:545:2" }
+edge: { sourcename: "bufferevent_settimeout" targetname: "bufferevent_set_timeouts" label: "./bufferevent.c:556:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "bufferevent_settimeout" targetname: "__stack_chk_fail" }
+node: { title: "bufferevent_disable_hard_" label: "bufferevent_disable_hard_\n./bufferevent.c:561:1" }
+edge: { sourcename: "bufferevent_disable_hard_" targetname: "__indirect_call" label: "./bufferevent.c:566:2" }
+edge: { sourcename: "bufferevent_disable_hard_" targetname: "__indirect_call" label: "./bufferevent.c:570:6" }
+edge: { sourcename: "bufferevent_disable_hard_" targetname: "__indirect_call" label: "./bufferevent.c:573:2" }
+node: { title: "bufferevent_disable" label: "bufferevent_disable\n./bufferevent.c:578:1" }
+edge: { sourcename: "bufferevent_disable" targetname: "__indirect_call" label: "./bufferevent.c:582:2" }
+edge: { sourcename: "bufferevent_disable" targetname: "__indirect_call" label: "./bufferevent.c:585:6" }
+edge: { sourcename: "bufferevent_disable" targetname: "event_debugx_" label: "./bufferevent.c:588:3" }
+edge: { sourcename: "bufferevent_disable" targetname: "__indirect_call" label: "./bufferevent.c:590:2" }
+node: { title: "bufferevent_setwatermark" label: "bufferevent_setwatermark\n./bufferevent.c:599:1" }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "__indirect_call" label: "./bufferevent.c:604:2" }
+node: { title: "evbuffer_add_cb" label: "evbuffer_add_cb\n./include/event2/buffer.h:954:27" shape : ellipse }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "evbuffer_add_cb" label: "./bufferevent.c:621:9" }
+node: { title: "evbuffer_cb_set_flags" label: "evbuffer_cb_set_flags\n./include/event2/buffer.h:992:5" shape : ellipse }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "evbuffer_cb_set_flags" label: "./bufferevent.c:625:4" }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "evbuffer_get_length" label: "./bufferevent.c:629:8" }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "bufferevent_suspend_read_" label: "./bufferevent.c:630:5" }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "evbuffer_get_length" label: "./bufferevent.c:631:13" }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "bufferevent_unsuspend_read_" label: "./bufferevent.c:632:5" }
+node: { title: "evbuffer_cb_clear_flags" label: "evbuffer_cb_clear_flags\n./include/event2/buffer.h:1003:5" shape : ellipse }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "evbuffer_cb_clear_flags" label: "./bufferevent.c:636:5" }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "bufferevent_unsuspend_read_" label: "./bufferevent.c:639:4" }
+edge: { sourcename: "bufferevent_setwatermark" targetname: "__indirect_call" label: "./bufferevent.c:642:2" }
+node: { title: "bufferevent_getwatermark" label: "bufferevent_getwatermark\n./bufferevent.c:646:1" }
+edge: { sourcename: "bufferevent_getwatermark" targetname: "__indirect_call" label: "./bufferevent.c:650:3" }
+edge: { sourcename: "bufferevent_getwatermark" targetname: "__indirect_call" label: "./bufferevent.c:655:3" }
+edge: { sourcename: "bufferevent_getwatermark" targetname: "__indirect_call" label: "./bufferevent.c:660:3" }
+edge: { sourcename: "bufferevent_getwatermark" targetname: "__indirect_call" label: "./bufferevent.c:665:3" }
+node: { title: "bufferevent_flush" label: "bufferevent_flush\n./bufferevent.c:672:1" }
+edge: { sourcename: "bufferevent_flush" targetname: "__indirect_call" label: "./bufferevent.c:677:2" }
+edge: { sourcename: "bufferevent_flush" targetname: "__indirect_call" label: "./bufferevent.c:679:7" }
+edge: { sourcename: "bufferevent_flush" targetname: "__indirect_call" label: "./bufferevent.c:680:2" }
+node: { title: "bufferevent_incref_and_lock_" label: "bufferevent_incref_and_lock_\n./bufferevent.c:685:1" }
+edge: { sourcename: "bufferevent_incref_and_lock_" targetname: "__indirect_call" label: "./bufferevent.c:688:2" }
+node: { title: "bufferevent_decref_and_unlock_" label: "bufferevent_decref_and_unlock_\n./bufferevent.c:711:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "event_errx" label: "./bufferevent.c:718:2" }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "__indirect_call" label: "./bufferevent.c:721:3" }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "__indirect_call" label: "./bufferevent.c:726:3" }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "event_initialized" label: "./bufferevent.c:736:7" }
+node: { title: "evbuffer_get_callbacks_" label: "evbuffer_get_callbacks_\n./evbuffer-internal.h:345:5" shape : ellipse }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "evbuffer_get_callbacks_" label: "./bufferevent.c:739:11" }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "evbuffer_get_callbacks_" label: "./bufferevent.c:740:11" }
+node: { title: "event_callback_finalize_many_" label: "event_callback_finalize_many_\n./event-internal.h:486:5" shape : ellipse }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "event_callback_finalize_many_" label: "./bufferevent.c:742:2" }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "__indirect_call" label: "./bufferevent.c:746:2" }
+edge: { sourcename: "bufferevent_decref_and_unlock_" targetname: "__stack_chk_fail" }
+node: { title: "./bufferevent.c:bufferevent_finalize_cb_" label: "bufferevent_finalize_cb_\n./bufferevent.c:752:1" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "__indirect_call" label: "./bufferevent.c:758:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "bufferevent_get_underlying" label: "./bufferevent.c:759:15" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "__indirect_call" label: "./bufferevent.c:763:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "evbuffer_free" label: "./bufferevent.c:769:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "evbuffer_free" label: "./bufferevent.c:770:2" }
+node: { title: "bufferevent_remove_from_rate_limit_group_internal_" label: "bufferevent_remove_from_rate_limit_group_internal_\n./ratelim-internal.h:87:5" shape : ellipse }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "bufferevent_remove_from_rate_limit_group_internal_" label: "./bufferevent.c:774:4" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "event_mm_free_" label: "./bufferevent.c:775:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "__indirect_call" label: "./bufferevent.c:780:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "__indirect_call" label: "./bufferevent.c:783:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "event_mm_free_" label: "./bufferevent.c:787:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_finalize_cb_" targetname: "bufferevent_decref" label: "./bufferevent.c:800:3" }
+node: { title: "bufferevent_decref" label: "bufferevent_decref\n./bufferevent.c:804:1" }
+edge: { sourcename: "bufferevent_decref" targetname: "__indirect_call" label: "./bufferevent.c:806:2" }
+edge: { sourcename: "bufferevent_decref" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:807:9" }
+node: { title: "bufferevent_free" label: "bufferevent_free\n./bufferevent.c:811:1" }
+edge: { sourcename: "bufferevent_free" targetname: "__indirect_call" label: "./bufferevent.c:813:2" }
+edge: { sourcename: "bufferevent_free" targetname: "bufferevent_setcb" label: "./bufferevent.c:814:2" }
+edge: { sourcename: "bufferevent_free" targetname: "./bufferevent.c:bufferevent_cancel_all_" label: "./bufferevent.c:815:2" }
+edge: { sourcename: "bufferevent_free" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:816:2" }
+node: { title: "bufferevent_incref" label: "bufferevent_incref\n./bufferevent.c:820:1" }
+edge: { sourcename: "bufferevent_incref" targetname: "__indirect_call" label: "./bufferevent.c:828:2" }
+edge: { sourcename: "bufferevent_incref" targetname: "__indirect_call" label: "./bufferevent.c:830:2" }
+node: { title: "bufferevent_enable_locking_" label: "bufferevent_enable_locking_\n./bufferevent.c:834:1" }
+edge: { sourcename: "bufferevent_enable_locking_" targetname: "bufferevent_get_underlying" label: "./bufferevent.c:843:15" }
+edge: { sourcename: "bufferevent_enable_locking_" targetname: "__indirect_call" label: "./bufferevent.c:850:3" }
+node: { title: "evbuffer_enable_locking" label: "evbuffer_enable_locking\n./include/event2/buffer.h:198:5" shape : ellipse }
+edge: { sourcename: "bufferevent_enable_locking_" targetname: "evbuffer_enable_locking" label: "./bufferevent.c:859:2" }
+edge: { sourcename: "bufferevent_enable_locking_" targetname: "evbuffer_enable_locking" label: "./bufferevent.c:860:2" }
+edge: { sourcename: "bufferevent_enable_locking_" targetname: "bufferevent_enable_locking_" label: "./bufferevent.c:863:3" }
+node: { title: "bufferevent_setfd" label: "bufferevent_setfd\n./bufferevent.c:870:1" }
+edge: { sourcename: "bufferevent_setfd" targetname: "__indirect_call" label: "./bufferevent.c:875:2" }
+edge: { sourcename: "bufferevent_setfd" targetname: "__indirect_call" label: "./bufferevent.c:877:9" }
+edge: { sourcename: "bufferevent_setfd" targetname: "event_debugx_" label: "./bufferevent.c:879:3" }
+edge: { sourcename: "bufferevent_setfd" targetname: "__indirect_call" label: "./bufferevent.c:880:2" }
+edge: { sourcename: "bufferevent_setfd" targetname: "__stack_chk_fail" }
+node: { title: "bufferevent_replacefd" label: "bufferevent_replacefd\n./bufferevent.c:885:1" }
+edge: { sourcename: "bufferevent_replacefd" targetname: "__indirect_call" label: "./bufferevent.c:891:2" }
+edge: { sourcename: "bufferevent_replacefd" targetname: "__indirect_call" label: "./bufferevent.c:893:9" }
+node: { title: "evutil_closesocket" label: "evutil_closesocket\n./include/event2/util.h:471:5" shape : ellipse }
+edge: { sourcename: "bufferevent_replacefd" targetname: "evutil_closesocket" label: "./bufferevent.c:897:11" }
+edge: { sourcename: "bufferevent_replacefd" targetname: "__indirect_call" label: "./bufferevent.c:902:10" }
+edge: { sourcename: "bufferevent_replacefd" targetname: "event_debugx_" label: "./bufferevent.c:906:3" }
+edge: { sourcename: "bufferevent_replacefd" targetname: "__indirect_call" label: "./bufferevent.c:907:2" }
+edge: { sourcename: "bufferevent_replacefd" targetname: "__stack_chk_fail" }
+node: { title: "bufferevent_getfd" label: "bufferevent_getfd\n./bufferevent.c:913:1" }
+edge: { sourcename: "bufferevent_getfd" targetname: "__indirect_call" label: "./bufferevent.c:918:2" }
+edge: { sourcename: "bufferevent_getfd" targetname: "__indirect_call" label: "./bufferevent.c:920:9" }
+edge: { sourcename: "bufferevent_getfd" targetname: "event_debugx_" label: "./bufferevent.c:922:3" }
+edge: { sourcename: "bufferevent_getfd" targetname: "__indirect_call" label: "./bufferevent.c:923:2" }
+edge: { sourcename: "bufferevent_getfd" targetname: "__stack_chk_fail" }
+node: { title: "bufferevent_get_options_" label: "bufferevent_get_options_\n./bufferevent.c:928:1" }
+edge: { sourcename: "bufferevent_get_options_" targetname: "__indirect_call" label: "./bufferevent.c:933:2" }
+edge: { sourcename: "bufferevent_get_options_" targetname: "__indirect_call" label: "./bufferevent.c:935:2" }
+node: { title: "./bufferevent.c:bufferevent_cancel_all_" label: "bufferevent_cancel_all_\n./bufferevent.c:941:1" }
+edge: { sourcename: "./bufferevent.c:bufferevent_cancel_all_" targetname: "memset" label: "./bufferevent.c:944:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_cancel_all_" targetname: "__indirect_call" label: "./bufferevent.c:945:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_cancel_all_" targetname: "__indirect_call" label: "./bufferevent.c:947:3" }
+edge: { sourcename: "./bufferevent.c:bufferevent_cancel_all_" targetname: "__indirect_call" label: "./bufferevent.c:948:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_cancel_all_" targetname: "__stack_chk_fail" }
+node: { title: "bufferevent_get_enabled" label: "bufferevent_get_enabled\n./bufferevent.c:952:1" }
+edge: { sourcename: "bufferevent_get_enabled" targetname: "__indirect_call" label: "./bufferevent.c:955:2" }
+edge: { sourcename: "bufferevent_get_enabled" targetname: "__indirect_call" label: "./bufferevent.c:957:2" }
+node: { title: "bufferevent_get_underlying" label: "bufferevent_get_underlying\n./bufferevent.c:962:1" }
+edge: { sourcename: "bufferevent_get_underlying" targetname: "__indirect_call" label: "./bufferevent.c:967:2" }
+edge: { sourcename: "bufferevent_get_underlying" targetname: "__indirect_call" label: "./bufferevent.c:969:9" }
+edge: { sourcename: "bufferevent_get_underlying" targetname: "__indirect_call" label: "./bufferevent.c:970:2" }
+edge: { sourcename: "bufferevent_get_underlying" targetname: "__stack_chk_fail" }
+node: { title: "./bufferevent.c:bufferevent_generic_read_timeout_cb" label: "bufferevent_generic_read_timeout_cb\n./bufferevent.c:975:1" }
+edge: { sourcename: "./bufferevent.c:bufferevent_generic_read_timeout_cb" targetname: "bufferevent_incref_and_lock_" label: "./bufferevent.c:978:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_generic_read_timeout_cb" targetname: "bufferevent_disable" label: "./bufferevent.c:979:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_generic_read_timeout_cb" targetname: "bufferevent_run_eventcb_" label: "./bufferevent.c:980:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_generic_read_timeout_cb" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:981:2" }
+node: { title: "./bufferevent.c:bufferevent_generic_write_timeout_cb" label: "bufferevent_generic_write_timeout_cb\n./bufferevent.c:984:1" }
+edge: { sourcename: "./bufferevent.c:bufferevent_generic_write_timeout_cb" targetname: "bufferevent_incref_and_lock_" label: "./bufferevent.c:987:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_generic_write_timeout_cb" targetname: "bufferevent_disable" label: "./bufferevent.c:988:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_generic_write_timeout_cb" targetname: "bufferevent_run_eventcb_" label: "./bufferevent.c:989:2" }
+edge: { sourcename: "./bufferevent.c:bufferevent_generic_write_timeout_cb" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:990:2" }
+node: { title: "bufferevent_init_generic_timeout_cbs_" label: "bufferevent_init_generic_timeout_cbs_\n./bufferevent.c:994:1" }
+node: { title: "event_assign" label: "event_assign\n./include/event2/event.h:1166:5" shape : ellipse }
+edge: { sourcename: "bufferevent_init_generic_timeout_cbs_" targetname: "event_assign" label: "./bufferevent.c:996:2" }
+edge: { sourcename: "bufferevent_init_generic_timeout_cbs_" targetname: "event_assign" label: "./bufferevent.c:998:2" }
+node: { title: "bufferevent_generic_adj_timeouts_" label: "bufferevent_generic_adj_timeouts_\n./bufferevent.c:1003:1" }
+node: { title: "event_add" label: "event_add\n./include/event2/event.h:1267:5" shape : ellipse }
+edge: { sourcename: "bufferevent_generic_adj_timeouts_" targetname: "event_add" label: "./bufferevent.c:1010:8" }
+node: { title: "event_del" label: "event_del\n./include/event2/event.h:1293:5" shape : ellipse }
+edge: { sourcename: "bufferevent_generic_adj_timeouts_" targetname: "event_del" label: "./bufferevent.c:1012:8" }
+edge: { sourcename: "bufferevent_generic_adj_timeouts_" targetname: "evbuffer_get_length" label: "./bufferevent.c:1016:6" }
+edge: { sourcename: "bufferevent_generic_adj_timeouts_" targetname: "event_add" label: "./bufferevent.c:1017:8" }
+edge: { sourcename: "bufferevent_generic_adj_timeouts_" targetname: "event_del" label: "./bufferevent.c:1019:8" }
+node: { title: "bufferevent_generic_adj_existing_timeouts_" label: "bufferevent_generic_adj_existing_timeouts_\n./bufferevent.c:1026:1" }
+node: { title: "event_pending" label: "event_pending\n./include/event2/event.h:1341:5" shape : ellipse }
+edge: { sourcename: "bufferevent_generic_adj_existing_timeouts_" targetname: "event_pending" label: "./bufferevent.c:1029:6" }
+edge: { sourcename: "bufferevent_generic_adj_existing_timeouts_" targetname: "bufferevent_add_event_" label: "./bufferevent.c:1031:12" }
+node: { title: "event_remove_timer" label: "event_remove_timer\n./include/event2/event.h:1279:5" shape : ellipse }
+edge: { sourcename: "bufferevent_generic_adj_existing_timeouts_" targetname: "event_remove_timer" label: "./bufferevent.c:1034:4" }
+edge: { sourcename: "bufferevent_generic_adj_existing_timeouts_" targetname: "event_pending" label: "./bufferevent.c:1037:6" }
+edge: { sourcename: "bufferevent_generic_adj_existing_timeouts_" targetname: "bufferevent_add_event_" label: "./bufferevent.c:1039:8" }
+edge: { sourcename: "bufferevent_generic_adj_existing_timeouts_" targetname: "event_remove_timer" label: "./bufferevent.c:1042:4" }
+node: { title: "bufferevent_add_event_" label: "bufferevent_add_event_\n./bufferevent.c:1049:1" }
+edge: { sourcename: "bufferevent_add_event_" targetname: "event_add" label: "./bufferevent.c:1052:10" }
+edge: { sourcename: "bufferevent_add_event_" targetname: "event_add" label: "./bufferevent.c:1054:10" }
+node: { title: "bufferevent_lock" label: "bufferevent_lock\n./bufferevent.c:1060:1" }
+edge: { sourcename: "bufferevent_lock" targetname: "bufferevent_incref_and_lock_" label: "./bufferevent.c:1062:2" }
+node: { title: "bufferevent_unlock" label: "bufferevent_unlock\n./bufferevent.c:1066:1" }
+edge: { sourcename: "bufferevent_unlock" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent.c:1068:2" }
+}

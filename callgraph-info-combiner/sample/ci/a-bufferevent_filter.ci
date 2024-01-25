@@ -1,0 +1,148 @@
+graph: { title: "./bufferevent_filter.c"
+node: { title: "./bufferevent_filter.c:bufferevent_trigger_nolock_" label: "bufferevent_trigger_nolock_\n./bufferevent-internal.h:414:1" }
+node: { title: "evbuffer_get_length" label: "evbuffer_get_length\n./include/event2/buffer.h:256:8" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_trigger_nolock_" targetname: "evbuffer_get_length" label: "./bufferevent-internal.h:417:6" }
+node: { title: "bufferevent_run_readcb_" label: "bufferevent_run_readcb_\n./bufferevent-internal.h:394:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_trigger_nolock_" targetname: "bufferevent_run_readcb_" label: "./bufferevent-internal.h:418:3" }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_trigger_nolock_" targetname: "evbuffer_get_length" label: "./bufferevent-internal.h:420:6" }
+node: { title: "bufferevent_run_writecb_" label: "bufferevent_run_writecb_\n./bufferevent-internal.h:398:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_trigger_nolock_" targetname: "bufferevent_run_writecb_" label: "./bufferevent-internal.h:421:3" }
+node: { title: "./bufferevent_filter.c:upcast" label: "upcast\n./bufferevent_filter.c:118:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:upcast" targetname: "event_errx" label: "./bufferevent_filter.c:125:2" }
+node: { title: "./bufferevent_filter.c:be_underlying_writebuf_full" label: "be_underlying_writebuf_full\n./bufferevent_filter.c:135:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_underlying_writebuf_full" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:141:6" }
+node: { title: "./bufferevent_filter.c:be_readbuf_full" label: "be_readbuf_full\n./bufferevent_filter.c:147:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_readbuf_full" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:153:6" }
+node: { title: "./bufferevent_filter.c:be_null_filter" label: "be_null_filter\n./bufferevent_filter.c:159:1" }
+node: { title: "evbuffer_remove_buffer" label: "evbuffer_remove_buffer\n./include/event2/buffer.h:418:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_null_filter" targetname: "evbuffer_remove_buffer" label: "./bufferevent_filter.c:163:6" }
+node: { title: "bufferevent_filter_new" label: "bufferevent_filter_new\n./bufferevent_filter.c:170:1" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./mm-internal.h:58:7" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "event_mm_calloc_" label: "./bufferevent_filter.c:188:12" }
+node: { title: "bufferevent_init_common_" label: "bufferevent_init_common_\n./bufferevent-internal.h:332:5" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "bufferevent_init_common_" label: "./bufferevent_filter.c:192:6" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "event_mm_free_" label: "./bufferevent_filter.c:194:3" }
+node: { title: "bufferevent_enable_locking_" label: "bufferevent_enable_locking_\n./bufferevent-internal.h:373:5" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "bufferevent_enable_locking_" label: "./bufferevent_filter.c:198:3" }
+node: { title: "bufferevent_setcb" label: "bufferevent_setcb\n./include/event2/bufferevent.h:345:6" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "bufferevent_setcb" label: "./bufferevent_filter.c:208:2" }
+node: { title: "evbuffer_add_cb" label: "evbuffer_add_cb\n./include/event2/buffer.h:954:27" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "evbuffer_add_cb" label: "./bufferevent_filter.c:211:22" }
+node: { title: "evbuffer_cb_clear_flags" label: "evbuffer_cb_clear_flags\n./include/event2/buffer.h:1003:5" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "evbuffer_cb_clear_flags" label: "./bufferevent_filter.c:213:2" }
+edge: { sourcename: "bufferevent_filter_new" targetname: "evbuffer_add_cb" label: "./bufferevent_filter.c:216:23" }
+node: { title: "bufferevent_init_generic_timeout_cbs_" label: "bufferevent_init_generic_timeout_cbs_\n./bufferevent-internal.h:437:6" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "bufferevent_init_generic_timeout_cbs_" label: "./bufferevent_filter.c:219:2" }
+node: { title: "bufferevent_incref" label: "bufferevent_incref\n./include/event2/bufferevent.h:613:6" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "bufferevent_incref" label: "./bufferevent_filter.c:220:2" }
+node: { title: "bufferevent_enable" label: "bufferevent_enable\n./include/event2/bufferevent.h:498:5" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "bufferevent_enable" label: "./bufferevent_filter.c:222:2" }
+node: { title: "bufferevent_suspend_read_" label: "bufferevent_suspend_read_\n./bufferevent-internal.h:337:6" shape : ellipse }
+edge: { sourcename: "bufferevent_filter_new" targetname: "bufferevent_suspend_read_" label: "./bufferevent_filter.c:223:2" }
+node: { title: "./bufferevent_filter.c:be_filter_unlink" label: "be_filter_unlink\n./bufferevent_filter.c:229:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_unlink" targetname: "./bufferevent_filter.c:upcast" label: "./bufferevent_filter.c:231:38" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_unlink" targetname: "event_errx" label: "./bufferevent_filter.c:232:2" }
+node: { title: "event_warnx" label: "event_warnx\n./log-internal.h:68:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_unlink" targetname: "event_warnx" label: "./bufferevent_filter.c:241:4" }
+node: { title: "bufferevent_free" label: "bufferevent_free\n./include/event2/bufferevent.h:327:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_unlink" targetname: "bufferevent_free" label: "./bufferevent_filter.c:244:4" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_unlink" targetname: "bufferevent_setcb" label: "./bufferevent_filter.c:249:5" }
+node: { title: "bufferevent_unsuspend_read_" label: "bufferevent_unsuspend_read_\n./bufferevent-internal.h:341:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_unlink" targetname: "bufferevent_unsuspend_read_" label: "./bufferevent_filter.c:251:4" }
+node: { title: "./bufferevent_filter.c:be_filter_destruct" label: "be_filter_destruct\n./bufferevent_filter.c:258:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_destruct" targetname: "./bufferevent_filter.c:upcast" label: "./bufferevent_filter.c:260:38" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_destruct" targetname: "event_errx" label: "./bufferevent_filter.c:261:2" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_destruct" targetname: "__indirect_call" label: "./bufferevent_filter.c:263:3" }
+node: { title: "evbuffer_remove_cb_entry" label: "evbuffer_remove_cb_entry\n./include/event2/buffer.h:965:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_destruct" targetname: "evbuffer_remove_cb_entry" label: "./bufferevent_filter.c:266:3" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_destruct" targetname: "evbuffer_remove_cb_entry" label: "./bufferevent_filter.c:269:3" }
+node: { title: "./bufferevent_filter.c:be_filter_enable" label: "be_filter_enable\n./bufferevent_filter.c:273:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_enable" targetname: "./bufferevent_filter.c:upcast" label: "./bufferevent_filter.c:275:38" }
+node: { title: "event_add" label: "event_add\n./include/event2/event.h:1267:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_enable" targetname: "event_add" label: "./bufferevent_filter.c:277:3" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_enable" targetname: "event_add" label: "./bufferevent_filter.c:280:3" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_enable" targetname: "bufferevent_unsuspend_read_" label: "./bufferevent_filter.c:281:3" }
+node: { title: "./bufferevent_filter.c:be_filter_disable" label: "be_filter_disable\n./bufferevent_filter.c:288:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_disable" targetname: "./bufferevent_filter.c:upcast" label: "./bufferevent_filter.c:290:38" }
+node: { title: "event_del" label: "event_del\n./include/event2/event.h:1293:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_disable" targetname: "event_del" label: "./bufferevent_filter.c:292:3" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_disable" targetname: "event_del" label: "./bufferevent_filter.c:294:3" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_disable" targetname: "bufferevent_suspend_read_" label: "./bufferevent_filter.c:295:3" }
+node: { title: "./bufferevent_filter.c:be_filter_process_input" label: "be_filter_process_input\n./bufferevent_filter.c:302:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_input" targetname: "./bufferevent_filter.c:be_readbuf_full" label: "./bufferevent_filter.c:313:7" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_input" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:321:8" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_input" targetname: "__indirect_call" label: "./bufferevent_filter.c:323:9" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_input" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:330:4" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_input" targetname: "./bufferevent_filter.c:be_readbuf_full" label: "./bufferevent_filter.c:331:5" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_input" targetname: "event_add" label: "./bufferevent_filter.c:334:3" }
+node: { title: "./bufferevent_filter.c:be_filter_process_output" label: "be_filter_process_output\n./bufferevent_filter.c:341:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "./bufferevent_filter.c:be_underlying_writebuf_full" label: "./bufferevent_filter.c:357:7" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:358:8" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "evbuffer_cb_clear_flags" label: "./bufferevent_filter.c:364:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:376:9" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "__indirect_call" label: "./bufferevent_filter.c:378:10" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:392:4" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "./bufferevent_filter.c:be_underlying_writebuf_full" label: "./bufferevent_filter.c:394:5" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "./bufferevent_filter.c:bufferevent_trigger_nolock_" label: "./bufferevent_filter.c:398:4" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:402:8" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "./bufferevent_filter.c:be_underlying_writebuf_full" label: "./bufferevent_filter.c:403:9" }
+node: { title: "evbuffer_cb_set_flags" label: "evbuffer_cb_set_flags\n./include/event2/buffer.h:992:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "evbuffer_cb_set_flags" label: "./bufferevent_filter.c:410:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_process_output" targetname: "event_add" label: "./bufferevent_filter.c:414:3" }
+node: { title: "./bufferevent_filter.c:bufferevent_filtered_outbuf_cb" label: "bufferevent_filtered_outbuf_cb\n./bufferevent_filter.c:421:1" }
+node: { title: "bufferevent_incref_and_lock_" label: "bufferevent_incref_and_lock_\n./bufferevent-internal.h:380:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_outbuf_cb" targetname: "bufferevent_incref_and_lock_" label: "./bufferevent_filter.c:431:3" }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_outbuf_cb" targetname: "./bufferevent_filter.c:be_filter_process_output" label: "./bufferevent_filter.c:432:3" }
+node: { title: "bufferevent_decref_and_unlock_" label: "bufferevent_decref_and_unlock_\n./bufferevent-internal.h:389:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_outbuf_cb" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent_filter.c:433:3" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_outbuf_cb" targetname: "__stack_chk_fail" }
+node: { title: "./bufferevent_filter.c:be_filter_read_nolock_" label: "be_filter_read_nolock_\n./bufferevent_filter.c:438:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_read_nolock_" targetname: "event_errx" label: "./bufferevent_filter.c:448:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_read_nolock_" targetname: "./bufferevent_filter.c:be_filter_process_input" label: "./bufferevent_filter.c:459:9" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_read_nolock_" targetname: "./bufferevent_filter.c:bufferevent_trigger_nolock_" label: "./bufferevent_filter.c:466:4" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_read_nolock_" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:467:8" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_read_nolock_" targetname: "./bufferevent_filter.c:be_readbuf_full" label: "./bufferevent_filter.c:468:5" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_read_nolock_" targetname: "evbuffer_cb_set_flags" label: "./bufferevent_filter.c:474:5" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_read_nolock_" targetname: "__stack_chk_fail" }
+node: { title: "./bufferevent_filter.c:bufferevent_filtered_inbuf_cb" label: "bufferevent_filtered_inbuf_cb\n./bufferevent_filter.c:483:1" }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_inbuf_cb" targetname: "__indirect_call" label: "./bufferevent_filter.c:490:2" }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_inbuf_cb" targetname: "./bufferevent_filter.c:be_readbuf_full" label: "./bufferevent_filter.c:498:7" }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_inbuf_cb" targetname: "evbuffer_cb_clear_flags" label: "./bufferevent_filter.c:503:3" }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_inbuf_cb" targetname: "evbuffer_get_length" label: "./bufferevent_filter.c:505:7" }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_inbuf_cb" targetname: "./bufferevent_filter.c:be_filter_read_nolock_" label: "./bufferevent_filter.c:506:4" }
+edge: { sourcename: "./bufferevent_filter.c:bufferevent_filtered_inbuf_cb" targetname: "__indirect_call" label: "./bufferevent_filter.c:509:2" }
+node: { title: "./bufferevent_filter.c:be_filter_readcb" label: "be_filter_readcb\n./bufferevent_filter.c:514:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_readcb" targetname: "__indirect_call" label: "./bufferevent_filter.c:519:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_readcb" targetname: "./bufferevent_filter.c:be_filter_read_nolock_" label: "./bufferevent_filter.c:521:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_readcb" targetname: "__indirect_call" label: "./bufferevent_filter.c:523:2" }
+node: { title: "./bufferevent_filter.c:be_filter_writecb" label: "be_filter_writecb\n./bufferevent_filter.c:529:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_writecb" targetname: "__indirect_call" label: "./bufferevent_filter.c:536:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_writecb" targetname: "event_errx" label: "./bufferevent_filter.c:539:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_writecb" targetname: "./bufferevent_filter.c:be_filter_process_output" label: "./bufferevent_filter.c:543:3" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_writecb" targetname: "__indirect_call" label: "./bufferevent_filter.c:546:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_writecb" targetname: "__stack_chk_fail" }
+node: { title: "./bufferevent_filter.c:be_filter_eventcb" label: "be_filter_eventcb\n./bufferevent_filter.c:551:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_eventcb" targetname: "__indirect_call" label: "./bufferevent_filter.c:557:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_eventcb" targetname: "event_errx" label: "./bufferevent_filter.c:560:2" }
+node: { title: "bufferevent_run_eventcb_" label: "bufferevent_run_eventcb_\n./bufferevent-internal.h:403:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_eventcb" targetname: "bufferevent_run_eventcb_" label: "./bufferevent_filter.c:566:3" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_eventcb" targetname: "__indirect_call" label: "./bufferevent_filter.c:569:2" }
+node: { title: "./bufferevent_filter.c:be_filter_flush" label: "be_filter_flush\n./bufferevent_filter.c:573:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_flush" targetname: "./bufferevent_filter.c:upcast" label: "./bufferevent_filter.c:576:38" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_flush" targetname: "event_errx" label: "./bufferevent_filter.c:578:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_flush" targetname: "bufferevent_incref_and_lock_" label: "./bufferevent_filter.c:580:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_flush" targetname: "./bufferevent_filter.c:be_filter_process_input" label: "./bufferevent_filter.c:583:3" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_flush" targetname: "./bufferevent_filter.c:be_filter_process_output" label: "./bufferevent_filter.c:586:3" }
+node: { title: "bufferevent_flush" label: "bufferevent_flush\n./include/event2/bufferevent.h:653:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_flush" targetname: "bufferevent_flush" label: "./bufferevent_filter.c:590:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_flush" targetname: "bufferevent_decref_and_unlock_" label: "./bufferevent_filter.c:592:2" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_flush" targetname: "__stack_chk_fail" }
+node: { title: "./bufferevent_filter.c:be_filter_ctrl" label: "be_filter_ctrl\n./bufferevent_filter.c:598:1" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_ctrl" targetname: "./bufferevent_filter.c:upcast" label: "./bufferevent_filter.c:604:10" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_ctrl" targetname: "./bufferevent_filter.c:upcast" label: "./bufferevent_filter.c:609:10" }
+edge: { sourcename: "./bufferevent_filter.c:be_filter_ctrl" targetname: "__indirect_call" label: "./bufferevent_filter.c:614:39" }
+}

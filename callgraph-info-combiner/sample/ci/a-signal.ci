@@ -1,0 +1,108 @@
+graph: { title: "./signal.c"
+node: { title: "evsig_set_base_" label: "evsig_set_base_\n./signal.c:122:1" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "evsig_set_base_" targetname: "__indirect_call" label: "./signal.c:124:2" }
+edge: { sourcename: "evsig_set_base_" targetname: "__indirect_call" label: "./signal.c:128:2" }
+node: { title: "./signal.c:evsig_cb" label: "evsig_cb\n./signal.c:133:1" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_cb" targetname: "memset" label: "./signal.c:143:2" }
+node: { title: "read" label: "read\n/usr/include/unistd.h:371:16" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_cb" targetname: "read" label: "./signal.c:149:7" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_cb" targetname: "__errno_location" label: "./signal.c:152:14" }
+node: { title: "event_sock_err" label: "event_sock_err\n./log-internal.h:62:6" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_cb" targetname: "event_sock_err" label: "./signal.c:154:5" }
+edge: { sourcename: "./signal.c:evsig_cb" targetname: "__indirect_call" label: "./signal.c:167:2" }
+node: { title: "evmap_signal_active_" label: "evmap_signal_active_\n./evmap-internal.h:86:6" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_cb" targetname: "evmap_signal_active_" label: "./signal.c:170:4" }
+edge: { sourcename: "./signal.c:evsig_cb" targetname: "__indirect_call" label: "./signal.c:172:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_cb" targetname: "__stack_chk_fail" }
+node: { title: "evsig_init_" label: "evsig_init_\n./signal.c:176:1" }
+node: { title: "evutil_make_internal_pipe_" label: "evutil_make_internal_pipe_\n./util-internal.h:528:5" shape : ellipse }
+edge: { sourcename: "evsig_init_" targetname: "evutil_make_internal_pipe_" label: "./signal.c:183:6" }
+edge: { sourcename: "evsig_init_" targetname: "event_sock_err" label: "./signal.c:189:3" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "evsig_init_" targetname: "event_mm_free_" label: "./signal.c:195:3" }
+node: { title: "event_assign" label: "event_assign\n./include/event2/event.h:1166:5" shape : ellipse }
+edge: { sourcename: "evsig_init_" targetname: "event_assign" label: "./signal.c:200:2" }
+node: { title: "event_priority_set" label: "event_priority_set\n./include/event2/event.h:1524:5" shape : ellipse }
+edge: { sourcename: "evsig_init_" targetname: "event_priority_set" label: "./signal.c:204:2" }
+node: { title: "evsig_ensure_saved_" label: "evsig_ensure_saved_\n./signal.c:214:1" }
+node: { title: "event_debugx_" label: "event_debugx_\n./log-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "evsig_ensure_saved_" targetname: "event_debugx_" label: "./signal.c:219:3" }
+node: { title: "event_mm_realloc_" label: "event_mm_realloc_\n./mm-internal.h:72:7" shape : ellipse }
+edge: { sourcename: "evsig_ensure_saved_" targetname: "event_mm_realloc_" label: "./signal.c:221:7" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "evsig_ensure_saved_" targetname: "event_warn" label: "./signal.c:223:4" }
+edge: { sourcename: "evsig_ensure_saved_" targetname: "memset" label: "./signal.c:227:3" }
+node: { title: "evsig_set_handler_" label: "evsig_set_handler_\n./signal.c:239:1" }
+edge: { sourcename: "evsig_set_handler_" targetname: "evsig_ensure_saved_" label: "./signal.c:250:6" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "evsig_set_handler_" targetname: "event_mm_malloc_" label: "./signal.c:254:26" }
+edge: { sourcename: "evsig_set_handler_" targetname: "event_warn" label: "./signal.c:256:3" }
+edge: { sourcename: "evsig_set_handler_" targetname: "memset" label: "./signal.c:262:2" }
+node: { title: "sigfillset" label: "sigfillset\n/usr/include/signal.h:202:12" shape : ellipse }
+edge: { sourcename: "evsig_set_handler_" targetname: "sigfillset" label: "./signal.c:267:2" }
+node: { title: "sigaction" label: "sigaction\n/usr/include/signal.h:243:12" shape : ellipse }
+edge: { sourcename: "evsig_set_handler_" targetname: "sigaction" label: "./signal.c:269:6" }
+edge: { sourcename: "evsig_set_handler_" targetname: "event_warn" label: "./signal.c:270:3" }
+edge: { sourcename: "evsig_set_handler_" targetname: "event_mm_free_" label: "./signal.c:271:3" }
+edge: { sourcename: "evsig_set_handler_" targetname: "__stack_chk_fail" }
+node: { title: "./signal.c:evsig_add" label: "evsig_add\n./signal.c:289:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "event_errx" label: "./signal.c:294:2" }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "__indirect_call" label: "./signal.c:297:2" }
+node: { title: "event_warnx" label: "event_warnx\n./log-internal.h:68:6" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "event_warnx" label: "./signal.c:299:3" }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "__indirect_call" label: "./signal.c:310:2" }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "event_debugx_" label: "./signal.c:312:2" }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "evsig_set_handler_" label: "./signal.c:313:6" }
+node: { title: "event_add_nolock_" label: "event_add_nolock_\n./event-internal.h:457:5" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "event_add_nolock_" label: "./signal.c:319:7" }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "__indirect_call" label: "./signal.c:327:2" }
+edge: { sourcename: "./signal.c:evsig_add" targetname: "__indirect_call" label: "./signal.c:330:2" }
+node: { title: "evsig_restore_handler_" label: "evsig_restore_handler_\n./signal.c:335:1" }
+edge: { sourcename: "evsig_restore_handler_" targetname: "sigaction" label: "./signal.c:355:6" }
+edge: { sourcename: "evsig_restore_handler_" targetname: "event_warn" label: "./signal.c:356:3" }
+edge: { sourcename: "evsig_restore_handler_" targetname: "event_mm_free_" label: "./signal.c:366:2" }
+node: { title: "./signal.c:evsig_del" label: "evsig_del\n./signal.c:372:1" }
+edge: { sourcename: "./signal.c:evsig_del" targetname: "event_errx" label: "./signal.c:374:2" }
+edge: { sourcename: "./signal.c:evsig_del" targetname: "event_debugx_" label: "./signal.c:376:2" }
+edge: { sourcename: "./signal.c:evsig_del" targetname: "__indirect_call" label: "./signal.c:379:2" }
+edge: { sourcename: "./signal.c:evsig_del" targetname: "__indirect_call" label: "./signal.c:382:2" }
+edge: { sourcename: "./signal.c:evsig_del" targetname: "evsig_restore_handler_" label: "./signal.c:384:10" }
+node: { title: "./signal.c:evsig_handler" label: "evsig_handler\n./signal.c:388:1" }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "__errno_location" label: "./signal.c:390:19" }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "event_warnx" label: "./signal.c:397:3" }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "__errno_location" label: "./signal.c:424:3" }
+node: { title: "write" label: "write\n/usr/include/unistd.h:378:16" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "write" label: "./signal.c:425:12" }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "__errno_location" label: "./signal.c:426:8" }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "__errno_location" label: "./signal.c:428:52" }
+node: { title: "strerror" label: "strerror\n/usr/include/string.h:419:14" shape : ellipse }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "strerror" label: "./signal.c:428:4" }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "event_warnx" label: "./signal.c:428:4" }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "__errno_location" label: "./signal.c:433:2" }
+edge: { sourcename: "./signal.c:evsig_handler" targetname: "__stack_chk_fail" }
+node: { title: "evsig_dealloc_" label: "evsig_dealloc_\n./signal.c:440:1" }
+node: { title: "event_del" label: "event_del\n./include/event2/event.h:1293:5" shape : ellipse }
+edge: { sourcename: "evsig_dealloc_" targetname: "event_del" label: "./signal.c:444:3" }
+node: { title: "event_debug_unassign" label: "event_debug_unassign\n./include/event2/event.h:334:6" shape : ellipse }
+edge: { sourcename: "evsig_dealloc_" targetname: "event_debug_unassign" label: "./signal.c:449:2" }
+edge: { sourcename: "evsig_dealloc_" targetname: "evsig_restore_handler_" label: "./signal.c:453:4" }
+edge: { sourcename: "evsig_dealloc_" targetname: "__indirect_call" label: "./signal.c:455:2" }
+edge: { sourcename: "evsig_dealloc_" targetname: "__indirect_call" label: "./signal.c:461:2" }
+node: { title: "evutil_closesocket" label: "evutil_closesocket\n./include/event2/util.h:471:5" shape : ellipse }
+edge: { sourcename: "evsig_dealloc_" targetname: "evutil_closesocket" label: "./signal.c:464:3" }
+edge: { sourcename: "evsig_dealloc_" targetname: "evutil_closesocket" label: "./signal.c:468:3" }
+edge: { sourcename: "evsig_dealloc_" targetname: "event_mm_free_" label: "./signal.c:475:3" }
+node: { title: "./signal.c:evsig_free_globals_locks" label: "evsig_free_globals_locks\n./signal.c:481:1" }
+edge: { sourcename: "./signal.c:evsig_free_globals_locks" targetname: "__indirect_call" label: "./signal.c:485:3" }
+node: { title: "evsig_free_globals_" label: "evsig_free_globals_\n./signal.c:493:1" }
+edge: { sourcename: "evsig_free_globals_" targetname: "./signal.c:evsig_free_globals_locks" label: "./signal.c:495:2" }
+node: { title: "evsig_global_setup_locks_" label: "evsig_global_setup_locks_\n./signal.c:500:1" }
+node: { title: "evthread_setup_global_lock_" label: "evthread_setup_global_lock_\n./evthread-internal.h:374:7" shape : ellipse }
+edge: { sourcename: "evsig_global_setup_locks_" targetname: "evthread_setup_global_lock_" label: "./signal.c:502:2" }
+edge: { sourcename: "evsig_global_setup_locks_" targetname: "event_warn" label: "./signal.c:502:2" }
+}

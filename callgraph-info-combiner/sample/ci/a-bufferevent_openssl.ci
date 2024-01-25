@@ -1,0 +1,179 @@
+graph: { title: "./bufferevent_openssl.c"
+node: { title: "./bufferevent_openssl.c:print_err" label: "print_err\n./bufferevent_openssl.c:82:1" }
+node: { title: "./bufferevent_openssl.c:bio_bufferevent_new" label: "bio_bufferevent_new\n./bufferevent_openssl.c:89:1" }
+node: { title: "BIO_set_init" label: "BIO_set_init\n/usr/include/openssl/bio.h:635:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_new" targetname: "BIO_set_init" label: "./bufferevent_openssl.c:91:2" }
+node: { title: "BIO_set_data" label: "BIO_set_data\n/usr/include/openssl/bio.h:633:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_new" targetname: "BIO_set_data" label: "./bufferevent_openssl.c:92:2" }
+node: { title: "./bufferevent_openssl.c:bio_bufferevent_free" label: "bio_bufferevent_free\n./bufferevent_openssl.c:98:1" }
+node: { title: "BIO_get_shutdown" label: "BIO_get_shutdown\n/usr/include/openssl/bio.h:638:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_free" targetname: "BIO_get_shutdown" label: "./bufferevent_openssl.c:102:6" }
+node: { title: "BIO_get_init" label: "BIO_get_init\n/usr/include/openssl/bio.h:636:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_free" targetname: "BIO_get_init" label: "./bufferevent_openssl.c:103:7" }
+node: { title: "BIO_get_data" label: "BIO_get_data\n/usr/include/openssl/bio.h:634:7" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_free" targetname: "BIO_get_data" label: "./bufferevent_openssl.c:103:26" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_free" targetname: "BIO_get_data" label: "./bufferevent_openssl.c:104:21" }
+node: { title: "bufferevent_free" label: "bufferevent_free\n./include/event2/bufferevent.h:327:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_free" targetname: "bufferevent_free" label: "./bufferevent_openssl.c:104:4" }
+node: { title: "BIO_free" label: "BIO_free\n/usr/include/openssl/bio.h:632:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_free" targetname: "BIO_free" label: "./bufferevent_openssl.c:105:3" }
+node: { title: "./bufferevent_openssl.c:bio_bufferevent_read" label: "bio_bufferevent_read\n./bufferevent_openssl.c:112:1" }
+node: { title: "BIO_clear_flags" label: "BIO_clear_flags\n/usr/include/openssl/bio.h:219:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_read" targetname: "BIO_clear_flags" label: "./bufferevent_openssl.c:117:2" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_read" targetname: "BIO_get_data" label: "./bufferevent_openssl.c:121:7" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_read" targetname: "BIO_get_data" label: "./bufferevent_openssl.c:124:32" }
+node: { title: "bufferevent_get_input" label: "bufferevent_get_input\n./include/event2/bufferevent.h:472:18" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_read" targetname: "bufferevent_get_input" label: "./bufferevent_openssl.c:124:10" }
+node: { title: "evbuffer_get_length" label: "evbuffer_get_length\n./include/event2/buffer.h:256:8" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_read" targetname: "evbuffer_get_length" label: "./bufferevent_openssl.c:125:6" }
+node: { title: "BIO_set_flags" label: "BIO_set_flags\n/usr/include/openssl/bio.h:217:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_read" targetname: "BIO_set_flags" label: "./bufferevent_openssl.c:127:3" }
+node: { title: "evbuffer_remove" label: "evbuffer_remove\n./include/event2/buffer.h:373:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_read" targetname: "evbuffer_remove" label: "./bufferevent_openssl.c:130:7" }
+node: { title: "./bufferevent_openssl.c:bio_bufferevent_write" label: "bio_bufferevent_write\n./bufferevent_openssl.c:138:1" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_write" targetname: "BIO_get_data" label: "./bufferevent_openssl.c:140:30" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_write" targetname: "BIO_clear_flags" label: "./bufferevent_openssl.c:144:2" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_write" targetname: "BIO_get_data" label: "./bufferevent_openssl.c:146:7" }
+node: { title: "bufferevent_get_output" label: "bufferevent_get_output\n./include/event2/bufferevent.h:487:18" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_write" targetname: "bufferevent_get_output" label: "./bufferevent_openssl.c:149:11" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_write" targetname: "evbuffer_get_length" label: "./bufferevent_openssl.c:150:11" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_write" targetname: "BIO_set_flags" label: "./bufferevent_openssl.c:157:4" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_write" targetname: "event_errx" label: "./bufferevent_openssl.c:163:2" }
+node: { title: "evbuffer_add" label: "evbuffer_add\n./include/event2/buffer.h:358:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_write" targetname: "evbuffer_add" label: "./bufferevent_openssl.c:164:2" }
+node: { title: "./bufferevent_openssl.c:bio_bufferevent_ctrl" label: "bio_bufferevent_ctrl\n./bufferevent_openssl.c:170:1" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_ctrl" targetname: "BIO_get_data" label: "./bufferevent_openssl.c:172:30" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_ctrl" targetname: "BIO_get_shutdown" label: "./bufferevent_openssl.c:177:9" }
+node: { title: "BIO_set_shutdown" label: "BIO_set_shutdown\n/usr/include/openssl/bio.h:637:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_ctrl" targetname: "BIO_set_shutdown" label: "./bufferevent_openssl.c:180:3" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_ctrl" targetname: "bufferevent_get_input" label: "./bufferevent_openssl.c:183:29" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_ctrl" targetname: "evbuffer_get_length" label: "./bufferevent_openssl.c:183:9" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_ctrl" targetname: "bufferevent_get_output" label: "./bufferevent_openssl.c:186:29" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_ctrl" targetname: "evbuffer_get_length" label: "./bufferevent_openssl.c:186:9" }
+node: { title: "./bufferevent_openssl.c:bio_bufferevent_puts" label: "bio_bufferevent_puts\n./bufferevent_openssl.c:203:1" }
+node: { title: "strlen" label: "strlen\n/usr/include/string.h:407:15" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_puts" targetname: "strlen" label: "./bufferevent_openssl.c:205:37" }
+edge: { sourcename: "./bufferevent_openssl.c:bio_bufferevent_puts" targetname: "./bufferevent_openssl.c:bio_bufferevent_write" label: "./bufferevent_openssl.c:205:9" }
+node: { title: "./bufferevent_openssl.c:BIO_s_bufferevent" label: "BIO_s_bufferevent\n./bufferevent_openssl.c:213:1" }
+node: { title: "BIO_meth_new" label: "BIO_meth_new\n/usr/include/openssl/bio.h:849:13" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_s_bufferevent" targetname: "BIO_meth_new" label: "./bufferevent_openssl.c:216:25" }
+node: { title: "BIO_meth_set_write" label: "BIO_meth_set_write\n/usr/include/openssl/bio.h:854:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_s_bufferevent" targetname: "BIO_meth_set_write" label: "./bufferevent_openssl.c:219:3" }
+node: { title: "BIO_meth_set_read" label: "BIO_meth_set_read\n/usr/include/openssl/bio.h:860:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_s_bufferevent" targetname: "BIO_meth_set_read" label: "./bufferevent_openssl.c:220:3" }
+node: { title: "BIO_meth_set_puts" label: "BIO_meth_set_puts\n/usr/include/openssl/bio.h:865:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_s_bufferevent" targetname: "BIO_meth_set_puts" label: "./bufferevent_openssl.c:221:3" }
+node: { title: "BIO_meth_set_ctrl" label: "BIO_meth_set_ctrl\n/usr/include/openssl/bio.h:871:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_s_bufferevent" targetname: "BIO_meth_set_ctrl" label: "./bufferevent_openssl.c:222:3" }
+node: { title: "BIO_meth_set_create" label: "BIO_meth_set_create\n/usr/include/openssl/bio.h:874:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_s_bufferevent" targetname: "BIO_meth_set_create" label: "./bufferevent_openssl.c:223:3" }
+node: { title: "BIO_meth_set_destroy" label: "BIO_meth_set_destroy\n/usr/include/openssl/bio.h:876:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_s_bufferevent" targetname: "BIO_meth_set_destroy" label: "./bufferevent_openssl.c:224:3" }
+node: { title: "./bufferevent_openssl.c:BIO_new_bufferevent" label: "BIO_new_bufferevent\n./bufferevent_openssl.c:232:1" }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_new_bufferevent" targetname: "./bufferevent_openssl.c:BIO_s_bufferevent" label: "./bufferevent_openssl.c:237:25" }
+node: { title: "BIO_new" label: "BIO_new\n/usr/include/openssl/bio.h:631:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_new_bufferevent" targetname: "BIO_new" label: "./bufferevent_openssl.c:237:17" }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_new_bufferevent" targetname: "BIO_set_init" label: "./bufferevent_openssl.c:239:2" }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_new_bufferevent" targetname: "BIO_set_data" label: "./bufferevent_openssl.c:240:2" }
+edge: { sourcename: "./bufferevent_openssl.c:BIO_new_bufferevent" targetname: "BIO_set_shutdown" label: "./bufferevent_openssl.c:243:2" }
+node: { title: "./bufferevent_openssl.c:conn_closed" label: "conn_closed\n./bufferevent_openssl.c:248:1" }
+node: { title: "SSL_get_shutdown" label: "SSL_get_shutdown\n/usr/include/openssl/ssl.h:2117:12" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "SSL_get_shutdown" label: "./bufferevent_openssl.c:257:7" }
+node: { title: "ERR_peek_error" label: "ERR_peek_error\n/usr/include/openssl/err.h:416:15" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "ERR_peek_error" label: "./bufferevent_openssl.c:264:34" }
+node: { title: "bufferevent_ssl_put_error" label: "bufferevent_ssl_put_error\n./ssl-compat.h:91:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "bufferevent_ssl_put_error" label: "./bufferevent_openssl.c:266:3" }
+node: { title: "SSL_is_init_finished" label: "SSL_is_init_finished\n/usr/include/openssl/ssl.h:1148:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "SSL_is_init_finished" label: "./bufferevent_openssl.c:270:19" }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "bufferevent_ssl_put_error" label: "./bufferevent_openssl.c:272:3" }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "bufferevent_ssl_put_error" label: "./bufferevent_openssl.c:276:3" }
+node: { title: "event_warnx" label: "event_warnx\n./log-internal.h:68:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "event_warnx" label: "./bufferevent_openssl.c:285:3" }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "bufferevent_ssl_put_error" label: "./bufferevent_openssl.c:290:3" }
+node: { title: "ERR_get_error" label: "ERR_get_error\n/usr/include/openssl/err.h:405:15" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "ERR_get_error" label: "./bufferevent_openssl.c:289:16" }
+node: { title: "bufferevent_ssl_stop_reading" label: "bufferevent_ssl_stop_reading\n./ssl-compat.h:93:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "bufferevent_ssl_stop_reading" label: "./bufferevent_openssl.c:296:2" }
+node: { title: "bufferevent_ssl_stop_writing" label: "bufferevent_ssl_stop_writing\n./ssl-compat.h:94:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "bufferevent_ssl_stop_writing" label: "./bufferevent_openssl.c:297:2" }
+node: { title: "bufferevent_run_eventcb_" label: "bufferevent_run_eventcb_\n./bufferevent-internal.h:403:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:conn_closed" targetname: "bufferevent_run_eventcb_" label: "./bufferevent_openssl.c:301:2" }
+node: { title: "./bufferevent_openssl.c:init_bio_counts" label: "init_bio_counts\n./bufferevent_openssl.c:305:1" }
+node: { title: "SSL_get_wbio" label: "SSL_get_wbio\n/usr/include/openssl/ssl.h:1638:13" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:init_bio_counts" targetname: "SSL_get_wbio" label: "./bufferevent_openssl.c:309:9" }
+node: { title: "BIO_number_written" label: "BIO_number_written\n/usr/include/openssl/bio.h:612:10" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:init_bio_counts" targetname: "BIO_number_written" label: "./bufferevent_openssl.c:310:37" }
+node: { title: "SSL_get_rbio" label: "SSL_get_rbio\n/usr/include/openssl/ssl.h:1637:13" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:init_bio_counts" targetname: "SSL_get_rbio" label: "./bufferevent_openssl.c:311:9" }
+node: { title: "BIO_number_read" label: "BIO_number_read\n/usr/include/openssl/bio.h:611:10" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:init_bio_counts" targetname: "BIO_number_read" label: "./bufferevent_openssl.c:312:34" }
+node: { title: "./bufferevent_openssl.c:decrement_buckets" label: "decrement_buckets\n./bufferevent_openssl.c:316:1" }
+edge: { sourcename: "./bufferevent_openssl.c:decrement_buckets" targetname: "SSL_get_wbio" label: "./bufferevent_openssl.c:318:24" }
+edge: { sourcename: "./bufferevent_openssl.c:decrement_buckets" targetname: "BIO_number_written" label: "./bufferevent_openssl.c:318:24" }
+edge: { sourcename: "./bufferevent_openssl.c:decrement_buckets" targetname: "SSL_get_rbio" label: "./bufferevent_openssl.c:319:24" }
+edge: { sourcename: "./bufferevent_openssl.c:decrement_buckets" targetname: "BIO_number_read" label: "./bufferevent_openssl.c:319:24" }
+node: { title: "bufferevent_decrement_write_buckets_" label: "bufferevent_decrement_write_buckets_\n./bufferevent-internal.h:508:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:decrement_buckets" targetname: "bufferevent_decrement_write_buckets_" label: "./bufferevent_openssl.c:324:3" }
+node: { title: "bufferevent_decrement_read_buckets_" label: "bufferevent_decrement_read_buckets_\n./bufferevent-internal.h:511:5" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:decrement_buckets" targetname: "bufferevent_decrement_read_buckets_" label: "./bufferevent_openssl.c:326:3" }
+node: { title: "./bufferevent_openssl.c:SSL_init" label: "SSL_init\n./bufferevent_openssl.c:332:1" }
+node: { title: "SSL_ctrl" label: "SSL_ctrl\n/usr/include/openssl/ssl.h:1965:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:SSL_init" targetname: "SSL_ctrl" label: "./bufferevent_openssl.c:336:2" }
+node: { title: "./bufferevent_openssl.c:SSL_context_free" label: "SSL_context_free\n./bufferevent_openssl.c:342:1" }
+node: { title: "SSL_free" label: "SSL_free\n/usr/include/openssl/ssl.h:1928:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:SSL_context_free" targetname: "SSL_free" label: "./bufferevent_openssl.c:345:3" }
+node: { title: "./bufferevent_openssl.c:SSL_handshake_is_ok" label: "SSL_handshake_is_ok\n./bufferevent_openssl.c:349:1" }
+node: { title: "./bufferevent_openssl.c:SSL_is_want_read" label: "SSL_is_want_read\n./bufferevent_openssl.c:356:1" }
+node: { title: "./bufferevent_openssl.c:SSL_is_want_write" label: "SSL_is_want_write\n./bufferevent_openssl.c:362:1" }
+node: { title: "./bufferevent_openssl.c:openssl_read" label: "openssl_read\n./bufferevent_openssl.c:368:1" }
+node: { title: "SSL_read" label: "SSL_read\n/usr/include/openssl/ssl.h:1948:12" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:openssl_read" targetname: "SSL_read" label: "./bufferevent_openssl.c:370:9" }
+node: { title: "./bufferevent_openssl.c:openssl_write" label: "openssl_write\n./bufferevent_openssl.c:374:1" }
+node: { title: "SSL_write" label: "SSL_write\n/usr/include/openssl/ssl.h:1961:12" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:openssl_write" targetname: "SSL_write" label: "./bufferevent_openssl.c:376:9" }
+node: { title: "./bufferevent_openssl.c:be_openssl_get_fd" label: "be_openssl_get_fd\n./bufferevent_openssl.c:380:1" }
+edge: { sourcename: "./bufferevent_openssl.c:be_openssl_get_fd" targetname: "SSL_get_wbio" label: "./bufferevent_openssl.c:383:13" }
+node: { title: "BIO_ctrl" label: "BIO_ctrl\n/usr/include/openssl/bio.h:649:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:be_openssl_get_fd" targetname: "BIO_ctrl" label: "./bufferevent_openssl.c:385:8" }
+node: { title: "./bufferevent_openssl.c:be_openssl_bio_set_fd" label: "be_openssl_bio_set_fd\n./bufferevent_openssl.c:390:1" }
+node: { title: "BIO_new_socket" label: "BIO_new_socket\n/usr/include/openssl/bio.h:799:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:be_openssl_bio_set_fd" targetname: "BIO_new_socket" label: "./bufferevent_openssl.c:394:9" }
+node: { title: "SSL_set_bio" label: "SSL_set_bio\n/usr/include/openssl/ssl.h:1636:6" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:be_openssl_bio_set_fd" targetname: "SSL_set_bio" label: "./bufferevent_openssl.c:395:3" }
+edge: { sourcename: "./bufferevent_openssl.c:be_openssl_bio_set_fd" targetname: "./bufferevent_openssl.c:BIO_new_bufferevent" label: "./bufferevent_openssl.c:398:15" }
+edge: { sourcename: "./bufferevent_openssl.c:be_openssl_bio_set_fd" targetname: "SSL_set_bio" label: "./bufferevent_openssl.c:400:3" }
+node: { title: "./bufferevent_openssl.c:SSL_pending_wrap" label: "SSL_pending_wrap\n./bufferevent_openssl.c:405:15" }
+node: { title: "SSL_pending" label: "SSL_pending\n/usr/include/openssl/ssl.h:1627:12" shape : ellipse }
+edge: { sourcename: "./bufferevent_openssl.c:SSL_pending_wrap" targetname: "SSL_pending" label: "./bufferevent_openssl.c:407:9" }
+node: { title: "bufferevent_openssl_filter_new" label: "bufferevent_openssl_filter_new\n./bufferevent_openssl.c:436:1" }
+edge: { sourcename: "bufferevent_openssl_filter_new" targetname: "./bufferevent_openssl.c:BIO_new_bufferevent" label: "./bufferevent_openssl.c:447:14" }
+edge: { sourcename: "bufferevent_openssl_filter_new" targetname: "SSL_set_bio" label: "./bufferevent_openssl.c:450:2" }
+node: { title: "bufferevent_ssl_new_impl" label: "bufferevent_ssl_new_impl\n./ssl-compat.h:87:21" shape : ellipse }
+edge: { sourcename: "bufferevent_openssl_filter_new" targetname: "bufferevent_ssl_new_impl" label: "./bufferevent_openssl.c:452:8" }
+edge: { sourcename: "bufferevent_openssl_filter_new" targetname: "SSL_free" label: "./bufferevent_openssl.c:458:3" }
+node: { title: "bufferevent_openssl_socket_new" label: "bufferevent_openssl_socket_new\n./bufferevent_openssl.c:463:1" }
+edge: { sourcename: "bufferevent_openssl_socket_new" targetname: "SSL_get_wbio" label: "./bufferevent_openssl.c:470:13" }
+edge: { sourcename: "bufferevent_openssl_socket_new" targetname: "BIO_ctrl" label: "./bufferevent_openssl.c:474:13" }
+edge: { sourcename: "bufferevent_openssl_socket_new" targetname: "BIO_ctrl" label: "./bufferevent_openssl.c:488:9" }
+edge: { sourcename: "bufferevent_openssl_socket_new" targetname: "BIO_new_socket" label: "./bufferevent_openssl.c:493:10" }
+edge: { sourcename: "bufferevent_openssl_socket_new" targetname: "SSL_set_bio" label: "./bufferevent_openssl.c:494:4" }
+edge: { sourcename: "bufferevent_openssl_socket_new" targetname: "bufferevent_ssl_new_impl" label: "./bufferevent_openssl.c:500:9" }
+edge: { sourcename: "bufferevent_openssl_socket_new" targetname: "SSL_free" label: "./bufferevent_openssl.c:505:3" }
+node: { title: "bufferevent_ssl_renegotiate" label: "bufferevent_ssl_renegotiate\n./bufferevent_openssl.c:510:1" }
+node: { title: "bufferevent_ssl_renegotiate_impl" label: "bufferevent_ssl_renegotiate_impl\n./ssl-compat.h:95:5" shape : ellipse }
+edge: { sourcename: "bufferevent_ssl_renegotiate" targetname: "bufferevent_ssl_renegotiate_impl" label: "./bufferevent_openssl.c:512:9" }
+node: { title: "bufferevent_openssl_get_ssl" label: "bufferevent_openssl_get_ssl\n./bufferevent_openssl.c:516:1" }
+node: { title: "bufferevent_ssl_upcast" label: "bufferevent_ssl_upcast\n./ssl-compat.h:90:25" shape : ellipse }
+edge: { sourcename: "bufferevent_openssl_get_ssl" targetname: "bufferevent_ssl_upcast" label: "./bufferevent_openssl.c:518:36" }
+node: { title: "bufferevent_openssl_get_allow_dirty_shutdown" label: "bufferevent_openssl_get_allow_dirty_shutdown\n./bufferevent_openssl.c:525:1" }
+node: { title: "bufferevent_ssl_get_allow_dirty_shutdown" label: "bufferevent_ssl_get_allow_dirty_shutdown\n./ssl-compat.h:97:5" shape : ellipse }
+edge: { sourcename: "bufferevent_openssl_get_allow_dirty_shutdown" targetname: "bufferevent_ssl_get_allow_dirty_shutdown" label: "./bufferevent_openssl.c:527:9" }
+node: { title: "bufferevent_openssl_set_allow_dirty_shutdown" label: "bufferevent_openssl_set_allow_dirty_shutdown\n./bufferevent_openssl.c:531:1" }
+node: { title: "bufferevent_ssl_set_allow_dirty_shutdown" label: "bufferevent_ssl_set_allow_dirty_shutdown\n./ssl-compat.h:98:6" shape : ellipse }
+edge: { sourcename: "bufferevent_openssl_set_allow_dirty_shutdown" targetname: "bufferevent_ssl_set_allow_dirty_shutdown" label: "./bufferevent_openssl.c:534:2" }
+node: { title: "bufferevent_get_openssl_error" label: "bufferevent_get_openssl_error\n./bufferevent_openssl.c:538:1" }
+edge: { sourcename: "bufferevent_get_openssl_error" targetname: "bufferevent_ssl_upcast" label: "./bufferevent_openssl.c:540:36" }
+node: { title: "bufferevent_get_ssl_error" label: "bufferevent_get_ssl_error\n./ssl-compat.h:96:15" shape : ellipse }
+edge: { sourcename: "bufferevent_get_openssl_error" targetname: "bufferevent_get_ssl_error" label: "./bufferevent_openssl.c:543:9" }
+}

@@ -1,0 +1,75 @@
+graph: { title: "./signalfd.c"
+node: { title: "./signalfd.c:sigfd_cb" label: "sigfd_cb\n./signalfd.c:53:1" }
+node: { title: "read" label: "read\n/usr/include/unistd.h:371:16" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_cb" targetname: "read" label: "./signalfd.c:57:16" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_cb" targetname: "event_errx" label: "./signalfd.c:59:2" }
+edge: { sourcename: "./signalfd.c:sigfd_cb" targetname: "event_errx" label: "./signalfd.c:60:2" }
+edge: { sourcename: "./signalfd.c:sigfd_cb" targetname: "event_errx" label: "./signalfd.c:61:2" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_cb" targetname: "__indirect_call" label: "./signalfd.c:63:2" }
+node: { title: "evmap_signal_active_" label: "evmap_signal_active_\n./evmap-internal.h:86:6" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_cb" targetname: "evmap_signal_active_" label: "./signalfd.c:64:2" }
+edge: { sourcename: "./signalfd.c:sigfd_cb" targetname: "__indirect_call" label: "./signalfd.c:65:2" }
+node: { title: "__stack_chk_fail" label: "__stack_chk_fail\n<built-in>" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_cb" targetname: "__stack_chk_fail" }
+node: { title: "./signalfd.c:sigfd_free_sigevent" label: "sigfd_free_sigevent\n./signalfd.c:69:1" }
+edge: { sourcename: "./signalfd.c:sigfd_free_sigevent" targetname: "event_errx" label: "./signalfd.c:74:2" }
+node: { title: "event_del_nolock_" label: "event_del_nolock_\n./event-internal.h:473:5" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_free_sigevent" targetname: "event_del_nolock_" label: "./signalfd.c:75:2" }
+node: { title: "close" label: "close\n/usr/include/unistd.h:358:12" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_free_sigevent" targetname: "close" label: "./signalfd.c:76:8" }
+edge: { sourcename: "./signalfd.c:sigfd_free_sigevent" targetname: "event_errx" label: "./signalfd.c:77:2" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_free_sigevent" targetname: "event_mm_free_" label: "./signalfd.c:78:2" }
+node: { title: "./signalfd.c:sigfd_add" label: "sigfd_add\n./signalfd.c:83:1" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_errx" label: "./signalfd.c:92:2" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_errx" label: "./signalfd.c:94:2" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "./signalfd.c:sigfd_free_sigevent" label: "./signalfd.c:107:4" }
+node: { title: "evsig_ensure_saved_" label: "evsig_ensure_saved_\n./evsignal-internal.h:73:5" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "evsig_ensure_saved_" label: "./signalfd.c:116:6" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_mm_malloc_" label: "./signalfd.c:119:23" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_warn" label: "./signalfd.c:121:3" }
+node: { title: "sigaction" label: "sigaction\n/usr/include/signal.h:243:12" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "sigaction" label: "./signalfd.c:125:6" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_warn" label: "./signalfd.c:126:3" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_mm_free_" label: "./signalfd.c:127:3" }
+node: { title: "sigemptyset" label: "sigemptyset\n/usr/include/signal.h:199:12" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "sigemptyset" label: "./signalfd.c:134:2" }
+node: { title: "sigaddset" label: "sigaddset\n/usr/include/signal.h:205:12" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "sigaddset" label: "./signalfd.c:135:2" }
+node: { title: "sigprocmask" label: "sigprocmask\n/usr/include/signal.h:232:12" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "sigprocmask" label: "./signalfd.c:136:6" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_warn" label: "./signalfd.c:137:3" }
+node: { title: "signalfd" label: "signalfd\n/usr/include/x86_64-linux-gnu/sys/signalfd.h:57:12" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "signalfd" label: "./signalfd.c:141:10" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_warn" label: "./signalfd.c:143:3" }
+node: { title: "event_new" label: "event_new\n./include/event2/event.h:1124:15" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_new" label: "./signalfd.c:148:10" }
+node: { title: "event_priority_set" label: "event_priority_set\n./include/event2/event.h:1524:5" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_priority_set" label: "./signalfd.c:154:2" }
+node: { title: "event_add_nolock_" label: "event_add_nolock_\n./event-internal.h:457:5" shape : ellipse }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_add_nolock_" label: "./signalfd.c:156:6" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "event_mm_free_" label: "./signalfd.c:162:2" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "close" label: "./signalfd.c:164:2" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "sigprocmask" label: "./signalfd.c:166:2" }
+edge: { sourcename: "./signalfd.c:sigfd_add" targetname: "__stack_chk_fail" }
+node: { title: "./signalfd.c:sigfd_del" label: "sigfd_del\n./signalfd.c:171:1" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "event_errx" label: "./signalfd.c:177:2" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "event_errx" label: "./signalfd.c:179:2" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "sigemptyset" label: "./signalfd.c:181:2" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "sigaddset" label: "./signalfd.c:182:2" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "sigprocmask" label: "./signalfd.c:183:6" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "event_warn" label: "./signalfd.c:184:3" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "sigaction" label: "./signalfd.c:192:8" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "event_warn" label: "./signalfd.c:193:5" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "event_mm_free_" label: "./signalfd.c:196:4" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "./signalfd.c:sigfd_free_sigevent" label: "./signalfd.c:201:2" }
+edge: { sourcename: "./signalfd.c:sigfd_del" targetname: "__stack_chk_fail" }
+node: { title: "sigfd_init_" label: "sigfd_init_\n./signalfd.c:205:5" }
+edge: { sourcename: "sigfd_init_" targetname: "event_errx" label: "./signalfd.c:207:2" }
+node: { title: "getenv" label: "getenv\n/usr/include/stdlib.h:641:14" shape : ellipse }
+edge: { sourcename: "sigfd_init_" targetname: "getenv" label: "./signalfd.c:209:7" }
+}

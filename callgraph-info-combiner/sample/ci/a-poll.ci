@@ -1,0 +1,54 @@
+graph: { title: "./poll.c"
+node: { title: "./poll.c:poll_init" label: "poll_init\n./poll.c:99:1" }
+node: { title: "event_mm_calloc_" label: "event_mm_calloc_\n./mm-internal.h:58:7" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_init" targetname: "event_mm_calloc_" label: "./poll.c:103:17" }
+node: { title: "sigfd_init_" label: "sigfd_init_\n./evsignal-internal.h:65:5" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_init" targetname: "sigfd_init_" label: "./poll.c:106:6" }
+node: { title: "evsig_init_" label: "evsig_init_\n./evsignal-internal.h:71:5" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_init" targetname: "evsig_init_" label: "./poll.c:107:3" }
+node: { title: "evutil_weakrand_seed_" label: "evutil_weakrand_seed_\n./util-internal.h:337:13" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_init" targetname: "evutil_weakrand_seed_" label: "./poll.c:109:2" }
+node: { title: "./poll.c:poll_dispatch" label: "poll_dispatch\n./poll.c:137:1" }
+node: { title: "event_mm_realloc_" label: "event_mm_realloc_\n./mm-internal.h:72:7" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "event_mm_realloc_" label: "./poll.c:156:25" }
+node: { title: "event_warn" label: "event_warn\n./log-internal.h:60:6" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "event_warn" label: "./poll.c:159:5" }
+node: { title: "memcpy" label: "memcpy\n/usr/include/string.h:43:14" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "memcpy" label: "./poll.c:165:3" }
+node: { title: "evutil_tv_to_msec_" label: "evutil_tv_to_msec_\n./time-internal.h:56:6" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "evutil_tv_to_msec_" label: "./poll.c:176:10" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "__indirect_call" label: "./poll.c:181:2" }
+node: { title: "poll" label: "poll\n/usr/include/x86_64-linux-gnu/sys/poll.h:54:12" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "poll" label: "./poll.c:183:8" }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "__indirect_call" label: "./poll.c:185:2" }
+node: { title: "__errno_location" label: "__errno_location\n/usr/include/errno.h:37:13" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "__errno_location" label: "./poll.c:188:7" }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "event_warn" label: "./poll.c:189:4" }
+node: { title: "event_debugx_" label: "event_debugx_\n./log-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "event_debugx_" label: "./poll.c:196:2" }
+node: { title: "evutil_weakrand_range_" label: "evutil_weakrand_range_\n./util-internal.h:348:12" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "evutil_weakrand_range_" label: "./poll.c:201:6" }
+node: { title: "evmap_io_active_" label: "evmap_io_active_\n./evmap-internal.h:78:6" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dispatch" targetname: "evmap_io_active_" label: "./poll.c:224:3" }
+node: { title: "./poll.c:poll_add" label: "poll_add\n./poll.c:231:1" }
+node: { title: "event_errx" label: "event_errx\n./log-internal.h:66:6" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_add" targetname: "event_errx" label: "./poll.c:238:2" }
+edge: { sourcename: "./poll.c:poll_add" targetname: "event_mm_realloc_" label: "./poll.c:253:19" }
+edge: { sourcename: "./poll.c:poll_add" targetname: "event_warn" label: "./poll.c:256:4" }
+node: { title: "./poll.c:poll_del" label: "poll_del\n./poll.c:294:1" }
+edge: { sourcename: "./poll.c:poll_del" targetname: "event_errx" label: "./poll.c:301:2" }
+node: { title: "evmap_io_get_fdinfo_" label: "evmap_io_get_fdinfo_\n./evmap-internal.h:91:7" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_del" targetname: "evmap_io_get_fdinfo_" label: "./poll.c:334:9" }
+edge: { sourcename: "./poll.c:poll_del" targetname: "event_errx" label: "./poll.c:335:3" }
+edge: { sourcename: "./poll.c:poll_del" targetname: "event_errx" label: "./poll.c:336:3" }
+node: { title: "./poll.c:poll_dealloc" label: "poll_dealloc\n./poll.c:345:1" }
+node: { title: "evsig_dealloc_" label: "evsig_dealloc_\n./evsignal-internal.h:72:6" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dealloc" targetname: "evsig_dealloc_" label: "./poll.c:349:2" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dealloc" targetname: "event_mm_free_" label: "./poll.c:351:3" }
+edge: { sourcename: "./poll.c:poll_dealloc" targetname: "event_mm_free_" label: "./poll.c:353:3" }
+node: { title: "memset" label: "memset\n/usr/include/string.h:61:14" shape : ellipse }
+edge: { sourcename: "./poll.c:poll_dealloc" targetname: "memset" label: "./poll.c:355:2" }
+edge: { sourcename: "./poll.c:poll_dealloc" targetname: "event_mm_free_" label: "./poll.c:356:2" }
+}

@@ -1,0 +1,19 @@
+graph: { title: "./watch.c"
+node: { title: "./watch.c:evwatch_new" label: "evwatch_new\n./watch.c:30:1" }
+node: { title: "event_mm_malloc_" label: "event_mm_malloc_\n./mm-internal.h:47:7" shape : ellipse }
+edge: { sourcename: "./watch.c:evwatch_new" targetname: "event_mm_malloc_" label: "./watch.c:32:28" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "./watch.c:evwatch_new" targetname: "__indirect_call" label: "./watch.c:39:2" }
+edge: { sourcename: "./watch.c:evwatch_new" targetname: "__indirect_call" label: "./watch.c:41:2" }
+node: { title: "evwatch_prepare_new" label: "evwatch_prepare_new\n./watch.c:46:1" }
+edge: { sourcename: "evwatch_prepare_new" targetname: "./watch.c:evwatch_new" label: "./watch.c:49:9" }
+node: { title: "evwatch_check_new" label: "evwatch_check_new\n./watch.c:53:1" }
+edge: { sourcename: "evwatch_check_new" targetname: "./watch.c:evwatch_new" label: "./watch.c:56:9" }
+node: { title: "evwatch_base" label: "evwatch_base\n./watch.c:60:1" }
+node: { title: "evwatch_free" label: "evwatch_free\n./watch.c:66:1" }
+edge: { sourcename: "evwatch_free" targetname: "__indirect_call" label: "./watch.c:68:2" }
+edge: { sourcename: "evwatch_free" targetname: "__indirect_call" label: "./watch.c:70:2" }
+node: { title: "event_mm_free_" label: "event_mm_free_\n./mm-internal.h:74:6" shape : ellipse }
+edge: { sourcename: "evwatch_free" targetname: "event_mm_free_" label: "./watch.c:71:2" }
+node: { title: "evwatch_prepare_get_timeout" label: "evwatch_prepare_get_timeout\n./watch.c:75:1" }
+}

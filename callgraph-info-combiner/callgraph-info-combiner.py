@@ -31,7 +31,7 @@ class CallgraphInfoCombiner(object):
         self._funciont_name = function_name
         self._output_file = output_file
         self._callee = dict()
-        self._graph = pydot.Dot("callgraph-info-combiner", graph_type="graph", bgcolor="white")
+        self._graph = pydot.Dot("callgraph-info-combiner", graph_type="digraph", bgcolor="white")
         pass
     
     def analyze(self, include_private=False):

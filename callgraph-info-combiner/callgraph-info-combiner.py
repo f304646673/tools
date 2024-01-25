@@ -82,7 +82,4 @@ if __name__ == '__main__':
     
     cvg_to_dot = VcgFiles2Dot(cvg_folder, dot_folder)
     cvg_to_dot.cvg_to_dot()
-    # if len(sys.argv) == 1:
-    #     sys.argv.append("/home/fangliang/tools/callgraph-info-combiner/sample/ci") 
-    #     sys.argv.append("/home/fangliang/tools/callgraph-info-combiner/sample/dot")
     CallgraphInfoCombiner(dot_folder, function_name, output_file).analyze()

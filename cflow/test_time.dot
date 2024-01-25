@@ -1,0 +1,190 @@
+digraph cflow {
+    node [shape="box"]
+    main [label="int main (int argc, char **argv)
+./test/test-time.c:82"]
+    main -> evutil_weakrand_seed_
+    main -> getenv
+    main -> event_enable_debug_logging
+    main -> event_base_new
+    main -> event_new
+    main -> event_self_cbarg
+    main -> event_add
+    main -> event_base_dispatch
+    main -> printf
+    evutil_weakrand_seed_ [label="uint32_t evutil_weakrand_seed_ (struct evutil_weakrand_state *state, uint32_t seed)
+./evutil.c:2739"]
+    evutil_weakrand_seed_ -> gettimeofday
+    evutil_weakrand_seed_ -> getpid
+    gettimeofday [label="gettimeofday()"]
+    getpid [label="getpid()"]
+    getenv [label="getenv()"]
+    event_enable_debug_logging [label="void event_enable_debug_logging (uint32_t which)
+./log.c:76"]
+    event_base_new [label="struct event_base *event_base_new (void)
+./event.c:527"]
+    event_base_new -> event_config_new
+    event_base_new -> event_base_new_with_config
+    event_base_new -> event_config_free
+    event_config_new [label="struct event_config *event_config_new (void)
+./event.c:1158"]
+    event_config_new -> event_mm_calloc_
+    event_mm_calloc_ [label="void *event_mm_calloc_ (size_t count, size_t size)
+./event.c:3562"]
+    event_mm_calloc_ -> memset
+    event_mm_calloc_ -> calloc
+    memset [label="memset()"]
+    calloc [label="calloc()"]
+    event_base_new_with_config [label="struct event_base *event_base_new_with_config (const struct event_config *cfg)
+./event.c:612"]
+    event_base_new_with_config -> event_mm_calloc_
+    event_base_new_with_config -> event_warn
+    event_base_new_with_config -> evutil_getenv_
+    event_base_new_with_config -> evutil_configure_monotonic_time_
+    event_base_new_with_config -> min_heap_ctor_
+    event_base_new_with_config -> evmap_io_initmap_
+    event_base_new_with_config -> evmap_signal_initmap_
+    event_base_new_with_config -> event_changelist_init_
+    event_base_new_with_config -> memcpy
+    event_base_new_with_config -> event_warnx
+    event_base_new_with_config -> event_base_free
+    event_base_new_with_config -> event_msgx
+    event_base_new_with_config -> event_base_priority_init
+    event_base_new_with_config -> evthread_make_base_notifiable
+    event_warn [label="void event_warn (const char *fmt, ...)
+./log.c:113"]
+    event_warn -> event_logv_
+    event_warn -> strerror
+    event_logv_ [label="void event_logv_ (int severity, const char *errstr, const char *fmt, va_list ap)
+./log.c:187"]
+    event_logv_ -> evutil_vsnprintf
+    event_logv_ -> strlen
+    event_logv_ -> evutil_snprintf
+    evutil_vsnprintf [label="int evutil_vsnprintf (char *buf, size_t buflen, const char *format, va_list ap)
+./evutil.c:2134"]
+    evutil_vsnprintf -> vsnprintf
+    vsnprintf [label="vsnprintf()"]
+    strlen [label="strlen()"]
+    evutil_snprintf [label="int evutil_snprintf (char *buf, size_t buflen, const char *format, ...)
+./evutil.c:2123"]
+    evutil_snprintf -> evutil_vsnprintf
+    strerror [label="strerror()"]
+    evutil_getenv_ [label="const char *evutil_getenv_ (const char *varname)
+./evutil.c:2730"]
+    evutil_getenv_ -> getenv
+    evutil_configure_monotonic_time_ [label="int evutil_configure_monotonic_time_ (struct evutil_monotonic_timer *base, int flags)
+./evutil_time.c:307"]
+    evutil_configure_monotonic_time_ -> event_errx
+    evutil_configure_monotonic_time_ -> clock_gettime
+    event_errx [label="void event_errx (int eval, const char *fmt, ...)
+./log.c:146"]
+    event_errx -> event_logv_
+    clock_gettime [label="clock_gettime()"]
+    min_heap_ctor_ [label="void min_heap_ctor_ (min_heap_t *s)
+./minheap-internal.h:64"]
+    evmap_io_initmap_ [label="void evmap_io_initmap_ (struct event_signal_map *ctx)
+./evmap.c:189"]
+    evmap_io_initmap_ -> evmap_signal_initmap_
+    evmap_signal_initmap_ [label="void evmap_signal_initmap_ (struct event_signal_map *ctx)
+./evmap.c:235"]
+    event_changelist_init_ [label="void event_changelist_init_ (struct event_changelist *changelist)
+./evmap.c:709"]
+    memcpy [label="memcpy()"]
+    event_warnx [label="void event_warnx (const char *fmt, ...)
+./log.c:157"]
+    event_warnx -> event_logv_
+    event_base_free [label="void event_base_free (struct event_base *base)
+./event.c:977"]
+    event_msgx [label="void event_msgx (const char *fmt, ...)
+./log.c:167"]
+    event_msgx -> event_logv_
+    event_base_priority_init [label="int event_base_priority_init (struct event_base *base, int npriorities)
+./event.c:1262"]
+    event_base_priority_init -> event_mm_free_
+    event_base_priority_init -> event_mm_calloc_
+    event_base_priority_init -> event_warn
+    event_mm_free_ [label="void event_mm_free_ (void *ptr)
+./event.c:3628"]
+    event_mm_free_ -> free
+    free [label="free()"]
+    evthread_make_base_notifiable [label="int evthread_make_base_notifiable (struct event_base *base)
+./event.c:3684"]
+    event_config_free [label="void event_config_free (struct event_config *cfg)
+./event.c:1182"]
+    event_config_free -> event_mm_free_
+    event_new [label="struct event *event_new (struct event_base *base, int fd, short events, void (*cb) (int, short, void *), void *arg)
+./event.c:2274"]
+    event_new -> event_mm_malloc_
+    event_new -> event_assign
+    event_new -> event_mm_free_
+    event_mm_malloc_ [label="void *event_mm_malloc_ (size_t sz)
+./event.c:3550"]
+    event_mm_malloc_ -> malloc
+    malloc [label="malloc()"]
+    event_assign [label="int 1 event_assign (struct event *ev, struct event_base *base, int fd, short events, void (*callback) (int, short, void *), void *arg)
+./event.c:2179"]
+    event_self_cbarg [label="void *event_self_cbarg (void)
+./event.c:2254"]
+    event_add [label="int event_add (struct event *ev, const struct timeval *tv)
+./event.c:2550"]
+    event_add -> event_warnx
+    event_add -> event_add_nolock_
+    event_add_nolock_ [label="int event_add_nolock_ (struct event *ev, const struct timeval *tv, int tv_is_absolute)
+./event.c:2663"]
+    event_add_nolock_ -> evthread_is_debug_lock_held_
+    event_add_nolock_ -> event_errx
+    event_add_nolock_ -> fprintf
+    event_add_nolock_ -> abort
+    event_add_nolock_ -> event_debugx_
+    event_add_nolock_ -> min_heap_reserve_
+    event_add_nolock_ -> min_heap_size_
+    event_add_nolock_ -> evthread_id_fn_
+    event_add_nolock_ -> evmap_io_add_
+    event_add_nolock_ -> evmap_signal_add_
+    event_add_nolock_ -> min_heap_elt_is_top_
+    event_add_nolock_ -> min_heap_top_
+    evthread_is_debug_lock_held_ [label="int evthread_is_debug_lock_held_ (void *lock_)
+./evthread.c:345"]
+    evthread_is_debug_lock_held_ -> evthread_id_fn_
+    evthread_id_fn_ [label="unsigned long (*evthread_id_fn_) (void)
+./evthread.c:58"]
+    fprintf [label="fprintf()"]
+    abort [label="abort()"]
+    event_debugx_ [label="void event_debugx_ (const char *fmt, ...)
+./log.c:177"]
+    event_debugx_ -> event_logv_
+    min_heap_reserve_ [label="int min_heap_reserve_ (min_heap_t *s, size_t n)
+./minheap-internal.h:133"]
+    min_heap_reserve_ -> event_mm_realloc_
+    event_mm_realloc_ [label="void *event_mm_realloc_ (void *ptr, size_t sz)
+./event.c:3619"]
+    event_mm_realloc_ -> realloc
+    realloc [label="realloc()"]
+    min_heap_size_ [label="size_t min_heap_size_ (min_heap_t *s)
+./minheap-internal.h:68"]
+    evmap_io_add_ [label="int evmap_io_add_ (struct event_base *base, int fd, struct event *ev)
+./evmap.c:273"]
+    evmap_io_add_ -> event_errx
+    evmap_io_add_ -> fprintf
+    evmap_io_add_ -> abort
+    evmap_io_add_ -> event_mm_calloc_
+    evmap_io_add_ -> event_warnx
+    evmap_signal_add_ [label="int evmap_signal_add_ (struct event_base *base, int sig, struct event *ev)
+./evmap.c:450"]
+    evmap_signal_add_ -> event_mm_calloc_
+    min_heap_elt_is_top_ [label="int min_heap_elt_is_top_ (const struct event *e)
+./minheap-internal.h:91"]
+    min_heap_top_ [label="struct event *min_heap_top_ (min_heap_t *s)
+./minheap-internal.h:69"]
+    event_base_dispatch [label="int event_base_dispatch (struct event_base *event_base)
+./event.c:1851"]
+    event_base_dispatch -> event_base_loop
+    event_base_loop [label="int event_base_loop (struct event_base *base, int flags)
+./event.c:1966"]
+    event_base_loop -> event_warnx
+    event_base_loop -> evsig_set_base_
+    event_base_loop -> evthread_id_fn_
+    event_base_loop -> event_debugx_
+    evsig_set_base_ [label="void evsig_set_base_ (struct event_base *base)
+./signal.c:122"]
+    printf [label="printf()"]
+}

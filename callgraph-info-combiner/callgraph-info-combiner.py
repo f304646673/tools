@@ -5,25 +5,25 @@ import pydot
 
 class Vcg2Dot(object):
     def __init__(self, vcg_file, dot_file):
-        self.cvg_file = vcg_file
+        self.vcg_file = vcg_file
         self.dot_file = dot_file
 
-    def cvg_to_dot(self):
-        print("graph-easy --input=" + self.cvg_file + " -as=dot --output=" + self.dot_file)
-        subprocess.run("graph-easy --input=" + self.cvg_file + " -as=dot --output=" + self.dot_file, shell=True)
+    def vcg_to_dot(self):
+        print("graph-easy --input=" + self.vcg_file + " -as=dot --output=" + self.dot_file)
+        subprocess.run("graph-easy --input=" + self.vcg_file + " -as=dot --output=" + self.dot_file, shell=True)
         
 class VcgFiles2Dot(object):
     def __init__(self, vcg_folder, dot_folder):
-        self.cvg_folder = vcg_folder
+        self.vcg_folder = vcg_folder
         self.dot_folder = dot_folder
 
-    def cvg_to_dot(self):
+    def vcg_to_dot(self):
         if not os.path.exists(self.dot_folder):
             os.makedirs(self.dot_folder)
         
-        for file in os.listdir(self.cvg_folder):
-            cvg_to_dot = Vcg2Dot(self.cvg_folder + file, self.dot_folder + file + ".dot")
-            cvg_to_dot.cvg_to_dot()
+        for file in os.listdir(self.vcg_folder):
+            vcg_to_dot = Vcg2Dot(self.vcg_folder + file, self.dot_folder + file + ".dot")
+            vcg_to_dot.vcg_to_dot()
             
 class CallgraphInfoCombiner(object):
     def __init__(self, dot_folder, function_name, output_file) -> None:
@@ -74,12 +74,12 @@ class CallgraphInfoCombiner(object):
                     self._callee[edge.get_source()] = {edge.get_destination()}
             
 if __name__ == '__main__':
-    cvg_folder = sys.argv[1]
+    vcg_folder = sys.argv[1]
     function_name = sys.argv[2]
     output_file = sys.argv[3]
     
     dot_folder = "/tmp/CallgraphInfoCombiner/dot/"
     
-    cvg_to_dot = VcgFiles2Dot(cvg_folder, dot_folder)
-    cvg_to_dot.cvg_to_dot()
+    vcg_to_dot = VcgFiles2Dot(vcg_folder, dot_folder)
+    vcg_to_dot.vcg_to_dot()
     CallgraphInfoCombiner(dot_folder, function_name, output_file).analyze()

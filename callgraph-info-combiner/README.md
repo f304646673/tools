@@ -128,7 +128,11 @@ class VcgFiles2Dot(object):
 ```bash
 python callgraph-info-combiner.py ./sample/ci/ main libevent
 ```
-![请添加图片描述](https://img-blog.csdnimg.cn/direct/6cec80a9ff2d4b61887cc5a92a612bbe.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/63532d8942df42e09c912b878b69a97c.png#pic_center)
+局部图如下
+![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/71bda132a4e94df3a59149e1cec87124.png)
+
+
 # 代码
 [https://github.com/f304646673/tools/tree/main/callgraph-info-combiner](https://github.com/f304646673/tools/tree/main/callgraph-info-combiner)
 # 参考资料

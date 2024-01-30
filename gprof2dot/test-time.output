@@ -1,0 +1,598 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+100.00      0.01     0.01        1    10.00    10.00  event_base_loop
+  0.00      0.01     0.00  6059970     0.00     0.00  is_common_timeout
+  0.00      0.01     0.00  4019980     0.00     0.00  evutil_weakrand_
+  0.00      0.01     0.00  4019980     0.00     0.00  rand_int
+  0.00      0.01     0.00  2580290     0.00     0.00  event_to_event_callback
+  0.00      0.01     0.00  2326005     0.00     0.00  min_heap_top_
+  0.00      0.01     0.00  2300140     0.00     0.00  min_heap_reserve_
+  0.00      0.01     0.00  2059084     0.00     0.00  gettime
+  0.00      0.01     0.00  2019991     0.00     0.00  event_debug_assert_is_setup_
+  0.00      0.01     0.00  2019990     0.00     0.00  event_add
+  0.00      0.01     0.00  2019990     0.00     0.00  event_add_nolock_
+  0.00      0.01     0.00  2019990     0.00     0.00  event_debug_note_add_
+  0.00      0.01     0.00  2019990     0.00     0.00  event_queue_insert_timeout
+  0.00      0.01     0.00  2019990     0.00     0.00  event_queue_remove_timeout
+  0.00      0.01     0.00  2019990     0.00     0.00  min_heap_elt_is_top_
+  0.00      0.01     0.00  2019990     0.00     0.00  min_heap_erase_
+  0.00      0.01     0.00  2019990     0.00     0.00  min_heap_push_
+  0.00      0.01     0.00  2019990     0.00     0.00  min_heap_shift_up_
+  0.00      0.01     0.00  1668802     0.00     0.00  min_heap_shift_down_
+  0.00      0.01     0.00   489148     0.00     0.00  event_debug_note_del_
+  0.00      0.01     0.00   489148     0.00     0.00  event_del_nolock_
+  0.00      0.01     0.00   351188     0.00     0.00  min_heap_shift_up_unconditional_
+  0.00      0.01     0.00   280150     0.00     0.00  event_active_nolock_
+  0.00      0.01     0.00   280150     0.00     0.00  event_callback_activate_nolock_
+  0.00      0.01     0.00   280150     0.00     0.00  event_queue_insert_active
+  0.00      0.01     0.00   280150     0.00     0.00  event_queue_remove_active
+  0.00      0.01     0.00   280150     0.00     0.00  min_heap_size_
+  0.00      0.01     0.00   208998     0.00     0.00  event_callback_to_event
+  0.00      0.01     0.00   208998     0.00     0.00  time_cb
+  0.00      0.01     0.00    33033     0.00     0.00  evutil_gettime_monotonic_
+  0.00      0.01     0.00    20001     0.00     0.00  event_assign
+  0.00      0.01     0.00    20001     0.00     0.00  event_debug_assert_not_added_
+  0.00      0.01     0.00    20001     0.00     0.00  event_debug_assert_socket_nonblocking_
+  0.00      0.01     0.00    20001     0.00     0.00  event_debug_note_setup_
+  0.00      0.01     0.00    20001     0.00     0.00  min_heap_elem_init_
+  0.00      0.01     0.00    20000     0.00     0.00  event_mm_malloc_
+  0.00      0.01     0.00    20000     0.00     0.00  event_new
+  0.00      0.01     0.00    20000     0.00     0.00  event_self_cbarg
+  0.00      0.01     0.00    13033     0.00     0.00  clear_time_cache
+  0.00      0.01     0.00    13032     0.00     0.00  event_haveevents
+  0.00      0.01     0.00    13032     0.00     0.00  timeout_next
+  0.00      0.01     0.00    13031     0.00     0.00  epoll_apply_changes
+  0.00      0.01     0.00    13031     0.00     0.00  epoll_dispatch
+  0.00      0.01     0.00    13031     0.00     0.00  event_changelist_remove_all_
+  0.00      0.01     0.00    13031     0.00     0.00  event_queue_make_later_events_active
+  0.00      0.01     0.00    13031     0.00     0.00  min_heap_empty_
+  0.00      0.01     0.00    13031     0.00     0.00  timeout_process
+  0.00      0.01     0.00    13031     0.00     0.00  update_time_cache
+  0.00      0.01     0.00      342     0.00     0.00  event_process_active
+  0.00      0.01     0.00      342     0.00     0.00  event_process_active_single_queue
+  0.00      0.01     0.00       13     0.00     0.00  event_mm_realloc_
+  0.00      0.01     0.00        5     0.00     0.00  EVUTIL_TOUPPER_
+  0.00      0.01     0.00        5     0.00     0.00  event_mm_calloc_
+  0.00      0.01     0.00        4     0.00     0.00  evutil_getenv_
+  0.00      0.01     0.00        4     0.00     0.00  evutil_issetugid
+  0.00      0.01     0.00        2     0.00     0.00  evmap_signal_initmap_
+  0.00      0.01     0.00        1     0.00     0.00  epoll_init
+  0.00      0.01     0.00        1     0.00    10.00  event_base_dispatch
+  0.00      0.01     0.00        1     0.00     0.00  event_base_new
+  0.00      0.01     0.00        1     0.00     0.00  event_base_new_with_config
+  0.00      0.01     0.00        1     0.00     0.00  event_base_priority_init
+  0.00      0.01     0.00        1     0.00     0.00  event_changelist_init_
+  0.00      0.01     0.00        1     0.00     0.00  event_config_free
+  0.00      0.01     0.00        1     0.00     0.00  event_config_is_avoided_method
+  0.00      0.01     0.00        1     0.00     0.00  event_config_new
+  0.00      0.01     0.00        1     0.00     0.00  event_is_method_disabled
+  0.00      0.01     0.00        1     0.00     0.00  event_mm_free_
+  0.00      0.01     0.00        1     0.00     0.00  event_priority_set
+  0.00      0.01     0.00        1     0.00     0.00  evmap_io_initmap_
+  0.00      0.01     0.00        1     0.00     0.00  evsig_init_
+  0.00      0.01     0.00        1     0.00     0.00  evutil_configure_monotonic_time_
+  0.00      0.01     0.00        1     0.00     0.00  evutil_make_internal_pipe_
+  0.00      0.01     0.00        1     0.00     0.00  evutil_snprintf
+  0.00      0.01     0.00        1     0.00     0.00  evutil_vsnprintf
+  0.00      0.01     0.00        1     0.00     0.00  evutil_weakrand_seed_
+  0.00      0.01     0.00        1     0.00     0.00  min_heap_ctor_
+  0.00      0.01     0.00        1     0.00     0.00  sigfd_init_
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 100.00% of 0.01 seconds
+
+index % time    self  children    called     name
+                0.00    0.01       1/1           main [3]
+[1]    100.0    0.00    0.01       1         event_base_dispatch [1]
+                0.01    0.00       1/1           event_base_loop [2]
+-----------------------------------------------
+                0.01    0.00       1/1           event_base_dispatch [1]
+[2]    100.0    0.01    0.00       1         event_base_loop [2]
+                0.00    0.00   13033/13033       clear_time_cache [41]
+                0.00    0.00   13032/13032       timeout_next [43]
+                0.00    0.00   13032/13032       event_haveevents [42]
+                0.00    0.00   13031/13031       event_queue_make_later_events_active [47]
+                0.00    0.00   13031/13031       epoll_dispatch [45]
+                0.00    0.00   13031/13031       update_time_cache [50]
+                0.00    0.00   13031/13031       timeout_process [49]
+                0.00    0.00     342/342         event_process_active [51]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]    100.0    0.00    0.01                 main [3]
+                0.00    0.01       1/1           event_base_dispatch [1]
+                0.00    0.00   20000/20000       event_self_cbarg [40]
+                0.00    0.00   20000/20000       event_new [39]
+                0.00    0.00   20000/4019980     rand_int [6]
+                0.00    0.00   20000/2019990     event_add [12]
+                0.00    0.00       1/1           evutil_weakrand_seed_ [76]
+                0.00    0.00       1/1           event_base_new [60]
+-----------------------------------------------
+                0.00    0.00 2019990/6059970     event_add_nolock_ [13]
+                0.00    0.00 2019990/6059970     event_queue_remove_timeout [16]
+                0.00    0.00 2019990/6059970     event_queue_insert_timeout [15]
+[4]      0.0    0.00    0.00 6059970         is_common_timeout [4]
+-----------------------------------------------
+                0.00    0.00 4019980/4019980     rand_int [6]
+[5]      0.0    0.00    0.00 4019980         evutil_weakrand_ [5]
+-----------------------------------------------
+                0.00    0.00   20000/4019980     main [3]
+                0.00    0.00 3999980/4019980     time_cb [31]
+[6]      0.0    0.00    0.00 4019980         rand_int [6]
+                0.00    0.00 4019980/4019980     evutil_weakrand_ [5]
+-----------------------------------------------
+                0.00    0.00  208998/2580290     event_del_nolock_ [23]
+                0.00    0.00  280150/2580290     event_active_nolock_ [25]
+                0.00    0.00 2091142/2580290     event_add_nolock_ [13]
+[7]      0.0    0.00    0.00 2580290         event_to_event_callback [7]
+-----------------------------------------------
+                0.00    0.00   13032/2326005     timeout_next [43]
+                0.00    0.00  293181/2326005     timeout_process [49]
+                0.00    0.00 2019792/2326005     event_add_nolock_ [13]
+[8]      0.0    0.00    0.00 2326005         min_heap_top_ [8]
+-----------------------------------------------
+                0.00    0.00  280150/2300140     event_add_nolock_ [13]
+                0.00    0.00 2019990/2300140     min_heap_push_ [19]
+[9]      0.0    0.00    0.00 2300140         min_heap_reserve_ [9]
+                0.00    0.00      13/13          event_mm_realloc_ [53]
+-----------------------------------------------
+                0.00    0.00       1/2059084     event_base_new_with_config [61]
+                0.00    0.00   13031/2059084     update_time_cache [50]
+                0.00    0.00   13031/2059084     timeout_next [43]
+                0.00    0.00   13031/2059084     timeout_process [49]
+                0.00    0.00 2019990/2059084     event_add_nolock_ [13]
+[10]     0.0    0.00    0.00 2059084         gettime [10]
+                0.00    0.00   33033/33033       evutil_gettime_monotonic_ [32]
+-----------------------------------------------
+                0.00    0.00       1/2019991     event_priority_set [69]
+                0.00    0.00 2019990/2019991     event_add_nolock_ [13]
+[11]     0.0    0.00    0.00 2019991         event_debug_assert_is_setup_ [11]
+-----------------------------------------------
+                0.00    0.00   20000/2019990     main [3]
+                0.00    0.00 1999990/2019990     time_cb [31]
+[12]     0.0    0.00    0.00 2019990         event_add [12]
+                0.00    0.00 2019990/2019990     event_add_nolock_ [13]
+-----------------------------------------------
+                0.00    0.00 2019990/2019990     event_add [12]
+[13]     0.0    0.00    0.00 2019990         event_add_nolock_ [13]
+                0.00    0.00 2091142/2580290     event_to_event_callback [7]
+                0.00    0.00 2019990/2019991     event_debug_assert_is_setup_ [11]
+                0.00    0.00 2019990/2059084     gettime [10]
+                0.00    0.00 2019990/6059970     is_common_timeout [4]
+                0.00    0.00 2019990/2019990     event_queue_insert_timeout [15]
+                0.00    0.00 2019990/2019990     min_heap_elt_is_top_ [17]
+                0.00    0.00 2019990/2019990     event_debug_note_add_ [14]
+                0.00    0.00 2019792/2326005     min_heap_top_ [8]
+                0.00    0.00 1739840/2019990     event_queue_remove_timeout [16]
+                0.00    0.00  280150/280150      min_heap_size_ [29]
+                0.00    0.00  280150/2300140     min_heap_reserve_ [9]
+                0.00    0.00   71152/280150      event_queue_remove_active [28]
+-----------------------------------------------
+                0.00    0.00 2019990/2019990     event_add_nolock_ [13]
+[14]     0.0    0.00    0.00 2019990         event_debug_note_add_ [14]
+-----------------------------------------------
+                0.00    0.00 2019990/2019990     event_add_nolock_ [13]
+[15]     0.0    0.00    0.00 2019990         event_queue_insert_timeout [15]
+                0.00    0.00 2019990/6059970     is_common_timeout [4]
+                0.00    0.00 2019990/2019990     min_heap_push_ [19]
+-----------------------------------------------
+                0.00    0.00  280150/2019990     event_del_nolock_ [23]
+                0.00    0.00 1739840/2019990     event_add_nolock_ [13]
+[16]     0.0    0.00    0.00 2019990         event_queue_remove_timeout [16]
+                0.00    0.00 2019990/6059970     is_common_timeout [4]
+                0.00    0.00 2019990/2019990     min_heap_erase_ [18]
+-----------------------------------------------
+                0.00    0.00 2019990/2019990     event_add_nolock_ [13]
+[17]     0.0    0.00    0.00 2019990         min_heap_elt_is_top_ [17]
+-----------------------------------------------
+                0.00    0.00 2019990/2019990     event_queue_remove_timeout [16]
+[18]     0.0    0.00    0.00 2019990         min_heap_erase_ [18]
+                0.00    0.00 1668802/1668802     min_heap_shift_down_ [21]
+                0.00    0.00  351188/351188      min_heap_shift_up_unconditional_ [24]
+-----------------------------------------------
+                0.00    0.00 2019990/2019990     event_queue_insert_timeout [15]
+[19]     0.0    0.00    0.00 2019990         min_heap_push_ [19]
+                0.00    0.00 2019990/2300140     min_heap_reserve_ [9]
+                0.00    0.00 2019990/2019990     min_heap_shift_up_ [20]
+-----------------------------------------------
+                0.00    0.00 2019990/2019990     min_heap_push_ [19]
+[20]     0.0    0.00    0.00 2019990         min_heap_shift_up_ [20]
+-----------------------------------------------
+                0.00    0.00 1668802/1668802     min_heap_erase_ [18]
+[21]     0.0    0.00    0.00 1668802         min_heap_shift_down_ [21]
+-----------------------------------------------
+                0.00    0.00  489148/489148      event_del_nolock_ [23]
+[22]     0.0    0.00    0.00  489148         event_debug_note_del_ [22]
+-----------------------------------------------
+                0.00    0.00  208998/489148      event_process_active_single_queue [52]
+                0.00    0.00  280150/489148      timeout_process [49]
+[23]     0.0    0.00    0.00  489148         event_del_nolock_ [23]
+                0.00    0.00  489148/489148      event_debug_note_del_ [22]
+                0.00    0.00  280150/2019990     event_queue_remove_timeout [16]
+                0.00    0.00  208998/2580290     event_to_event_callback [7]
+                0.00    0.00  208998/280150      event_queue_remove_active [28]
+-----------------------------------------------
+                0.00    0.00  351188/351188      min_heap_erase_ [18]
+[24]     0.0    0.00    0.00  351188         min_heap_shift_up_unconditional_ [24]
+-----------------------------------------------
+                0.00    0.00  280150/280150      timeout_process [49]
+[25]     0.0    0.00    0.00  280150         event_active_nolock_ [25]
+                0.00    0.00  280150/2580290     event_to_event_callback [7]
+                0.00    0.00  280150/280150      event_callback_activate_nolock_ [26]
+-----------------------------------------------
+                0.00    0.00  280150/280150      event_active_nolock_ [25]
+[26]     0.0    0.00    0.00  280150         event_callback_activate_nolock_ [26]
+                0.00    0.00  280150/280150      event_queue_insert_active [27]
+-----------------------------------------------
+                0.00    0.00  280150/280150      event_callback_activate_nolock_ [26]
+[27]     0.0    0.00    0.00  280150         event_queue_insert_active [27]
+-----------------------------------------------
+                0.00    0.00   71152/280150      event_add_nolock_ [13]
+                0.00    0.00  208998/280150      event_del_nolock_ [23]
+[28]     0.0    0.00    0.00  280150         event_queue_remove_active [28]
+-----------------------------------------------
+                0.00    0.00  280150/280150      event_add_nolock_ [13]
+[29]     0.0    0.00    0.00  280150         min_heap_size_ [29]
+-----------------------------------------------
+                0.00    0.00  208998/208998      event_process_active_single_queue [52]
+[30]     0.0    0.00    0.00  208998         event_callback_to_event [30]
+-----------------------------------------------
+                0.00    0.00  208998/208998      event_process_active_single_queue [52]
+[31]     0.0    0.00    0.00  208998         time_cb [31]
+                0.00    0.00 3999980/4019980     rand_int [6]
+                0.00    0.00 1999990/2019990     event_add [12]
+-----------------------------------------------
+                0.00    0.00   33033/33033       gettime [10]
+[32]     0.0    0.00    0.00   33033         evutil_gettime_monotonic_ [32]
+-----------------------------------------------
+                0.00    0.00       1/20001       evsig_init_ [71]
+                0.00    0.00   20000/20001       event_new [39]
+[33]     0.0    0.00    0.00   20001         event_assign [33]
+                0.00    0.00   20001/20001       event_debug_assert_socket_nonblocking_ [35]
+                0.00    0.00   20001/20001       event_debug_assert_not_added_ [34]
+                0.00    0.00   20001/20001       min_heap_elem_init_ [37]
+                0.00    0.00   20001/20001       event_debug_note_setup_ [36]
+-----------------------------------------------
+                0.00    0.00   20001/20001       event_assign [33]
+[34]     0.0    0.00    0.00   20001         event_debug_assert_not_added_ [34]
+-----------------------------------------------
+                0.00    0.00   20001/20001       event_assign [33]
+[35]     0.0    0.00    0.00   20001         event_debug_assert_socket_nonblocking_ [35]
+-----------------------------------------------
+                0.00    0.00   20001/20001       event_assign [33]
+[36]     0.0    0.00    0.00   20001         event_debug_note_setup_ [36]
+-----------------------------------------------
+                0.00    0.00   20001/20001       event_assign [33]
+[37]     0.0    0.00    0.00   20001         min_heap_elem_init_ [37]
+-----------------------------------------------
+                0.00    0.00   20000/20000       event_new [39]
+[38]     0.0    0.00    0.00   20000         event_mm_malloc_ [38]
+-----------------------------------------------
+                0.00    0.00   20000/20000       main [3]
+[39]     0.0    0.00    0.00   20000         event_new [39]
+                0.00    0.00   20000/20000       event_mm_malloc_ [38]
+                0.00    0.00   20000/20001       event_assign [33]
+-----------------------------------------------
+                0.00    0.00   20000/20000       main [3]
+[40]     0.0    0.00    0.00   20000         event_self_cbarg [40]
+-----------------------------------------------
+                0.00    0.00   13033/13033       event_base_loop [2]
+[41]     0.0    0.00    0.00   13033         clear_time_cache [41]
+-----------------------------------------------
+                0.00    0.00   13032/13032       event_base_loop [2]
+[42]     0.0    0.00    0.00   13032         event_haveevents [42]
+-----------------------------------------------
+                0.00    0.00   13032/13032       event_base_loop [2]
+[43]     0.0    0.00    0.00   13032         timeout_next [43]
+                0.00    0.00   13032/2326005     min_heap_top_ [8]
+                0.00    0.00   13031/2059084     gettime [10]
+-----------------------------------------------
+                0.00    0.00   13031/13031       epoll_dispatch [45]
+[44]     0.0    0.00    0.00   13031         epoll_apply_changes [44]
+-----------------------------------------------
+                0.00    0.00   13031/13031       event_base_loop [2]
+[45]     0.0    0.00    0.00   13031         epoll_dispatch [45]
+                0.00    0.00   13031/13031       epoll_apply_changes [44]
+                0.00    0.00   13031/13031       event_changelist_remove_all_ [46]
+-----------------------------------------------
+                0.00    0.00   13031/13031       epoll_dispatch [45]
+[46]     0.0    0.00    0.00   13031         event_changelist_remove_all_ [46]
+-----------------------------------------------
+                0.00    0.00   13031/13031       event_base_loop [2]
+[47]     0.0    0.00    0.00   13031         event_queue_make_later_events_active [47]
+-----------------------------------------------
+                0.00    0.00   13031/13031       timeout_process [49]
+[48]     0.0    0.00    0.00   13031         min_heap_empty_ [48]
+-----------------------------------------------
+                0.00    0.00   13031/13031       event_base_loop [2]
+[49]     0.0    0.00    0.00   13031         timeout_process [49]
+                0.00    0.00  293181/2326005     min_heap_top_ [8]
+                0.00    0.00  280150/489148      event_del_nolock_ [23]
+                0.00    0.00  280150/280150      event_active_nolock_ [25]
+                0.00    0.00   13031/13031       min_heap_empty_ [48]
+                0.00    0.00   13031/2059084     gettime [10]
+-----------------------------------------------
+                0.00    0.00   13031/13031       event_base_loop [2]
+[50]     0.0    0.00    0.00   13031         update_time_cache [50]
+                0.00    0.00   13031/2059084     gettime [10]
+-----------------------------------------------
+                0.00    0.00     342/342         event_base_loop [2]
+[51]     0.0    0.00    0.00     342         event_process_active [51]
+                0.00    0.00     342/342         event_process_active_single_queue [52]
+-----------------------------------------------
+                0.00    0.00     342/342         event_process_active [51]
+[52]     0.0    0.00    0.00     342         event_process_active_single_queue [52]
+                0.00    0.00  208998/208998      event_callback_to_event [30]
+                0.00    0.00  208998/489148      event_del_nolock_ [23]
+                0.00    0.00  208998/208998      time_cb [31]
+-----------------------------------------------
+                0.00    0.00      13/13          min_heap_reserve_ [9]
+[53]     0.0    0.00    0.00      13         event_mm_realloc_ [53]
+-----------------------------------------------
+                0.00    0.00       5/5           event_is_method_disabled [67]
+[54]     0.0    0.00    0.00       5         EVUTIL_TOUPPER_ [54]
+-----------------------------------------------
+                0.00    0.00       1/5           event_base_new_with_config [61]
+                0.00    0.00       1/5           event_config_new [66]
+                0.00    0.00       1/5           event_base_priority_init [62]
+                0.00    0.00       2/5           epoll_init [59]
+[55]     0.0    0.00    0.00       5         event_mm_calloc_ [55]
+-----------------------------------------------
+                0.00    0.00       1/4           event_is_method_disabled [67]
+                0.00    0.00       1/4           epoll_init [59]
+                0.00    0.00       2/4           event_base_new_with_config [61]
+[56]     0.0    0.00    0.00       4         evutil_getenv_ [56]
+                0.00    0.00       4/4           evutil_issetugid [57]
+-----------------------------------------------
+                0.00    0.00       4/4           evutil_getenv_ [56]
+[57]     0.0    0.00    0.00       4         evutil_issetugid [57]
+-----------------------------------------------
+                0.00    0.00       1/2           event_base_new_with_config [61]
+                0.00    0.00       1/2           evmap_io_initmap_ [70]
+[58]     0.0    0.00    0.00       2         evmap_signal_initmap_ [58]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new_with_config [61]
+[59]     0.0    0.00    0.00       1         epoll_init [59]
+                0.00    0.00       2/5           event_mm_calloc_ [55]
+                0.00    0.00       1/4           evutil_getenv_ [56]
+                0.00    0.00       1/1           sigfd_init_ [78]
+                0.00    0.00       1/1           evsig_init_ [71]
+-----------------------------------------------
+                0.00    0.00       1/1           main [3]
+[60]     0.0    0.00    0.00       1         event_base_new [60]
+                0.00    0.00       1/1           event_config_new [66]
+                0.00    0.00       1/1           event_base_new_with_config [61]
+                0.00    0.00       1/1           event_config_free [64]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new [60]
+[61]     0.0    0.00    0.00       1         event_base_new_with_config [61]
+                0.00    0.00       2/4           evutil_getenv_ [56]
+                0.00    0.00       1/5           event_mm_calloc_ [55]
+                0.00    0.00       1/1           evutil_configure_monotonic_time_ [72]
+                0.00    0.00       1/2059084     gettime [10]
+                0.00    0.00       1/1           min_heap_ctor_ [77]
+                0.00    0.00       1/1           evmap_io_initmap_ [70]
+                0.00    0.00       1/2           evmap_signal_initmap_ [58]
+                0.00    0.00       1/1           event_changelist_init_ [63]
+                0.00    0.00       1/1           event_config_is_avoided_method [65]
+                0.00    0.00       1/1           event_is_method_disabled [67]
+                0.00    0.00       1/1           epoll_init [59]
+                0.00    0.00       1/1           event_base_priority_init [62]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new_with_config [61]
+[62]     0.0    0.00    0.00       1         event_base_priority_init [62]
+                0.00    0.00       1/5           event_mm_calloc_ [55]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new_with_config [61]
+[63]     0.0    0.00    0.00       1         event_changelist_init_ [63]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new [60]
+[64]     0.0    0.00    0.00       1         event_config_free [64]
+                0.00    0.00       1/1           event_mm_free_ [68]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new_with_config [61]
+[65]     0.0    0.00    0.00       1         event_config_is_avoided_method [65]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new [60]
+[66]     0.0    0.00    0.00       1         event_config_new [66]
+                0.00    0.00       1/5           event_mm_calloc_ [55]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new_with_config [61]
+[67]     0.0    0.00    0.00       1         event_is_method_disabled [67]
+                0.00    0.00       5/5           EVUTIL_TOUPPER_ [54]
+                0.00    0.00       1/1           evutil_snprintf [74]
+                0.00    0.00       1/4           evutil_getenv_ [56]
+-----------------------------------------------
+                0.00    0.00       1/1           event_config_free [64]
+[68]     0.0    0.00    0.00       1         event_mm_free_ [68]
+-----------------------------------------------
+                0.00    0.00       1/1           evsig_init_ [71]
+[69]     0.0    0.00    0.00       1         event_priority_set [69]
+                0.00    0.00       1/2019991     event_debug_assert_is_setup_ [11]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new_with_config [61]
+[70]     0.0    0.00    0.00       1         evmap_io_initmap_ [70]
+                0.00    0.00       1/2           evmap_signal_initmap_ [58]
+-----------------------------------------------
+                0.00    0.00       1/1           epoll_init [59]
+[71]     0.0    0.00    0.00       1         evsig_init_ [71]
+                0.00    0.00       1/1           evutil_make_internal_pipe_ [73]
+                0.00    0.00       1/20001       event_assign [33]
+                0.00    0.00       1/1           event_priority_set [69]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new_with_config [61]
+[72]     0.0    0.00    0.00       1         evutil_configure_monotonic_time_ [72]
+-----------------------------------------------
+                0.00    0.00       1/1           evsig_init_ [71]
+[73]     0.0    0.00    0.00       1         evutil_make_internal_pipe_ [73]
+-----------------------------------------------
+                0.00    0.00       1/1           event_is_method_disabled [67]
+[74]     0.0    0.00    0.00       1         evutil_snprintf [74]
+                0.00    0.00       1/1           evutil_vsnprintf [75]
+-----------------------------------------------
+                0.00    0.00       1/1           evutil_snprintf [74]
+[75]     0.0    0.00    0.00       1         evutil_vsnprintf [75]
+-----------------------------------------------
+                0.00    0.00       1/1           main [3]
+[76]     0.0    0.00    0.00       1         evutil_weakrand_seed_ [76]
+-----------------------------------------------
+                0.00    0.00       1/1           event_base_new_with_config [61]
+[77]     0.0    0.00    0.00       1         min_heap_ctor_ [77]
+-----------------------------------------------
+                0.00    0.00       1/1           epoll_init [59]
+[78]     0.0    0.00    0.00       1         sigfd_init_ [78]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [54] EVUTIL_TOUPPER_        [36] event_debug_note_setup_ [73] evutil_make_internal_pipe_
+  [41] clear_time_cache       [23] event_del_nolock_      [74] evutil_snprintf
+  [44] epoll_apply_changes    [42] event_haveevents       [75] evutil_vsnprintf
+  [45] epoll_dispatch         [67] event_is_method_disabled [5] evutil_weakrand_
+  [59] epoll_init             [55] event_mm_calloc_       [76] evutil_weakrand_seed_
+  [25] event_active_nolock_   [68] event_mm_free_         [10] gettime
+  [12] event_add              [38] event_mm_malloc_        [4] is_common_timeout
+  [13] event_add_nolock_      [53] event_mm_realloc_      [77] min_heap_ctor_
+  [33] event_assign           [39] event_new              [37] min_heap_elem_init_
+   [1] event_base_dispatch    [69] event_priority_set     [17] min_heap_elt_is_top_
+   [2] event_base_loop        [51] event_process_active   [48] min_heap_empty_
+  [60] event_base_new         [52] event_process_active_single_queue [18] min_heap_erase_
+  [61] event_base_new_with_config [27] event_queue_insert_active [19] min_heap_push_
+  [62] event_base_priority_init [15] event_queue_insert_timeout [9] min_heap_reserve_
+  [26] event_callback_activate_nolock_ [47] event_queue_make_later_events_active [21] min_heap_shift_down_
+  [30] event_callback_to_event [28] event_queue_remove_active [20] min_heap_shift_up_
+  [63] event_changelist_init_ [16] event_queue_remove_timeout [24] min_heap_shift_up_unconditional_
+  [46] event_changelist_remove_all_ [40] event_self_cbarg [29] min_heap_size_
+  [64] event_config_free       [7] event_to_event_callback [8] min_heap_top_
+  [65] event_config_is_avoided_method [70] evmap_io_initmap_ [6] rand_int
+  [66] event_config_new       [58] evmap_signal_initmap_  [78] sigfd_init_
+  [11] event_debug_assert_is_setup_ [71] evsig_init_      [31] time_cb
+  [34] event_debug_assert_not_added_ [72] evutil_configure_monotonic_time_ [43] timeout_next
+  [35] event_debug_assert_socket_nonblocking_ [56] evutil_getenv_ [49] timeout_process
+  [14] event_debug_note_add_  [32] evutil_gettime_monotonic_ [50] update_time_cache
+  [22] event_debug_note_del_  [57] evutil_issetugid
